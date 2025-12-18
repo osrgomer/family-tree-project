@@ -7,148 +7,266 @@ const familyData = {
     role: "United Family",
     children: [
         {
-            name: "Efraim Eliezer Rimon (Granat)",
-            role: "G1: Founder & Poet",
+            name: "Josek Hersz Granat",
+            role: "G0: Patriarch (c.1815–1885)",
             image: "",
             partner: {
-                name: "Esther Hava Rimon (Granat)",
-                role: "G1: Businesswoman",
+                name: "Hana Chaja Granat",
+                role: "G0: Matriarch",
                 image: ""
             },
             children: [
                 {
-                    name: "Yosef Zvi Rimon",
-                    role: "G2: The Poet of Zion",
+                    name: "Efraim Eliezer Rimon (Granat)",
+                    role: "G1: Founder & Poet (1868–1919)",
                     image: "",
+                    partner: {
+                        name: "Esther Hava Rimon (Granat)",
+                        role: "G1: Businesswoman (1864–1918)",
+                        image: ""
+                    },
                     children: [
                         {
-                            name: "Rabbi Yosef Zvi Rimon",
-                            role: "G4: Halachic Authority",
+                            name: "Yosef Zvi Rimon",
+                            role: "G2: The Poet of Zion",
                             image: "",
+                            children: [
+                                {
+                                    name: "Rabbi Yosef Zvi Rimon",
+                                    role: "G4: Halachic Authority",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Hana Haya Kaczor",
+                            role: "G2: Sibling",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Yechiel Bunim Rimon (Granat)",
+                            role: "G2: Sibling",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Yaakov Haim (Zvi) Rimon (Granat)",
+                            role: "G2: Author & Social Worker (1903–1973)",
+                            image: "",
+                            partner: {
+                                name: "Bracha Rimon (Laznowsky)",
+                                role: "G2: Matriarch (Granat Side)",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Hava Esther Cohen (Rimon)",
+                                    role: "G3: Sibling (1928 - 2002)",
+                                    image: "",
+                                    partner: {
+                                        name: "Benjamin Cohen",
+                                        role: "G3: Husband (1921–1981)",
+                                        image: ""
+                                    },
+                                    children: [
+                                        {
+                                            name: "Yoram Cohen",
+                                            role: "G4: Sibling",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Rivka Zinkin",
+                                    role: "G3: Sibling",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Nitzchia Rimon",
+                                    role: "G3: Sibling",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Miriam Esther Gliksberg",
+                                    role: "G3: Educator",
+                                    image: "",
+                                    partner: {
+                                        name: "Israel Glicksberg",
+                                        role: "G3: Educator & Scholar",
+                                        image: ""
+                                    },
+                                    partnerLeft: true, // Miriam on the right, Israel on the left
+                                    children: [
+                                        {
+                                            name: "Prof. David Glicksberg",
+                                            role: "G4: Law & Tax Expert",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Alex Glicksberg",
+                                            role: "G4: Literacy Archivist",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Ephraim Rimon",
+                                    role: "G3: Songwriter | Bank of Israel",
+                                    image: "",
+                                    partner: {
+                                        name: "Talma Rimon",
+                                        role: "G3: Matriarch | Bank of Israel",
+                                        image: ""
+                                    },
+                                    partnerLeft: false, // Ephraim on the left, Talma on the right
+                                    children: [
+                                        {
+                                            name: "Gil Rimon",
+                                            role: "G4: Entrepreneur & Branding",
+                                            image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                            partner: {
+                                                name: "Yael Givon",
+                                                role: "G4: Creative Director",
+                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180"
+                                            },
+                                            partnerLeft: true,
+                                            children: [
+                                                {
+                                                    name: "Omer Rimon",
+                                                    role: "G5: The Union (Age 13.5)",
+                                                    image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Nomi Rimon",
+                                                    role: "G5: Student",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Ran Rimon",
+                                            role: "G4: Entrepreneur",
+                                            image: "",
+                                            children: [
+                                                {
+                                                    name: "Eyal Rimon",
+                                                    role: "G5: Student (Age 14)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Talia Rimon",
+                                                    role: "G5: Student (Age 11-12)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Gur Rimon",
+                                                    role: "G5: Student (Age 6-7)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Ana Rimon",
+                                                    role: "G5: Student (Age 1.5)",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Professor Moshe Givon",
+                    role: "G3: Marketing Expert",
+                    image: "",
+                    partner: {
+                        name: "Deborah Givon",
+                        role: "G3: Early Childhood Expert",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Dr. Assaf Givon",
+                            role: "G4: Orthopedic Surgeon",
+                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
+                            children: []
+                        },
+                        {
+                            name: "Daniella Givon",
+                            role: "G4: CEO, Unik",
+                            image: "https://media.licdn.com/dms/image/v2/D4D03AQGLpB26rU7Qeg/profile-displayphoto-scale_400_400/B4DZgDBqt5HwAg-/0/1752397427174?e=2147483647&v=beta&t=c85erwnZ5g9A9yFGxxQ4bBx7fiwZ05MRLpOb4uy2Gss",
+                            children: []
+                        },
+                        {
+                            name: "Yael Givon Rimon",
+                            role: "G4: Creative Director (Married to Gil Rimon)",
+                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
+                            children: []
+                        },
+                        {
+                            name: "Daphna Givon",
+                            role: "G4: Botanical Expert",
+                            image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4NlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
+                            children: []
+                        },
+                        {
+                            name: "Ronnie Heller",
+                            role: "G4: Choreographer",
+                            image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
+                            children: []
+                        },
+                        {
+                            name: "DUNICA",
+                            role: "Shared Venture: Biotech & Therapeutics",
+                            description: "A pioneering biomedical venture co-founded by Daniella Givon, focusing on transformative therapeutics and innovative health solutions.",
+                            image: "",
+                            type: "venture",
                             children: []
                         }
                     ]
                 },
                 {
-                    name: "Hana Haya Kaczor",
-                    role: "G2: Sibling",
-                    image: "",
-                    children: []
-                },
-                {
-                    name: "Yechiel Bunim Rimon (Granat)",
-                    role: "G2: Sibling",
-                    image: "",
-                    children: []
-                },
-                {
-                    name: "Yaakov Haim (Zvi) Rimon (Granat)",
-                    role: "G2: Author & Social Worker (1903-1973)",
+                    name: "Baruch Tzvi Hirsh Cohen",
+                    role: "Paternal Roots (1852–1941)",
                     image: "",
                     partner: {
-                        name: "Bracha Rimon (Granat)",
-                        role: "G2: Matriarch",
+                        name: "Peril Pnina Cohen",
+                        role: "Great-Grandmother (1856–1925)",
                         image: ""
                     },
                     children: [
                         {
-                            name: "Hava Esther Cohen (Rimon)",
-                            role: "G3: Sibling (1928 - 2002)",
+                            name: "Rabi Mosheh David Rozental Hacohen",
+                            role: "G2: Rabbi & Scholar",
                             image: "",
                             partner: {
-                                name: "Benjamin Cohen",
-                                role: "Husband",
+                                name: "Lieba Leah Cohen Rozental",
+                                role: "G2: Matriarch (1886–1966)",
                                 image: ""
                             },
                             children: [
                                 {
-                                    name: "Yoram Cohen",
-                                    role: "G4: Sibling",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Rivka Zinkin",
-                            role: "G3: Sibling",
-                            image: "",
-                            children: []
-                        },
-                        {
-                            name: "Nitzchia Rimon",
-                            role: "G3: Sibling",
-                            image: "",
-                            children: []
-                        },
-                        {
-                            name: "Miriam Esther Gliksberg",
-                            role: "G3: Educator",
-                            image: "",
-                            partner: {
-                                name: "Israel Glicksberg",
-                                role: "G3: Educator & Scholar",
-                                image: ""
-                            },
-                            partnerLeft: true, // Miriam on the right, Israel on the left
-                            children: [
-                                {
-                                    name: "Prof. David Glicksberg",
-                                    role: "G4: Law & Tax Expert",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Alex Glicksberg",
-                                    role: "G4: Literacy Archivist",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Ephraim Rimon",
-                            role: "G3: Songwriter | Bank of Israel",
-                            image: "",
-                            partner: {
-                                name: "Talma Rimon",
-                                role: "G3: Matriarch | Bank of Israel",
-                                image: ""
-                            },
-                            partnerLeft: false, // Ephraim on the left, Talma on the right
-                            children: [
-                                {
-                                    name: "Gil Rimon",
-                                    role: "G4: Entrepreneur (Partnered with Yael Givon)",
-                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                    children: []
-                                },
-                                {
-                                    name: "Ran Rimon",
-                                    role: "G4: Entrepreneur",
+                                    name: "Benjamin Cohen",
+                                    role: "G3: Husband (1921–1981)",
                                     image: "",
                                     children: [
                                         {
-                                            name: "Eyal Rimon",
-                                            role: "G5: Student (Age 14)",
-                                            image: "",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Talia Rimon",
-                                            role: "G5: Student (Age 11-12)",
-                                            image: "",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Gur Rimon",
-                                            role: "G5: Student (Age 6-7)",
-                                            image: "",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Ana Rimon",
-                                            role: "G5: Student (Age 1.5)",
+                                            name: "Yoram Cohen",
+                                            role: "G4: Legacy Representative",
                                             image: "",
                                             children: []
                                         }
@@ -157,67 +275,6 @@ const familyData = {
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            name: "Professor Moshe Givon",
-            role: "G3: Marketing Expert",
-            image: "",
-            partner: {
-                name: "Deborah Givon",
-                role: "G3: Early Childhood Expert",
-                image: ""
-            },
-            children: [
-                {
-                    name: "Dr. Assaf Givon",
-                    role: "G4: Orthopedic Surgeon",
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
-                    children: []
-                },
-                {
-                    name: "Daniella Givon",
-                    role: "G4: CEO, Unik",
-                    image: "https://media.licdn.com/dms/image/v2/D4D03AQGLpB26rU7Qeg/profile-displayphoto-scale_400_400/B4DZgDBqt5HwAg-/0/1752397427174?e=2147483647&v=beta&t=c85erwnZ5g9A9yFGxxQ4bBx7fiwZ05MRLpOb4uy2Gss",
-                    children: []
-                },
-                {
-                    name: "Yael Givon Rimon",
-                    role: "G4: Creative Director",
-                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                    partner: {
-                        name: "Gil Rimon",
-                        role: "G4: Entrepreneur",
-                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y"
-                    },
-                    children: [
-                        {
-                            name: "Omer Rimon",
-                            role: "G5: The Union (Age 13.5)",
-                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                            children: []
-                        }
-                    ]
-                },
-                {
-                    name: "Daphna Givon",
-                    role: "G4: Botanical Expert",
-                    image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4NlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
-                    children: []
-                },
-                {
-                    name: "Ronnie Heller",
-                    role: "G4: Choreographer",
-                    image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
-                    children: []
-                },
-                {
-                    name: "DUNICA",
-                    role: "Shared Venture: Biotech Startup",
-                    image: "",
-                    type: "venture",
-                    children: []
                 }
             ]
         }
@@ -290,7 +347,7 @@ function createCard(member) {
 
     const backInfo = document.createElement('div');
     backInfo.className = 'member-role';
-    backInfo.textContent = `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
+    backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
 
     back.appendChild(backTitle);
     back.appendChild(backInfo);
