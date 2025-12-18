@@ -87,12 +87,12 @@ const familyData = {
                 {
                     name: "Dr. Assaf Givon",
                     role: "G4: Orthopedic Surgeon",
-                    image: "",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
                     children: []
                 },
                 {
-                    name: "Daniella Givon Tapuchee",
-                    role: "G4: CEO, Unik (Biotech)",
+                    name: "Daniella Givon",
+                    role: "G4: CEO, Unik",
                     image: "https://media.licdn.com/dms/image/v2/D4D03AQGLpB26rU7Qeg/profile-displayphoto-scale_400_400/B4DZgDBqt5HwAg-/0/1752397427174?e=2147483647&v=beta&t=c85erwnZ5g9A9yFGxxQ4bBx7fiwZ05MRLpOb4uy2Gss",
                     children: []
                 },
@@ -109,7 +109,7 @@ const familyData = {
                         {
                             name: "Omer Rimon",
                             role: "G5: The Union",
-                            image: "",
+                            image: "https://photos.fife.usercontent.google.com/pw/AP1GczNCe0dj2QNipJDOthUZb-qlUeUui_DUVg2DOaOB79C4srJF4limgtAw=w736-h736-s-no-gm?authuser=0",
                             children: []
                         }
                     ]
@@ -127,7 +127,7 @@ const familyData = {
                     children: []
                 },
                 {
-                    name: "Don T. 1 Ltd (DUNICA)",
+                    name: "DUNICA",
                     role: "Shared Venture: Biotech Startup",
                     image: "",
                     type: "venture",
@@ -144,6 +144,13 @@ const familyData = {
 function createCard(member) {
     const card = document.createElement('div');
     card.className = member.type === 'venture' ? 'member-card venture-card' : 'member-card';
+
+    const inner = document.createElement('div');
+    inner.className = 'card-inner';
+
+    // FRONT
+    const front = document.createElement('div');
+    front.className = 'card-front';
 
     // Image Placeholder
     const imgContainer = document.createElement('div');
@@ -181,9 +188,30 @@ function createCard(member) {
     roleData.className = 'member-role';
     roleData.textContent = member.role;
 
-    card.appendChild(imgContainer);
-    card.appendChild(nameData);
-    card.appendChild(roleData);
+    front.appendChild(imgContainer);
+    front.appendChild(nameData);
+    front.appendChild(roleData);
+
+    // BACK
+    const back = document.createElement('div');
+    back.className = 'card-back';
+
+    const backTitle = document.createElement('div');
+    backTitle.className = 'member-name';
+    backTitle.textContent = "Legacy Details";
+    backTitle.style.fontSize = '1rem';
+    backTitle.style.marginBottom = '1rem';
+
+    const backInfo = document.createElement('div');
+    backInfo.className = 'member-role';
+    backInfo.textContent = `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
+
+    back.appendChild(backTitle);
+    back.appendChild(backInfo);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
 
     return card;
 }
