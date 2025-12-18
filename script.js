@@ -30,12 +30,59 @@ const familyData = {
                     ]
                 },
                 {
-                    name: "Yaakov Rimon",
-                    role: "G2: Author & Social Worker",
+                    name: "Hana Haya Kaczor",
+                    role: "G2: Sibling",
                     image: "",
+                    children: []
+                },
+                {
+                    name: "Yechiel Bunim Rimon (Granat)",
+                    role: "G2: Sibling",
+                    image: "",
+                    children: []
+                },
+                {
+                    name: "Yaakov Haim (Zvi) Rimon (Granat)",
+                    role: "G2: Author & Social Worker (1903-1973)",
+                    image: "",
+                    partner: {
+                        name: "Bracha Rimon (Granat)",
+                        role: "G2: Matriarch",
+                        image: ""
+                    },
                     children: [
                         {
-                            name: "Miriam (Rimon) Glicksberg",
+                            name: "Hava Esther Cohen (Rimon)",
+                            role: "G3: Sibling (1928-2002)",
+                            image: "",
+                            partner: {
+                                name: "Benjamin Cohen",
+                                role: "Husband",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Yoram Cohen",
+                                    role: "G4: Sibling",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Rivka Zinkin",
+                            role: "G3: Sibling",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Nitzchia Rimon",
+                            role: "G3: Sibling",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Miriam Esther Gliksberg",
                             role: "G3: Educator",
                             image: "",
                             partner: {
@@ -43,6 +90,7 @@ const familyData = {
                                 role: "G3: Educator & Scholar",
                                 image: ""
                             },
+                            partnerLeft: true, // Miriam on the right, Israel on the left
                             children: [
                                 {
                                     name: "Prof. David Glicksberg",
@@ -52,7 +100,7 @@ const familyData = {
                                 },
                                 {
                                     name: "Alex Glicksberg",
-                                    role: "G4: Literary Archivist",
+                                    role: "G4: Literacy Archivist",
                                     image: "",
                                     children: []
                                 }
@@ -60,14 +108,34 @@ const familyData = {
                         },
                         {
                             name: "Ephraim Rimon",
-                            role: "G3: Songwriter",
+                            role: "G3: Songwriter | Bank of Israel",
                             image: "",
                             partner: {
                                 name: "Talma Rimon",
-                                role: "G3: Matriarch",
+                                role: "G3: Matriarch | Bank of Israel",
                                 image: ""
                             },
+                            partnerLeft: false, // Ephraim on the left, Talma on the right
                             children: [
+                                {
+                                    name: "Gil Rimon",
+                                    role: "G4: Entrepreneur & Branding",
+                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                    partner: {
+                                        name: "Yael Givon",
+                                        role: "G4: Creative Director",
+                                        image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180"
+                                    },
+                                    partnerLeft: true, // Gil on the right, Yael on the left
+                                    children: [
+                                        {
+                                            name: "Omer Rimon",
+                                            role: "G5: The Union (Age 13.5)",
+                                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                            children: []
+                                        }
+                                    ]
+                                },
                                 {
                                     name: "Ran Rimon",
                                     role: "G4: Entrepreneur",
@@ -128,22 +196,11 @@ const familyData = {
                     children: []
                 },
                 {
-                    name: "Yael Givon",
+                    name: "Yael Givon Rimon",
                     role: "G4: Creative Director",
                     image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                    partner: {
-                        name: "Gil Rimon",
-                        role: "Co-founder Stevie",
-                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y"
-                    },
-                    children: [
-                        {
-                            name: "Omer Rimon",
-                            role: "G5: The Union (Age 13.5)",
-                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                            children: []
-                        }
-                    ]
+                    type: "reference",
+                    children: []
                 },
                 {
                     name: "Daphna Givon",
@@ -254,18 +311,25 @@ function createTreeElement(member) {
     const nodeContainer = document.createElement('div');
     nodeContainer.className = 'node-container';
 
-    // 1. Main Member Card
+    // 1. Determine card order (Spouse Left or Blood Relative Left)
     const mainCard = createCard(member);
-    nodeContainer.appendChild(mainCard);
 
-    // 2. Connector & Partner Card (if exists)
     if (member.partner) {
+        const partnerCard = createCard(member.partner);
         const connector = document.createElement('div');
         connector.className = 'spouse-connector';
-        nodeContainer.appendChild(connector);
 
-        const partnerCard = createCard(member.partner);
-        nodeContainer.appendChild(partnerCard);
+        if (member.partnerLeft) {
+            nodeContainer.appendChild(partnerCard);
+            nodeContainer.appendChild(connector);
+            nodeContainer.appendChild(mainCard);
+        } else {
+            nodeContainer.appendChild(mainCard);
+            nodeContainer.appendChild(connector);
+            nodeContainer.appendChild(partnerCard);
+        }
+    } else {
+        nodeContainer.appendChild(mainCard);
     }
 
     li.appendChild(nodeContainer);
