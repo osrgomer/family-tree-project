@@ -122,7 +122,8 @@ const familyData = {
                                     image: "",
                                     partner: {
                                         name: "Talma Rimon",
-                                        role: "G3: Matriarch | Bank of Israel",
+                                        role: "G3: Bank of Israel",
+                                        description: "Part of the G3: Matriarch | Bank of Israel lineage and the core of the Rimon-Givon story.",
                                         image: ""
                                     },
                                     partnerLeft: false, // Ephraim on the left, Talma on the right
@@ -203,31 +204,105 @@ const familyData = {
                             name: "Dr. Assaf Givon",
                             role: "G4: Orthopedic Surgeon",
                             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
-                            children: []
+                            partner: {
+                                name: "Ruth Givon",
+                                role: "Partner",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Ivry Givon",
+                                    role: "G5: Son (Age 9-10)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Lily Givon",
+                                    role: "G5: Daughter (Age 6-7)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             name: "Daniella Givon",
                             role: "G4: CEO, Unik",
                             image: "https://media.licdn.com/dms/image/v2/D4D03AQGLpB26rU7Qeg/profile-displayphoto-scale_400_400/B4DZgDBqt5HwAg-/0/1752397427174?e=2147483647&v=beta&t=c85erwnZ5g9A9yFGxxQ4bBx7fiwZ05MRLpOb4uy2Gss",
-                            children: []
+                            partner: {
+                                name: "Nissim Douek",
+                                role: "Partner",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Nave Midbar Tapuhi",
+                                    role: "G5: Son (Age 21)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Soof Tapuhi",
+                                    role: "G5: Child (Age 18)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         },
-                        {
-                            name: "Yael Givon Rimon",
-                            role: "G4: Creative Director (Married to Gil Rimon)",
-                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                            children: []
-                        },
+
                         {
                             name: "Daphna Givon",
                             role: "G4: Botanical Expert",
                             image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4NlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
-                            children: []
+                            partner: {
+                                name: "Arturo Whitelegg",
+                                role: "Partner",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Lian Givon Whitelegg",
+                                    role: "G5: Son (Age 15)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Alma Givon Whitelegg",
+                                    role: "G5: Daughter (Age 13.5)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Yanai Givon Whitelegg",
+                                    role: "G5: Son (Age 9-10)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Ilay Givon Whitelegg",
+                                    role: "G5: Son (Age 5)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             name: "Ronnie Heller",
                             role: "G4: Choreographer",
                             image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
-                            children: []
+                            children: [
+                                {
+                                    name: "Amir Heller",
+                                    role: "G5: Son (Age 21)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "David Heller",
+                                    role: "G5: Son (Age 15-16)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         },
                         {
                             name: "DUNICA",
