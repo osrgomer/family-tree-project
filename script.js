@@ -7,11 +7,11 @@ const familyData = {
     role: "United Family",
     children: [
         {
-            name: "Ephraim Rimon",
+            name: "Efraim Eliezer Rimon (Granat)",
             role: "G1: Founder & Poet",
             image: "",
             partner: {
-                name: "Esther-Hava Rimon",
+                name: "Esther Hava Rimon (Granat)",
                 role: "G1: Businesswoman",
                 image: ""
             },
@@ -53,7 +53,7 @@ const familyData = {
                     children: [
                         {
                             name: "Hava Esther Cohen (Rimon)",
-                            role: "G3: Sibling (1928-2002)",
+                            role: "G3: Sibling (1928 - 2002)",
                             image: "",
                             partner: {
                                 name: "Benjamin Cohen",
@@ -119,22 +119,9 @@ const familyData = {
                             children: [
                                 {
                                     name: "Gil Rimon",
-                                    role: "G4: Entrepreneur & Branding",
+                                    role: "G4: Entrepreneur (Partnered with Yael Givon)",
                                     image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                    partner: {
-                                        name: "Yael Givon",
-                                        role: "G4: Creative Director",
-                                        image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180"
-                                    },
-                                    partnerLeft: true, // Gil on the right, Yael on the left
-                                    children: [
-                                        {
-                                            name: "Omer Rimon",
-                                            role: "G5: The Union (Age 13.5)",
-                                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                            children: []
-                                        }
-                                    ]
+                                    children: []
                                 },
                                 {
                                     name: "Ran Rimon",
@@ -199,8 +186,19 @@ const familyData = {
                     name: "Yael Givon Rimon",
                     role: "G4: Creative Director",
                     image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                    type: "reference",
-                    children: []
+                    partner: {
+                        name: "Gil Rimon",
+                        role: "G4: Entrepreneur",
+                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y"
+                    },
+                    children: [
+                        {
+                            name: "Omer Rimon",
+                            role: "G5: The Union (Age 13.5)",
+                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                            children: []
+                        }
+                    ]
                 },
                 {
                     name: "Daphna Givon",
