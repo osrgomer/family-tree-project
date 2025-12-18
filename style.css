@@ -56,9 +56,16 @@ header p {
     padding: 2rem;
     display: flex;
     justify-content: center;
+    gap: 10rem;
+    /* Large gap between different family lineages */
     min-width: max-content;
-    /* Ensure container grows with content */
     margin: 0 auto;
+    align-items: flex-start;
+}
+
+.lineage-section {
+    position: relative;
+    padding: 2rem;
 }
 
 /* Tree CSS Logic */

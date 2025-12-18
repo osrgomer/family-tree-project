@@ -75,7 +75,14 @@ const familyData = {
                                             name: "Yoram Cohen",
                                             role: "G4: Sibling",
                                             image: "",
-                                            children: []
+                                            children: [
+                                                {
+                                                    name: "Michal Cohen",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -156,7 +163,7 @@ const familyData = {
                                         {
                                             name: "Ran Rimon",
                                             role: "G4: Entrepreneur",
-                                            image: "",
+                                            image: "https://pbs.twimg.com/profile_images/1524011464109002752/GLGXYNu9_400x400.jpg",
                                             children: [
                                                 {
                                                     name: "Eyal Rimon",
@@ -231,7 +238,7 @@ const familyData = {
                             partner: {
                                 name: "Nissim Douek",
                                 role: "Partner",
-                                image: ""
+                                image: "https://media.licdn.com/dms/image/v2/C5603AQGg5A2CPy1q4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1603183059658?e=2147483647&v=beta&t=KWSh0XWuCXFYbg1sHPukZOzfEP9AkY-W4LDZMkXZoeA"
                             },
                             children: [
                                 {
@@ -343,7 +350,14 @@ const familyData = {
                                             name: "Yoram Cohen",
                                             role: "G4: Legacy Representative",
                                             image: "",
-                                            children: []
+                                            children: [
+                                                {
+                                                    name: "Michal Cohen",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -479,17 +493,21 @@ function createTreeElement(member) {
 function renderTree() {
     const container = document.getElementById('family-tree');
     container.innerHTML = ''; // Clear previous content
-    const rootUl = document.createElement('ul');
-    rootUl.className = 'tree';
 
-    // Skip the root card, directly render the two main lineages (Rimon and Givon)
+    // Render each main lineage as its own independent tree
     if (familyData.children) {
-        familyData.children.forEach(child => {
-            rootUl.appendChild(createTreeElement(child));
+        familyData.children.forEach(lineage => {
+            const lineageSection = document.createElement('div');
+            lineageSection.className = 'lineage-section';
+
+            const rootUl = document.createElement('ul');
+            rootUl.className = 'tree';
+
+            rootUl.appendChild(createTreeElement(lineage));
+            lineageSection.appendChild(rootUl);
+            container.appendChild(lineageSection);
         });
     }
-
-    container.appendChild(rootUl);
 }
 
 // Initial Render
