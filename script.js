@@ -62,12 +62,42 @@ const familyData = {
                             name: "Ephraim Rimon",
                             role: "G3: Songwriter",
                             image: "",
+                            partner: {
+                                name: "Talma Rimon",
+                                role: "G3: Matriarch",
+                                image: ""
+                            },
                             children: [
                                 {
-                                    name: "Gil Rimon",
-                                    role: "G4: Entrepreneur & Branding",
-                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                    children: []
+                                    name: "Ran Rimon",
+                                    role: "G4: Entrepreneur",
+                                    image: "",
+                                    children: [
+                                        {
+                                            name: "Eyal Rimon",
+                                            role: "G5: Student (Age 14)",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Talia Rimon",
+                                            role: "G5: Student (Age 11-12)",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Gur Rimon",
+                                            role: "G5: Student (Age 6-7)",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Ana Rimon",
+                                            role: "G5: Student (Age 1.5)",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -109,7 +139,7 @@ const familyData = {
                     children: [
                         {
                             name: "Omer Rimon",
-                            role: "G5: The Union",
+                            role: "G5: The Union (Age 13.5)",
                             image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
                             children: []
                         }
