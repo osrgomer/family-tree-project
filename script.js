@@ -10,68 +10,64 @@ const familyData = {
             name: "Ephraim Rimon",
             role: "G1: Founder & Poet",
             image: "",
+            partner: {
+                name: "Esther-Hava Rimon",
+                role: "G1: Businesswoman",
+                image: ""
+            },
             children: [
                 {
-                    name: "Esther-Hava Rimon",
-                    role: "G1: Businesswoman",
+                    name: "Yosef Zvi Rimon",
+                    role: "G2: The Poet of Zion",
                     image: "",
                     children: [
                         {
-                            name: "Yosef Zvi Rimon",
-                            role: "G2: The Poet of Zion",
+                            name: "Rabbi Yosef Zvi Rimon",
+                            role: "G4: Halachic Authority",
                             image: "",
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    name: "Yaakov Rimon",
+                    role: "G2: Author & Social Worker",
+                    image: "",
+                    children: [
+                        {
+                            name: "Miriam (Rimon) Glicksberg",
+                            role: "G3: Educator",
+                            image: "",
+                            partner: {
+                                name: "Israel Glicksberg",
+                                role: "G3: Educator & Scholar",
+                                image: ""
+                            },
                             children: [
                                 {
-                                    name: "Rabbi Yosef Zvi Rimon",
-                                    role: "G4: Halachic Authority",
+                                    name: "Prof. David Glicksberg",
+                                    role: "G4: Law & Tax Expert",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Alex Glicksberg",
+                                    role: "G4: Literary Archivist",
                                     image: "",
                                     children: []
                                 }
                             ]
                         },
                         {
-                            name: "Yaakov Rimon",
-                            role: "G2: Author & Social Worker",
+                            name: "Ephraim Rimon",
+                            role: "G3: Songwriter",
                             image: "",
                             children: [
                                 {
-                                    name: "Miriam (Rimon) Glicksberg",
-                                    role: "G3: Educator",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Israel Glicksberg",
-                                            role: "Husband & Educator",
-                                            image: "",
-                                            children: [
-                                                {
-                                                    name: "Prof. David Glicksberg",
-                                                    role: "G4: Law & Tax Expert",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Alex Glicksberg",
-                                                    role: "G4: Literary Archivist",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Ephraim Rimon",
-                                    role: "G3: Songwriter",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Gil Rimon",
-                                            role: "G4: Entrepreneur & Branding",
-                                            image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                            children: []
-                                        }
-                                    ]
+                                    name: "Gil Rimon",
+                                    role: "G4: Entrepreneur & Branding",
+                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                    children: []
                                 }
                             ]
                         }
@@ -80,9 +76,14 @@ const familyData = {
             ]
         },
         {
-            name: "The Givon Lineage",
-            role: "Roots: Moshe & Deborah Givon",
+            name: "Professor Moshe Givon",
+            role: "G3: Marketing Expert",
             image: "",
+            partner: {
+                name: "Deborah Givon",
+                role: "G3: Early Childhood Expert",
+                image: ""
+            },
             children: [
                 {
                     name: "Dr. Assaf Givon",
@@ -109,7 +110,7 @@ const familyData = {
                         {
                             name: "Omer Rimon",
                             role: "G5: The Union",
-                            image: "https://photos.fife.usercontent.google.com/pw/AP1GczNCe0dj2QNipJDOthUZb-qlUeUui_DUVg2DOaOB79C4srJF4limgtAw=w736-h736-s-no-gm?authuser=0",
+                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
                             children: []
                         }
                     ]
