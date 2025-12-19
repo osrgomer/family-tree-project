@@ -511,4 +511,98 @@ function renderTree() {
 }
 
 // Initial Render
-document.addEventListener('DOMContentLoaded', renderTree);
+document.addEventListener('DOMContentLoaded', () => {
+    renderTree();
+
+    // Initial centering of the tree
+    setTimeout(() => {
+        const viewport = document.querySelector('.tree-viewport');
+        const treeContainer = document.getElementById('family-tree');
+        if (viewport && treeContainer) {
+            viewport.scrollLeft = (treeContainer.scrollWidth - viewport.clientWidth) / 2;
+        }
+    }, 100);
+});
+
+/**
+ * Zoom and Pan Logic
+ * Allows users to zoom in/out and drag to move the tree
+ */
+let zoomLevel = 1;
+
+function initControls() {
+    const treeContainer = document.getElementById('family-tree');
+    const viewport = document.querySelector('.tree-viewport');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const zoomResetBtn = document.getElementById('zoom-reset');
+
+    if (!treeContainer || !viewport) return;
+
+    const updateZoom = () => {
+        treeContainer.style.transform = `scale(${zoomLevel})`;
+    };
+
+    zoomInBtn.addEventListener('click', () => {
+        zoomLevel = Math.min(zoomLevel + 0.1, 2);
+        updateZoom();
+    });
+
+    zoomOutBtn.addEventListener('click', () => {
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.4);
+        updateZoom();
+    });
+
+    zoomResetBtn.addEventListener('click', () => {
+        zoomLevel = 1;
+        updateZoom();
+        viewport.scrollTo({
+            top: 0,
+            left: (treeContainer.scrollWidth - viewport.clientWidth) / 2,
+            behavior: 'smooth'
+        });
+    });
+
+    // Panning (Drag to scroll)
+    let isDown = false;
+    let startX;
+    let startY;
+    let scrollLeft;
+    let scrollTop;
+
+    viewport.addEventListener('mousedown', (e) => {
+        // Don't pan if clicking zoom buttons or cards
+        if (e.target.closest('.zoom-controls') || e.target.closest('.member-card')) return;
+
+        isDown = true;
+        startX = e.pageX - viewport.offsetLeft;
+        startY = e.pageY - viewport.offsetTop;
+        scrollLeft = viewport.scrollLeft;
+        scrollTop = viewport.scrollTop;
+        viewport.style.cursor = 'grabbing';
+    });
+
+    viewport.addEventListener('mouseleave', () => {
+        isDown = false;
+        viewport.style.cursor = 'grab';
+    });
+
+    viewport.addEventListener('mouseup', () => {
+        isDown = false;
+        viewport.style.cursor = 'grab';
+    });
+
+    viewport.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - viewport.offsetLeft;
+        const y = e.pageY - viewport.offsetTop;
+        const walkX = (x - startX) * 1.5;
+        const walkY = (y - startY) * 1.5;
+        viewport.scrollLeft = scrollLeft - walkX;
+        viewport.scrollTop = scrollTop - walkY;
+    });
+}
+
+// Initialize controls after DOM is ready
+document.addEventListener('DOMContentLoaded', initControls);

@@ -21,11 +21,17 @@
         <p>A visual history of our lineage</p>
     </header>
 
-    <main>
+    <main class="tree-viewport">
         <div id="family-tree" class="tree-container">
             <!-- Family tree will be rendered here by JavaScript -->
         </div>
     </main>
+
+    <div class="zoom-controls">
+        <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
+        <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
+        <button class="zoom-btn" id="zoom-reset" title="Reset Zoom">↺</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
