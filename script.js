@@ -381,10 +381,17 @@ const familyData = {
                                     children: []
                                 },
                                 {
-                                    name: "Sister",
+                                    name: "Maya",
                                     role: "G4: Daughter (Deceased)",
                                     image: "",
-                                    children: []
+                                    children: [
+                                        {
+                                            name: "Matan Punk",
+                                            role: "G5: Son",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -757,7 +764,8 @@ function initTabs() {
 
         // Initialize map if not already done
         if (!mapInitialized) {
-            initMap();
+            // Give the DOM a moment to process the display change
+            setTimeout(() => initMap(), 50);
         } else {
             // Re-invalidate size to fix Leaflet rendering in hidden container
             setTimeout(() => map.invalidateSize(), 100);
@@ -783,6 +791,9 @@ function initMap() {
 
     addMarkersToMap(familyData);
     mapInitialized = true;
+
+    // Force a size refresh after markers are added to ensure correct rendering
+    setTimeout(() => map.invalidateSize(), 200);
 }
 
 function addMarkersToMap(member) {
