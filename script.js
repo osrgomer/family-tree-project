@@ -8,11 +8,11 @@ const familyData = {
     children: [
         {
             name: "Josek Hersz Granat",
-            role: "G0: Patriarch (c.1815–1885)",
+            role: "G0: Patriarch (c.1815–1885) (Deceased)",
             image: "",
             partner: {
                 name: "Hana Chaja Granat",
-                role: "G0: Matriarch",
+                role: "G0: Matriarch (Deceased)",
                 image: ""
             },
             coords: [52.9515, 20.0119],
@@ -20,13 +20,13 @@ const familyData = {
             children: [
                 {
                     name: "Efraim Eliezer Rimon (Granat)",
-                    role: "G1: Founder & Poet (1868–1919)",
+                    role: "G1: Founder & Poet (1868–1919) (Deceased)",
                     image: "",
                     coords: [32.0515, 34.7551],
                     locationName: "Jaffa, Israel (Last Residence)",
                     partner: {
                         name: "Esther Hava Rimon (Granat)",
-                        role: "G1: Businesswoman (1864–1918)",
+                        role: "G1: Businesswoman (1864–1918) (Deceased)",
                         coords: [32.0515, 34.7551],
                         locationName: "Jaffa, Israel (Last Residence)",
                         image: ""
@@ -59,7 +59,7 @@ const familyData = {
                         },
                         {
                             name: "Yaakov Haim (Zvi) Rimon (Granat)",
-                            role: "G2: Author & Social Worker (1903–1973)",
+                            role: "G2: Author & Social Worker (1903–1973) (Deceased)",
                             image: "",
                             partner: {
                                 name: "Bracha Rimon (Laznowsky)",
@@ -362,6 +362,31 @@ const familyData = {
                                     children: []
                                 }
                             ]
+                        },
+                        {
+                            name: "Haya Givon",
+                            role: "G3: Sibling (Deceased)",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Gal Ran",
+                                    role: "G4: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Yifat Givon",
+                                    role: "G4: Daughter (Deceased)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Sister",
+                                    role: "G4: Daughter (Deceased)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         }
                     ]
                 },
@@ -445,7 +470,10 @@ const familyData = {
  */
 function createCard(member) {
     const card = document.createElement('div');
-    card.className = member.type === 'venture' ? 'member-card venture-card' : 'member-card';
+    let cardClass = 'member-card';
+    if (member.type === 'venture') cardClass += ' venture-card';
+    if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
+    card.className = cardClass;
 
     const inner = document.createElement('div');
     inner.className = 'card-inner';
@@ -647,19 +675,19 @@ function initControls() {
 
     // Movement Controls
     moveUpBtn.addEventListener('click', () => {
-        viewport.scrollBy({ top: -moveStep, behavior: 'smooth' });
+        viewport.scrollTop -= moveStep;
     });
 
     moveDownBtn.addEventListener('click', () => {
-        viewport.scrollBy({ top: moveStep, behavior: 'smooth' });
+        viewport.scrollTop += moveStep;
     });
 
     moveLeftBtn.addEventListener('click', () => {
-        viewport.scrollBy({ left: -moveStep, behavior: 'smooth' });
+        viewport.scrollLeft -= moveStep;
     });
 
     moveRightBtn.addEventListener('click', () => {
-        viewport.scrollBy({ left: moveStep, behavior: 'smooth' });
+        viewport.scrollLeft += moveStep;
     });
 
     // Panning (Drag to scroll)
