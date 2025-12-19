@@ -5,7 +5,8 @@
     --accent-color: #38bdf8;
     --card-bg: rgba(30, 41, 59, 0.7);
     --card-border: rgba(255, 255, 255, 0.1);
-    --line-color: #475569;
+    --line-color: #64748b;
+    /* Brighter lines for clarity */
 }
 
 * {
@@ -134,17 +135,19 @@ header p {
 }
 
 .sidebar-tabs .tab-btn {
-    padding: 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     background: transparent;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
+    border-radius: 20px;
+    width: auto;
+    /* Fit text */
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
 }
 
 .sidebar-tabs .tab-btn:last-child {
@@ -185,15 +188,13 @@ header p {
 
 /* Tree Container */
 .tree-container {
-    padding: 10rem 40rem;
-    /* Reduced vertical padding slightly for better initial view */
-    /* Increased horizontal padding for panning flexibility */
+    padding: 5rem 10rem;
     display: flex;
-    justify-content: flex-start;
-    /* Crucial: flex-start allows for logical scrolling */
-    gap: 15rem;
+    justify-content: center;
+    /* Center the tree content */
+    gap: 20rem;
     min-width: max-content;
-    margin: 0;
+    margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -224,7 +225,7 @@ header p {
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px;
+    padding: 40px 5px 0 5px;
     transition: all 0.5s;
 }
 
@@ -235,9 +236,11 @@ header p {
     position: absolute;
     top: 0;
     right: 50%;
-    border-top: 2px solid var(--line-color);
+    border-top: 3px solid var(--line-color);
+    /* Thicker lines */
     width: 50%;
-    height: 20px;
+    height: 40px;
+    /* More vertical space */
     transition: all 0.5s;
 }
 
@@ -253,7 +256,8 @@ header p {
 }
 
 .tree li:only-child {
-    padding-top: 0;
+    padding-top: 40px;
+    /* Keep space for the vertical line */
 }
 
 .tree li:first-child::before,
@@ -275,9 +279,9 @@ header p {
     position: absolute;
     top: 0;
     left: 50%;
-    border-left: 2px solid var(--line-color);
+    border-left: 3px solid var(--line-color);
     width: 0;
-    height: 20px;
+    height: 30px;
 }
 
 /* Member Card 3D Flip Styling */
@@ -445,11 +449,19 @@ header p {
 }
 
 .movement-grid {
-    display: grid;
-    grid-template-areas:
-        ". up ."
-        "left . right"
-        ". down .";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.horiz-controls {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.label-group {
+    display: flex;
     gap: 0.5rem;
 }
 

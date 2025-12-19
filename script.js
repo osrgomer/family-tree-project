@@ -457,9 +457,9 @@ const familyData = {
         },
         {
             name: "Shalom Weissbarst",
-            role: "G2: Patriarch (Weissbarst Lineage)",
+            role: "G2: Architect (Deceased)",
             image: "",
-            description: "Father of Talma Rimon and founder of the Weissbarst branch of the family.",
+            description: "A distinguished architect and father of Talma Rimon, bridging the Weissbarst heritage with the family legacy.",
             children: [
                 {
                     name: "Talma Rimon",
@@ -640,14 +640,20 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', centerTree);
 
 function centerTree() {
-    const viewport = document.querySelector('.tree-viewport');
     const treeContainer = document.getElementById('family-tree');
-    if (viewport && treeContainer) {
-        const scrollX = (treeContainer.scrollWidth - viewport.clientWidth) / 2;
-        const scrollY = 0; // Keep at top to see the roots
-        viewport.scrollLeft = scrollX;
-        viewport.scrollTop = scrollY;
-    }
+    const viewport = document.querySelector('.tree-viewport');
+    if (!treeContainer || !viewport) return;
+
+    // Wait for a tiny bit to ensure DOM is ready
+    setTimeout(() => {
+        const viewportWidth = viewport.clientWidth;
+        const viewportHeight = viewport.clientHeight;
+        const treeWidth = treeContainer.scrollWidth * zoomLevel;
+        const treeHeight = treeContainer.scrollHeight * zoomLevel;
+
+        viewport.scrollLeft = (treeWidth - viewportWidth) / 2;
+        viewport.scrollTop = 0; // Start at the patriarchs
+    }, 100);
 }
 
 /**
@@ -698,7 +704,8 @@ function initControls() {
 
     const scrollLoop = () => {
         if (moveDir.x !== 0 || moveDir.y !== 0) {
-            viewport.scrollBy({ left: moveDir.x * 12, top: moveDir.y * 12, behavior: 'auto' });
+            viewport.scrollLeft += moveDir.x * 20; // Increased speed
+            viewport.scrollTop += moveDir.y * 20;
             rafId = requestAnimationFrame(scrollLoop);
         }
     };
@@ -746,10 +753,10 @@ function initControls() {
     });
 
     // Single click for quick jump
-    moveUpBtn.addEventListener('click', () => viewport.scrollBy({ top: -200, behavior: 'smooth' }));
-    moveDownBtn.addEventListener('click', () => viewport.scrollBy({ top: 200, behavior: 'smooth' }));
-    moveLeftBtn.addEventListener('click', () => viewport.scrollBy({ left: -200, behavior: 'smooth' }));
-    moveRightBtn.addEventListener('click', () => viewport.scrollBy({ left: 200, behavior: 'smooth' }));
+    moveUpBtn.addEventListener('click', () => viewport.scrollTop -= 200);
+    moveDownBtn.addEventListener('click', () => viewport.scrollTop += 200);
+    moveLeftBtn.addEventListener('click', () => viewport.scrollLeft -= 200);
+    moveRightBtn.addEventListener('click', () => viewport.scrollLeft += 200);
 
     // Panning (Drag to scroll)
     let isDown = false;

@@ -38,21 +38,25 @@
 
         <div class="zoom-controls">
             <nav class="view-tabs sidebar-tabs">
-                <button class="tab-btn active" id="show-tree" title="Family Tree View">🌳</button>
-                <button class="tab-btn" id="show-map" title="Legacy Map View">🗺️</button>
+                <button class="tab-btn active" id="show-tree" title="Family Tree View">🌳 Family Tree</button>
+                <button class="tab-btn" id="show-map" title="Legacy Map View">🗺️ Legacy Map</button>
             </nav>
 
             <div class="control-group tree-only-controls">
-                <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
-                <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
-                <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
+                <div class="label-group">
+                    <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
+                    <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
+                    <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
+                </div>
             </div>
 
             <div class="control-group movement-grid tree-only-controls">
                 <button class="zoom-btn" id="move-up" title="Move Up">↑</button>
-                <button class="zoom-btn" id="move-left" title="Move Left">←</button>
+                <div class="horiz-controls">
+                    <button class="zoom-btn" id="move-left" title="Move Left">←</button>
+                    <button class="zoom-btn" id="move-right" title="Move Right">→</button>
+                </div>
                 <button class="zoom-btn" id="move-down" title="Move Down">↓</button>
-                <button class="zoom-btn" id="move-right" title="Move Right">→</button>
             </div>
         </div>
     </main>
