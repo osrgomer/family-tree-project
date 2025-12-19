@@ -234,7 +234,7 @@ const familyData = {
                         {
                             name: "Daniella Givon",
                             role: "G4: CEO, Unik",
-                            image: "https://media.licdn.com/dms/image/v2/D4D03AQGLpB26rU7Qeg/profile-displayphoto-scale_400_400/B4DZgDBqt5HwAg-/0/1752397427174?e=2147483647&v=beta&t=c85erwnZ5g9A9yFGxxQ4bBx7fiwZ05MRLpOb4uy2Gss",
+                            image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
                             partner: {
                                 name: "Nissim Douek",
                                 role: "Partner",
