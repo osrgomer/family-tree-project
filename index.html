@@ -21,11 +21,6 @@
     <header>
         <h1>Family Legacy</h1>
         <p>A visual history of our lineage</p>
-
-        <nav class="view-tabs">
-            <button class="tab-btn active" id="show-tree">Family Tree</button>
-            <button class="tab-btn" id="show-map">Legacy Map</button>
-        </nav>
     </header>
 
     <main class="content-wrapper">
@@ -35,26 +30,31 @@
                     <!-- Family tree will be rendered here by JavaScript -->
                 </div>
             </div>
-
-            <div class="zoom-controls">
-                <div class="control-group">
-                    <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
-                    <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
-                    <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
-                </div>
-
-                <div class="control-group movement-grid">
-                    <button class="zoom-btn" id="move-up" title="Move Up">↑</button>
-                    <button class="zoom-btn" id="move-left" title="Move Left">←</button>
-                    <button class="zoom-btn" id="move-down" title="Move Down">↓</button>
-                    <button class="zoom-btn" id="move-right" title="Move Right">→</button>
-                </div>
-            </div>
         </section>
 
         <section id="map-section">
             <div id="map"></div>
         </section>
+
+        <div class="zoom-controls">
+            <nav class="view-tabs sidebar-tabs">
+                <button class="tab-btn active" id="show-tree" title="Family Tree View">🌳</button>
+                <button class="tab-btn" id="show-map" title="Legacy Map View">🗺️</button>
+            </nav>
+
+            <div class="control-group tree-only-controls">
+                <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
+                <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
+                <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
+            </div>
+
+            <div class="control-group movement-grid tree-only-controls">
+                <button class="zoom-btn" id="move-up" title="Move Up">↑</button>
+                <button class="zoom-btn" id="move-left" title="Move Left">←</button>
+                <button class="zoom-btn" id="move-down" title="Move Down">↓</button>
+                <button class="zoom-btn" id="move-right" title="Move Right">→</button>
+            </div>
+        </div>
     </main>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

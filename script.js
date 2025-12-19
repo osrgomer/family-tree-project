@@ -212,7 +212,7 @@ const familyData = {
                             name: "Thomas (Tsvi) Givon",
                             role: "G3: Distinguished Professor (Linguistics)",
                             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tgivon.jpg/220px-Tgivon.jpg",
-                            description: "Born June 22, 1936. Known by the nickname 'Talmy', he is an world-renowned Israeli linguist, Distinguished Professor Emeritus at the University of Oregon, and a founder of West Coast Functionalism. Currently resides on the Southern Ute Indian Reservation in Colorado.",
+                            description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus. Currently resides in the USA.",
                             children: []
                         },
                         {
@@ -278,10 +278,14 @@ const familyData = {
                                     name: "Daphna Givon",
                                     role: "G4: Botanical Expert",
                                     image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4NlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
+                                    coords: [37.3192, -8.8033],
+                                    locationName: "Aljezur, Portugal",
                                     partner: {
                                         name: "Arturo Whitelegg",
                                         role: "Partner",
-                                        image: ""
+                                        image: "",
+                                        coords: [37.3192, -8.8033],
+                                        locationName: "Aljezur, Portugal"
                                     },
                                     children: [
                                         {
@@ -314,22 +318,30 @@ const familyData = {
                                     name: "Yael Givon",
                                     role: "G4: Creative Director",
                                     image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
+                                    coords: [37.3192, -8.8033],
+                                    locationName: "Aljezur, Portugal",
                                     partner: {
                                         name: "Gil Rimon",
                                         role: "G4: Entrepreneur & Branding",
-                                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y"
+                                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                        coords: [37.3192, -8.8033],
+                                        locationName: "Aljezur, Portugal"
                                     },
                                     children: [
                                         {
                                             name: "Omer Rimon",
                                             role: "G5: The Union (Age 13.5)",
                                             image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                            coords: [37.3192, -8.8033],
+                                            locationName: "Aljezur, Portugal",
                                             children: []
                                         },
                                         {
                                             name: "Nomi Rimon",
                                             role: "G5: Student",
                                             image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                            coords: [37.3192, -8.8033],
+                                            locationName: "Aljezur, Portugal",
                                             children: []
                                         }
                                     ]
@@ -364,7 +376,7 @@ const familyData = {
                             ]
                         },
                         {
-                            name: "Haya Givon",
+                            name: "Haya Ran",
                             role: "G3: Sibling (Deceased)",
                             image: "",
                             children: [
@@ -375,13 +387,13 @@ const familyData = {
                                     children: []
                                 },
                                 {
-                                    name: "Yifat Givon",
+                                    name: "Yifat Ran",
                                     role: "G4: Daughter (Deceased)",
                                     image: "",
                                     children: []
                                 },
                                 {
-                                    name: "Maya",
+                                    name: "Maya Ran",
                                     role: "G4: Daughter (Deceased)",
                                     image: "",
                                     children: [
@@ -680,22 +692,64 @@ function initControls() {
         centerTree();
     });
 
-    // Movement Controls
-    moveUpBtn.addEventListener('click', () => {
-        viewport.scrollTop -= moveStep;
+    // Movement Controls - Smooth continuous scroll mechanism
+    let rafId = null;
+    let moveDir = { x: 0, y: 0 };
+
+    const scrollLoop = () => {
+        if (moveDir.x !== 0 || moveDir.y !== 0) {
+            viewport.scrollBy({ left: moveDir.x * 12, top: moveDir.y * 12, behavior: 'auto' });
+            rafId = requestAnimationFrame(scrollLoop);
+        }
+    };
+
+    const handleMoveStart = (btn, dx, dy) => {
+        btn.classList.add('holding');
+        moveDir = { x: dx, y: dy };
+        if (!rafId) scrollLoop();
+    };
+
+    const handleMoveStop = (btn) => {
+        btn.classList.remove('holding');
+        moveDir = { x: 0, y: 0 };
+        if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+        }
+    };
+
+    // Up
+    moveUpBtn.addEventListener('mousedown', () => handleMoveStart(moveUpBtn, 0, -1));
+    moveUpBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveUpBtn, 0, -1); }, { passive: false });
+
+    // Down
+    moveDownBtn.addEventListener('mousedown', () => handleMoveStart(moveDownBtn, 0, 1));
+    moveDownBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveDownBtn, 0, 1); }, { passive: false });
+
+    // Left
+    moveLeftBtn.addEventListener('mousedown', () => handleMoveStart(moveLeftBtn, -1, 0));
+    moveLeftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveLeftBtn, -1, 0); }, { passive: false });
+
+    // Right
+    moveRightBtn.addEventListener('mousedown', () => handleMoveStart(moveRightBtn, 1, 0));
+    moveRightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveRightBtn, 1, 0); }, { passive: false });
+
+    // Global stop listeners
+    const stopAll = () => {
+        [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(handleMoveStop);
+    };
+
+    window.addEventListener('mouseup', stopAll);
+    window.addEventListener('touchend', stopAll);
+    [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(btn => {
+        btn.addEventListener('mouseleave', () => handleMoveStop(btn));
     });
 
-    moveDownBtn.addEventListener('click', () => {
-        viewport.scrollTop += moveStep;
-    });
-
-    moveLeftBtn.addEventListener('click', () => {
-        viewport.scrollLeft -= moveStep;
-    });
-
-    moveRightBtn.addEventListener('click', () => {
-        viewport.scrollLeft += moveStep;
-    });
+    // Single click for quick jump
+    moveUpBtn.addEventListener('click', () => viewport.scrollBy({ top: -200, behavior: 'smooth' }));
+    moveDownBtn.addEventListener('click', () => viewport.scrollBy({ top: 200, behavior: 'smooth' }));
+    moveLeftBtn.addEventListener('click', () => viewport.scrollBy({ left: -200, behavior: 'smooth' }));
+    moveRightBtn.addEventListener('click', () => viewport.scrollBy({ left: 200, behavior: 'smooth' }));
 
     // Panning (Drag to scroll)
     let isDown = false;
@@ -754,6 +808,9 @@ function initTabs() {
         showMapBtn.classList.remove('active');
         treeSection.classList.add('active');
         mapSection.classList.remove('active');
+
+        // Show tree-only controls
+        document.querySelectorAll('.tree-only-controls').forEach(el => el.style.display = 'flex');
     });
 
     showMapBtn.addEventListener('click', () => {
@@ -761,6 +818,9 @@ function initTabs() {
         showTreeBtn.classList.remove('active');
         mapSection.classList.add('active');
         treeSection.classList.remove('active');
+
+        // Hide tree-only controls
+        document.querySelectorAll('.tree-only-controls').forEach(el => el.style.display = 'none');
 
         // Initialize map if not already done
         if (!mapInitialized) {
