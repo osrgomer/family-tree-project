@@ -25,6 +25,26 @@ body {
     /* Use viewport for scrolling */
 }
 
+.content-wrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: none;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+section.active {
+    display: flex;
+    flex-direction: column;
+}
+
 .tree-viewport {
     flex: 1;
     overflow: auto;
@@ -63,6 +83,67 @@ header p {
     font-size: 1.1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* Tab Navigation */
+.view-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tab-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Map Styling */
+#map {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+}
+
+/* Leaflet Dark Theme Overrides */
+.leaflet-container {
+    background-color: var(--bg-color) !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(10px);
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border);
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border) !important;
 }
 
 /* Tree Container */
@@ -291,15 +372,46 @@ header p {
     color: var(--text-secondary);
 }
 
-/* Zoom Controls Styling */
 .zoom-controls {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.5rem;
     z-index: 1000;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.movement-grid {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 0.5rem;
+}
+
+#move-up {
+    grid-area: up;
+}
+
+#move-left {
+    grid-area: left;
+}
+
+#move-right {
+    grid-area: right;
+}
+
+#move-down {
+    grid-area: down;
 }
 
 .zoom-btn {

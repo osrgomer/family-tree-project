@@ -15,14 +15,20 @@ const familyData = {
                 role: "G0: Matriarch",
                 image: ""
             },
+            coords: [52.9515, 20.0119],
+            locationName: "Biezun, Poland (Ancestral Home)",
             children: [
                 {
                     name: "Efraim Eliezer Rimon (Granat)",
                     role: "G1: Founder & Poet (1868–1919)",
                     image: "",
+                    coords: [32.0515, 34.7551],
+                    locationName: "Jaffa, Israel (Last Residence)",
                     partner: {
                         name: "Esther Hava Rimon (Granat)",
                         role: "G1: Businesswoman (1864–1918)",
+                        coords: [32.0515, 34.7551],
+                        locationName: "Jaffa, Israel (Last Residence)",
                         image: ""
                     },
                     children: [
@@ -510,9 +516,11 @@ function renderTree() {
     }
 }
 
-// Initial Render
+// Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
     renderTree();
+    initControls();
+    initTabs();
 
     // Initial centering of the tree
     setTimeout(() => {
@@ -537,11 +545,18 @@ function initControls() {
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
 
+    const moveUpBtn = document.getElementById('move-up');
+    const moveDownBtn = document.getElementById('move-down');
+    const moveLeftBtn = document.getElementById('move-left');
+    const moveRightBtn = document.getElementById('move-right');
+
     if (!treeContainer || !viewport) return;
 
     const updateZoom = () => {
         treeContainer.style.transform = `scale(${zoomLevel})`;
     };
+
+    const moveStep = 150; // Pixels to move per click
 
     zoomInBtn.addEventListener('click', () => {
         zoomLevel = Math.min(zoomLevel + 0.1, 2);
@@ -561,6 +576,23 @@ function initControls() {
             left: (treeContainer.scrollWidth - viewport.clientWidth) / 2,
             behavior: 'smooth'
         });
+    });
+
+    // Movement Controls
+    moveUpBtn.addEventListener('click', () => {
+        viewport.scrollBy({ top: -moveStep, behavior: 'smooth' });
+    });
+
+    moveDownBtn.addEventListener('click', () => {
+        viewport.scrollBy({ top: moveStep, behavior: 'smooth' });
+    });
+
+    moveLeftBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: -moveStep, behavior: 'smooth' });
+    });
+
+    moveRightBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: moveStep, behavior: 'smooth' });
     });
 
     // Panning (Drag to scroll)
@@ -604,5 +636,72 @@ function initControls() {
     });
 }
 
-// Initialize controls after DOM is ready
-document.addEventListener('DOMContentLoaded', initControls);
+
+
+/**
+ * Tab Navigation Logic
+ */
+function initTabs() {
+    const showTreeBtn = document.getElementById('show-tree');
+    const showMapBtn = document.getElementById('show-map');
+    const treeSection = document.getElementById('tree-section');
+    const mapSection = document.getElementById('map-section');
+
+    showTreeBtn.addEventListener('click', () => {
+        showTreeBtn.classList.add('active');
+        showMapBtn.classList.remove('active');
+        treeSection.classList.add('active');
+        mapSection.classList.remove('active');
+    });
+
+    showMapBtn.addEventListener('click', () => {
+        showMapBtn.classList.add('active');
+        showTreeBtn.classList.remove('active');
+        mapSection.classList.add('active');
+        treeSection.classList.remove('active');
+
+        // Initialize map if not already done
+        if (!mapInitialized) {
+            initMap();
+        } else {
+            // Re-invalidate size to fix Leaflet rendering in hidden container
+            setTimeout(() => map.invalidateSize(), 100);
+        }
+    });
+}
+
+/**
+ * Map Logic
+ */
+let map;
+let mapInitialized = false;
+
+function initMap() {
+    map = L.map('map').setView([32.0, 34.8], 3); // Centered between Europe and Israel
+
+    // Use a dark, premium map tile set
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    }).addTo(map);
+
+    addMarkersToMap(familyData);
+    mapInitialized = true;
+}
+
+function addMarkersToMap(member) {
+    if (member.coords) {
+        L.marker(member.coords).addTo(map)
+            .bindPopup(`<strong>${member.name}</strong><br>${member.role}<br><em>${member.locationName || 'Known Location'}</em>`);
+    }
+
+    if (member.partner && member.partner.coords) {
+        L.marker(member.partner.coords).addTo(map)
+            .bindPopup(`<strong>${member.partner.name}</strong><br>${member.partner.role}<br><em>${member.partner.locationName || 'Known Location'}</em>`);
+    }
+
+    if (member.children) {
+        member.children.forEach(child => addMarkersToMap(child));
+    }
+}

@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,20 +21,44 @@
     <header>
         <h1>Family Legacy</h1>
         <p>A visual history of our lineage</p>
+
+        <nav class="view-tabs">
+            <button class="tab-btn active" id="show-tree">Family Tree</button>
+            <button class="tab-btn" id="show-map">Legacy Map</button>
+        </nav>
     </header>
 
-    <main class="tree-viewport">
-        <div id="family-tree" class="tree-container">
-            <!-- Family tree will be rendered here by JavaScript -->
-        </div>
+    <main class="content-wrapper">
+        <section id="tree-section" class="active">
+            <div class="tree-viewport">
+                <div id="family-tree" class="tree-container">
+                    <!-- Family tree will be rendered here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="zoom-controls">
+                <div class="control-group">
+                    <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
+                    <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
+                    <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
+                </div>
+
+                <div class="control-group movement-grid">
+                    <button class="zoom-btn" id="move-up" title="Move Up">↑</button>
+                    <button class="zoom-btn" id="move-left" title="Move Left">←</button>
+                    <button class="zoom-btn" id="move-down" title="Move Down">↓</button>
+                    <button class="zoom-btn" id="move-right" title="Move Right">→</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-section">
+            <div id="map"></div>
+        </section>
     </main>
 
-    <div class="zoom-controls">
-        <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
-        <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
-        <button class="zoom-btn" id="zoom-reset" title="Reset Zoom">↺</button>
-    </div>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 
