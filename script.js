@@ -155,7 +155,7 @@ const familyData = {
                                                 {
                                                     name: "Nomi Rimon",
                                                     role: "G5: Student",
-                                                    image: "",
+                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
                                                     children: []
                                                 }
                                             ]
