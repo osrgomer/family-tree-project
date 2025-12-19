@@ -211,7 +211,7 @@ const familyData = {
                         {
                             name: "Thomas (Tsvi) Givon",
                             role: "G3: Distinguished Professor (Linguistics)",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tgivon.jpg/220px-Tgivon.jpg",
+                            image: "",
                             description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus. Currently resides in the USA.",
                             children: []
                         },
