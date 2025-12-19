@@ -148,14 +148,14 @@ header p {
 
 /* Tree Container */
 .tree-container {
-    padding: 15rem;
-    /* Large padding to allow for panning and zooming */
+    padding: 20rem 40rem;
+    /* Increased horizontal padding for panning flexibility */
     display: flex;
-    justify-content: center;
-    gap: 10rem;
-    /* Large gap between different family lineages */
+    justify-content: flex-start;
+    /* Crucial: flex-start allows for logical scrolling */
+    gap: 15rem;
     min-width: max-content;
-    margin: 0 auto;
+    margin: 0;
     align-items: flex-start;
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
