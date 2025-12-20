@@ -186,7 +186,7 @@ const familyData = {
                                                                     name: "Omer Rimon",
                                                                     role: "G5: The Union (Age 13.5)",
                                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                                                    coords: [37.3192, -8.8033],
+                                                                    coords: [37.330462, -8.731486],
                                                                     locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 },
@@ -194,7 +194,7 @@ const familyData = {
                                                                     name: "Nomi Rimon",
                                                                     role: "G5: Student",
                                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                                                    coords: [37.3192, -8.8033],
+                                                                    coords: [37.330462, -8.731486],
                                                                     locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 }
@@ -290,15 +290,15 @@ const familyData = {
                     name: "Professor Moshe Givon",
                     role: "G3: Marketing Expert",
                     image: "",
-                    coords: [32.0853, 34.7818],
-                    locationName: "Tel Aviv, Israel",
+                    coords: [31.8167, 34.7833],
+                    locationName: "Meishar, near Gedera, Israel",
                     partner: {
                         name: "Deborah Miriam Givon (Gurfinkel)",
                         role: "G3: Early Childhood Expert",
-                        description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel.",
+                        description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel. Lives happily with Moshe in Meishar.",
                         image: "",
-                        coords: [32.0853, 34.7818],
-                        locationName: "Tel Aviv, Israel"
+                        coords: [31.8167, 34.7833],
+                        locationName: "Meishar, near Gedera, Israel"
                     },
                     children: [
                         {
@@ -397,13 +397,13 @@ const familyData = {
                             name: "Yael Givon",
                             role: "G4: Creative Director",
                             image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                            coords: [37.3192, -8.8033],
+                            coords: [37.330462, -8.731486],
                             locationName: "Aljezur, Portugal",
                             partner: {
                                 name: "Gil Rimon",
                                 role: "G4: Entrepreneur & Branding",
                                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                coords: [37.3192, -8.8033],
+                                coords: [37.330462, -8.731486],
                                 locationName: "Aljezur, Portugal"
                             },
                             children: [
@@ -411,7 +411,7 @@ const familyData = {
                                     name: "Omer Rimon",
                                     role: "G5: The Union (Age 13.5)",
                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                    coords: [37.3192, -8.8033],
+                                    coords: [37.330462, -8.731486],
                                     locationName: "Aljezur, Portugal",
                                     children: []
                                 },
@@ -419,7 +419,7 @@ const familyData = {
                                     name: "Nomi Rimon",
                                     role: "G5: Student",
                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                    coords: [37.3192, -8.8033],
+                                    coords: [37.330462, -8.731486],
                                     locationName: "Aljezur, Portugal",
                                     children: []
                                 }
