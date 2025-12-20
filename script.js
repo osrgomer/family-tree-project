@@ -186,16 +186,12 @@ const familyData = {
                                                                     name: "Omer Rimon",
                                                                     role: "G5: The Union (Age 13.5)",
                                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                                                    coords: [37.330462, -8.731486],
-                                                                    locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 },
                                                                 {
                                                                     name: "Nomi Rimon",
                                                                     role: "G5: Student",
                                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                                                    coords: [37.330462, -8.731486],
-                                                                    locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 }
                                                             ]
@@ -357,13 +353,13 @@ const familyData = {
                             name: "Daphna Givon",
                             role: "G4: Botanical Expert",
                             image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/94432436_10222579086852096_7837351610438123520_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9aQLxujBgTEQ7kNvwHwhXiR&_nc_oc=AdkrUeAUt_cU2GunGtCxAzBS61nTRlVVV-koUzJTDuMJUbOvUb98w2YdURzHLfgcRwU&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=c2gH7rGbsMLbYTB7DTjWmg&oh=00_AfleKGkY55UOGMBsuJe-hPGTZE42xTlYyauBuDvnEHLLaQ&oe=696E63ED",
-                            coords: [37.3192, -8.8033],
+                            coords: [37.329767, -8.733916],
                             locationName: "Aljezur, Portugal",
                             partner: {
                                 name: "Arturo Whitelegg",
                                 role: "Partner",
                                 image: "",
-                                coords: [37.3192, -8.8033],
+                                coords: [37.329767, -8.733916],
                                 locationName: "Aljezur, Portugal"
                             },
                             children: [
@@ -371,24 +367,32 @@ const familyData = {
                                     name: "Lian Givon Whitelegg",
                                     role: "G5: Son (Age 15)",
                                     image: "",
+                                    coords: [37.329767, -8.733916],
+                                    locationName: "Aljezur, Portugal",
                                     children: []
                                 },
                                 {
                                     name: "Alma Givon Whitelegg",
                                     role: "G5: Daughter (Age 13.5)",
                                     image: "",
+                                    coords: [37.329767, -8.733916],
+                                    locationName: "Aljezur, Portugal",
                                     children: []
                                 },
                                 {
                                     name: "Yanai Givon Whitelegg",
                                     role: "G5: Son (Age 9-10)",
                                     image: "",
+                                    coords: [37.329767, -8.733916],
+                                    locationName: "Aljezur, Portugal",
                                     children: []
                                 },
                                 {
                                     name: "Ilay Givon Whitelegg",
                                     role: "G5: Son (Age 5)",
                                     image: "",
+                                    coords: [37.329767, -8.733916],
+                                    locationName: "Aljezur, Portugal",
                                     children: []
                                 }
                             ]
