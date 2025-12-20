@@ -978,6 +978,7 @@ function initControls() {
             }
 
             const matches = [];
+            const seen = new Set();
             const cards = document.querySelectorAll('.member-card');
 
             cards.forEach(card => {
@@ -988,14 +989,19 @@ function initControls() {
                     const name = nameEl.textContent;
                     const role = roleEl ? roleEl.textContent : 'Family Member';
                     
-                    // Find lineage
-                    const section = card.closest('.lineage-section');
-                    let lineage = 'Family';
-                    if (section && section.dataset.lineageName) {
-                        lineage = section.dataset.lineageName;
+                    // Use name as unique key to prevent duplicates
+                    if (!seen.has(name)) {
+                        seen.add(name);
+                        
+                        // Find lineage
+                        const section = card.closest('.lineage-section');
+                        let lineage = 'Family';
+                        if (section && section.dataset.lineageName) {
+                            lineage = section.dataset.lineageName;
+                        }
+                        
+                        matches.push({ name, role, lineage, element: card });
                     }
-                    
-                    matches.push({ name, role, lineage, element: card });
                 }
             });
 

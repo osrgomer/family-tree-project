@@ -194,9 +194,8 @@ header p {
     justify-content: center;
     gap: 20rem;
     min-width: max-content;
-    min-height: 500vh;
-    flex-shrink: 0;
-    /* Prevent flex from shrinking this */
+    min-height: 300vh;
+    /* 3x viewport height to ensure vertical scrolling */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
