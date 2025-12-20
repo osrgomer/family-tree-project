@@ -125,6 +125,16 @@
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Prevent text overflow */
+}
+
+.form-group select {
+    cursor: pointer;
 }
 
 .form-group input:focus,
