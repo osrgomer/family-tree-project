@@ -1201,79 +1201,47 @@ function initControls() {
         }
     });
 
-    // --- Pointer Panning with Momentum (supports touch and mouse) ---
-    let isDown = false;
-    let lastX = 0, lastY = 0;
-    let velX = 0, velY = 0;
-    const momentumFriction = 0.92;
+    // --- Simple Click & Drag Panning ---
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let startScrollLeft = 0, startScrollTop = 0;
 
     const shouldIgnoreDrag = (el) => {
         return el && el.closest && !!el.closest('.lineage-navigator, .search-wrapper, button, a, input, select, textarea');
     };
 
-    const applyMomentum = () => {
-        if (!isDown && (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05)) {
-            viewport.scrollLeft -= velX;
-            viewport.scrollTop -= velY;
-            velX *= momentumFriction;
-            velY *= momentumFriction;
-            requestAnimationFrame(applyMomentum);
-        }
-    };
-
-    const onPointerDown = (e) => {
-        if (shouldIgnoreDrag(e.target)) return;
-        isDown = true;
-        try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
-        lastX = e.clientX;
-        lastY = e.clientY;
-        velX = 0; velY = 0;
+    viewport.addEventListener('mousedown', (e) => {
+        if (e.button !== 0 || shouldIgnoreDrag(e.target)) return;
+        
+        isDragging = true;
+        startX = e.pageX;
+        startY = e.pageY;
+        startScrollLeft = viewport.scrollLeft;
+        startScrollTop = viewport.scrollTop;
+        
         viewport.style.cursor = 'grabbing';
         document.body.style.userSelect = 'none';
-        viewport.style.scrollBehavior = 'auto';
-    };
+        e.preventDefault();
+    });
 
-    const onPointerMove = (e) => {
-        if (!isDown) return;
-        const dx = (e.clientX - lastX) / zoomLevel;
-        const dy = (e.clientY - lastY) / zoomLevel;
-        viewport.scrollLeft -= dx;
-        viewport.scrollTop -= dy;
-        velX = dx;
-        velY = dy;
-        lastX = e.clientX;
-        lastY = e.clientY;
-    };
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        
+        const deltaX = e.pageX - startX;
+        const deltaY = e.pageY - startY;
+        
+        viewport.scrollLeft = startScrollLeft - deltaX;
+        viewport.scrollTop = startScrollTop - deltaY;
+    });
 
-    const onPointerUp = (e) => {
-        if (!isDown) return;
-        isDown = false;
-        try { viewport.releasePointerCapture(e.pointerId); } catch (err) {}
+    document.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
         viewport.style.cursor = 'grab';
         document.body.style.userSelect = '';
-        setTimeout(() => { viewport.style.scrollBehavior = 'smooth'; }, 10);
-        requestAnimationFrame(applyMomentum);
-    };
+    });
 
-    viewport.addEventListener('pointerdown', onPointerDown);
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('pointerup', onPointerUp);
     viewport.addEventListener('dragstart', (e) => e.preventDefault());
-
-    // Fallback for environments that don't fully support Pointer events: attach mouse handlers
-    viewport.addEventListener('mousedown', (e) => {
-        // only handle left button
-        if (e.button !== 0) return;
-        onPointerDown({ pointerId: 'mouse', clientX: e.clientX, clientY: e.clientY, target: e.target });
-    });
-
-    window.addEventListener('mousemove', (e) => {
-        onPointerMove({ clientX: e.clientX, clientY: e.clientY });
-    });
-
-    window.addEventListener('mouseup', (e) => {
-        onPointerUp({ pointerId: 'mouse', clientX: e.clientX, clientY: e.clientY });
-    });
 }
 
 /**
