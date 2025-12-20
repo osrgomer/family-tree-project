@@ -913,22 +913,26 @@ function initControls() {
         element.classList.add('spotlight');
 
         // Robust centering logic that works at ANY zoom level
+        // Robust centering logic that handles zoom levels perfectly
         const viewportRect = viewport.getBoundingClientRect();
         const elementRect = element.getBoundingClientRect();
 
-        // Calculate the center points
+        // Screen-space center of the card
         const elementCenterX = elementRect.left + (elementRect.width / 2);
         const elementCenterY = elementRect.top + (elementRect.height / 2);
+
+        // Screen-space center of the viewport
         const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
         const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
 
-        // Adjust delta for current zoom level (screen pixels to content pixels)
-        const deltaX = (elementCenterX - viewportCenterX) / zoomLevel;
-        const deltaY = (elementCenterY - viewportCenterY) / zoomLevel;
+        // Calculate the distance in screen pixels
+        const screenDeltaX = elementCenterX - viewportCenterX;
+        const screenDeltaY = elementCenterY - viewportCenterY;
 
+        // Convert screen pixels to scroll units by dividing by current zoom
         viewport.scrollBy({
-            left: deltaX,
-            top: deltaY,
+            left: screenDeltaX / zoomLevel,
+            top: screenDeltaY / zoomLevel,
             behavior: 'smooth'
         });
 
@@ -1120,6 +1124,7 @@ function initControls() {
 
         viewport.style.cursor = 'grabbing';
         document.body.style.userSelect = 'none'; // Prevent text selection
+        viewport.style.scrollBehavior = 'auto'; // Disable smooth scroll for instant response during drag
     });
 
     window.addEventListener('mouseup', () => {
@@ -1127,15 +1132,17 @@ function initControls() {
         isDown = false;
         viewport.style.cursor = 'grab';
         document.body.style.userSelect = '';
+
+        // Restore smooth behavior after a tiny delay
+        setTimeout(() => {
+            viewport.style.scrollBehavior = 'smooth';
+        }, 10);
+
         applyMomentum();
     });
 
-    viewport.addEventListener('mousemove', (e) => {
+    window.addEventListener('mousemove', (e) => {
         if (!isDown) return;
-        e.preventDefault();
-
-        const x = e.pageX - viewport.offsetLeft;
-        const y = e.pageY - viewport.offsetTop;
 
         // Direct scroll calculation for intuitive 1:1 movement
         const walkX = (e.pageX - lastX);
@@ -1218,12 +1225,19 @@ function initMap() {
 
 function addMarkersToMap(member) {
     if (member.coords) {
-        L.marker(member.coords).addTo(map)
+        // Add a tiny random jitter to prevent perfect overlap
+        const lat = member.coords[0] + (Math.random() - 0.5) * 0.005;
+        const lng = member.coords[1] + (Math.random() - 0.5) * 0.005;
+
+        L.marker([lat, lng]).addTo(map)
             .bindPopup(`<strong>${member.name}</strong><br>${member.role}<br><em>${member.locationName || 'Known Location'}</em>`);
     }
 
     if (member.partner && member.partner.coords) {
-        L.marker(member.partner.coords).addTo(map)
+        const lat = member.partner.coords[0] + (Math.random() - 0.5) * 0.005;
+        const lng = member.partner.coords[1] + (Math.random() - 0.5) * 0.005;
+
+        L.marker([lat, lng]).addTo(map)
             .bindPopup(`<strong>${member.partner.name}</strong><br>${member.partner.role}<br><em>${member.partner.locationName || 'Known Location'}</em>`);
     }
 
