@@ -969,7 +969,7 @@ function initControls() {
     };
 
     // --- Search Logic ---
-    if (searchInput) {
+    if (searchInput && searchResults) {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             searchResults.innerHTML = '';
@@ -981,47 +981,81 @@ function initControls() {
 
             const matches = [];
             const seen = new Set();
-            const cards = document.querySelectorAll('.member-card');
-
-            cards.forEach(card => {
-                const name = card.querySelector('.member-name').textContent;
-                const role = card.querySelector('.member-role').textContent;
-                const searchKey = `${name.toLowerCase()}|${role.toLowerCase()}`;
-
-                if (name.toLowerCase().includes(query) && !seen.has(searchKey)) {
-                    matches.push({ name, element: card });
-                    seen.add(searchKey);
+            
+            // Search through family data recursively
+            const searchInData = (member, lineageName = 'Family') => {
+                if (member.name && member.name.toLowerCase().includes(query)) {
+                    const searchKey = member.name.toLowerCase();
+                    if (!seen.has(searchKey)) {
+                        matches.push({ 
+                            name: member.name, 
+                            role: member.role || 'Family Member',
+                            lineage: lineageName
+                        });
+                        seen.add(searchKey);
+                    }
                 }
-            });
+                
+                // Search partner
+                if (member.partner && member.partner.name && member.partner.name.toLowerCase().includes(query)) {
+                    const searchKey = member.partner.name.toLowerCase();
+                    if (!seen.has(searchKey)) {
+                        matches.push({ 
+                            name: member.partner.name, 
+                            role: member.partner.role || 'Family Member',
+                            lineage: lineageName
+                        });
+                        seen.add(searchKey);
+                    }
+                }
+                
+                // Search second partner
+                if (member.secondPartner && member.secondPartner.name && member.secondPartner.name.toLowerCase().includes(query)) {
+                    const searchKey = member.secondPartner.name.toLowerCase();
+                    if (!seen.has(searchKey)) {
+                        matches.push({ 
+                            name: member.secondPartner.name, 
+                            role: member.secondPartner.role || 'Family Member',
+                            lineage: lineageName
+                        });
+                        seen.add(searchKey);
+                    }
+                }
+                
+                // Search children recursively
+                if (member.children) {
+                    member.children.forEach(child => searchInData(child, lineageName));
+                }
+            };
+            
+            // Search through all lineages
+            if (familyData.children) {
+                familyData.children.forEach(lineage => {
+                    const lineageName = lineage.name || 'Family';
+                    searchInData(lineage, lineageName);
+                });
+            }
 
             if (matches.length > 0) {
                 searchResults.style.display = 'block';
                 matches.slice(0, 10).forEach(match => {
                     const div = document.createElement('div');
                     div.className = 'search-result-item';
-                    const role = match.element.querySelector('.member-role').textContent;
-
-                    // Find lineage name by looking up the lineage-section parent
-                    const section = match.element.closest('.lineage-section');
-                    let lineageName = 'Family';
-                    if (section) {
-                        const targetBtn = Array.from(document.querySelectorAll('.nav-jump-btn')).find(b => {
-                            const btnName = (b.textContent || '').trim().toLowerCase();
-                            const secName = (section.dataset.lineageName || '').trim().toLowerCase();
-                            return btnName === secName || btnName.includes(secName) || secName.includes(btnName);
-                        });
-                        lineageName = targetBtn ? targetBtn.textContent : (section.dataset.lineageName || 'Family');
-                    }
 
                     div.innerHTML = `
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <strong>${match.name}</strong>
-                            <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.2); color: var(--accent-color); padding: 2px 6px; border-radius: 10px;">${lineageName}</span>
+                            <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.2); color: var(--accent-color); padding: 2px 6px; border-radius: 10px;">${match.lineage}</span>
                         </div>
-                        <small style="opacity:0.7">${role}</small>
+                        <small style="opacity:0.7">${match.role}</small>
                     `;
                     div.onclick = () => {
-                        scrollToElement(match.element);
+                        // Find the actual card element and scroll to it
+                        const cardId = 'member-' + match.name.replace(/\s+/g, '-').toLowerCase();
+                        const cardElement = document.getElementById(cardId);
+                        if (cardElement) {
+                            scrollToElement(cardElement);
+                        }
                         searchResults.style.display = 'none';
                         searchInput.value = '';
                     };
@@ -1037,6 +1071,14 @@ function initControls() {
     document.addEventListener('click', (e) => {
         if (searchResults && !e.target.closest('.search-wrapper')) {
             searchResults.style.display = 'none';
+        }
+    });
+    
+    // Close search on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchResults) {
+            searchResults.style.display = 'none';
+            if (searchInput) searchInput.value = '';
         }
     });
 
