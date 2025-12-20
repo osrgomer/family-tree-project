@@ -488,33 +488,28 @@ const familyData = {
                             name: "Yifat Marton",
                             role: "G4: Daughter (Deceased)",
                             image: "",
-                            parentage: "first",
                             children: []
                         },
                         {
                             name: "Orit Marton",
                             role: "G4: Daughter",
-                            parentage: "first",
                             children: []
                         },
                         {
                             name: "Tzafra Marton",
                             role: "G4: Daughter",
-                            parentage: "first",
                             children: []
                         },
                         {
                             name: "Gal Ran",
                             role: "G4: Son",
                             image: "",
-                            parentage: "second",
                             children: []
                         },
                         {
                             name: "Maya Ran",
                             role: "G4: Daughter (Deceased)",
                             image: "",
-                            parentage: "second",
                             children: [
                                 {
                                     name: "Matan Punk",
@@ -527,7 +522,6 @@ const familyData = {
                         {
                             name: "Iris Frumerman",
                             role: "G4: Daughter",
-                            parentage: "second",
                             children: []
                         }
                     ]
