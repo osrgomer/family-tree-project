@@ -363,20 +363,27 @@ header p {
 }
 
 /* Ensure text on the back of member cards wraps and can scroll when long */
+.card-back {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+.card-back .member-name {
+    text-align: center;
+    flex: 0 0 auto;
+}
+
 .card-back .member-role {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    max-height: calc(100% - 3.5rem);
+    flex: 1 1 auto;
     text-align: left;
     font-size: 0.85rem;
     line-height: 1.25;
     white-space: normal;
     word-break: break-word;
     padding-right: 6px;
-}
-
-.card-back .member-name {
-    text-align: center;
 }
 
 .venture-card .card-front,

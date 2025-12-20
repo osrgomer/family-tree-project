@@ -159,13 +159,13 @@ const familyData = {
                                                     name: "Ephraim Rimon",
                                                     role: "G3: Songwriter | Bank of Israel",
                                                     image: "",
-                                                    coords: [31.7683, 35.2137],
-                                                    locationName: "Jerusalem, Israel",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
                                                     partner: {
                                                         name: "Talma Rimon",
                                                         role: "G3: Bank of Israel",
-                                                        coords: [31.7683, 35.2137],
-                                                        locationName: "Jerusalem, Israel",
+                                                        coords: [32.0853, 34.7818],
+                                                        locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
                                                         description: "Daughter of Shalom Weissbarst.",
                                                         image: ""
                                                     },
@@ -200,31 +200,46 @@ const familyData = {
                                                             name: "Ran Rimon",
                                                             role: "G4: Entrepreneur",
                                                             image: "https://pbs.twimg.com/profile_images/1524011464109002752/GLGXYNu9_400x400.jpg",
-                                                            coords: [32.0853, 34.7818],
-                                                            locationName: "Tel Aviv, Israel",
+                                                            coords: [32.0746, 34.7778],
+                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                            partner: {
+                                                                name: "Shulamit Bonder",
+                                                                role: "Spouse",
+                                                                coords: [32.0746, 34.7778],
+                                                                locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                image: ""
+                                                            },
                                                             children: [
                                                                 {
                                                                     name: "Eyal Rimon",
                                                                     role: "G5: Student (Age 14)",
                                                                     image: "",
+                                                                    coords: [32.0746, 34.7778],
+                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
                                                                 },
                                                                 {
                                                                     name: "Talia Rimon",
                                                                     role: "G5: Student (Age 11-12)",
                                                                     image: "",
+                                                                    coords: [32.0746, 34.7778],
+                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
                                                                 },
                                                                 {
                                                                     name: "Gur Rimon",
                                                                     role: "G5: Student (Age 6-7)",
                                                                     image: "",
+                                                                    coords: [32.0746, 34.7778],
+                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
                                                                 },
                                                                 {
                                                                     name: "Ana Rimon",
                                                                     role: "G5: Student (Age 1.5)",
                                                                     image: "",
+                                                                    coords: [32.0746, 34.7778],
+                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
                                                                 }
                                                             ]
@@ -689,10 +704,14 @@ const familyData = {
                                             name: "Talma Rimon",
                                             role: "G3: Bank of Israel",
                                             image: "",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
                                             partner: {
                                                 name: "Ephraim Rimon",
                                                 role: "G3: Songwriter | Bank of Israel",
-                                                image: ""
+                                                image: "",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel"
                                             },
                                             children: [
                                                 {
@@ -859,6 +878,8 @@ function renderTree() {
         familyData.children.forEach(lineage => {
             const lineageSection = document.createElement('div');
             lineageSection.className = 'lineage-section';
+            // store the lineage name to make navigation robust to ordering
+            lineageSection.dataset.lineageName = (lineage.name || '').toLowerCase();
 
             const rootUl = document.createElement('ul');
             rootUl.className = 'tree';
@@ -927,34 +948,22 @@ function initControls() {
         // Spotlight highlight immediately
         element.classList.add('spotlight');
 
-        // Get the element's position relative to the tree container
+        // Get the element's position relative to the tree container, accounting for scale
         const treeContainer = document.getElementById('family-tree');
         const elementRect = element.getBoundingClientRect();
         const containerRect = treeContainer.getBoundingClientRect();
-        const viewportRect = viewport.getBoundingClientRect();
 
-        // Calculate element's center in viewport coordinates
-        const elementCenterX = elementRect.left + (elementRect.width / 2);
-        const elementCenterY = elementRect.top + (elementRect.height / 2);
+        // Convert visible (scaled) coordinates back to unscaled content coordinates
+        const unscaledOffsetLeft = (elementRect.left - containerRect.left) / zoomLevel;
+        const unscaledOffsetTop = (elementRect.top - containerRect.top) / zoomLevel;
 
-        // Calculate viewport's center
-        const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
-        const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
+        const elCenterUnscaledX = unscaledOffsetLeft + (elementRect.width / (2 * zoomLevel));
+        const elCenterUnscaledY = unscaledOffsetTop + (elementRect.height / (2 * zoomLevel));
 
-        // Calculate how far off-center the element currently is (in screen pixels)
-        const offsetX = elementCenterX - viewportCenterX;
-        const offsetY = elementCenterY - viewportCenterY;
+        const newScrollLeft = elCenterUnscaledX - (viewport.clientWidth / 2);
+        const newScrollTop = elCenterUnscaledY - (viewport.clientHeight / 2);
 
-        // Calculate the new scroll position
-        // We need to add the offset to current scroll position
-        const newScrollLeft = viewport.scrollLeft + offsetX;
-        const newScrollTop = viewport.scrollTop + offsetY;
-
-        viewport.scrollTo({
-            left: newScrollLeft,
-            top: newScrollTop,
-            behavior: 'smooth'
-        });
+        viewport.scrollTo({ left: newScrollLeft, top: newScrollTop, behavior: 'smooth' });
 
         setTimeout(() => element.classList.remove('spotlight'), 3000);
     };
@@ -994,8 +1003,15 @@ function initControls() {
 
                     // Find lineage name by looking up the lineage-section parent
                     const section = match.element.closest('.lineage-section');
-                    const lineageBtn = document.querySelectorAll('.nav-jump-btn')[Array.from(document.querySelectorAll('.lineage-section')).indexOf(section)];
-                    const lineageName = lineageBtn ? lineageBtn.textContent : 'Family';
+                    let lineageName = 'Family';
+                    if (section) {
+                        const targetBtn = Array.from(document.querySelectorAll('.nav-jump-btn')).find(b => {
+                            const btnName = (b.textContent || '').trim().toLowerCase();
+                            const secName = (section.dataset.lineageName || '').trim().toLowerCase();
+                            return btnName === secName || btnName.includes(secName) || secName.includes(btnName);
+                        });
+                        lineageName = targetBtn ? targetBtn.textContent : (section.dataset.lineageName || 'Family');
+                    }
 
                     div.innerHTML = `
                         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -1030,12 +1046,24 @@ function initControls() {
         btn.addEventListener('click', () => {
             const index = parseInt(btn.dataset.lineage);
             const sections = document.querySelectorAll('.lineage-section');
-            if (sections[index]) {
+
+            // Try matching by lineage name first (more robust), fallback to index
+            const btnName = (btn.textContent || '').trim().toLowerCase();
+            let targetSection = Array.from(sections).find(s => {
+                const secName = (s.dataset.lineageName || '').trim().toLowerCase();
+                return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
+            });
+
+            if (!targetSection && sections[index]) {
+                targetSection = sections[index];
+            }
+
+            if (targetSection) {
                 navBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 // Focus the root card of this lineage
-                const rootCard = sections[index].querySelector('.member-card');
+                const rootCard = targetSection.querySelector('.member-card');
                 scrollToElement(rootCard);
             }
         });
@@ -1046,19 +1074,35 @@ function initControls() {
     genBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const genTag = btn.dataset.gen; // "G0" or "G5"
-            const cards = Array.from(document.querySelectorAll('.member-card'));
+            // Prefer focusing inside the currently active lineage (if any)
+            const activeNav = document.querySelector('.nav-jump-btn.active');
+            let cards = Array.from(document.querySelectorAll('.member-card'));
+            if (activeNav) {
+                const btnName = (activeNav.textContent || '').trim().toLowerCase();
+                const sections = Array.from(document.querySelectorAll('.lineage-section'));
+                const targetSec = sections.find(s => {
+                    const secName = (s.dataset.lineageName || '').trim().toLowerCase();
+                    return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
+                });
+                if (targetSec) cards = Array.from(targetSec.querySelectorAll('.member-card'));
+            }
 
             // Priority landmark for G5 is Omer Rimon
             let target;
             if (genTag === 'G5') {
-                target = cards.find(c => c.querySelector('.member-name').textContent.includes('Omer Rimon'));
+                target = cards.find(c => (c.querySelector('.member-name') || {}).textContent && c.querySelector('.member-name').textContent.includes('Omer Rimon'));
             }
 
             if (!target) {
-                target = cards.find(card => {
-                    const role = card.querySelector('.member-role').textContent;
-                    return role.includes(genTag);
+                // For G5 pick the last matching card in the selected scope, for G0 pick the first
+                const matches = cards.filter(card => {
+                    const roleEl = card.querySelector('.member-role');
+                    const role = roleEl ? roleEl.textContent : '';
+                    return role && role.includes(genTag);
                 });
+                if (matches.length > 0) {
+                    target = (genTag === 'G5') ? matches[matches.length - 1] : matches[0];
+                }
             }
 
             if (target) {
@@ -1173,6 +1217,21 @@ function initControls() {
     window.addEventListener('pointermove', onPointerMove);
     window.addEventListener('pointerup', onPointerUp);
     viewport.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Fallback for environments that don't fully support Pointer events: attach mouse handlers
+    viewport.addEventListener('mousedown', (e) => {
+        // only handle left button
+        if (e.button !== 0) return;
+        onPointerDown({ pointerId: 'mouse', clientX: e.clientX, clientY: e.clientY, target: e.target });
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        onPointerMove({ clientX: e.clientX, clientY: e.clientY });
+    });
+
+    window.addEventListener('mouseup', (e) => {
+        onPointerUp({ pointerId: 'mouse', clientX: e.clientX, clientY: e.clientY });
+    });
 }
 
 /**
