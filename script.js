@@ -336,7 +336,7 @@ const familyData = {
                         {
                             name: "Daphna Givon",
                             role: "G4: Botanical Expert",
-                            image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4FlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
+                            image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/94432436_10222579086852096_7837351610438123520_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9aQLxujBgTEQ7kNvwHwhXiR&_nc_oc=AdkrUeAUt_cU2GunGtCxAzBS61nTRlVVV-koUzJTDuMJUbOvUb98w2YdURzHLfgcRwU&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=c2gH7rGbsMLbYTB7DTjWmg&oh=00_AfleKGkY55UOGMBsuJe-hPGTZE42xTlYyauBuDvnEHLLaQ&oe=696E63ED",
                             coords: [37.3192, -8.8033],
                             locationName: "Aljezur, Portugal",
                             partner: {
@@ -536,84 +536,78 @@ const familyData = {
             ]
         },
         {
-            name: "The Diamentstein-Gurfinkel Legacy",
-            role: "Ancestral Roots",
+            name: "Leah Diamentstein",
+            role: "G2: Matriarch (Deceased)",
+            partner: {
+                name: "Ze'ev Gurfinkel",
+                role: "G2: Patriarch (Deceased)"
+            },
             children: [
                 {
-                    name: "Leah Diamentstein",
-                    role: "G2: Matriarch",
-                    partner: {
-                        name: "Ze'ev Gurfinkel",
-                        role: "G2: Patriarch"
-                    },
+                    name: "Ran Nergal",
+                    role: "G3: Sibling",
                     children: [
                         {
-                            name: "Ran Nergal",
-                            role: "G3: Sibling",
+                            name: "Kohava Nergal",
+                            role: "G3: First Wife",
                             children: [
-                                {
-                                    name: "Kohava Nergal",
-                                    role: "G3: First Wife",
-                                    children: [
-                                        { name: "Tali Nergal", role: "G4: Daughter" },
-                                        { name: "Livnat Nergal", role: "G4: Daughter" }
-                                    ]
-                                },
-                                {
-                                    name: "Rachel Nergal",
-                                    role: "G3: Second Wife",
-                                    children: [
-                                        { name: "Ziv Nergal", role: "G4: Child" },
-                                        { name: "Chen Nergal", role: "G4: Child" }
-                                    ]
-                                }
+                                { name: "Tali Nergal", role: "G4: Daughter" },
+                                { name: "Livnat Nergal", role: "G4: Daughter" }
                             ]
                         },
                         {
-                            name: "Deborah Miriam Givon (Gurfinkel)",
-                            role: "G3: Early Childhood Expert",
-                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal.",
-                            children: []
+                            name: "Rachel Nergal",
+                            role: "G3: Second Wife",
+                            children: [
+                                { name: "Ziv Nergal", role: "G4: Child" },
+                                { name: "Chen Nergal", role: "G4: Child" }
+                            ]
                         }
                     ]
                 },
                 {
-                    name: "Rachel Diamentstein",
-                    role: "G2: Sibling",
+                    name: "Deborah Miriam Givon (Gurfinkel)",
+                    role: "G3: Early Childhood Expert",
+                    description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
+                    children: []
+                }
+            ]
+        },
+        {
+            name: "Rachel Diamentstein",
+            role: "G2: Sibling",
+            partner: {
+                name: "Ashkenazy",
+                role: "Partner"
+            },
+            children: [
+                {
+                    name: "Herbert Ashkenazy",
+                    role: "G3: Sibling",
                     partner: {
-                        name: "Ashkenazy",
+                        name: "Ruth Ashkenazy",
                         role: "Partner"
                     },
                     children: [
                         {
-                            name: "Herbert Ashkenazy",
-                            role: "G3: Sibling",
-                            partner: {
-                                name: "Ruth Ashkenazy",
-                                role: "Partner"
-                            },
+                            name: "Leah Ashkenazy",
+                            role: "G4: Sibling",
                             children: [
-                                {
-                                    name: "Leah Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: [
-                                        { name: "Girl Reid 1", role: "G5: Daughter" },
-                                        { name: "Girl Reid 2", role: "G5: Daughter" }
-                                    ]
-                                },
-                                {
-                                    name: "David Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: []
-                                },
-                                {
-                                    name: "Miriam Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: [
-                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
-                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
-                                    ]
-                                }
+                                { name: "Girl Reid 1", role: "G5: Daughter" },
+                                { name: "Girl Reid 2", role: "G5: Daughter" }
+                            ]
+                        },
+                        {
+                            name: "David Ashkenazy",
+                            role: "G4: Sibling",
+                            children: []
+                        },
+                        {
+                            name: "Miriam Ashkenazy",
+                            role: "G4: Sibling",
+                            children: [
+                                { name: "Altamo Ashkenazy", role: "G5: Child" },
+                                { name: "Ezria Ashkenazy", role: "G5: Child" }
                             ]
                         }
                     ]
@@ -891,22 +885,30 @@ function initControls() {
     const scrollToElement = (element) => {
         if (!element) return;
 
-        // Reset zoom to 1 to ensure centering is accurate
-        zoomLevel = 1;
-        updateZoom();
+        // Spotlight highlight immediately
+        element.classList.add('spotlight');
 
-        const rect = element.getBoundingClientRect();
+        // Robust centering logic that works at ANY zoom level
         const viewportRect = viewport.getBoundingClientRect();
+        const elementRect = element.getBoundingClientRect();
 
-        viewport.scrollTo({
-            left: (viewport.scrollLeft + rect.left) - (viewportRect.width / 2) + (rect.width / 2),
-            top: (viewport.scrollTop + rect.top) - (viewportRect.height / 2) + (rect.height / 2),
+        // Calculate the center points
+        const elementCenterX = elementRect.left + (elementRect.width / 2);
+        const elementCenterY = elementRect.top + (elementRect.height / 2);
+        const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
+        const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
+
+        // The delta needed to bring element center to viewport center
+        const deltaX = elementCenterX - viewportCenterX;
+        const deltaY = elementCenterY - viewportCenterY;
+
+        viewport.scrollBy({
+            left: deltaX,
+            top: deltaY,
             behavior: 'smooth'
         });
 
-        // Spotlight highlight
-        element.classList.add('spotlight');
-        setTimeout(() => element.classList.remove('spotlight'), 4000);
+        setTimeout(() => element.classList.remove('spotlight'), 3000);
     };
 
     // --- Search Logic ---
@@ -934,7 +936,8 @@ function initControls() {
                 matches.slice(0, 10).forEach(match => {
                     const div = document.createElement('div');
                     div.className = 'search-result-item';
-                    div.textContent = match.name;
+                    const role = match.element.querySelector('.member-role').textContent;
+                    div.innerHTML = `<strong>${match.name}</strong><br><small style="opacity:0.7">${role}</small>`;
                     div.onclick = () => {
                         scrollToElement(match.element);
                         searchResults.style.display = 'none';
@@ -979,11 +982,18 @@ function initControls() {
             const genTag = btn.dataset.gen; // "G0" or "G5"
             const cards = Array.from(document.querySelectorAll('.member-card'));
 
-            // Find the first card that matches the generation tag
-            const target = cards.find(card => {
-                const role = card.querySelector('.member-role').textContent;
-                return role.includes(genTag);
-            });
+            // Priority landmark for G5 is Omer Rimon
+            let target;
+            if (genTag === 'G5') {
+                target = cards.find(c => c.querySelector('.member-name').textContent.includes('Omer Rimon'));
+            }
+
+            if (!target) {
+                target = cards.find(card => {
+                    const role = card.querySelector('.member-role').textContent;
+                    return role.includes(genTag);
+                });
+            }
 
             if (target) {
                 genBtns.forEach(b => b.classList.remove('active'));
