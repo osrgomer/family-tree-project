@@ -473,60 +473,62 @@ const familyData = {
                     name: "Haya Ran",
                     role: "G3: Sibling (Deceased)",
                     image: "",
+                    partner: {
+                        name: "Amnon Marton",
+                        role: "G3: First Husband",
+                        image: ""
+                    },
+                    secondPartner: {
+                        name: "Moshe Ran",
+                        role: "G3: Second Husband",
+                        image: ""
+                    },
                     children: [
                         {
-                            name: "Amnon Marton",
-                            role: "G3: First Husband",
+                            name: "Yifat Marton",
+                            role: "G4: Daughter (Deceased)",
                             image: "",
+                            parentage: "first",
+                            children: []
+                        },
+                        {
+                            name: "Orit Marton",
+                            role: "G4: Daughter",
+                            parentage: "first",
+                            children: []
+                        },
+                        {
+                            name: "Tzafra Marton",
+                            role: "G4: Daughter",
+                            parentage: "first",
+                            children: []
+                        },
+                        {
+                            name: "Gal Ran",
+                            role: "G4: Son",
+                            image: "",
+                            parentage: "second",
+                            children: []
+                        },
+                        {
+                            name: "Maya Ran",
+                            role: "G4: Daughter (Deceased)",
+                            image: "",
+                            parentage: "second",
                             children: [
                                 {
-                                    name: "Yifat Marton",
-                                    role: "G4: Daughter (Deceased)",
+                                    name: "Matan Punk",
+                                    role: "G5: Son",
                                     image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Orit Marton",
-                                    role: "G4: Daughter",
-                                    children: []
-                                },
-                                {
-                                    name: "Tzafra Marton",
-                                    role: "G4: Daughter",
                                     children: []
                                 }
                             ]
                         },
                         {
-                            name: "Moshe Ran",
-                            role: "G3: Second Husband",
-                            image: "",
-                            children: [
-                                {
-                                    name: "Gal Ran",
-                                    role: "G4: Son",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Maya Ran",
-                                    role: "G4: Daughter (Deceased)",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Matan Punk",
-                                            role: "G5: Son",
-                                            image: "",
-                                            children: []
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Iris Frumerman",
-                                    role: "G4: Daughter",
-                                    children: []
-                                }
-                            ]
+                            name: "Iris Frumerman",
+                            role: "G4: Daughter",
+                            parentage: "second",
+                            children: []
                         }
                     ]
                 }
@@ -860,9 +862,27 @@ function createTreeElement(member) {
     // Recursively render children
     if (member.children && member.children.length > 0) {
         const ul = document.createElement('ul');
-        member.children.forEach(child => {
-            ul.appendChild(createTreeElement(child));
-        });
+        
+        // Check if this member has multiple marriages with children from different parents
+        const hasMultipleParentage = member.children.some(child => child.parentage);
+        
+        if (hasMultipleParentage) {
+            // Group children by parentage
+            const firstMarriageChildren = member.children.filter(child => child.parentage === 'first');
+            const secondMarriageChildren = member.children.filter(child => child.parentage === 'second');
+            const otherChildren = member.children.filter(child => !child.parentage);
+            
+            // Create separate groups
+            [...firstMarriageChildren, ...otherChildren, ...secondMarriageChildren].forEach(child => {
+                ul.appendChild(createTreeElement(child));
+            });
+        } else {
+            // Normal rendering
+            member.children.forEach(child => {
+                ul.appendChild(createTreeElement(child));
+            });
+        }
+        
         li.appendChild(ul);
     }
 
@@ -1179,11 +1199,9 @@ function initControls() {
     };
 
     viewport.addEventListener('mousedown', (e) => {
-        console.log('mousedown fired', { button: e.button, target: e.target, shouldIgnore: shouldIgnoreDrag(e.target) });
         if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
         
-        console.log('Starting drag', { clientX: e.clientX, clientY: e.clientY, scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop });
         isDragging = true;
         dragStartX = e.clientX;
         dragStartY = e.clientY;
@@ -1201,17 +1219,12 @@ function initControls() {
         const deltaX = e.clientX - dragStartX;
         const deltaY = e.clientY - dragStartY;
         
-        console.log('Before scroll:', { scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop });
-        
         viewport.scrollLeft = dragStartScrollLeft - deltaX;
         viewport.scrollTop = dragStartScrollTop - deltaY;
-        
-        console.log('After scroll:', { scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop, deltaX, deltaY });
     });
 
     window.addEventListener('mouseup', () => {
         if (!isDragging) return;
-        console.log('Drag ended', { finalScrollLeft: viewport.scrollLeft, finalScrollTop: viewport.scrollTop });
         isDragging = false;
         viewport.style.cursor = 'grab';
         document.body.style.userSelect = '';
