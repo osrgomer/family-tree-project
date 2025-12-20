@@ -463,6 +463,11 @@ const familyData = {
                         role: "G3: First Husband",
                         image: ""
                     },
+                    secondPartner: {
+                        name: "Moshe Ran",
+                        role: "G3: Second Husband",
+                        image: ""
+                    },
                     children: [
                         {
                             name: "Yifat Marton",
@@ -819,6 +824,15 @@ function createTreeElement(member) {
         }
     } else {
         nodeContainer.appendChild(mainCard);
+    }
+
+    // Add second partner if it exists (for multiple marriages)
+    if (member.secondPartner) {
+        const secondPartnerCard = createCard(member.secondPartner);
+        const secondConnector = document.createElement('div');
+        secondConnector.className = 'spouse-connector';
+        nodeContainer.appendChild(secondConnector);
+        nodeContainer.appendChild(secondPartnerCard);
     }
 
     li.appendChild(nodeContainer);
