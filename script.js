@@ -980,61 +980,26 @@ function initControls() {
             }
 
             const matches = [];
-            const seen = new Set();
-            
-            // Search through family data recursively
-            const searchInData = (member, lineageName = 'Family') => {
-                if (member.name && member.name.toLowerCase().includes(query)) {
-                    const searchKey = member.name.toLowerCase();
-                    if (!seen.has(searchKey)) {
-                        matches.push({ 
-                            name: member.name, 
-                            role: member.role || 'Family Member',
-                            lineage: lineageName
-                        });
-                        seen.add(searchKey);
-                    }
-                }
+            const cards = document.querySelectorAll('.member-card');
+
+            cards.forEach(card => {
+                const nameEl = card.querySelector('.member-name');
+                const roleEl = card.querySelector('.member-role');
                 
-                // Search partner
-                if (member.partner && member.partner.name && member.partner.name.toLowerCase().includes(query)) {
-                    const searchKey = member.partner.name.toLowerCase();
-                    if (!seen.has(searchKey)) {
-                        matches.push({ 
-                            name: member.partner.name, 
-                            role: member.partner.role || 'Family Member',
-                            lineage: lineageName
-                        });
-                        seen.add(searchKey);
+                if (nameEl && nameEl.textContent.toLowerCase().includes(query)) {
+                    const name = nameEl.textContent;
+                    const role = roleEl ? roleEl.textContent : 'Family Member';
+                    
+                    // Find lineage
+                    const section = card.closest('.lineage-section');
+                    let lineage = 'Family';
+                    if (section && section.dataset.lineageName) {
+                        lineage = section.dataset.lineageName;
                     }
+                    
+                    matches.push({ name, role, lineage, element: card });
                 }
-                
-                // Search second partner
-                if (member.secondPartner && member.secondPartner.name && member.secondPartner.name.toLowerCase().includes(query)) {
-                    const searchKey = member.secondPartner.name.toLowerCase();
-                    if (!seen.has(searchKey)) {
-                        matches.push({ 
-                            name: member.secondPartner.name, 
-                            role: member.secondPartner.role || 'Family Member',
-                            lineage: lineageName
-                        });
-                        seen.add(searchKey);
-                    }
-                }
-                
-                // Search children recursively
-                if (member.children) {
-                    member.children.forEach(child => searchInData(child, lineageName));
-                }
-            };
-            
-            // Search through all lineages
-            if (familyData.children) {
-                familyData.children.forEach(lineage => {
-                    const lineageName = lineage.name || 'Family';
-                    searchInData(lineage, lineageName);
-                });
-            }
+            });
 
             if (matches.length > 0) {
                 searchResults.style.display = 'block';
@@ -1050,12 +1015,7 @@ function initControls() {
                         <small style="opacity:0.7">${match.role}</small>
                     `;
                     div.onclick = () => {
-                        // Find the actual card element and scroll to it
-                        const cardId = 'member-' + match.name.replace(/\s+/g, '-').toLowerCase();
-                        const cardElement = document.getElementById(cardId);
-                        if (cardElement) {
-                            scrollToElement(cardElement);
-                        }
+                        scrollToElement(match.element);
                         searchResults.style.display = 'none';
                         searchInput.value = '';
                     };
@@ -1203,41 +1163,81 @@ function initControls() {
 
     // --- Simple Click & Drag Panning ---
     let isDragging = false;
-    let startX = 0, startY = 0;
-    let startScrollLeft = 0, startScrollTop = 0;
+    let dragStartX = 0, dragStartY = 0;
+    let dragStartScrollLeft = 0, dragStartScrollTop = 0;
 
     const shouldIgnoreDrag = (el) => {
-        return el && el.closest && !!el.closest('.lineage-navigator, .search-wrapper, button, a, input, select, textarea');
+        // Only block drag on interactive elements, not on the background
+        if (!el) return false;
+        const tagName = el.tagName ? el.tagName.toLowerCase() : '';
+        if (['button', 'input', 'select', 'textarea', 'a'].includes(tagName)) return true;
+        // Check if it's inside a navigator or search
+        const nav = el.closest ? el.closest('.lineage-navigator') : null;
+        const search = el.closest ? el.closest('.search-wrapper') : null;
+        return !!(nav || search);
     };
 
     viewport.addEventListener('mousedown', (e) => {
-        if (e.button !== 0 || shouldIgnoreDrag(e.target)) return;
+        if (e.button !== 0) return;
+        if (shouldIgnoreDrag(e.target)) return;
         
         isDragging = true;
-        startX = e.pageX;
-        startY = e.pageY;
-        startScrollLeft = viewport.scrollLeft;
-        startScrollTop = viewport.scrollTop;
+        dragStartX = e.clientX;
+        dragStartY = e.clientY;
+        dragStartScrollLeft = viewport.scrollLeft;
+        dragStartScrollTop = viewport.scrollTop;
         
         viewport.style.cursor = 'grabbing';
         document.body.style.userSelect = 'none';
         e.preventDefault();
     });
 
-    document.addEventListener('mousemove', (e) => {
+    window.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         
-        const deltaX = e.pageX - startX;
-        const deltaY = e.pageY - startY;
+        const deltaX = e.clientX - dragStartX;
+        const deltaY = e.clientY - dragStartY;
         
-        viewport.scrollLeft = startScrollLeft - deltaX;
-        viewport.scrollTop = startScrollTop - deltaY;
+        viewport.scrollLeft = dragStartScrollLeft - deltaX;
+        viewport.scrollTop = dragStartScrollTop - deltaY;
     });
 
-    document.addEventListener('mouseup', () => {
+    window.addEventListener('mouseup', () => {
         if (!isDragging) return;
         isDragging = false;
         viewport.style.cursor = 'grab';
+        document.body.style.userSelect = '';
+    });
+
+    // Touch support
+    let touchStartX = 0, touchStartY = 0;
+    let touchStartScrollLeft = 0, touchStartScrollTop = 0;
+
+    viewport.addEventListener('touchstart', (e) => {
+        if (shouldIgnoreDrag(e.target)) return;
+        if (e.touches.length !== 1) return;
+        
+        isDragging = true;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartScrollLeft = viewport.scrollLeft;
+        touchStartScrollTop = viewport.scrollTop;
+        document.body.style.userSelect = 'none';
+    });
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isDragging || e.touches.length !== 1) return;
+        
+        const deltaX = e.touches[0].clientX - touchStartX;
+        const deltaY = e.touches[0].clientY - touchStartY;
+        
+        viewport.scrollLeft = touchStartScrollLeft - deltaX;
+        viewport.scrollTop = touchStartScrollTop - deltaY;
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
         document.body.style.userSelect = '';
     });
 
