@@ -188,14 +188,14 @@ header p {
 /* Tree Container */
 .tree-container {
     position: relative;
-    padding: 100vh 10rem;
-    /* Massive vertical padding - full viewport height above and below */
+    padding: 20rem 10rem;
+    /* Vertical padding for scrolling space */
     display: flex;
     justify-content: center;
     gap: 20rem;
     min-width: max-content;
-    min-height: 400vh;
-    /* 4x viewport height to ensure scrolling */
+    min-height: 300vh;
+    /* 3x viewport height to ensure vertical scrolling */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
