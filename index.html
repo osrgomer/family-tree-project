@@ -26,6 +26,14 @@
     <main class="content-wrapper">
         <section id="tree-section" class="active">
             <div class="tree-viewport">
+                <div class="lineage-navigator tree-only-controls">
+                    <span class="nav-label">Jump to:</span>
+                    <button class="nav-jump-btn" data-lineage="0">Granat-Rimon</button>
+                    <button class="nav-jump-btn" data-lineage="1">Givon</button>
+                    <button class="nav-jump-btn" data-lineage="2">Cohen</button>
+                    <button class="nav-jump-btn" data-lineage="3">Nergal</button>
+                    <button class="nav-jump-btn" data-lineage="4">Weissbarst</button>
+                </div>
                 <div id="family-tree" class="tree-container">
                     <!-- Family tree will be rendered here by JavaScript -->
                 </div>
@@ -50,14 +58,7 @@
                 </div>
             </div>
 
-            <div class="control-group movement-grid tree-only-controls">
-                <button class="zoom-btn" id="move-up" title="Move Up">↑</button>
-                <div class="horiz-controls">
-                    <button class="zoom-btn" id="move-left" title="Move Left">←</button>
-                    <button class="zoom-btn" id="move-right" title="Move Right">→</button>
-                </div>
-                <button class="zoom-btn" id="move-down" title="Move Down">↓</button>
-            </div>
+            <!-- Movement arrows removed in favor of Lineage Navigator and Keyboard/Mouse controls -->
         </div>
     </main>
 

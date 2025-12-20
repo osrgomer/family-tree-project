@@ -431,6 +431,59 @@ header p {
     color: var(--text-secondary);
 }
 
+/* Lineage Navigator Bar */
+.lineage-navigator {
+    position: sticky;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-border);
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    pointer-events: auto;
+    width: fit-content;
+}
+
+.nav-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 0.5rem;
+}
+
+.nav-jump-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-jump-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.nav-jump-btn.active {
+    background: var(--accent-color);
+    color: white;
+}
+
 .zoom-controls {
     position: fixed;
     bottom: 2rem;

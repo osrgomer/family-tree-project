@@ -760,24 +760,54 @@ function initControls() {
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
 
-    const moveUpBtn = document.getElementById('move-up');
-    const moveDownBtn = document.getElementById('move-down');
-    const moveLeftBtn = document.getElementById('move-left');
-    const moveRightBtn = document.getElementById('move-right');
-
     if (!treeContainer || !viewport) return;
 
     const updateZoom = () => {
         treeContainer.style.transform = `scale(${zoomLevel})`;
     };
 
+    // --- Lineage Navigation ---
+    const navBtns = document.querySelectorAll('.nav-jump-btn');
+    navBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const index = parseInt(btn.dataset.lineage);
+            const sections = document.querySelectorAll('.lineage-section');
+            if (sections[index]) {
+                navBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const target = sections[index];
+                const rect = target.getBoundingClientRect();
+                const viewportRect = viewport.getBoundingClientRect();
+
+                // Smooth scroll to the target section
+                viewport.scrollTo({
+                    left: (viewport.scrollLeft + rect.left) - (viewportRect.width / 2) + (rect.width / 2),
+                    top: (viewport.scrollTop + rect.top) - (viewportRect.top + 100),
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // --- Mousewheel Zoom ---
+    viewport.addEventListener('wheel', (e) => {
+        if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.05 : 0.05;
+            zoomLevel = Math.max(0.3, Math.min(2.5, zoomLevel + delta));
+            updateZoom();
+        }
+    }, { passive: false });
+
+    // --- Button Zoom ---
     zoomInBtn.addEventListener('click', () => {
-        zoomLevel = Math.min(zoomLevel + 0.1, 2);
+        zoomLevel = Math.min(zoomLevel + 0.1, 2.5);
         updateZoom();
     });
 
     zoomOutBtn.addEventListener('click', () => {
-        zoomLevel = Math.max(zoomLevel - 0.1, 0.4);
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.3);
         updateZoom();
     });
 
@@ -787,100 +817,57 @@ function initControls() {
         centerTree();
     });
 
-    // Movement Controls - Smooth continuous scroll mechanism
-    let rafId = null;
-    let moveDir = { x: 0, y: 0 };
-
-    const scrollLoop = () => {
-        if (moveDir.x !== 0 || moveDir.y !== 0) {
-            viewport.scrollLeft += moveDir.x * 20; // Speed
-            viewport.scrollTop += moveDir.y * 20;
-            rafId = requestAnimationFrame(scrollLoop);
+    // --- Keyboard Navigation ---
+    const moveStep = 40;
+    window.addEventListener('keydown', (e) => {
+        if (document.getElementById('tree-section').classList.contains('active')) {
+            switch (e.key.toLowerCase()) {
+                case 'arrowup':
+                case 'w': viewport.scrollTop -= moveStep; break;
+                case 'arrowdown':
+                case 's': viewport.scrollTop += moveStep; break;
+                case 'arrowleft':
+                case 'a': viewport.scrollLeft -= moveStep; break;
+                case 'arrowright':
+                case 'd': viewport.scrollLeft += moveStep; break;
+                case '+': zoomLevel = Math.min(zoomLevel + 0.1, 2.5); updateZoom(); break;
+                case '-': zoomLevel = Math.max(zoomLevel - 0.1, 0.3); updateZoom(); break;
+            }
         }
-    };
-
-    const handleMoveStart = (btn, dx, dy) => {
-        btn.classList.add('holding');
-        moveDir = { x: dx, y: dy };
-        if (!rafId) scrollLoop();
-    };
-
-    const handleMoveStop = (btn) => {
-        btn.classList.remove('holding');
-        moveDir = { x: 0, y: 0 };
-        if (rafId) {
-            cancelAnimationFrame(rafId);
-            rafId = null;
-        }
-    };
-
-    // Up
-    if (moveUpBtn) {
-        moveUpBtn.addEventListener('mousedown', () => handleMoveStart(moveUpBtn, 0, -1));
-        moveUpBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveUpBtn, 0, -1); }, { passive: false });
-        moveUpBtn.addEventListener('click', () => viewport.scrollTop -= 200);
-    }
-
-    // Down
-    if (moveDownBtn) {
-        moveDownBtn.addEventListener('mousedown', () => handleMoveStart(moveDownBtn, 0, 1));
-        moveDownBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveDownBtn, 0, 1); }, { passive: false });
-        moveDownBtn.addEventListener('click', () => viewport.scrollTop += 200);
-    }
-
-    // Left
-    if (moveLeftBtn) {
-        moveLeftBtn.addEventListener('mousedown', () => handleMoveStart(moveLeftBtn, -1, 0));
-        moveLeftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveLeftBtn, -1, 0); }, { passive: false });
-        moveLeftBtn.addEventListener('click', () => viewport.scrollLeft -= 200);
-    }
-
-    // Right
-    if (moveRightBtn) {
-        moveRightBtn.addEventListener('mousedown', () => handleMoveStart(moveRightBtn, 1, 0));
-        moveRightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveRightBtn, 1, 0); }, { passive: false });
-        moveRightBtn.addEventListener('click', () => viewport.scrollLeft += 200);
-    }
-
-    // Global stop listeners
-    const stopAll = () => {
-        [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(btn => {
-            if (btn) handleMoveStop(btn);
-        });
-    };
-
-    window.addEventListener('mouseup', stopAll);
-    window.addEventListener('touchend', stopAll);
-    [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(btn => {
-        if (btn) btn.addEventListener('mouseleave', () => handleMoveStop(btn));
     });
 
-    // Panning (Drag to scroll)
+    // --- Mouse Panning with Momentum ---
     let isDown = false;
-    let startX;
-    let startY;
-    let scrollLeft;
-    let scrollTop;
+    let startX, startY, scrollLeft, scrollTop;
+    let velX = 0, velY = 0, lastX = 0, lastY = 0;
+
+    const applyMomentum = () => {
+        if (!isDown && (Math.abs(velX) > 0.1 || Math.abs(velY) > 0.1)) {
+            viewport.scrollLeft -= velX;
+            viewport.scrollTop -= velY;
+            velX *= 0.95; // Friction
+            velY *= 0.95;
+            requestAnimationFrame(applyMomentum);
+        }
+    };
 
     viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.zoom-controls') || e.target.closest('.member-card')) return;
-
+        if (e.target.closest('.member-card') || e.target.closest('.lineage-navigator')) return;
         isDown = true;
         startX = e.pageX - viewport.offsetLeft;
         startY = e.pageY - viewport.offsetTop;
         scrollLeft = viewport.scrollLeft;
         scrollTop = viewport.scrollTop;
+        lastX = e.pageX;
+        lastY = e.pageY;
         viewport.style.cursor = 'grabbing';
     });
 
-    viewport.addEventListener('mouseleave', () => {
+    window.addEventListener('mouseup', () => {
+        if (!isDown) return;
         isDown = false;
         viewport.style.cursor = 'grab';
-    });
-
-    viewport.addEventListener('mouseup', () => {
-        isDown = false;
-        viewport.style.cursor = 'grab';
+        applyMomentum();
     });
 
     viewport.addEventListener('mousemove', (e) => {
@@ -890,8 +877,15 @@ function initControls() {
         const y = e.pageY - viewport.offsetTop;
         const walkX = (x - startX) * 1.5;
         const walkY = (y - startY) * 1.5;
+
         viewport.scrollLeft = scrollLeft - walkX;
         viewport.scrollTop = scrollTop - walkY;
+
+        // Calculate velocity for momentum
+        velX = e.pageX - lastX;
+        velY = e.pageY - lastY;
+        lastX = e.pageX;
+        lastY = e.pageY;
     });
 }
 
