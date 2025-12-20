@@ -473,59 +473,60 @@ const familyData = {
                     name: "Haya Ran",
                     role: "G3: Sibling (Deceased)",
                     image: "",
-                    partner: {
-                        name: "Amnon Marton",
-                        role: "G3: First Husband",
-                        image: ""
-                    },
-                    secondPartner: {
-                        name: "Moshe Ran",
-                        role: "G3: Second Husband",
-                        image: ""
-                    },
                     children: [
                         {
-                            name: "Yifat Marton",
-                            role: "G4: Daughter (Deceased)",
+                            name: "Amnon Marton",
+                            role: "G3: First Husband",
                             image: "",
-                            children: []
-                        },
-                        {
-                            name: "Orit Marton",
-                            role: "G4: Daughter",
-                            children: []
-                        },
-                        {
-                            name: "Tzafra Marton",
-                            role: "G4: Daughter",
-                            children: []
-                        },
-                        {
-                            name: "Gal Ran",
-                            role: "G4: Son (from second marriage)",
-                            image: "",
-                            description: "Child of Haya Ran and Moshe Ran (second husband)",
-                            children: []
-                        },
-                        {
-                            name: "Maya Ran",
-                            role: "G4: Daughter (Deceased, from second marriage)",
-                            image: "",
-                            description: "Child of Haya Ran and Moshe Ran (second husband)",
                             children: [
                                 {
-                                    name: "Matan Punk",
-                                    role: "G5: Son",
+                                    name: "Yifat Marton",
+                                    role: "G4: Daughter (Deceased)",
                                     image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Orit Marton",
+                                    role: "G4: Daughter",
+                                    children: []
+                                },
+                                {
+                                    name: "Tzafra Marton",
+                                    role: "G4: Daughter",
                                     children: []
                                 }
                             ]
                         },
                         {
-                            name: "Iris Frumerman",
-                            role: "G4: Daughter (from second marriage)",
-                            description: "Child of Haya Ran and Moshe Ran (second husband)",
-                            children: []
+                            name: "Moshe Ran",
+                            role: "G3: Second Husband",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Gal Ran",
+                                    role: "G4: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Maya Ran",
+                                    role: "G4: Daughter (Deceased)",
+                                    image: "",
+                                    children: [
+                                        {
+                                            name: "Matan Punk",
+                                            role: "G5: Son",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Iris Frumerman",
+                                    role: "G4: Daughter",
+                                    children: []
+                                }
+                            ]
                         }
                     ]
                 }
@@ -1194,16 +1195,18 @@ function initControls() {
         e.preventDefault();
     });
 
-    window.addEventListener('mousemove', (e) => {
+    viewport.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         
         const deltaX = e.clientX - dragStartX;
         const deltaY = e.clientY - dragStartY;
         
-        console.log('Dragging', { deltaX, deltaY, newScrollLeft: dragStartScrollLeft - deltaX, newScrollTop: dragStartScrollTop - deltaY });
+        console.log('Before scroll:', { scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop });
         
         viewport.scrollLeft = dragStartScrollLeft - deltaX;
         viewport.scrollTop = dragStartScrollTop - deltaY;
+        
+        console.log('After scroll:', { scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop, deltaX, deltaY });
     });
 
     window.addEventListener('mouseup', () => {
