@@ -53,6 +53,8 @@ const familyData = {
                                             name: "Yosef Zvi Rimon",
                                             role: "G2: The Poet of Zion",
                                             image: "",
+                                            coords: [31.7683, 35.2137],
+                                            locationName: "Jerusalem, Israel",
                                             children: []
                                         },
                                         {
@@ -157,9 +159,13 @@ const familyData = {
                                                     name: "Ephraim Rimon",
                                                     role: "G3: Songwriter | Bank of Israel",
                                                     image: "",
+                                                    coords: [31.7683, 35.2137],
+                                                    locationName: "Jerusalem, Israel",
                                                     partner: {
                                                         name: "Talma Rimon",
                                                         role: "G3: Bank of Israel",
+                                                        coords: [31.7683, 35.2137],
+                                                        locationName: "Jerusalem, Israel",
                                                         description: "Daughter of Shalom Weissbarst.",
                                                         image: ""
                                                     },
@@ -299,6 +305,8 @@ const familyData = {
                             name: "Dr. Assaf Givon",
                             role: "G4: Orthopedic Surgeon",
                             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
+                            coords: [32.1481, 34.8913],
+                            locationName: "Hod HaSharon, Israel",
                             partner: {
                                 name: "Ruth Givon",
                                 role: "Partner",
@@ -323,6 +331,8 @@ const familyData = {
                             name: "Daniella Givon",
                             role: "G4: CEO, Unik",
                             image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
+                            coords: [32.0853, 34.7818],
+                            locationName: "Tel Aviv, Israel",
                             partner: {
                                 name: "Nissim Douek",
                                 role: "Partner",
@@ -556,6 +566,8 @@ const familyData = {
                 {
                     name: "Ran Nergal",
                     role: "G3: Sibling",
+                    coords: [32.0853, 34.7818],
+                    locationName: "Tel Aviv, Israel",
                     children: [
                         {
                             name: "Kohava Nergal",
@@ -658,6 +670,8 @@ const familyData = {
                                     name: "Shalom Weissbarst",
                                     role: "G2: Architect (1915-2002) (Deceased)",
                                     image: "",
+                                    coords: [32.7940, 34.9896],
+                                    locationName: "Haifa, Israel",
                                     description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
                                     partner: {
                                         name: "Tova (Gita) Wallach",
@@ -933,11 +947,17 @@ function initControls() {
             }
 
             const matches = [];
+            const seen = new Set();
             const cards = document.querySelectorAll('.member-card');
+
             cards.forEach(card => {
                 const name = card.querySelector('.member-name').textContent;
-                if (name.toLowerCase().includes(query)) {
+                const role = card.querySelector('.member-role').textContent;
+                const searchKey = `${name.toLowerCase()}|${role.toLowerCase()}`;
+
+                if (name.toLowerCase().includes(query) && !seen.has(searchKey)) {
                     matches.push({ name, element: card });
+                    seen.add(searchKey);
                 }
             });
 
@@ -947,7 +967,19 @@ function initControls() {
                     const div = document.createElement('div');
                     div.className = 'search-result-item';
                     const role = match.element.querySelector('.member-role').textContent;
-                    div.innerHTML = `<strong>${match.name}</strong><br><small style="opacity:0.7">${role}</small>`;
+
+                    // Find lineage name by looking up the lineage-section parent
+                    const section = match.element.closest('.lineage-section');
+                    const lineageBtn = document.querySelectorAll('.nav-jump-btn')[Array.from(document.querySelectorAll('.lineage-section')).indexOf(section)];
+                    const lineageName = lineageBtn ? lineageBtn.textContent : 'Family';
+
+                    div.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <strong>${match.name}</strong>
+                            <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.2); color: var(--accent-color); padding: 2px 6px; border-radius: 10px;">${lineageName}</span>
+                        </div>
+                        <small style="opacity:0.7">${role}</small>
+                    `;
                     div.onclick = () => {
                         scrollToElement(match.element);
                         searchResults.style.display = 'none';
@@ -1075,7 +1107,9 @@ function initControls() {
     };
 
     viewport.addEventListener('mousedown', (e) => {
-        if (e.target.closest('.member-card') || e.target.closest('.lineage-navigator')) return;
+        // Only prevent dragging if clicking the lineage navigator UI
+        if (e.target.closest('.lineage-navigator')) return;
+
         isDown = true;
         startX = e.pageX - viewport.offsetLeft;
         startY = e.pageY - viewport.offsetTop;
@@ -1083,30 +1117,37 @@ function initControls() {
         scrollTop = viewport.scrollTop;
         lastX = e.pageX;
         lastY = e.pageY;
+
         viewport.style.cursor = 'grabbing';
+        document.body.style.userSelect = 'none'; // Prevent text selection
     });
 
     window.addEventListener('mouseup', () => {
         if (!isDown) return;
         isDown = false;
         viewport.style.cursor = 'grab';
+        document.body.style.userSelect = '';
         applyMomentum();
     });
 
     viewport.addEventListener('mousemove', (e) => {
         if (!isDown) return;
         e.preventDefault();
+
         const x = e.pageX - viewport.offsetLeft;
         const y = e.pageY - viewport.offsetTop;
-        const walkX = (x - startX) * 1.5;
-        const walkY = (y - startY) * 1.5;
 
-        viewport.scrollLeft = scrollLeft - walkX;
-        viewport.scrollTop = scrollTop - walkY;
+        // Direct scroll calculation for intuitive 1:1 movement
+        const walkX = (e.pageX - lastX);
+        const walkY = (e.pageY - lastY);
 
-        // Calculate velocity for momentum
-        velX = e.pageX - lastX;
-        velY = e.pageY - lastY;
+        viewport.scrollLeft -= walkX;
+        viewport.scrollTop -= walkY;
+
+        // Velocity for momentum
+        velX = walkX;
+        velY = walkY;
+
         lastX = e.pageX;
         lastY = e.pageY;
     });
