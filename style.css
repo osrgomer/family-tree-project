@@ -194,8 +194,8 @@ header p {
     justify-content: center;
     gap: 20rem;
     min-width: max-content;
-    min-height: 300vh;
-    /* 3x viewport height to ensure vertical scrolling */
+    height: 300vh;
+    /* Explicit height to enable vertical scrolling */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
@@ -284,6 +284,7 @@ header p {
     border-left: 3px solid var(--line-color);
     width: 0;
     height: 30px;
+    transform: translateX(-50%);
 }
 
 /* Member Card 3D Flip Styling */
