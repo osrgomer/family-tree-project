@@ -359,6 +359,24 @@ header p {
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
     transform: rotateY(180deg);
     color: var(--text-primary);
+    align-items: stretch;
+}
+
+/* Ensure text on the back of member cards wraps and can scroll when long */
+.card-back .member-role {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100% - 3.5rem);
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.25;
+    white-space: normal;
+    word-break: break-word;
+    padding-right: 6px;
+}
+
+.card-back .member-name {
+    text-align: center;
 }
 
 .venture-card .card-front,

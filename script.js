@@ -1115,69 +1115,64 @@ function initControls() {
         }
     });
 
-    // --- Mouse Panning with Momentum ---
+    // --- Pointer Panning with Momentum (supports touch and mouse) ---
     let isDown = false;
-    let startX, startY, scrollLeft, scrollTop;
-    let velX = 0, velY = 0, lastX = 0, lastY = 0;
+    let lastX = 0, lastY = 0;
+    let velX = 0, velY = 0;
+    const momentumFriction = 0.92;
+
+    const shouldIgnoreDrag = (el) => {
+        return el && el.closest && !!el.closest('.lineage-navigator, .search-wrapper, button, a, input, select, textarea');
+    };
 
     const applyMomentum = () => {
-        if (!isDown && (Math.abs(velX) > 0.1 || Math.abs(velY) > 0.1)) {
+        if (!isDown && (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05)) {
             viewport.scrollLeft -= velX;
             viewport.scrollTop -= velY;
-            velX *= 0.95; // Friction
-            velY *= 0.95;
+            velX *= momentumFriction;
+            velY *= momentumFriction;
             requestAnimationFrame(applyMomentum);
         }
     };
 
-    viewport.addEventListener('mousedown', (e) => {
-        // Only prevent dragging if clicking the lineage navigator UI
-        if (e.target.closest('.lineage-navigator')) return;
-
+    const onPointerDown = (e) => {
+        if (shouldIgnoreDrag(e.target)) return;
         isDown = true;
-        startX = e.pageX - viewport.offsetLeft;
-        startY = e.pageY - viewport.offsetTop;
-        scrollLeft = viewport.scrollLeft;
-        scrollTop = viewport.scrollTop;
-        lastX = e.pageX;
-        lastY = e.pageY;
-
+        try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
+        lastX = e.clientX;
+        lastY = e.clientY;
+        velX = 0; velY = 0;
         viewport.style.cursor = 'grabbing';
-        document.body.style.userSelect = 'none'; // Prevent text selection
-        viewport.style.scrollBehavior = 'auto'; // Disable smooth scroll for instant response during drag
-    });
+        document.body.style.userSelect = 'none';
+        viewport.style.scrollBehavior = 'auto';
+    };
 
-    window.addEventListener('mouseup', () => {
+    const onPointerMove = (e) => {
+        if (!isDown) return;
+        const dx = (e.clientX - lastX) / zoomLevel;
+        const dy = (e.clientY - lastY) / zoomLevel;
+        viewport.scrollLeft -= dx;
+        viewport.scrollTop -= dy;
+        velX = dx;
+        velY = dy;
+        lastX = e.clientX;
+        lastY = e.clientY;
+    };
+
+    const onPointerUp = (e) => {
         if (!isDown) return;
         isDown = false;
+        try { viewport.releasePointerCapture(e.pointerId); } catch (err) {}
         viewport.style.cursor = 'grab';
         document.body.style.userSelect = '';
+        setTimeout(() => { viewport.style.scrollBehavior = 'smooth'; }, 10);
+        requestAnimationFrame(applyMomentum);
+    };
 
-        // Restore smooth behavior after a tiny delay
-        setTimeout(() => {
-            viewport.style.scrollBehavior = 'smooth';
-        }, 10);
-
-        applyMomentum();
-    });
-
-    window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-
-        // Direct scroll calculation for intuitive 1:1 movement
-        const walkX = (e.pageX - lastX);
-        const walkY = (e.pageY - lastY);
-
-        viewport.scrollLeft -= walkX;
-        viewport.scrollTop -= walkY;
-
-        // Velocity for momentum
-        velX = walkX;
-        velY = walkY;
-
-        lastX = e.pageX;
-        lastY = e.pageY;
-    });
+    viewport.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+    viewport.addEventListener('dragstart', (e) => e.preventDefault());
 }
 
 /**
