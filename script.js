@@ -862,27 +862,9 @@ function createTreeElement(member) {
     // Recursively render children
     if (member.children && member.children.length > 0) {
         const ul = document.createElement('ul');
-        
-        // Check if this member has multiple marriages with children from different parents
-        const hasMultipleParentage = member.children.some(child => child.parentage);
-        
-        if (hasMultipleParentage) {
-            // Group children by parentage
-            const firstMarriageChildren = member.children.filter(child => child.parentage === 'first');
-            const secondMarriageChildren = member.children.filter(child => child.parentage === 'second');
-            const otherChildren = member.children.filter(child => !child.parentage);
-            
-            // Create separate groups
-            [...firstMarriageChildren, ...otherChildren, ...secondMarriageChildren].forEach(child => {
-                ul.appendChild(createTreeElement(child));
-            });
-        } else {
-            // Normal rendering
-            member.children.forEach(child => {
-                ul.appendChild(createTreeElement(child));
-            });
-        }
-        
+        member.children.forEach(child => {
+            ul.appendChild(createTreeElement(child));
+        });
         li.appendChild(ul);
     }
 
