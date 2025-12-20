@@ -198,6 +198,8 @@ const familyData = {
                                                             name: "Ran Rimon",
                                                             role: "G4: Entrepreneur",
                                                             image: "https://pbs.twimg.com/profile_images/1524011464109002752/GLGXYNu9_400x400.jpg",
+                                                            coords: [32.0853, 34.7818],
+                                                            locationName: "Tel Aviv, Israel",
                                                             children: [
                                                                 {
                                                                     name: "Eyal Rimon",
@@ -241,11 +243,15 @@ const familyData = {
             name: "Zvi Givon",
             role: "G2: Patriarch",
             image: "",
+            coords: [32.0853, 34.7818],
+            locationName: "Tel Aviv, Israel",
             children: [
                 {
                     name: "Thomas (Tsvi) Givon",
                     role: "G3: Distinguished Professor (Linguistics)",
                     image: "",
+                    coords: [45.5152, -122.6784],
+                    locationName: "Oregon, USA",
                     description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus.",
                     partner: {
                         name: "Linda Givon",
@@ -278,11 +284,15 @@ const familyData = {
                     name: "Professor Moshe Givon",
                     role: "G3: Marketing Expert",
                     image: "",
+                    coords: [32.0853, 34.7818],
+                    locationName: "Tel Aviv, Israel",
                     partner: {
                         name: "Deborah Miriam Givon (Gurfinkel)",
                         role: "G3: Early Childhood Expert",
                         description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel.",
-                        image: ""
+                        image: "",
+                        coords: [32.0853, 34.7818],
+                        locationName: "Tel Aviv, Israel"
                     },
                     children: [
                         {
@@ -898,9 +908,9 @@ function initControls() {
         const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
         const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
 
-        // The delta needed to bring element center to viewport center
-        const deltaX = elementCenterX - viewportCenterX;
-        const deltaY = elementCenterY - viewportCenterY;
+        // Adjust delta for current zoom level (screen pixels to content pixels)
+        const deltaX = (elementCenterX - viewportCenterX) / zoomLevel;
+        const deltaY = (elementCenterY - viewportCenterY) / zoomLevel;
 
         viewport.scrollBy({
             left: deltaX,

@@ -274,7 +274,7 @@ header p {
     border-radius: 5px 0 0 0;
 }
 
-.tree ul ul::before {
+.tree ul::before {
     content: '';
     position: absolute;
     top: 0;
