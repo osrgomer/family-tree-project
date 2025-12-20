@@ -454,58 +454,54 @@ const familyData = {
                     name: "Haya Ran",
                     role: "G3: Sibling (Deceased)",
                     image: "",
+                    partner: {
+                        name: "Amnon Marton",
+                        role: "G3: First Husband",
+                        image: ""
+                    },
                     children: [
                         {
-                            name: "Amnon Marton",
-                            role: "G3: First Husband",
+                            name: "Yifat Marton",
+                            role: "G4: Daughter (Deceased)",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Orit Marton",
+                            role: "G4: Daughter",
+                            children: []
+                        },
+                        {
+                            name: "Tzafra Marton",
+                            role: "G4: Daughter",
+                            children: []
+                        },
+                        {
+                            name: "Gal Ran",
+                            role: "G4: Son (from second marriage)",
+                            image: "",
+                            description: "Child of Haya Ran and Moshe Ran (second husband)",
+                            children: []
+                        },
+                        {
+                            name: "Maya Ran",
+                            role: "G4: Daughter (Deceased, from second marriage)",
+                            image: "",
+                            description: "Child of Haya Ran and Moshe Ran (second husband)",
                             children: [
                                 {
-                                    name: "Yifat Marton",
-                                    role: "G4: Daughter (Deceased)",
+                                    name: "Matan Punk",
+                                    role: "G5: Son",
                                     image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Orit Marton",
-                                    role: "G4: Daughter (Amnon's branch)",
-                                    children: []
-                                },
-                                {
-                                    name: "Tzafra Marton",
-                                    role: "G4: Daughter (Amnon's branch)",
                                     children: []
                                 }
                             ]
                         },
                         {
-                            name: "Moshe Ran",
-                            role: "G3: Second Husband",
-                            children: [
-                                {
-                                    name: "Gal Ran",
-                                    role: "G4: Son",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Maya Ran",
-                                    role: "G4: Daughter (Deceased)",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Matan Punk",
-                                            role: "G5: Son",
-                                            image: "",
-                                            children: []
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Iris Frumerman",
-                                    role: "G4: Daughter (Moshe's branch)",
-                                    children: []
-                                }
-                            ]
+                            name: "Iris Frumerman",
+                            role: "G4: Daughter (from second marriage)",
+                            description: "Child of Haya Ran and Moshe Ran (second husband)",
+                            children: []
                         }
                     ]
                 }

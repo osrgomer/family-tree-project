@@ -10,6 +10,11 @@ function initAddMemberModal() {
     const form = document.getElementById('add-member-form');
     const parentSelect = document.getElementById('new-parent');
 
+    if (!modal || !openBtn || !closeBtn || !cancelBtn || !form || !parentSelect) {
+        console.error('Add Member Modal: Required elements not found');
+        return;
+    }
+
     // Populate parent dropdown with all family members
     function populateParentDropdown() {
         parentSelect.innerHTML = '<option value="">Select Parent...</option>';
@@ -153,7 +158,7 @@ function initAddMemberModal() {
                 initControls();
 
                 // Update map if it's initialized
-                if (mapInitialized && geoData) {
+                if (typeof mapInitialized !== 'undefined' && mapInitialized && geoData) {
                     addMarkersToMap(newMember);
                 }
 
@@ -165,34 +170,33 @@ function initAddMemberModal() {
                 setTimeout(() => {
                     const newCard = document.getElementById('member-' + name.replace(/\s+/g, '-').toLowerCase());
                     if (newCard) {
-                        const scrollToElement = (element) => {
-                            const viewport = document.querySelector('.tree-viewport');
-                            if (!element || !viewport) return;
+                        const viewport = document.querySelector('.tree-viewport');
+                        if (!viewport) return;
 
-                            element.classList.add('spotlight');
+                        newCard.classList.add('spotlight');
 
-                            const viewportRect = viewport.getBoundingClientRect();
-                            const elementRect = element.getBoundingClientRect();
+                        const viewportRect = viewport.getBoundingClientRect();
+                        const elementRect = newCard.getBoundingClientRect();
 
-                            const elementCenterX = elementRect.left + (elementRect.width / 2);
-                            const elementCenterY = elementRect.top + (elementRect.height / 2);
+                        const elementCenterX = elementRect.left + (elementRect.width / 2);
+                        const elementCenterY = elementRect.top + (elementRect.height / 2);
 
-                            const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
-                            const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
+                        const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
+                        const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
 
-                            const screenDeltaX = elementCenterX - viewportCenterX;
-                            const screenDeltaY = elementCenterY - viewportCenterY;
+                        const offsetX = elementCenterX - viewportCenterX;
+                        const offsetY = elementCenterY - viewportCenterY;
 
-                            viewport.scrollBy({
-                                left: screenDeltaX / zoomLevel,
-                                top: screenDeltaY / zoomLevel,
-                                behavior: 'smooth'
-                            });
+                        const newScrollLeft = viewport.scrollLeft + offsetX;
+                        const newScrollTop = viewport.scrollTop + offsetY;
 
-                            setTimeout(() => element.classList.remove('spotlight'), 3000);
-                        };
+                        viewport.scrollTo({
+                            left: newScrollLeft,
+                            top: newScrollTop,
+                            behavior: 'smooth'
+                        });
 
-                        scrollToElement(newCard);
+                        setTimeout(() => newCard.classList.remove('spotlight'), 3000);
                     }
                 }, 500);
             } else {
@@ -206,4 +210,12 @@ function initAddMemberModal() {
             submitBtn.disabled = false;
         }
     });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAddMemberModal);
+} else {
+    // DOM is already ready
+    initAddMemberModal();
 }
