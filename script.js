@@ -861,6 +861,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTree();
     initControls();
     initTabs();
+    initAddMemberModal();
 
     // Initial centering of the tree
     centerTree();

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal-styles.css">
 </head>
 
 <body>
@@ -46,8 +47,22 @@
                     <div class="nav-divider"></div>
                     <div class="nav-section">
                         <span class="nav-label">View:</span>
-                        <button class="nav-gen-btn" data-gen="G0">Roots</button>
-                        <button class="nav-gen-btn" data-gen="G5">Latest</button>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <button class="nav-gen-btn" data-gen="G0">Roots</button>
+                            <button class="nav-gen-btn" data-gen="G5">Latest</button>
+                        </div>
+                    </div>
+                    <div class="nav-divider"></div>
+                    <div class="nav-section">
+                        <span class="nav-label">Update:</span>
+                        <button id="open-add-member" class="add-member-trigger">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Add to Legacy
+                        </button>
                     </div>
                 </div>
                 <div id="family-tree" class="tree-container">
@@ -78,9 +93,47 @@
         </div>
     </main>
 
+    <!-- Add Member Modal -->
+    <div id="add-member-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add to Family Tree</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="add-member-form" class="legacy-form">
+                <div class="form-group">
+                    <label for="new-name">Full Name</label>
+                    <input type="text" id="new-name" placeholder="e.g. John Doe" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="new-age">Age / Generation</label>
+                        <input type="text" id="new-age" placeholder="e.g. 25 or G5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-parent">Parent (Link to...)</label>
+                        <select id="new-parent" required>
+                            <option value="">Select Parent...</option>
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="new-location">Current Residence (Map Location)</label>
+                    <input type="text" id="new-location" placeholder="e.g. Tel Aviv, Israel" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-add" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Member</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
+    <script src="add-member.js"></script>
 </body>
 
 </html>
