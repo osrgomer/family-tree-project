@@ -195,7 +195,8 @@ header p {
     gap: 20rem;
     min-width: max-content;
     height: 300vh;
-    /* Explicit height to enable vertical scrolling */
+    flex-shrink: 0;
+    /* Prevent flex from shrinking this */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;

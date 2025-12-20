@@ -483,6 +483,7 @@ const familyData = {
                         role: "G3: Second Husband",
                         image: ""
                     },
+                    partnerLeft: true,
                     children: [
                         {
                             name: "Yifat Marton",
