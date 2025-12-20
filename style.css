@@ -194,7 +194,8 @@ header p {
     justify-content: center;
     gap: 20rem;
     min-width: max-content;
-    height: 300vh;
+    min-height: 300vh;
+    height: max-content;
     flex-shrink: 0;
     /* Prevent flex from shrinking this */
     margin: 0 auto;
