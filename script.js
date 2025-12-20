@@ -1178,9 +1178,11 @@ function initControls() {
     };
 
     viewport.addEventListener('mousedown', (e) => {
+        console.log('mousedown fired', { button: e.button, target: e.target, shouldIgnore: shouldIgnoreDrag(e.target) });
         if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
         
+        console.log('Starting drag', { clientX: e.clientX, clientY: e.clientY, scrollLeft: viewport.scrollLeft, scrollTop: viewport.scrollTop });
         isDragging = true;
         dragStartX = e.clientX;
         dragStartY = e.clientY;
@@ -1198,12 +1200,15 @@ function initControls() {
         const deltaX = e.clientX - dragStartX;
         const deltaY = e.clientY - dragStartY;
         
+        console.log('Dragging', { deltaX, deltaY, newScrollLeft: dragStartScrollLeft - deltaX, newScrollTop: dragStartScrollTop - deltaY });
+        
         viewport.scrollLeft = dragStartScrollLeft - deltaX;
         viewport.scrollTop = dragStartScrollTop - deltaY;
     });
 
     window.addEventListener('mouseup', () => {
         if (!isDragging) return;
+        console.log('Drag ended', { finalScrollLeft: viewport.scrollLeft, finalScrollTop: viewport.scrollTop });
         isDragging = false;
         viewport.style.cursor = 'grab';
         document.body.style.userSelect = '';
