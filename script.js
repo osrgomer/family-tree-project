@@ -29,7 +29,7 @@ const familyData = {
                                 name: "Hana Haya Gerlitz",
                                 role: "G0: Matriarch (1817–1885) (Deceased)",
                                 image: "",
-                                description: "Daughter of Wolf Eliasz and Sara Rayzel Gerlitz. Born and lived in Biezun, Poland."
+                                description: "Daughter of Wolf Eliasz Gerlitz (b. 1782) and Sara Rayzel (b. 1792, d. 1857). Born and lived in Biezun, Poland."
                             },
                             coords: [52.9515, 20.0119],
                             locationName: "Biezun, Poland (Ancestral Home)",
@@ -41,11 +41,12 @@ const familyData = {
                                     coords: [32.0515, 34.7551],
                                     locationName: "Jaffa, Israel (Last Residence)",
                                     partner: {
-                                        name: "Esther Hava Rimon (Granat)",
+                                        name: "Esther Hava Rimon (Elstein)",
                                         role: "G1: Businesswoman (1864–1918) (Deceased)",
                                         coords: [32.0515, 34.7551],
                                         locationName: "Jaffa, Israel (Last Residence)",
-                                        image: ""
+                                        image: "",
+                                        description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Died in Zichron Yaakov."
                                     },
                                     children: [
                                         {
@@ -136,7 +137,7 @@ const familyData = {
                                                         role: "G3: Educator & Scholar",
                                                         image: ""
                                                     },
-                                                    partnerLeft: true, // Miriam on the right, Israel on the left
+                                                    partnerLeft: true,
                                                     children: [
                                                         {
                                                             name: "Prof. David Glicksberg",
@@ -159,10 +160,10 @@ const familyData = {
                                                     partner: {
                                                         name: "Talma Rimon",
                                                         role: "G3: Bank of Israel",
-                                                        description: "Daughter of Shalom Weissbarst. Part of the G3: Matriarch | Bank of Israel lineage and the core of the Rimon-Givon story.",
+                                                        description: "Daughter of Shalom Weissbarst.",
                                                         image: ""
                                                     },
-                                                    partnerLeft: false, // Ephraim on the left, Talma on the right
+                                                    partnerLeft: false,
                                                     children: [
                                                         {
                                                             name: "Gil Rimon",
@@ -179,12 +180,16 @@ const familyData = {
                                                                     name: "Omer Rimon",
                                                                     role: "G5: The Union (Age 13.5)",
                                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                                                    coords: [37.3192, -8.8033],
+                                                                    locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 },
                                                                 {
                                                                     name: "Nomi Rimon",
                                                                     role: "G5: Student",
                                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                                                    coords: [37.3192, -8.8033],
+                                                                    locationName: "Aljezur, Portugal",
                                                                     children: []
                                                                 }
                                                             ]
@@ -225,340 +230,336 @@ const familyData = {
                                             ]
                                         }
                                     ]
-                                },
-                                {
-                                    name: "Zvi Givon",
-                                    role: "G2: Patriarch",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Thomas (Tsvi) Givon",
-                                            role: "G3: Distinguished Professor (Linguistics)",
-                                            image: "",
-                                            description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus. Currently resides in the USA.",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Professor Moshe Givon",
-                                            role: "G3: Marketing Expert",
-                                            image: "",
-                                            partner: {
-                                                name: "Deborah Givon",
-                                                role: "G3: Early Childhood Expert",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Dr. Assaf Givon",
-                                                    role: "G4: Orthopedic Surgeon",
-                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
-                                                    partner: {
-                                                        name: "Ruth Givon",
-                                                        role: "Partner",
-                                                        image: ""
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Ivry Givon",
-                                                            role: "G5: Son (Age 9-10)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Lily Givon",
-                                                            role: "G5: Daughter (Age 6-7)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Daniella Givon",
-                                                    role: "G4: CEO, Unik",
-                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
-                                                    partner: {
-                                                        name: "Nissim Douek",
-                                                        role: "Partner",
-                                                        image: "https://media.licdn.com/dms/image/v2/C5603AQGg5A2CPy1q4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1603183059658?e=2147483647&v=beta&t=KWSh0XWuCXFYbg1sHPukZOzfEP9AkY-W4LDZMkXZoeA"
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Nave Midbar Tapuhi",
-                                                            role: "G5: Son (Age 21)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Soof Tapuhi",
-                                                            role: "G5: Child (Age 18)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-
-                                                {
-                                                    name: "Daphna Givon",
-                                                    role: "G4: Botanical Expert",
-                                                    image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4NlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
-                                                    coords: [37.3192, -8.8033],
-                                                    locationName: "Aljezur, Portugal",
-                                                    partner: {
-                                                        name: "Arturo Whitelegg",
-                                                        role: "Partner",
-                                                        image: "",
-                                                        coords: [37.3192, -8.8033],
-                                                        locationName: "Aljezur, Portugal"
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Lian Givon Whitelegg",
-                                                            role: "G5: Son (Age 15)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Alma Givon Whitelegg",
-                                                            role: "G5: Daughter (Age 13.5)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Yanai Givon Whitelegg",
-                                                            role: "G5: Son (Age 9-10)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Ilay Givon Whitelegg",
-                                                            role: "G5: Son (Age 5)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Yael Givon",
-                                                    role: "G4: Creative Director",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                                                    coords: [37.3192, -8.8033],
-                                                    locationName: "Aljezur, Portugal",
-                                                    partner: {
-                                                        name: "Gil Rimon",
-                                                        role: "G4: Entrepreneur & Branding",
-                                                        image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                                        coords: [37.3192, -8.8033],
-                                                        locationName: "Aljezur, Portugal"
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Omer Rimon",
-                                                            role: "G5: The Union (Age 13.5)",
-                                                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                                            coords: [37.3192, -8.8033],
-                                                            locationName: "Aljezur, Portugal",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Nomi Rimon",
-                                                            role: "G5: Student",
-                                                            image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                                            coords: [37.3192, -8.8033],
-                                                            locationName: "Aljezur, Portugal",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Ronnie Heller",
-                                                    role: "G4: Choreographer",
-                                                    image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
-                                                    children: [
-                                                        {
-                                                            name: "Amir Heller",
-                                                            role: "G5: Son (Age 21)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "David Heller",
-                                                            role: "G5: Son (Age 15-16)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "DUNICA",
-                                                    role: "Shared Venture: Biotech & Therapeutics",
-                                                    description: "A pioneering biomedical venture co-founded by Daniella Givon, focusing on transformative therapeutics and innovative health solutions.",
-                                                    image: "",
-                                                    type: "venture",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Haya Ran",
-                                            role: "G3: Sibling (Deceased)",
-                                            image: "",
-                                            children: [
-                                                {
-                                                    name: "Gal Ran",
-                                                    role: "G4: Son",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Yifat Ran",
-                                                    role: "G4: Daughter (Deceased)",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Maya Ran",
-                                                    role: "G4: Daughter (Deceased)",
-                                                    image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Matan Punk",
-                                                            role: "G5: Son",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Baruch Tzvi Hirsh Cohen",
-                                    role: "Paternal Roots (1852–1941)",
-                                    image: "",
-                                    partner: {
-                                        name: "Peril Pnina Cohen",
-                                        role: "Great-Grandmother (1856–1925)",
-                                        image: ""
-                                    },
-                                    children: [
-                                        {
-                                            name: "Rabi Mosheh David Rozental Hacohen",
-                                            role: "G2: Rabbi & Scholar",
-                                            image: "",
-                                            partner: {
-                                                name: "Lieba Leah Cohen Rozental",
-                                                role: "G2: Matriarch (1886–1966)",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Benjamin Cohen",
-                                                    role: "G3: Husband (1921–1981)",
-                                                    image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Yoram Cohen",
-                                                            role: "G4: Legacy Representative",
-                                                            image: "",
-                                                            children: [
-                                                                {
-                                                                    name: "Michal Cohen",
-                                                                    role: "G5: Daughter",
-                                                                    image: "",
-                                                                    children: []
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
                                 }
                             ]
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Zvi Givon",
+            role: "G2: Patriarch",
+            image: "",
+            children: [
+                {
+                    name: "Thomas (Tsvi) Givon",
+                    role: "G3: Distinguished Professor (Linguistics)",
+                    image: "",
+                    description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus. Currently resides in the USA.",
+                    children: []
+                },
+                {
+                    name: "Professor Moshe Givon",
+                    role: "G3: Marketing Expert",
+                    image: "",
+                    partner: {
+                        name: "Deborah Givon (Nergal)",
+                        role: "G3: Early Childhood Expert",
+                        image: ""
+                    },
+                    children: [
                         {
-                            name: "The Nergal Lineage",
-                            role: "Ancestral Roots",
-                            image: "",
+                            name: "Dr. Assaf Givon",
+                            role: "G4: Orthopedic Surgeon",
+                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
+                            partner: {
+                                name: "Ruth Givon",
+                                role: "Partner",
+                                image: ""
+                            },
                             children: [
                                 {
-                                    name: "Ran Nergal",
-                                    role: "G3: Sibling",
+                                    name: "Ivry Givon",
+                                    role: "G5: Son (Age 9-10)",
                                     image: "",
                                     children: []
                                 },
                                 {
-                                    name: "Deborah Givon (Nergal)",
-                                    role: "G3: Early Childhood Expert",
+                                    name: "Lily Givon",
+                                    role: "G5: Daughter (Age 6-7)",
                                     image: "",
-                                    description: "Sister of Ran Nergal and partner of Professor Moshe Givon.",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Daniella Givon",
+                            role: "G4: CEO, Unik",
+                            image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
+                            partner: {
+                                name: "Nissim Douek",
+                                role: "Partner",
+                                image: "https://media.licdn.com/dms/image/v2/C5603AQGg5A2CPy1q4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1603183059658?e=2147483647&v=beta&t=KWSh0XWuCXFYbg1sHPukZOzfEP9AkY-W4LDZMkXZoeA"
+                            },
+                            children: [
+                                {
+                                    name: "Nave Midbar Tapuhi",
+                                    role: "G5: Son (Age 21)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Soof Tapuhi",
+                                    role: "G5: Child (Age 18)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Daphna Givon",
+                            role: "G4: Botanical Expert",
+                            image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-1/94432436_10222579086852096_7837351610438123520_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_ohc=l4ns_hm94mIQ7kNvwFSFHM1&_nc_oc=AdmI0yEoLESZPcK5deqhvdX2IcJ7GWgWsda0lbxJtLq433F3Kcbp9JwacnVVyYfY3hA&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=FwqF4FlVpGSn8vZG5187Gw&oh=00_Afl5CAO3hH0Fy-c-yJ68myLLStboL2BunkBkfeudZ1LjVw&oe=696BDCDD",
+                            coords: [37.3192, -8.8033],
+                            locationName: "Aljezur, Portugal",
+                            partner: {
+                                name: "Arturo Whitelegg",
+                                role: "Partner",
+                                image: "",
+                                coords: [37.3192, -8.8033],
+                                locationName: "Aljezur, Portugal"
+                            },
+                            children: [
+                                {
+                                    name: "Lian Givon Whitelegg",
+                                    role: "G5: Son (Age 15)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Alma Givon Whitelegg",
+                                    role: "G5: Daughter (Age 13.5)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Yanai Givon Whitelegg",
+                                    role: "G5: Son (Age 9-10)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Ilay Givon Whitelegg",
+                                    role: "G5: Son (Age 5)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Yael Givon",
+                            role: "G4: Creative Director",
+                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
+                            coords: [37.3192, -8.8033],
+                            locationName: "Aljezur, Portugal",
+                            partner: {
+                                name: "Gil Rimon",
+                                role: "G4: Entrepreneur & Branding",
+                                image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                coords: [37.3192, -8.8033],
+                                locationName: "Aljezur, Portugal"
+                            },
+                            children: [
+                                {
+                                    name: "Omer Rimon",
+                                    role: "G5: The Union (Age 13.5)",
+                                    image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                    coords: [37.3192, -8.8033],
+                                    locationName: "Aljezur, Portugal",
+                                    children: []
+                                },
+                                {
+                                    name: "Nomi Rimon",
+                                    role: "G5: Student",
+                                    image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                    coords: [37.3192, -8.8033],
+                                    locationName: "Aljezur, Portugal",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Ronnie Heller",
+                            role: "G4: Choreographer",
+                            children: [
+                                {
+                                    name: "Amir Heller",
+                                    role: "G5: Son (Age 21)",
+                                    children: []
+                                },
+                                {
+                                    name: "David Heller",
+                                    role: "G5: Son (Age 15-16)",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "DUNICA",
+                            role: "Shared Venture: Biotech & Therapeutics",
+                            description: "A pioneering biomedical venture co-founded by Daniella Givon.",
+                            type: "venture",
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    name: "Haya Ran",
+                    role: "G3: Sibling (Deceased)",
+                    image: "",
+                    children: [
+                        {
+                            name: "Gal Ran",
+                            role: "G4: Son",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Yifat Ran",
+                            role: "G4: Daughter (Deceased)",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Maya Ran",
+                            role: "G4: Daughter (Deceased)",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Matan Punk",
+                                    role: "G5: Son",
+                                    image: "",
                                     children: []
                                 }
                             ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            name: "Baruch Tzvi Hirsh Cohen",
+            role: "Paternal Roots (1852–1941)",
+            image: "",
+            partner: {
+                name: "Peril Pnina Cohen",
+                role: "Great-Grandmother (1856–1925)",
+                image: ""
+            },
+            children: [
                 {
-                    name: "Hirsch Weissbarst",
-                    role: "G-1: Ancestor",
+                    name: "Rabi Mosheh David Rozental Hacohen",
+                    role: "G2: Rabbi & Scholar",
                     image: "",
                     partner: {
-                        name: "Beile Frenkel",
-                        role: "G-1: Ancestor",
+                        name: "Lieba Leah Cohen Rozental",
+                        role: "G2: Matriarch (1886–1966)",
                         image: ""
                     },
                     children: [
                         {
-                            name: "Rachmiel Muhlrad-Weissburst",
-                            role: "G0: Ancestor",
+                            name: "Benjamin Cohen",
+                            role: "G3: Husband (1921–1981)",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Yoram Cohen",
+                                    role: "G4: Legacy Representative",
+                                    image: "",
+                                    children: [
+                                        {
+                                            name: "Michal Cohen",
+                                            role: "G5: Daughter",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "The Nergal Lineage",
+            role: "Ancestral Roots",
+            image: "",
+            children: [
+                {
+                    name: "Ran Nergal",
+                    role: "G3: Sibling",
+                    image: "",
+                    description: "Brother of Deborah Givon.",
+                    children: []
+                },
+                {
+                    name: "Deborah Givon (Nergal)",
+                    role: "G3: Early Childhood Expert",
+                    image: "",
+                    description: "Sister of Ran Nergal and partner of Professor Moshe Givon.",
+                    children: []
+                }
+            ]
+        },
+        {
+            name: "Hirsch Weissbarst",
+            role: "G-1: Ancestor",
+            image: "",
+            partner: {
+                name: "Beile Frenkel",
+                role: "G-1: Ancestor",
+                image: ""
+            },
+            children: [
+                {
+                    name: "Rachmiel Muhlrad-Weissburst",
+                    role: "G0: Ancestor",
+                    image: "",
+                    partner: {
+                        name: "Scheindel Weissbarst",
+                        role: "G0: Ancestor (b. 1861)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Zvi Weissburst",
+                            role: "G1: Merchant (b. 1888)",
                             image: "",
                             partner: {
-                                name: "Scheindel Weissbarst",
-                                role: "G0: Ancestor (b. 1861)",
+                                name: "Sara Weissbarst",
+                                role: "G1: Matriarch",
                                 image: ""
                             },
                             children: [
                                 {
-                                    name: "Zvi Weissburst",
-                                    role: "G1: Merchant (b. 1888)",
+                                    name: "Shalom Weissbarst",
+                                    role: "G2: Architect (1915-2002) (Deceased)",
                                     image: "",
+                                    description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
                                     partner: {
-                                        name: "Sara Weissbarst",
-                                        role: "G1: Matriarch",
-                                        image: ""
+                                        name: "Tova (Gita) Wallach",
+                                        role: "Partner (1917-2002)",
+                                        image: "",
+                                        description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
                                     },
                                     children: [
                                         {
-                                            name: "Shalom Weissbarst",
-                                            role: "G2: Architect (1915-2002) (Deceased)",
+                                            name: "Talma Rimon",
+                                            role: "G3: Bank of Israel",
                                             image: "",
-                                            description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
                                             partner: {
-                                                name: "Tova (Gita) Wallach",
-                                                role: "Partner (1917-2002)",
-                                                image: "",
-                                                description: "Born in Ukraine, immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
+                                                name: "Ephraim Rimon",
+                                                role: "G3: Songwriter | Bank of Israel",
+                                                image: ""
                                             },
                                             children: [
                                                 {
-                                                    name: "Talma Rimon",
-                                                    role: "G3: Bank of Israel",
-                                                    image: "",
-                                                    partner: {
-                                                        name: "Ephraim Rimon",
-                                                        role: "G3: Songwriter | Bank of Israel",
-                                                        image: ""
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Gil Rimon",
-                                                            role: "G4: Entrepreneur & Branding",
-                                                            image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                                            children: []
-                                                        }
-                                                    ]
+                                                    name: "Gil Rimon",
+                                                    role: "G4: Entrepreneur & Branding",
+                                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                                    children: []
                                                 }
                                             ]
                                         }
@@ -569,87 +570,89 @@ const familyData = {
                     ]
                 }
             ]
-        };
+        }
+    ]
+};
 
-    /**
-     * Helper to create a single card DOM element
-     */
-    function createCard(member) {
-        const card = document.createElement('div');
-let cardClass = 'member-card';
-if (member.type === 'venture') cardClass += ' venture-card';
-if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
-card.className = cardClass;
+/**
+ * Helper to create a single card DOM element
+ */
+function createCard(member) {
+    const card = document.createElement('div');
+    let cardClass = 'member-card';
+    if (member.type === 'venture') cardClass += ' venture-card';
+    if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
+    card.className = cardClass;
 
-const inner = document.createElement('div');
-inner.className = 'card-inner';
+    const inner = document.createElement('div');
+    inner.className = 'card-inner';
 
-// FRONT
-const front = document.createElement('div');
-front.className = 'card-front';
+    // FRONT
+    const front = document.createElement('div');
+    front.className = 'card-front';
 
-// Image Placeholder
-const imgContainer = document.createElement('div');
-imgContainer.className = 'image-placeholder';
-if (member.image) {
-    const img = document.createElement('img');
-    img.src = member.image;
-    img.alt = member.name;
-    imgContainer.appendChild(img);
-} else {
-    // Icon logic
-    let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
-    let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
+    // Image Placeholder
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'image-placeholder';
+    if (member.image) {
+        const img = document.createElement('img');
+        img.src = member.image;
+        img.alt = member.name;
+        imgContainer.appendChild(img);
+    } else {
+        // Icon logic
+        let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
+        let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
 
-    if (member.type === 'venture') {
-        // DNA/Biology icon for biotech (abstract)
-        iconPath = "M2 15c6.667-6 13.333 0 20-6";
-        iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
-    }
+        if (member.type === 'venture') {
+            // DNA/Biology icon for biotech (abstract)
+            iconPath = "M2 15c6.667-6 13.333 0 20-6";
+            iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
+        }
 
-    imgContainer.innerHTML = `
+        imgContainer.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="${member.type === 'venture' ? '#38bdf8' : '#94a3b8'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="${iconPath}"></path>
                 ${iconCircle}
             </svg>
         `;
-}
+    }
 
-// Text Content
-const nameData = document.createElement('div');
-nameData.className = 'member-name';
-nameData.textContent = member.name;
+    // Text Content
+    const nameData = document.createElement('div');
+    nameData.className = 'member-name';
+    nameData.textContent = member.name;
 
-const roleData = document.createElement('div');
-roleData.className = 'member-role';
-roleData.textContent = member.role;
+    const roleData = document.createElement('div');
+    roleData.className = 'member-role';
+    roleData.textContent = member.role;
 
-front.appendChild(imgContainer);
-front.appendChild(nameData);
-front.appendChild(roleData);
+    front.appendChild(imgContainer);
+    front.appendChild(nameData);
+    front.appendChild(roleData);
 
-// BACK
-const back = document.createElement('div');
-back.className = 'card-back';
+    // BACK
+    const back = document.createElement('div');
+    back.className = 'card-back';
 
-const backTitle = document.createElement('div');
-backTitle.className = 'member-name';
-backTitle.textContent = "Legacy Details";
-backTitle.style.fontSize = '1rem';
-backTitle.style.marginBottom = '1rem';
+    const backTitle = document.createElement('div');
+    backTitle.className = 'member-name';
+    backTitle.textContent = "Legacy Details";
+    backTitle.style.fontSize = '1rem';
+    backTitle.style.marginBottom = '1rem';
 
-const backInfo = document.createElement('div');
-backInfo.className = 'member-role';
-backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
+    const backInfo = document.createElement('div');
+    backInfo.className = 'member-role';
+    backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
 
-back.appendChild(backTitle);
-back.appendChild(backInfo);
+    back.appendChild(backTitle);
+    back.appendChild(backInfo);
 
-inner.appendChild(front);
-inner.appendChild(back);
-card.appendChild(inner);
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
 
-return card;
+    return card;
 }
 
 function createTreeElement(member) {
@@ -696,6 +699,7 @@ function createTreeElement(member) {
 
 function renderTree() {
     const container = document.getElementById('family-tree');
+    if (!container) return;
     container.innerHTML = ''; // Clear previous content
 
     // Render each main lineage as its own independent tree
@@ -767,8 +771,6 @@ function initControls() {
         treeContainer.style.transform = `scale(${zoomLevel})`;
     };
 
-    const moveStep = 300; // Increased move step for better navigation
-
     zoomInBtn.addEventListener('click', () => {
         zoomLevel = Math.min(zoomLevel + 0.1, 2);
         updateZoom();
@@ -791,7 +793,7 @@ function initControls() {
 
     const scrollLoop = () => {
         if (moveDir.x !== 0 || moveDir.y !== 0) {
-            viewport.scrollLeft += moveDir.x * 20; // Increased speed
+            viewport.scrollLeft += moveDir.x * 20; // Speed
             viewport.scrollTop += moveDir.y * 20;
             rafId = requestAnimationFrame(scrollLoop);
         }
@@ -813,37 +815,45 @@ function initControls() {
     };
 
     // Up
-    moveUpBtn.addEventListener('mousedown', () => handleMoveStart(moveUpBtn, 0, -1));
-    moveUpBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveUpBtn, 0, -1); }, { passive: false });
+    if (moveUpBtn) {
+        moveUpBtn.addEventListener('mousedown', () => handleMoveStart(moveUpBtn, 0, -1));
+        moveUpBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveUpBtn, 0, -1); }, { passive: false });
+        moveUpBtn.addEventListener('click', () => viewport.scrollTop -= 200);
+    }
 
     // Down
-    moveDownBtn.addEventListener('mousedown', () => handleMoveStart(moveDownBtn, 0, 1));
-    moveDownBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveDownBtn, 0, 1); }, { passive: false });
+    if (moveDownBtn) {
+        moveDownBtn.addEventListener('mousedown', () => handleMoveStart(moveDownBtn, 0, 1));
+        moveDownBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveDownBtn, 0, 1); }, { passive: false });
+        moveDownBtn.addEventListener('click', () => viewport.scrollTop += 200);
+    }
 
     // Left
-    moveLeftBtn.addEventListener('mousedown', () => handleMoveStart(moveLeftBtn, -1, 0));
-    moveLeftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveLeftBtn, -1, 0); }, { passive: false });
+    if (moveLeftBtn) {
+        moveLeftBtn.addEventListener('mousedown', () => handleMoveStart(moveLeftBtn, -1, 0));
+        moveLeftBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveLeftBtn, -1, 0); }, { passive: false });
+        moveLeftBtn.addEventListener('click', () => viewport.scrollLeft -= 200);
+    }
 
     // Right
-    moveRightBtn.addEventListener('mousedown', () => handleMoveStart(moveRightBtn, 1, 0));
-    moveRightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveRightBtn, 1, 0); }, { passive: false });
+    if (moveRightBtn) {
+        moveRightBtn.addEventListener('mousedown', () => handleMoveStart(moveRightBtn, 1, 0));
+        moveRightBtn.addEventListener('touchstart', (e) => { e.preventDefault(); handleMoveStart(moveRightBtn, 1, 0); }, { passive: false });
+        moveRightBtn.addEventListener('click', () => viewport.scrollLeft += 200);
+    }
 
     // Global stop listeners
     const stopAll = () => {
-        [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(handleMoveStop);
+        [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(btn => {
+            if (btn) handleMoveStop(btn);
+        });
     };
 
     window.addEventListener('mouseup', stopAll);
     window.addEventListener('touchend', stopAll);
     [moveUpBtn, moveDownBtn, moveLeftBtn, moveRightBtn].forEach(btn => {
-        btn.addEventListener('mouseleave', () => handleMoveStop(btn));
+        if (btn) btn.addEventListener('mouseleave', () => handleMoveStop(btn));
     });
-
-    // Single click for quick jump
-    moveUpBtn.addEventListener('click', () => viewport.scrollTop -= 200);
-    moveDownBtn.addEventListener('click', () => viewport.scrollTop += 200);
-    moveLeftBtn.addEventListener('click', () => viewport.scrollLeft -= 200);
-    moveRightBtn.addEventListener('click', () => viewport.scrollLeft += 200);
 
     // Panning (Drag to scroll)
     let isDown = false;
@@ -853,7 +863,6 @@ function initControls() {
     let scrollTop;
 
     viewport.addEventListener('mousedown', (e) => {
-        // Don't pan if clicking zoom buttons or cards
         if (e.target.closest('.zoom-controls') || e.target.closest('.member-card')) return;
 
         isDown = true;
@@ -886,8 +895,6 @@ function initControls() {
     });
 }
 
-
-
 /**
  * Tab Navigation Logic
  */
@@ -896,6 +903,8 @@ function initTabs() {
     const showMapBtn = document.getElementById('show-map');
     const treeSection = document.getElementById('tree-section');
     const mapSection = document.getElementById('map-section');
+
+    if (!showTreeBtn || !showMapBtn) return;
 
     showTreeBtn.addEventListener('click', () => {
         showTreeBtn.classList.add('active');
@@ -918,10 +927,8 @@ function initTabs() {
 
         // Initialize map if not already done
         if (!mapInitialized) {
-            // Give the DOM a moment to process the display change
             setTimeout(() => initMap(), 50);
         } else {
-            // Re-invalidate size to fix Leaflet rendering in hidden container
             setTimeout(() => map.invalidateSize(), 100);
         }
     });
@@ -934,9 +941,11 @@ let map;
 let mapInitialized = false;
 
 function initMap() {
-    map = L.map('map').setView([32.0, 34.8], 3); // Centered between Europe and Israel
+    const mapContainer = document.getElementById('map');
+    if (!mapContainer) return;
 
-    // Use a dark, premium map tile set
+    map = L.map('map').setView([32.0, 34.8], 3);
+
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
@@ -946,7 +955,6 @@ function initMap() {
     addMarkersToMap(familyData);
     mapInitialized = true;
 
-    // Force a size refresh after markers are added to ensure correct rendering
     setTimeout(() => map.invalidateSize(), 200);
 }
 
