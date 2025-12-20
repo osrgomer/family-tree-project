@@ -997,7 +997,18 @@ function initControls() {
                         const section = card.closest('.lineage-section');
                         let lineage = 'Family';
                         if (section && section.dataset.lineageName) {
-                            lineage = section.dataset.lineageName;
+                            const lineageName = section.dataset.lineageName.toLowerCase();
+                            if (lineageName.includes('granat') || lineageName.includes('yosef')) {
+                                lineage = 'Granat';
+                            } else if (lineageName.includes('givon') || lineageName.includes('zvi')) {
+                                lineage = 'Givon';
+                            } else if (lineageName.includes('cohen') || lineageName.includes('baruch')) {
+                                lineage = 'Cohen';
+                            } else if (lineageName.includes('diamentstein') || lineageName.includes('leah')) {
+                                lineage = 'Diamentstein';
+                            } else if (lineageName.includes('weissbarst') || lineageName.includes('hirsch')) {
+                                lineage = 'Weissbarst';
+                            }
                         }
                         
                         matches.push({ name, role, lineage, element: card });

@@ -194,12 +194,14 @@ header p {
     justify-content: center;
     gap: 20rem;
     min-width: max-content;
-    min-height: 300vh;
-    /* 3x viewport height to ensure vertical scrolling */
+    min-height: 2000px;
+    /* Explicit large height to ensure vertical scrolling room */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    /* Prevent flex parent from shrinking this */
 }
 
 .lineage-section {
