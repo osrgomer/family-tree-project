@@ -913,27 +913,32 @@ function initControls() {
         // Spotlight highlight immediately
         element.classList.add('spotlight');
 
-        // Robust centering logic that works at ANY zoom level
-        // Robust centering logic that handles zoom levels perfectly
-        const viewportRect = viewport.getBoundingClientRect();
+        // Get the element's position relative to the tree container
+        const treeContainer = document.getElementById('family-tree');
         const elementRect = element.getBoundingClientRect();
+        const containerRect = treeContainer.getBoundingClientRect();
+        const viewportRect = viewport.getBoundingClientRect();
 
-        // Screen-space center of the card
+        // Calculate element's center in viewport coordinates
         const elementCenterX = elementRect.left + (elementRect.width / 2);
         const elementCenterY = elementRect.top + (elementRect.height / 2);
 
-        // Screen-space center of the viewport
+        // Calculate viewport's center
         const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
         const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
 
-        // Calculate the distance in screen pixels
-        const screenDeltaX = elementCenterX - viewportCenterX;
-        const screenDeltaY = elementCenterY - viewportCenterY;
+        // Calculate how far off-center the element currently is (in screen pixels)
+        const offsetX = elementCenterX - viewportCenterX;
+        const offsetY = elementCenterY - viewportCenterY;
 
-        // Convert screen pixels to scroll units by dividing by current zoom
-        viewport.scrollBy({
-            left: screenDeltaX / zoomLevel,
-            top: screenDeltaY / zoomLevel,
+        // Calculate the new scroll position
+        // We need to add the offset to current scroll position
+        const newScrollLeft = viewport.scrollLeft + offsetX;
+        const newScrollTop = viewport.scrollTop + offsetY;
+
+        viewport.scrollTo({
+            left: newScrollLeft,
+            top: newScrollTop,
             behavior: 'smooth'
         });
 

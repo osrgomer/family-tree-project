@@ -193,6 +193,8 @@ header p {
     /* Center the tree content */
     gap: 20rem;
     min-width: max-content;
+    min-height: 200vh;
+    /* Ensure vertical scrolling is possible */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
