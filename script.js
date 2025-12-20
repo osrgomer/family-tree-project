@@ -246,16 +246,42 @@ const familyData = {
                     name: "Thomas (Tsvi) Givon",
                     role: "G3: Distinguished Professor (Linguistics)",
                     image: "",
-                    description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus. Currently resides in the USA.",
-                    children: []
+                    description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus.",
+                    partner: {
+                        name: "Linda Givon",
+                        role: "Partner (Second Wife)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Chris Givon",
+                            role: "G4: Son (from first marriage)",
+                            children: [
+                                {
+                                    name: "Raquel Givon",
+                                    role: "G5: Daughter",
+                                    children: [
+                                        { name: "Son", role: "G6: Grandson" },
+                                        { name: "Daughter", role: "G6: Granddaughter" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Nathaniel Givon",
+                            role: "G4: Son (with Linda)",
+                            children: []
+                        }
+                    ]
                 },
                 {
                     name: "Professor Moshe Givon",
                     role: "G3: Marketing Expert",
                     image: "",
                     partner: {
-                        name: "Deborah Givon (Nergal)",
+                        name: "Deborah Miriam Givon (Gurfinkel)",
                         role: "G3: Early Childhood Expert",
+                        description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel.",
                         image: ""
                     },
                     children: [
@@ -410,26 +436,53 @@ const familyData = {
                     image: "",
                     children: [
                         {
-                            name: "Gal Ran",
-                            role: "G4: Son",
-                            image: "",
-                            children: []
-                        },
-                        {
-                            name: "Yifat Ran",
-                            role: "G4: Daughter (Deceased)",
-                            image: "",
-                            children: []
-                        },
-                        {
-                            name: "Maya Ran",
-                            role: "G4: Daughter (Deceased)",
-                            image: "",
+                            name: "Amnon Marton",
+                            role: "G3: First Husband",
                             children: [
                                 {
-                                    name: "Matan Punk",
-                                    role: "G5: Son",
+                                    name: "Yifat Marton",
+                                    role: "G4: Daughter (Deceased)",
                                     image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Orit Marton",
+                                    role: "G4: Daughter (Amnon's branch)",
+                                    children: []
+                                },
+                                {
+                                    name: "Tzafra Marton",
+                                    role: "G4: Daughter (Amnon's branch)",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Moshe Ran",
+                            role: "G3: Second Husband",
+                            children: [
+                                {
+                                    name: "Gal Ran",
+                                    role: "G4: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Maya Ran",
+                                    role: "G4: Daughter (Deceased)",
+                                    image: "",
+                                    children: [
+                                        {
+                                            name: "Matan Punk",
+                                            role: "G5: Son",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Iris Frumerman",
+                                    role: "G4: Daughter (Moshe's branch)",
                                     children: []
                                 }
                             ]
@@ -483,23 +536,87 @@ const familyData = {
             ]
         },
         {
-            name: "The Nergal Lineage",
+            name: "The Diamentstein-Gurfinkel Legacy",
             role: "Ancestral Roots",
-            image: "",
             children: [
                 {
-                    name: "Ran Nergal",
-                    role: "G3: Sibling",
-                    image: "",
-                    description: "Brother of Deborah Givon.",
-                    children: []
+                    name: "Leah Diamentstein",
+                    role: "G2: Matriarch",
+                    partner: {
+                        name: "Ze'ev Gurfinkel",
+                        role: "G2: Patriarch"
+                    },
+                    children: [
+                        {
+                            name: "Ran Nergal",
+                            role: "G3: Sibling",
+                            children: [
+                                {
+                                    name: "Kohava Nergal",
+                                    role: "G3: First Wife",
+                                    children: [
+                                        { name: "Tali Nergal", role: "G4: Daughter" },
+                                        { name: "Livnat Nergal", role: "G4: Daughter" }
+                                    ]
+                                },
+                                {
+                                    name: "Rachel Nergal",
+                                    role: "G3: Second Wife",
+                                    children: [
+                                        { name: "Ziv Nergal", role: "G4: Child" },
+                                        { name: "Chen Nergal", role: "G4: Child" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Deborah Miriam Givon (Gurfinkel)",
+                            role: "G3: Early Childhood Expert",
+                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal.",
+                            children: []
+                        }
+                    ]
                 },
                 {
-                    name: "Deborah Givon (Nergal)",
-                    role: "G3: Early Childhood Expert",
-                    image: "",
-                    description: "Sister of Ran Nergal and partner of Professor Moshe Givon.",
-                    children: []
+                    name: "Rachel Diamentstein",
+                    role: "G2: Sibling",
+                    partner: {
+                        name: "Ashkenazy",
+                        role: "Partner"
+                    },
+                    children: [
+                        {
+                            name: "Herbert Ashkenazy",
+                            role: "G3: Sibling",
+                            partner: {
+                                name: "Ruth Ashkenazy",
+                                role: "Partner"
+                            },
+                            children: [
+                                {
+                                    name: "Leah Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Girl Reid 1", role: "G5: Daughter" },
+                                        { name: "Girl Reid 2", role: "G5: Daughter" }
+                                    ]
+                                },
+                                {
+                                    name: "David Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: []
+                                },
+                                {
+                                    name: "Miriam Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
+                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -579,6 +696,9 @@ const familyData = {
  */
 function createCard(member) {
     const card = document.createElement('div');
+    // Unique ID for searching and jumping
+    card.id = 'member-' + member.name.replace(/\s+/g, '-').toLowerCase();
+
     let cardClass = 'member-card';
     if (member.type === 'venture') cardClass += ' venture-card';
     if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
@@ -759,12 +879,81 @@ function initControls() {
     const zoomInBtn = document.getElementById('zoom-in');
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
+    const searchInput = document.getElementById('member-search');
+    const searchResults = document.getElementById('search-results');
 
     if (!treeContainer || !viewport) return;
 
     const updateZoom = () => {
         treeContainer.style.transform = `scale(${zoomLevel})`;
     };
+
+    const scrollToElement = (element) => {
+        if (!element) return;
+
+        // Reset zoom to 1 to ensure centering is accurate
+        zoomLevel = 1;
+        updateZoom();
+
+        const rect = element.getBoundingClientRect();
+        const viewportRect = viewport.getBoundingClientRect();
+
+        viewport.scrollTo({
+            left: (viewport.scrollLeft + rect.left) - (viewportRect.width / 2) + (rect.width / 2),
+            top: (viewport.scrollTop + rect.top) - (viewportRect.height / 2) + (rect.height / 2),
+            behavior: 'smooth'
+        });
+
+        // Spotlight highlight
+        element.classList.add('spotlight');
+        setTimeout(() => element.classList.remove('spotlight'), 4000);
+    };
+
+    // --- Search Logic ---
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+
+            if (query.length < 1) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            const matches = [];
+            const cards = document.querySelectorAll('.member-card');
+            cards.forEach(card => {
+                const name = card.querySelector('.member-name').textContent;
+                if (name.toLowerCase().includes(query)) {
+                    matches.push({ name, element: card });
+                }
+            });
+
+            if (matches.length > 0) {
+                searchResults.style.display = 'block';
+                matches.slice(0, 10).forEach(match => {
+                    const div = document.createElement('div');
+                    div.className = 'search-result-item';
+                    div.textContent = match.name;
+                    div.onclick = () => {
+                        scrollToElement(match.element);
+                        searchResults.style.display = 'none';
+                        searchInput.value = '';
+                    };
+                    searchResults.appendChild(div);
+                });
+            } else {
+                searchResults.style.display = 'none';
+            }
+        });
+    }
+
+    // Close search on click outside
+    document.addEventListener('click', (e) => {
+        if (searchResults && !e.target.closest('.search-wrapper')) {
+            searchResults.style.display = 'none';
+        }
+    });
 
     // --- Lineage Navigation ---
     const navBtns = document.querySelectorAll('.nav-jump-btn');
@@ -776,16 +965,30 @@ function initControls() {
                 navBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                const target = sections[index];
-                const rect = target.getBoundingClientRect();
-                const viewportRect = viewport.getBoundingClientRect();
+                // Focus the root card of this lineage
+                const rootCard = sections[index].querySelector('.member-card');
+                scrollToElement(rootCard);
+            }
+        });
+    });
 
-                // Smooth scroll to the target section
-                viewport.scrollTo({
-                    left: (viewport.scrollLeft + rect.left) - (viewportRect.width / 2) + (rect.width / 2),
-                    top: (viewport.scrollTop + rect.top) - (viewportRect.top + 100),
-                    behavior: 'smooth'
-                });
+    // --- Generation Navigation ---
+    const genBtns = document.querySelectorAll('.nav-gen-btn');
+    genBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const genTag = btn.dataset.gen; // "G0" or "G5"
+            const cards = Array.from(document.querySelectorAll('.member-card'));
+
+            // Find the first card that matches the generation tag
+            const target = cards.find(card => {
+                const role = card.querySelector('.member-role').textContent;
+                return role.includes(genTag);
+            });
+
+            if (target) {
+                genBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                scrollToElement(target);
             }
         });
     });
@@ -820,7 +1023,7 @@ function initControls() {
     // --- Keyboard Navigation ---
     const moveStep = 40;
     window.addEventListener('keydown', (e) => {
-        if (document.getElementById('tree-section').classList.contains('active')) {
+        if (document.getElementById('tree-section').classList.contains('active') && document.activeElement !== searchInput) {
             switch (e.key.toLowerCase()) {
                 case 'arrowup':
                 case 'w': viewport.scrollTop -= moveStep; break;

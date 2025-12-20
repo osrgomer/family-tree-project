@@ -27,12 +27,28 @@
         <section id="tree-section" class="active">
             <div class="tree-viewport">
                 <div class="lineage-navigator tree-only-controls">
-                    <span class="nav-label">Jump to:</span>
-                    <button class="nav-jump-btn" data-lineage="0">Granat-Rimon</button>
-                    <button class="nav-jump-btn" data-lineage="1">Givon</button>
-                    <button class="nav-jump-btn" data-lineage="2">Cohen</button>
-                    <button class="nav-jump-btn" data-lineage="3">Nergal</button>
-                    <button class="nav-jump-btn" data-lineage="4">Weissbarst</button>
+                    <div class="nav-section">
+                        <span class="nav-label">Search:</span>
+                        <div class="search-wrapper">
+                            <input type="text" id="member-search" placeholder="Find a name..." autocomplete="off">
+                            <div id="search-results" class="search-results-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="nav-divider"></div>
+                    <div class="nav-section">
+                        <span class="nav-label">Lineage:</span>
+                        <button class="nav-jump-btn" data-lineage="0">Granat</button>
+                        <button class="nav-jump-btn" data-lineage="1">Givon</button>
+                        <button class="nav-jump-btn" data-lineage="2">Cohen</button>
+                        <button class="nav-jump-btn" data-lineage="3">Diamentstein</button>
+                        <button class="nav-jump-btn" data-lineage="4">Weissbarst</button>
+                    </div>
+                    <div class="nav-divider"></div>
+                    <div class="nav-section">
+                        <span class="nav-label">View:</span>
+                        <button class="nav-gen-btn" data-gen="G0">Roots</button>
+                        <button class="nav-gen-btn" data-gen="G5">Latest</button>
+                    </div>
                 </div>
                 <div id="family-tree" class="tree-container">
                     <!-- Family tree will be rendered here by JavaScript -->
