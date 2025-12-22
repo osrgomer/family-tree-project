@@ -643,7 +643,7 @@ const familyData = {
                     children: [
                         {
                             name: "Herbert Ashkenazy",
-                            role: "G3: Son",
+                            role: "G3: Son of Rachel & Bernard",
                             partner: {
                                 name: "Ruth Ashkenazy",
                                 role: "Partner"
