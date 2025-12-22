@@ -74,7 +74,7 @@ section.active {
 /* Elegant Headers */
 header {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
     position: relative;
     z-index: 10;
 }
@@ -95,7 +95,7 @@ header p {
     font-size: 1.1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Tab Navigation */
@@ -103,7 +103,7 @@ header p {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .tab-btn {

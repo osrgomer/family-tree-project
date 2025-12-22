@@ -901,15 +901,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial centering of the tree
     centerTree();
     console.log('Family Tree Application Loaded Successfully');
-    
-    // Verification test - add temporary red background to confirm visual movement
-    setTimeout(() => {
-        const container = document.getElementById('family-tree');
-        if (container) {
-            container.style.background = 'linear-gradient(45deg, rgba(255,0,0,0.1) 25%, transparent 25%)';
-            console.log('Drag test: Red pattern added - drag to verify visual movement matches scroll values');
-        }
-    }, 1000);
 });
 
 window.addEventListener('resize', centerTree);
