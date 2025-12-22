@@ -494,7 +494,7 @@ const familyData = {
                             role: "G4: Daughter",
                             description: "Born Iris Frumerman. Daughter of Haya Ran and Moshe Ran. First married to Leal, then to Tamir Sher.",
                             partner: {
-                                name: "Leal (First Husband)",
+                                name: "Dudi Leal",
                                 role: "G4: First Husband",
                                 image: ""
                             },
@@ -589,6 +589,7 @@ const familyData = {
         {
             name: "Leah Diamentstein",
             role: "G2: Matriarch (Deceased)",
+            description: "Sister of Rachel Diamentstein.",
             partner: {
                 name: "Ze'ev Gurfinkel",
                 role: "G2: Patriarch (Deceased)"
@@ -629,14 +630,15 @@ const familyData = {
         {
             name: "Rachel Diamentstein",
             role: "G2: Sibling",
+            description: "Sister of Leah Diamentstein.",
             partner: {
-                name: "Ashkenazy",
+                name: "Bernard Ashkenazy",
                 role: "Partner"
             },
             children: [
                 {
                     name: "Herbert Ashkenazy",
-                    role: "G3: Sibling",
+                    role: "G3: Son",
                     partner: {
                         name: "Ruth Ashkenazy",
                         role: "Partner"
