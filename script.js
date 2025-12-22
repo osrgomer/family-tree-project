@@ -1096,37 +1096,48 @@ function initControls() {
     genBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const genTag = btn.dataset.gen; // "G0" or "G5"
-            // Prefer focusing inside the currently active lineage (if any)
-            const activeNav = document.querySelector('.nav-jump-btn.active');
             let cards = Array.from(document.querySelectorAll('.member-card'));
-            if (activeNav) {
-                const btnName = (activeNav.textContent || '').trim().toLowerCase();
-                const sections = Array.from(document.querySelectorAll('.lineage-section'));
-                const targetSec = sections.find(s => {
-                    const secName = (s.dataset.lineageName || '').trim().toLowerCase();
-                    return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
-                });
-                if (targetSec) cards = Array.from(targetSec.querySelectorAll('.member-card'));
-            }
-
-            // Priority landmark for G5 is Omer Rimon
+            
             let target;
-            if (genTag === 'G5') {
-                target = cards.find(c => (c.querySelector('.member-name') || {}).textContent && c.querySelector('.member-name').textContent.includes('Omer Rimon'));
-            }
-
-            if (!target) {
-                // For G5 pick the last matching card in the selected scope, for G0 pick the first
-                const matches = cards.filter(card => {
+            
+            if (genTag === 'G0') {
+                // Roots: Find the oldest generation (G-2, G-1, G0)
+                const rootGenerations = ['G-2:', 'G-1:', 'G0:'];
+                for (const gen of rootGenerations) {
+                    target = cards.find(card => {
+                        const roleEl = card.querySelector('.member-role');
+                        const role = roleEl ? roleEl.textContent : '';
+                        return role.includes(gen);
+                    });
+                    if (target) break;
+                }
+            } else if (genTag === 'G5') {
+                // Latest: Find youngest person by age
+                let youngestAge = Infinity;
+                cards.forEach(card => {
                     const roleEl = card.querySelector('.member-role');
                     const role = roleEl ? roleEl.textContent : '';
-                    return role && role.includes(genTag);
+                    
+                    // Look for age patterns like "Age 1.5", "Age 2", etc.
+                    const ageMatch = role.match(/Age (\d+(?:\.\d+)?)/i);
+                    if (ageMatch) {
+                        const age = parseFloat(ageMatch[1]);
+                        if (age < youngestAge) {
+                            youngestAge = age;
+                            target = card;
+                        }
+                    }
                 });
-                if (matches.length > 0) {
-                    target = (genTag === 'G5') ? matches[matches.length - 1] : matches[0];
+                
+                // If no age found, fallback to Ana Rimon or any G5
+                if (!target) {
+                    target = cards.find(c => {
+                        const nameEl = c.querySelector('.member-name');
+                        return nameEl && nameEl.textContent.includes('Ana Rimon');
+                    });
                 }
             }
-
+            
             if (target) {
                 genBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
