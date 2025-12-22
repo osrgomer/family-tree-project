@@ -1165,87 +1165,55 @@ function initControls() {
         }
     });
 
-    // --- Simple Click & Drag Panning ---
-    let isDragging = false;
-    let dragStartX = 0, dragStartY = 0;
-    let dragStartScrollLeft = 0, dragStartScrollTop = 0;
-
     const shouldIgnoreDrag = (el) => {
-        // Only block drag on interactive elements, not on the background
         if (!el) return false;
         const tagName = el.tagName ? el.tagName.toLowerCase() : '';
         if (['button', 'input', 'select', 'textarea', 'a'].includes(tagName)) return true;
-        // Check if it's inside a navigator or search
         const nav = el.closest ? el.closest('.lineage-navigator') : null;
         const search = el.closest ? el.closest('.search-wrapper') : null;
         return !!(nav || search);
     };
 
+    // --- Simple Click & Drag Panning ---
+    let isMouseDown = false;
+    let startX, startY;
+
     viewport.addEventListener('mousedown', (e) => {
-        if (e.button !== 0) return;
+        if (e.button !== 0) return; // Only left mouse button
         if (shouldIgnoreDrag(e.target)) return;
         
-        isDragging = true;
-        dragStartX = e.clientX;
-        dragStartY = e.clientY;
-        dragStartScrollLeft = viewport.scrollLeft;
-        dragStartScrollTop = viewport.scrollTop;
-        
+        isMouseDown = true;
+        startX = e.pageX - viewport.offsetLeft;
+        startY = e.pageY - viewport.offsetTop;
         viewport.style.cursor = 'grabbing';
-        document.body.style.userSelect = 'none';
         e.preventDefault();
     });
 
-    viewport.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        
-        const deltaX = e.clientX - dragStartX;
-        const deltaY = e.clientY - dragStartY;
-        
-        viewport.scrollLeft = dragStartScrollLeft - deltaX;
-        viewport.scrollTop = dragStartScrollTop - deltaY;
-    });
-
-    window.addEventListener('mouseup', () => {
-        if (!isDragging) return;
-        isDragging = false;
+    viewport.addEventListener('mouseleave', () => {
+        isMouseDown = false;
         viewport.style.cursor = 'grab';
-        document.body.style.userSelect = '';
     });
 
-    // Touch support
-    let touchStartX = 0, touchStartY = 0;
-    let touchStartScrollLeft = 0, touchStartScrollTop = 0;
-
-    viewport.addEventListener('touchstart', (e) => {
-        if (shouldIgnoreDrag(e.target)) return;
-        if (e.touches.length !== 1) return;
-        
-        isDragging = true;
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-        touchStartScrollLeft = viewport.scrollLeft;
-        touchStartScrollTop = viewport.scrollTop;
-        document.body.style.userSelect = 'none';
+    viewport.addEventListener('mouseup', () => {
+        isMouseDown = false;
+        viewport.style.cursor = 'grab';
     });
 
-    window.addEventListener('touchmove', (e) => {
-        if (!isDragging || e.touches.length !== 1) return;
+    viewport.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        e.preventDefault();
         
-        const deltaX = e.touches[0].clientX - touchStartX;
-        const deltaY = e.touches[0].clientY - touchStartY;
+        const x = e.pageX - viewport.offsetLeft;
+        const y = e.pageY - viewport.offsetTop;
+        const walkX = (x - startX) * 2; // Multiply for faster scrolling
+        const walkY = (y - startY) * 2;
         
-        viewport.scrollLeft = touchStartScrollLeft - deltaX;
-        viewport.scrollTop = touchStartScrollTop - deltaY;
-    }, { passive: true });
-
-    window.addEventListener('touchend', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        document.body.style.userSelect = '';
+        viewport.scrollLeft = viewport.scrollLeft - walkX;
+        viewport.scrollTop = viewport.scrollTop - walkY;
+        
+        startX = x;
+        startY = y;
     });
-
-    viewport.addEventListener('dragstart', (e) => e.preventDefault());
 }
 
 /**
