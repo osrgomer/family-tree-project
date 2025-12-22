@@ -1209,8 +1209,8 @@ function initControls() {
         const pageY = e.pageY || e.touches[0].pageY;
         const x = pageX - viewport.offsetLeft;
         const y = pageY - viewport.offsetTop;
-        const walkX = (x - startX) * 2;
-        const walkY = (y - startY) * 2;
+        const walkX = x - startX;
+        const walkY = y - startY;
         viewport.scrollLeft = scrollLeft - walkX;
         viewport.scrollTop = scrollTop - walkY;
     };
