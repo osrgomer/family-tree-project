@@ -710,6 +710,17 @@ const familyData = {
                                         image: "",
                                         description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
                                     },
+                                    children: [
+                                        {
+                                            name: "Talma Rimon",
+                                            role: "G3: Bank of Israel",
+                                            image: "",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
+                                            description: "Daughter of Shalom Weissbarst.",
+                                            children: []
+                                        }
+                                    ]
 
                                 }
                             ]
