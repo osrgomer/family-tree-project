@@ -634,11 +634,11 @@ const familyData = {
                 },
                 {
                     name: "Rachel Diamentstein",
-                    role: "G2: Sibling",
+                    role: "G2: Sibling (Deceased)",
                     description: "Sister of Leah Diamentstein.",
                     partner: {
                         name: "Bernard Ashkenazy",
-                        role: "Partner"
+                        role: "Partner (Deceased)"
                     },
                     children: [
                         {
