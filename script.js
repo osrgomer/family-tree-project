@@ -722,7 +722,7 @@ const familyData = {
                                     children: [
                                         {
                                             name: "Talma Rimon",
-                                            role: "G3: Bank of Israel",
+                                            role: "G3: Daughter of Shalom",
                                             image: "",
                                             coords: [32.0853, 34.7818],
                                             locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
