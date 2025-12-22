@@ -183,9 +183,10 @@ const familyData = {
                                                             partnerLeft: true,
                                                             children: [
                                                                 {
-                                                                    name: "Omer Rimon",
+                                                                    name: "Omer Shalom Rimon",
                                                                     role: "G5: The Union (Age 13.5)",
                                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                                                    description: "Named after Shalom Weissbarst, his great-grandfather.",
                                                                     children: []
                                                                 },
                                                                 {
