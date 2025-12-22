@@ -1306,6 +1306,7 @@ function initMap() {
     }).addTo(map);
 
     addMarkersToMap(familyData);
+    addHistoricalLocations();
     mapInitialized = true;
 
     setTimeout(() => map.invalidateSize(), 200);
@@ -1332,4 +1333,30 @@ function addMarkersToMap(member) {
     if (member.children) {
         member.children.forEach(child => addMarkersToMap(child));
     }
+}
+
+// Add historical locations from GEDCOM data
+function addHistoricalLocations() {
+    const historicalLocations = [
+        { name: "Biezun, Poland", coords: [52.9515, 20.0119], description: "Ancestral home of the Granat family" },
+        { name: "Kutno, Poland", coords: [52.2333, 19.3667], description: "Birthplace of Bracha Laznowsky" },
+        { name: "Tarnopol, Ukraine", coords: [49.5535, 25.5948], description: "Birthplace of Zvi Weissburst (1888)" },
+        { name: "Zichron Yaakov, Israel", coords: [32.5708, 34.9533], description: "Death place of Esther Hava Elstein (1918)" },
+        { name: "Beersheba, Israel", coords: [31.2518, 34.7915], description: "Birthplace of Gil Rimon (1972)" },
+        { name: "Ukraine", coords: [48.3794, 31.1656], description: "Birthplace of Tova Wallach (1917)" },
+        { name: "Jerusalem, Israel", coords: [31.7683, 35.2137], description: "Immigration destination (1921)" }
+    ];
+
+    historicalLocations.forEach(location => {
+        const marker = L.marker(location.coords).addTo(map);
+        marker.bindPopup(`<strong>${location.name}</strong><br><em>Historical Location</em><br>${location.description}`);
+        
+        // Use different icon for historical locations
+        marker.setIcon(L.divIcon({
+            className: 'historical-marker',
+            html: '📍',
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+        }));
+    });
 }
