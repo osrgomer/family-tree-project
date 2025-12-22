@@ -521,9 +521,39 @@ const familyData = {
                             ]
                         },
                         {
-                            name: "Iris Frumerman",
+                            name: "Iris Leal",
                             role: "G4: Daughter",
-                            children: []
+                            description: "Born Iris Frumerman. Daughter of Haya Ran and Moshe Ran. First married to Leal, then to Tamir Sher.",
+                            partner: {
+                                name: "Leal (First Husband)",
+                                role: "G4: First Husband",
+                                image: ""
+                            },
+                            secondPartner: {
+                                name: "Tamir Sher",
+                                role: "G4: Second Husband",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Jorden Leal",
+                                    role: "G5: Daughter (from first marriage)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Itamar Sher",
+                                    role: "G5: Son (from second marriage)",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Ari Sher",
+                                    role: "G5: Daughter (from second marriage)",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
                         }
                     ]
                 }
@@ -1174,45 +1204,46 @@ function initControls() {
         return !!(nav || search);
     };
 
-    // --- Simple Click & Drag Panning ---
-    let isMouseDown = false;
-    let startX, startY;
+    // --- Click & Drag Panning ---
+    let isDragging = false;
+    let startX, startY, scrollLeft, scrollTop;
 
     viewport.addEventListener('mousedown', (e) => {
-        if (e.button !== 0) return; // Only left mouse button
+        if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
         
-        isMouseDown = true;
+        isDragging = true;
+        viewport.classList.add('active');
         startX = e.pageX - viewport.offsetLeft;
         startY = e.pageY - viewport.offsetTop;
+        scrollLeft = viewport.scrollLeft;
+        scrollTop = viewport.scrollTop;
         viewport.style.cursor = 'grabbing';
-        e.preventDefault();
     });
 
     viewport.addEventListener('mouseleave', () => {
-        isMouseDown = false;
+        isDragging = false;
+        viewport.classList.remove('active');
         viewport.style.cursor = 'grab';
     });
 
     viewport.addEventListener('mouseup', () => {
-        isMouseDown = false;
+        isDragging = false;
+        viewport.classList.remove('active');
         viewport.style.cursor = 'grab';
     });
 
     viewport.addEventListener('mousemove', (e) => {
-        if (!isMouseDown) return;
+        if (!isDragging) return;
         e.preventDefault();
         
         const x = e.pageX - viewport.offsetLeft;
         const y = e.pageY - viewport.offsetTop;
-        const walkX = (x - startX) * 2; // Multiply for faster scrolling
-        const walkY = (y - startY) * 2;
+        const walkX = (x - startX) * 1;
+        const walkY = (y - startY) * 1;
         
-        viewport.scrollLeft = viewport.scrollLeft - walkX;
-        viewport.scrollTop = viewport.scrollTop - walkY;
-        
-        startX = x;
-        startY = y;
+        viewport.scrollLeft = scrollLeft - walkX;
+        viewport.scrollTop = scrollTop - walkY;
     });
 }
 
