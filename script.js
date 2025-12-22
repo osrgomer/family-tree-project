@@ -1210,14 +1210,15 @@ function initControls() {
     };
 
     function debugDrag(element) {
-        console.log({
+        const data = {
             event: "Dragging",
             scrollTop: element.scrollTop,
             scrollHeight: element.scrollHeight,
             clientHeight: element.clientHeight,
             canScrollVertical: element.scrollHeight > element.clientHeight,
             movementY: event.movementY || 0
-        });
+        };
+        console.log(`DRAG: scrollTop=${data.scrollTop}, canScroll=${data.canScrollVertical}, height=${data.scrollHeight}/${data.clientHeight}`);
     }
 
     viewport.addEventListener('mousedown', startDragging);
