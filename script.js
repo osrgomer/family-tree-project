@@ -1181,38 +1181,38 @@ function initControls() {
     };
 
     // --- Click & Drag Panning ---
-    let isDragging = false;
-    let startScrollLeft, startScrollTop, startX, startY;
+    let isDown = false;
+    let startX, startY, scrollLeft, scrollTop;
 
     viewport.addEventListener('mousedown', (e) => {
-        if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
-        
-        isDragging = true;
-        startScrollLeft = viewport.scrollLeft;
-        startScrollTop = viewport.scrollTop;
-        startX = e.clientX;
-        startY = e.clientY;
+        isDown = true;
         viewport.style.cursor = 'grabbing';
-        e.preventDefault();
+        startX = e.pageX - viewport.offsetLeft;
+        startY = e.pageY - viewport.offsetTop;
+        scrollLeft = viewport.scrollLeft;
+        scrollTop = viewport.scrollTop;
     });
 
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const deltaX = e.clientX - startX;
-        const deltaY = e.clientY - startY;
-        
-        viewport.scrollLeft = startScrollLeft - deltaX;
-        viewport.scrollTop = startScrollTop - deltaY;
+    viewport.addEventListener('mouseleave', () => {
+        isDown = false;
+        viewport.style.cursor = 'grab';
     });
 
-    document.addEventListener('mouseup', () => {
-        if (isDragging) {
-            isDragging = false;
-            viewport.style.cursor = 'grab';
-        }
+    viewport.addEventListener('mouseup', () => {
+        isDown = false;
+        viewport.style.cursor = 'grab';
+    });
+
+    viewport.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - viewport.offsetLeft;
+        const y = e.pageY - viewport.offsetTop;
+        const walkX = (x - startX) * 2;
+        const walkY = (y - startY) * 2;
+        viewport.scrollLeft = scrollLeft - walkX;
+        viewport.scrollTop = scrollTop - walkY;
     });
 }
 
