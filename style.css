@@ -198,6 +198,8 @@ header p {
     /* Explicit large height to ensure vertical scrolling room */
     margin: 0 auto;
     align-items: flex-start;
+    align-self: flex-start;
+    /* Prevent flex parent from stretching this vertically */
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;

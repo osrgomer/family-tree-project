@@ -943,28 +943,13 @@ function initControls() {
     const scrollToElement = (element) => {
         if (!element) return;
 
-        // Spotlight highlight immediately
         element.classList.add('spotlight');
 
-        // Get viewport dimensions
-        const viewportRect = viewport.getBoundingClientRect();
-        const elementRect = element.getBoundingClientRect();
-        
-        // Calculate the center position
-        const elementCenterX = elementRect.left + elementRect.width / 2;
-        const elementCenterY = elementRect.top + elementRect.height / 2;
-        
-        const viewportCenterX = viewportRect.width / 2;
-        const viewportCenterY = viewportRect.height / 2;
-        
-        // Calculate scroll offsets to center the element
-        const scrollX = viewport.scrollLeft + (elementCenterX - viewportRect.left - viewportCenterX);
-        const scrollY = viewport.scrollTop + (elementCenterY - viewportRect.top - viewportCenterY);
-
-        viewport.scrollTo({ 
-            left: scrollX, 
-            top: scrollY, 
-            behavior: 'smooth' 
+        // Use scrollIntoView for reliable centering
+        element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center', 
+            inline: 'center' 
         });
 
         setTimeout(() => element.classList.remove('spotlight'), 3000);
@@ -1139,7 +1124,7 @@ function initControls() {
         if (e.ctrlKey || e.metaKey) {
             e.preventDefault();
             const delta = e.deltaY > 0 ? -0.05 : 0.05;
-            zoomLevel = Math.max(0.3, Math.min(2.5, zoomLevel + delta));
+            zoomLevel = Math.max(0.1, Math.min(2.5, zoomLevel + delta));
             updateZoom();
         }
     }, { passive: false });
@@ -1151,7 +1136,7 @@ function initControls() {
     });
 
     zoomOutBtn.addEventListener('click', () => {
-        zoomLevel = Math.max(zoomLevel - 0.1, 0.3);
+        zoomLevel = Math.max(zoomLevel - 0.1, 0.1);
         updateZoom();
     });
 
@@ -1175,7 +1160,7 @@ function initControls() {
                 case 'arrowright':
                 case 'd': viewport.scrollLeft += moveStep; break;
                 case '+': zoomLevel = Math.min(zoomLevel + 0.1, 2.5); updateZoom(); break;
-                case '-': zoomLevel = Math.max(zoomLevel - 0.1, 0.3); updateZoom(); break;
+                case '-': zoomLevel = Math.max(zoomLevel - 0.1, 0.1); updateZoom(); break;
             }
         }
     });
