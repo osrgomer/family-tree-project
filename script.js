@@ -1184,36 +1184,44 @@ function initControls() {
     let isDown = false;
     let startX, startY, scrollLeft, scrollTop;
 
-    viewport.addEventListener('mousedown', (e) => {
+    const startDragging = (e) => {
         if (shouldIgnoreDrag(e.target)) return;
         isDown = true;
         viewport.style.cursor = 'grabbing';
-        startX = e.pageX - viewport.offsetLeft;
-        startY = e.pageY - viewport.offsetTop;
+        const pageX = e.pageX || e.touches[0].pageX;
+        const pageY = e.pageY || e.touches[0].pageY;
+        startX = pageX - viewport.offsetLeft;
+        startY = pageY - viewport.offsetTop;
         scrollLeft = viewport.scrollLeft;
         scrollTop = viewport.scrollTop;
-    });
+        e.preventDefault();
+    };
 
-    viewport.addEventListener('mouseleave', () => {
+    const stopDragging = () => {
         isDown = false;
         viewport.style.cursor = 'grab';
-    });
+    };
 
-    viewport.addEventListener('mouseup', () => {
-        isDown = false;
-        viewport.style.cursor = 'grab';
-    });
-
-    viewport.addEventListener('mousemove', (e) => {
+    const move = (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const x = e.pageX - viewport.offsetLeft;
-        const y = e.pageY - viewport.offsetTop;
+        const pageX = e.pageX || e.touches[0].pageX;
+        const pageY = e.pageY || e.touches[0].pageY;
+        const x = pageX - viewport.offsetLeft;
+        const y = pageY - viewport.offsetTop;
         const walkX = (x - startX) * 2;
         const walkY = (y - startY) * 2;
         viewport.scrollLeft = scrollLeft - walkX;
         viewport.scrollTop = scrollTop - walkY;
-    });
+    };
+
+    viewport.addEventListener('mousedown', startDragging);
+    viewport.addEventListener('mousemove', move);
+    viewport.addEventListener('mouseup', stopDragging);
+    viewport.addEventListener('mouseleave', stopDragging);
+    viewport.addEventListener('touchstart', startDragging, { passive: false });
+    viewport.addEventListener('touchmove', move, { passive: false });
+    viewport.addEventListener('touchend', stopDragging);
 }
 
 /**
