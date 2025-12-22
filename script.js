@@ -190,7 +190,7 @@ const familyData = {
                                                                 },
                                                                 {
                                                                     name: "Nomi Rimon",
-                                                                    role: "G5: Student",
+                                                                    role: "G5: Daughter (Omer's Sister)",
                                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
                                                                     children: []
                                                                 }
@@ -436,7 +436,7 @@ const familyData = {
                                 },
                                 {
                                     name: "Nomi Rimon",
-                                    role: "G5: Student",
+                                    role: "G5: Daughter (Omer's Sister)",
                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
                                     coords: [37.330462, -8.731486],
                                     locationName: "Aljezur, Portugal",
