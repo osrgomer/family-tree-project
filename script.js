@@ -412,38 +412,7 @@ const familyData = {
                                 }
                             ]
                         },
-                        {
-                            name: "Yael Givon",
-                            role: "G4: Creative Director",
-                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                            coords: [37.330462, -8.731486],
-                            locationName: "Aljezur, Portugal",
-                            partner: {
-                                name: "Gil Rimon",
-                                role: "G4: Entrepreneur & Branding",
-                                image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                coords: [37.330462, -8.731486],
-                                locationName: "Aljezur, Portugal"
-                            },
-                            children: [
-                                {
-                                    name: "Omer Rimon",
-                                    role: "G5: The Union (Age 13.5)",
-                                    image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                    coords: [37.330462, -8.731486],
-                                    locationName: "Aljezur, Portugal",
-                                    children: []
-                                },
-                                {
-                                    name: "Nomi Rimon",
-                                    role: "G5: Daughter (Omer's Sister)",
-                                    image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                    coords: [37.330462, -8.731486],
-                                    locationName: "Aljezur, Portugal",
-                                    children: []
-                                }
-                            ]
-                        },
+
                         {
                             name: "Ronnie Heller",
                             role: "G4: Choreographer",
@@ -741,30 +710,7 @@ const familyData = {
                                         image: "",
                                         description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
                                     },
-                                    children: [
-                                        {
-                                            name: "Talma Rimon",
-                                            role: "G3: Bank of Israel",
-                                            image: "",
-                                            coords: [32.0853, 34.7818],
-                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                            partner: {
-                                                name: "Ephraim Rimon",
-                                                role: "G3: Songwriter | Bank of Israel",
-                                                image: "",
-                                                coords: [32.0853, 34.7818],
-                                                locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel"
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Gil Rimon",
-                                                    role: "G4: Entrepreneur & Branding",
-                                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
+
                                 }
                             ]
                         }
@@ -975,6 +921,7 @@ function initControls() {
     const zoomInBtn = document.getElementById('zoom-in');
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
+    const exportGedcomBtn = document.getElementById('export-gedcom');
     const searchInput = document.getElementById('member-search');
     const searchResults = document.getElementById('search-results');
 
@@ -1190,6 +1137,10 @@ function initControls() {
         centerTree();
     });
 
+    exportGedcomBtn.addEventListener('click', () => {
+        exportToGedcom();
+    });
+
     // --- Keyboard Navigation ---
     const moveStep = 40;
     window.addEventListener('keydown', (e) => {
@@ -1220,13 +1171,15 @@ function initControls() {
 
     // --- Click & Drag Panning ---
     let isDragging = false;
-    let startX, startY;
+    let startScrollLeft, startScrollTop, startX, startY;
 
     viewport.addEventListener('mousedown', (e) => {
         if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
         
         isDragging = true;
+        startScrollLeft = viewport.scrollLeft;
+        startScrollTop = viewport.scrollTop;
         startX = e.clientX;
         startY = e.clientY;
         viewport.style.cursor = 'grabbing';
@@ -1240,16 +1193,15 @@ function initControls() {
         const deltaX = e.clientX - startX;
         const deltaY = e.clientY - startY;
         
-        viewport.scrollLeft -= deltaX;
-        viewport.scrollTop -= deltaY;
-        
-        startX = e.clientX;
-        startY = e.clientY;
+        viewport.scrollLeft = startScrollLeft - deltaX;
+        viewport.scrollTop = startScrollTop - deltaY;
     });
 
     document.addEventListener('mouseup', () => {
-        isDragging = false;
-        viewport.style.cursor = 'grab';
+        if (isDragging) {
+            isDragging = false;
+            viewport.style.cursor = 'grab';
+        }
     });
 }
 
@@ -1365,3 +1317,73 @@ function addHistoricalLocations() {
         }));
     });
 }
+
+function exportToGedcom() {
+    let gedcom = '0 HEAD\n1 SOUR Family Tree Project\n1 GEDC\n2 VERS 5.5.1\n1 CHAR UTF-8\n';
+    let individualId = 1;
+    let familyId = 1;
+    const personMap = new Map();
+    const families = [];
+
+    function addPerson(member, parentFamilyId = null) {
+        const id = `I${individualId++}`;
+        personMap.set(member.name, id);
+        
+        gedcom += `0 ${id} INDI\n`;
+        gedcom += `1 NAME ${member.name}\n`;
+        if (member.role) gedcom += `1 NOTE ${member.role}\n`;
+        if (member.coords) gedcom += `1 RESI\n2 PLAC ${member.locationName || 'Unknown'}\n`;
+        if (parentFamilyId) gedcom += `1 FAMC @${parentFamilyId}@\n`;
+        
+        if (member.partner) {
+            const famId = `F${familyId++}`;
+            const spouseId = `I${individualId++}`;
+            personMap.set(member.partner.name, spouseId);
+            
+            gedcom += `1 FAMS @${famId}@\n`;
+            
+            gedcom += `0 ${spouseId} INDI\n`;
+            gedcom += `1 NAME ${member.partner.name}\n`;
+            if (member.partner.role) gedcom += `1 NOTE ${member.partner.role}\n`;
+            gedcom += `1 FAMS @${famId}@\n`;
+            
+            families.push({ id: famId, husband: id, wife: spouseId, children: member.children || [] });
+        }
+        
+        return id;
+    }
+
+    function processTree(member, parentFamilyId = null) {
+        const personId = addPerson(member, parentFamilyId);
+        
+        if (member.children && member.children.length > 0) {
+            const currentFamily = families.find(f => f.husband === personId || f.wife === personId);
+            const childFamilyId = currentFamily ? currentFamily.id : null;
+            
+            member.children.forEach(child => {
+                processTree(child, childFamilyId);
+            });
+        }
+    }
+
+    familyData.children.forEach(lineage => processTree(lineage));
+
+    families.forEach(family => {
+        gedcom += `0 @${family.id}@ FAM\n`;
+        gedcom += `1 HUSB @${family.husband}@\n`;
+        gedcom += `1 WIFE @${family.wife}@\n`;
+        family.children.forEach(child => {
+            const childId = personMap.get(child.name);
+            if (childId) gedcom += `1 CHIL @${childId}@\n`;
+        });
+    });
+
+    gedcom += '0 TRLR\n';
+
+    const blob = new Blob([gedcom], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'family-tree.ged';
+    a.click();
+    URL.revokeObjectURL(url);
