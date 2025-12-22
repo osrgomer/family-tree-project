@@ -1398,3 +1398,4 @@ function exportToGedcom() {
     a.download = 'family-tree.ged';
     a.click();
     URL.revokeObjectURL(url);
+}
