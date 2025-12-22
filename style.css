@@ -58,6 +58,8 @@ section.active {
     /* Essential for flexbox scrolling */
     /* Force height constraint */
     -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
 }
 
 .tree-viewport:active {
