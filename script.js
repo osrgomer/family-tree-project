@@ -946,22 +946,26 @@ function initControls() {
         // Spotlight highlight immediately
         element.classList.add('spotlight');
 
-        // Get the element's position relative to the tree container, accounting for scale
-        const treeContainer = document.getElementById('family-tree');
+        // Get viewport dimensions
+        const viewportRect = viewport.getBoundingClientRect();
         const elementRect = element.getBoundingClientRect();
-        const containerRect = treeContainer.getBoundingClientRect();
+        
+        // Calculate the center position
+        const elementCenterX = elementRect.left + elementRect.width / 2;
+        const elementCenterY = elementRect.top + elementRect.height / 2;
+        
+        const viewportCenterX = viewportRect.width / 2;
+        const viewportCenterY = viewportRect.height / 2;
+        
+        // Calculate scroll offsets to center the element
+        const scrollX = viewport.scrollLeft + (elementCenterX - viewportRect.left - viewportCenterX);
+        const scrollY = viewport.scrollTop + (elementCenterY - viewportRect.top - viewportCenterY);
 
-        // Convert visible (scaled) coordinates back to unscaled content coordinates
-        const unscaledOffsetLeft = (elementRect.left - containerRect.left) / zoomLevel;
-        const unscaledOffsetTop = (elementRect.top - containerRect.top) / zoomLevel;
-
-        const elCenterUnscaledX = unscaledOffsetLeft + (elementRect.width / (2 * zoomLevel));
-        const elCenterUnscaledY = unscaledOffsetTop + (elementRect.height / (2 * zoomLevel));
-
-        const newScrollLeft = elCenterUnscaledX - (viewport.clientWidth / 2);
-        const newScrollTop = elCenterUnscaledY - (viewport.clientHeight / 2);
-
-        viewport.scrollTo({ left: newScrollLeft, top: newScrollTop, behavior: 'smooth' });
+        viewport.scrollTo({ 
+            left: scrollX, 
+            top: scrollY, 
+            behavior: 'smooth' 
+        });
 
         setTimeout(() => element.classList.remove('spotlight'), 3000);
     };
