@@ -936,7 +936,7 @@ function initControls() {
     const searchInput = document.getElementById('member-search');
     const searchResults = document.getElementById('search-results');
 
-    if (!treeContainer || !viewport) return;
+    if (!treeContainer || !viewport || !zoomResetBtn) return;
 
     const updateZoom = () => {
         treeContainer.style.transform = `scale(${zoomLevel})`;
