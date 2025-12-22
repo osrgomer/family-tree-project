@@ -587,82 +587,89 @@ const familyData = {
             ]
         },
         {
-            name: "Leah Diamentstein",
-            role: "G2: Matriarch (Deceased)",
-            description: "Sister of Rachel Diamentstein.",
-            partner: {
-                name: "Ze'ev Gurfinkel",
-                role: "G2: Patriarch (Deceased)"
-            },
+            name: "Diamentstein Family",
+            role: "G1: Patriarch & Matriarch",
+            image: "",
             children: [
                 {
-                    name: "Ran Nergal",
-                    role: "G3: Sibling",
-                    coords: [32.0853, 34.7818],
-                    locationName: "Tel Aviv, Israel",
+                    name: "Leah Diamentstein",
+                    role: "G2: Matriarch (Deceased)",
+                    description: "Sister of Rachel Diamentstein.",
+                    partner: {
+                        name: "Ze'ev Gurfinkel",
+                        role: "G2: Patriarch (Deceased)"
+                    },
                     children: [
                         {
-                            name: "Kohava Nergal",
-                            role: "G3: First Wife",
+                            name: "Ran Nergal",
+                            role: "G3: Sibling",
+                            coords: [32.0853, 34.7818],
+                            locationName: "Tel Aviv, Israel",
                             children: [
-                                { name: "Tali Nergal", role: "G4: Daughter" },
-                                { name: "Livnat Nergal", role: "G4: Daughter" }
+                                {
+                                    name: "Kohava Nergal",
+                                    role: "G3: First Wife",
+                                    children: [
+                                        { name: "Tali Nergal", role: "G4: Daughter" },
+                                        { name: "Livnat Nergal", role: "G4: Daughter" }
+                                    ]
+                                },
+                                {
+                                    name: "Rachel Nergal",
+                                    role: "G3: Second Wife",
+                                    children: [
+                                        { name: "Ziv Nergal", role: "G4: Child" },
+                                        { name: "Chen Nergal", role: "G4: Child" }
+                                    ]
+                                }
                             ]
                         },
                         {
-                            name: "Rachel Nergal",
-                            role: "G3: Second Wife",
-                            children: [
-                                { name: "Ziv Nergal", role: "G4: Child" },
-                                { name: "Chen Nergal", role: "G4: Child" }
-                            ]
+                            name: "Deborah Miriam Givon (Gurfinkel)",
+                            role: "G3: Early Childhood Expert",
+                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
+                            children: []
                         }
                     ]
                 },
                 {
-                    name: "Deborah Miriam Givon (Gurfinkel)",
-                    role: "G3: Early Childhood Expert",
-                    description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
-                    children: []
-                }
-            ]
-        },
-        {
-            name: "Rachel Diamentstein",
-            role: "G2: Sibling",
-            description: "Sister of Leah Diamentstein.",
-            partner: {
-                name: "Bernard Ashkenazy",
-                role: "Partner"
-            },
-            children: [
-                {
-                    name: "Herbert Ashkenazy",
-                    role: "G3: Son",
+                    name: "Rachel Diamentstein",
+                    role: "G2: Sibling",
+                    description: "Sister of Leah Diamentstein.",
                     partner: {
-                        name: "Ruth Ashkenazy",
+                        name: "Bernard Ashkenazy",
                         role: "Partner"
                     },
                     children: [
                         {
-                            name: "Leah Ashkenazy",
-                            role: "G4: Sibling",
+                            name: "Herbert Ashkenazy",
+                            role: "G3: Son",
+                            partner: {
+                                name: "Ruth Ashkenazy",
+                                role: "Partner"
+                            },
                             children: [
-                                { name: "Girl Reid 1", role: "G5: Daughter" },
-                                { name: "Girl Reid 2", role: "G5: Daughter" }
-                            ]
-                        },
-                        {
-                            name: "David Ashkenazy",
-                            role: "G4: Sibling",
-                            children: []
-                        },
-                        {
-                            name: "Miriam Ashkenazy",
-                            role: "G4: Sibling",
-                            children: [
-                                { name: "Altamo Ashkenazy", role: "G5: Child" },
-                                { name: "Ezria Ashkenazy", role: "G5: Child" }
+                                {
+                                    name: "Leah Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Girl Reid 1", role: "G5: Daughter" },
+                                        { name: "Girl Reid 2", role: "G5: Daughter" }
+                                    ]
+                                },
+                                {
+                                    name: "David Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: []
+                                },
+                                {
+                                    name: "Miriam Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
+                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
+                                    ]
+                                }
                             ]
                         }
                     ]
