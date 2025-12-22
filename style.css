@@ -61,7 +61,6 @@ section.active {
     max-height: 100vh;
     min-height: 0;
     -webkit-overflow-scrolling: touch;
-    border: 5px solid red;
 }
 
 .tree-viewport:active {
@@ -208,10 +207,6 @@ header p {
     align-items: flex-start;
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    background-image: 
-        linear-gradient(to right, #333 1px, transparent 1px),
-        linear-gradient(to bottom, #333 1px, transparent 1px);
-    background-size: 50px 50px;
 }
 
 .lineage-section {

@@ -901,6 +901,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial centering of the tree
     centerTree();
     console.log('Family Tree Application Loaded Successfully');
+    
+    // Verification test - add temporary red background to confirm visual movement
+    setTimeout(() => {
+        const container = document.getElementById('family-tree');
+        if (container) {
+            container.style.background = 'linear-gradient(45deg, rgba(255,0,0,0.1) 25%, transparent 25%)';
+            console.log('Drag test: Red pattern added - drag to verify visual movement matches scroll values');
+        }
+    }, 1000);
 });
 
 window.addEventListener('resize', centerTree);
@@ -1204,22 +1213,7 @@ function initControls() {
         // Use built-in movementX/Y for frame-to-frame movement
         viewport.scrollLeft -= e.movementX;
         viewport.scrollTop -= e.movementY;
-        
-        // Vertical Health Check Debug
-        debugDrag(viewport);
     };
-
-    function debugDrag(element) {
-        const data = {
-            event: "Dragging",
-            scrollTop: element.scrollTop,
-            scrollHeight: element.scrollHeight,
-            clientHeight: element.clientHeight,
-            canScrollVertical: element.scrollHeight > element.clientHeight,
-            movementY: event.movementY || 0
-        };
-        console.log(`DRAG: scrollTop=${data.scrollTop}, canScroll=${data.canScrollVertical}, height=${data.scrollHeight}/${data.clientHeight}`);
-    }
 
     viewport.addEventListener('mousedown', startDragging);
     viewport.addEventListener('mousemove', move);
