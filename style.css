@@ -30,8 +30,7 @@ body {
     flex: 1;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 section {
@@ -48,7 +47,7 @@ section.active {
 
 .tree-viewport {
     flex: 1;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     cursor: grab;
     user-select: none;
@@ -58,6 +57,7 @@ section.active {
     height: 100vh;
     min-height: 0;
     -webkit-overflow-scrolling: touch;
+    border: 5px solid red;
 }
 
 .tree-viewport:active {
@@ -193,19 +193,20 @@ header p {
 .tree-container {
     position: relative;
     padding: 20rem 10rem;
-    /* Vertical padding for scrolling space */
     display: flex;
     justify-content: center;
     gap: 20rem;
-    min-width: max-content;
-    min-height: 2000px;
-    /* Explicit large height to ensure vertical scrolling room */
+    min-width: 4000px;
+    min-height: 4000px;
     height: auto;
-    /* Respect min-height, don't stretch to fill parent */
     margin: 0 auto;
     align-items: flex-start;
     transform-origin: center top;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-image: 
+        linear-gradient(to right, #333 1px, transparent 1px),
+        linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 .lineage-section {

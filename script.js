@@ -892,6 +892,7 @@ function renderTree() {
 
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Family Tree Application Starting...');
     renderTree();
     initControls();
     initTabs();
@@ -899,6 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial centering of the tree
     centerTree();
+    console.log('Family Tree Application Loaded Successfully');
 });
 
 window.addEventListener('resize', centerTree);
@@ -1180,20 +1182,13 @@ function initControls() {
         return !!(nav || search);
     };
 
-    // --- Click & Drag Panning ---
+    // --- Click & Drag Panning (Industry Standard) ---
     let isDown = false;
-    let startX, startY, scrollLeft, scrollTop;
 
     const startDragging = (e) => {
         if (shouldIgnoreDrag(e.target)) return;
         isDown = true;
         viewport.style.cursor = 'grabbing';
-        const pageX = e.pageX || e.touches[0].pageX;
-        const pageY = e.pageY || e.touches[0].pageY;
-        startX = pageX - viewport.offsetLeft;
-        startY = pageY - viewport.offsetTop;
-        scrollLeft = viewport.scrollLeft;
-        scrollTop = viewport.scrollTop;
         e.preventDefault();
     };
 
@@ -1205,15 +1200,25 @@ function initControls() {
     const move = (e) => {
         if (!isDown) return;
         e.preventDefault();
-        const pageX = e.pageX || e.touches[0].pageX;
-        const pageY = e.pageY || e.touches[0].pageY;
-        const x = pageX - viewport.offsetLeft;
-        const y = pageY - viewport.offsetTop;
-        const walkX = x - startX;
-        const walkY = y - startY;
-        viewport.scrollLeft = scrollLeft - walkX;
-        viewport.scrollTop = scrollTop - walkY;
+        
+        // Use built-in movementX/Y for frame-to-frame movement
+        viewport.scrollLeft -= e.movementX;
+        viewport.scrollTop -= e.movementY;
+        
+        // Vertical Health Check Debug
+        debugDrag(viewport);
     };
+
+    function debugDrag(element) {
+        console.log({
+            event: "Dragging",
+            scrollTop: element.scrollTop,
+            scrollHeight: element.scrollHeight,
+            clientHeight: element.clientHeight,
+            canScrollVertical: element.scrollHeight > element.clientHeight,
+            movementY: event.movementY || 0
+        });
+    }
 
     viewport.addEventListener('mousedown', startDragging);
     viewport.addEventListener('mousemove', move);
