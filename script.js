@@ -534,22 +534,23 @@ const familyData = {
                                 role: "G4: Second Husband",
                                 image: ""
                             },
+                            partnerLeft: true,
                             children: [
                                 {
                                     name: "Jorden Leal",
-                                    role: "G5: Daughter (from first marriage)",
+                                    role: "G5: Daughter (first marriage)",
                                     image: "",
                                     children: []
                                 },
                                 {
                                     name: "Itamar Sher",
-                                    role: "G5: Son (from second marriage)",
+                                    role: "G5: Son (second marriage)",
                                     image: "",
                                     children: []
                                 },
                                 {
                                     name: "Ari Sher",
-                                    role: "G5: Daughter (from second marriage)",
+                                    role: "G5: Daughter (second marriage)",
                                     image: "",
                                     children: []
                                 }
@@ -592,6 +593,19 @@ const familyData = {
                                         {
                                             name: "Michal Cohen",
                                             role: "G5: Daughter",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Dafna Cohen",
+                                    role: "G4: Sister",
+                                    image: "",
+                                    children: [
+                                        {
+                                            name: "Uri Cohen",
+                                            role: "G5: Son",
                                             image: "",
                                             children: []
                                         }
@@ -1206,44 +1220,36 @@ function initControls() {
 
     // --- Click & Drag Panning ---
     let isDragging = false;
-    let startX, startY, scrollLeft, scrollTop;
+    let startX, startY;
 
     viewport.addEventListener('mousedown', (e) => {
         if (e.button !== 0) return;
         if (shouldIgnoreDrag(e.target)) return;
         
         isDragging = true;
-        viewport.classList.add('active');
-        startX = e.pageX - viewport.offsetLeft;
-        startY = e.pageY - viewport.offsetTop;
-        scrollLeft = viewport.scrollLeft;
-        scrollTop = viewport.scrollTop;
+        startX = e.clientX;
+        startY = e.clientY;
         viewport.style.cursor = 'grabbing';
+        e.preventDefault();
     });
 
-    viewport.addEventListener('mouseleave', () => {
-        isDragging = false;
-        viewport.classList.remove('active');
-        viewport.style.cursor = 'grab';
-    });
-
-    viewport.addEventListener('mouseup', () => {
-        isDragging = false;
-        viewport.classList.remove('active');
-        viewport.style.cursor = 'grab';
-    });
-
-    viewport.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         e.preventDefault();
         
-        const x = e.pageX - viewport.offsetLeft;
-        const y = e.pageY - viewport.offsetTop;
-        const walkX = (x - startX) * 1;
-        const walkY = (y - startY) * 1;
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
         
-        viewport.scrollLeft = scrollLeft - walkX;
-        viewport.scrollTop = scrollTop - walkY;
+        viewport.scrollLeft -= deltaX;
+        viewport.scrollTop -= deltaY;
+        
+        startX = e.clientX;
+        startY = e.clientY;
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        viewport.style.cursor = 'grab';
     });
 }
 
