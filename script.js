@@ -782,7 +782,19 @@ function createCard(member) {
     // Text Content
     const nameData = document.createElement('div');
     nameData.className = 'member-name';
-    nameData.textContent = member.name;
+    
+    // Format name to break parenthetical surnames to new line
+    let formattedName = member.name;
+    if (formattedName.includes('(') && formattedName.includes(')')) {
+        // Find the last parenthetical part (surname)
+        const lastParenIndex = formattedName.lastIndexOf('(');
+        if (lastParenIndex > 0) {
+            const beforeParen = formattedName.substring(0, lastParenIndex).trim();
+            const parenPart = formattedName.substring(lastParenIndex).trim();
+            formattedName = beforeParen + '\n' + parenPart;
+        }
+    }
+    nameData.textContent = formattedName;
 
     const roleData = document.createElement('div');
     roleData.className = 'member-role';
