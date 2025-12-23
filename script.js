@@ -757,8 +757,9 @@ const familyData = {
                                             },
                                             secondPartner: {
                                                 name: "Paul Truong",
-                                                role: "G5: Second Husband (m. 2006)",
-                                                image: ""
+                                                role: "G5: Chess Master & Author (b. 1965)",
+                                                image: "",
+                                                description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
                                             },
                                             partnerLeft: true,
                                             children: [
