@@ -1,84 +1,74 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GEDCOM File Fixer & Merger</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 50px auto; text-align: center; }
+        .container { border: 2px dashed #ccc; padding: 30px; border-radius: 15px; background: #fafafa; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        button:disabled { background: #ccc; }
+        #status { margin-top: 20px; font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
 
-const GedcomMerger = () => {
-  const [mergedContent, setMergedContent] = useState('');
-  const [status, setStatus] = useState('Waiting for files...');
+<div class="container">
+    <h2>GEDCOM Merger</h2>
+    <p>Select your <b>family-tree.ged</b> and <b>granat.ged</b> files together.</p>
+    
+    <input type="file" id="fileInput" multiple accept=".ged">
+    <br>
+    <button id="mergeBtn" disabled>Download Merged & Fixed File</button>
+    <div id="status">Waiting for files...</div>
+</div>
 
-  // This function fixes the "Invalid Entity" error you saw in the screenshot
-  const fixGedcomFormatting = (text) => {
-    return text
-      // 1. Fixes "0 I1 INDI" -> "0 @I1@ INDI"
-      .replace(/^0\s+(I\d+|X\d+)\s+INDI/gm, '0 @$1@ INDI')
-      // 2. Fixes family pointers "1 FAMS F1" -> "1 FAMS @F1@"
-      .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+|X\d+)/gm, '1 $1 @$2@')
-      // 3. Fixes family definitions "0 F1 FAM" -> "0 @F1@ FAM"
-      .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM')
-      // 4. Fixes double @@ symbols sometimes caused by bad exports
-      .replace(/@@/g, '@');
-  };
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const mergeBtn = document.getElementById('mergeBtn');
+    const status = document.getElementById('status');
+    let mergedResult = '';
 
-  const handleMerge = async (event) => {
-    const files = Array.from(event.target.files);
-    if (files.length < 2) {
-      setStatus('Please select at least two files.');
-      return;
+    // This fixes the exact "Invalid Entity" errors from your screenshot
+    function fixGedcom(text) {
+        return text
+            .replace(/^0\s+(I\d+|X\d+)\s+INDI/gm, '0 @$1@ INDI')
+            .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+|X\d+)/gm, '1 $1 @$2@')
+            .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM')
+            .replace(/@@/g, '@'); // Fixes double @s
     }
 
-    setStatus('Processing...');
-    let allRecords = [];
-    let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 SOUR MERGED_APP\n";
+    fileInput.addEventListener('change', async (e) => {
+        const files = Array.from(e.target.files);
+        if (files.length < 1) return;
 
-    for (const file of files) {
-      const text = await file.text();
-      const fixedText = fixGedcomFormatting(text);
-      
-      // Extract everything between HEAD and TRLR
-      const recordsOnly = fixedText
-        .replace(/0 HEAD[\s\S]*?(?=0 @)/g, '') 
-        .replace(/0 TRLR/g, '');
-      
-      allRecords.push(recordsOnly.trim());
-    }
+        status.innerText = "Processing files...";
+        let records = [];
+        let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 SOUR PLAIN_JS_MERGER\n";
 
-    const finalFile = `${header}\n${allRecords.join('\n')}\n0 TRLR`;
-    setMergedContent(finalFile);
-    setStatus('Merge Complete! Ready to download.');
-  };
+        for (const file of files) {
+            const text = await file.text();
+            const fixed = fixGedcom(text);
+            
+            // Strip headers and trailers to prevent corruption
+            const clean = fixed.replace(/0 HEAD[\s\S]*?(?=0 @|0 I)/g, '').replace(/0 TRLR/g, '');
+            records.push(clean.trim());
+        }
 
-  const downloadFile = () => {
-    const blob = new Blob([mergedContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = "master_family_tree.ged";
-    link.click();
-  };
+        mergedResult = header + "\n" + records.join("\n") + "\n0 TRLR";
+        status.innerText = "Ready! Click the button below.";
+        mergeBtn.disabled = false;
+    });
 
-  return (
-    <div style={{ padding: '40px', maxWidth: '600px', margin: 'auto', textAlign: 'center', border: '1px solid #ddd', borderRadius: '10px' }}>
-      <h2>GEDCOM Master Merger</h2>
-      <p>{status}</p>
-      
-      <input 
-        type="file" 
-        multiple 
-        accept=".ged" 
-        onChange={handleMerge} 
-        style={{ margin: '20px 0', padding: '10px' }}
-      />
+    mergeBtn.addEventListener('click', () => {
+        const blob = new Blob([mergedResult], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = "fixed_merged_tree.ged";
+        a.click();
+    });
+</script>
 
-      {mergedContent && (
-        <div>
-          <button 
-            onClick={downloadFile} 
-            style={{ backgroundColor: '#28a745', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
-          >
-            Download Master File (.ged)
-          </button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default GedcomMerger;
+</body>
+</html>
