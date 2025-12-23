@@ -565,7 +565,7 @@ const familyData = {
                                                     children: []
                                                 },
                                                 {
-                                                    name: "Gal Ran",
+                                                    name: "Gal M. Ran",
                                                     role: "G5: Son",
                                                     image: "",
                                                     children: []
