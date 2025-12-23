@@ -52,7 +52,7 @@ const familyData = {
                                         {
                                             name: "Yosef Zvi Rimon",
                                             role: "G2: The Poet of Zion",
-                                            image: "",
+                                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg/250px-Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg",
                                             coords: [31.7683, 35.2137],
                                             locationName: "Jerusalem, Israel",
                                             children: []
