@@ -754,7 +754,7 @@ const familyData = {
                                         {
                                             name: "Sofia Polgár (Zsófia)",
                                             role: "G5: Chess Grandmaster (b. 1974)",
-                                            image: "",
+                                            image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
                                             description: "Middle sister. International Master known for creative and artistic chess approach.",
