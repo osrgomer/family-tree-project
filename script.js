@@ -1000,12 +1000,12 @@ const familyData = {
                     name: "Moshe Givon (Gelbman)",
                     role: "G2: Patriarch (Changed surname from Gelbman)",
                     image: "",
-                    description: "Born Moshe Gelbman in Hungary. Changed surname to Givon when he moved to Israel. Father of the Givon family line.",
+                    description: "Born Moshe Gelbman in Hungary. Son of Victoria Zoref. Changed surname to Givon when he moved to Israel. Father of the Givon family line.",
                     coords: [32.0853, 34.7818],
                     locationName: "Tel Aviv, Israel",
                     partner: {
-                        name: "Victoria Zoref",
-                        role: "G2: Matriarch (Poor sense of smell)",
+                        name: "Deborah Givon",
+                        role: "G2: Matriarch",
                         image: ""
                     },
                     children: [
