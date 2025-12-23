@@ -2,26 +2,37 @@ import React, { useState } from 'react';
 
 const GedcomMerger = () => {
   const [mergedContent, setMergedContent] = useState('');
+  const [status, setStatus] = useState('Waiting for files...');
 
-  const fixGedcomIds = (text) => {
-    // This fixes the "0 I1 INDI" error by adding the missing @ symbols
-    return text.replace(/^0\s+(I\d+)\s+INDI/gm, '0 @$1@ INDI')
-               .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+)/gm, '1 $1 @$2@')
-               .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM');
+  // This function fixes the "Invalid Entity" error you saw in the screenshot
+  const fixGedcomFormatting = (text) => {
+    return text
+      // 1. Fixes "0 I1 INDI" -> "0 @I1@ INDI"
+      .replace(/^0\s+(I\d+|X\d+)\s+INDI/gm, '0 @$1@ INDI')
+      // 2. Fixes family pointers "1 FAMS F1" -> "1 FAMS @F1@"
+      .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+|X\d+)/gm, '1 $1 @$2@')
+      // 3. Fixes family definitions "0 F1 FAM" -> "0 @F1@ FAM"
+      .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM')
+      // 4. Fixes double @@ symbols sometimes caused by bad exports
+      .replace(/@@/g, '@');
   };
 
   const handleMerge = async (event) => {
     const files = Array.from(event.target.files);
+    if (files.length < 2) {
+      setStatus('Please select at least two files.');
+      return;
+    }
+
+    setStatus('Processing...');
     let allRecords = [];
-    
-    // We'll keep the header from the first file
-    let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n";
+    let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 SOUR MERGED_APP\n";
 
     for (const file of files) {
       const text = await file.text();
-      const fixedText = fixGedcomIds(text);
+      const fixedText = fixGedcomFormatting(text);
       
-      // Remove the original Header and Trailer so we can stack the records
+      // Extract everything between HEAD and TRLR
       const recordsOnly = fixedText
         .replace(/0 HEAD[\s\S]*?(?=0 @)/g, '') 
         .replace(/0 TRLR/g, '');
@@ -31,32 +42,39 @@ const GedcomMerger = () => {
 
     const finalFile = `${header}\n${allRecords.join('\n')}\n0 TRLR`;
     setMergedContent(finalFile);
+    setStatus('Merge Complete! Ready to download.');
   };
 
   const downloadFile = () => {
-    const element = document.createElement("a");
-    const file = new Blob([mergedContent], {type: 'text/plain'});
-    element.href = URL.createObjectURL(file);
-    element.download = "merged_family_tree.ged";
-    document.body.appendChild(element);
-    element.click();
+    const blob = new Blob([mergedContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = "master_family_tree.ged";
+    link.click();
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>GEDCOM Format Merger</h1>
-      <p>Upload your .ged files to fix IDs and merge them into one standard 5.5.1 file.</p>
+    <div style={{ padding: '40px', maxWidth: '600px', margin: 'auto', textAlign: 'center', border: '1px solid #ddd', borderRadius: '10px' }}>
+      <h2>GEDCOM Master Merger</h2>
+      <p>{status}</p>
       
-      <input type="file" multiple accept=".ged" onChange={handleMerge} />
-      
+      <input 
+        type="file" 
+        multiple 
+        accept=".ged" 
+        onChange={handleMerge} 
+        style={{ margin: '20px 0', padding: '10px' }}
+      />
+
       {mergedContent && (
-        <div style={{ marginTop: '20px' }}>
-          <button onClick={downloadFile} style={{ padding: '10px 20px', cursor: 'pointer' }}>
-            Download Merged File
+        <div>
+          <button 
+            onClick={downloadFile} 
+            style={{ backgroundColor: '#28a745', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+          >
+            Download Master File (.ged)
           </button>
-          <pre style={{ background: '#f4f4f4', padding: '10px', marginTop: '10px', maxHeight: '300px', overflow: 'auto' }}>
-            {mergedContent.substring(0, 500)}...
-          </pre>
         </div>
       )}
     </div>
