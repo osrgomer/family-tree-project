@@ -763,7 +763,7 @@ const familyData = {
                                         {
                                             name: "Judit Polgár",
                                             role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                                            image: "",
+                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
                                             description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
