@@ -404,12 +404,14 @@ const familyData = {
                                                     name: "Nave Midbar Tapuhi",
                                                     role: "G5: Son (Age 21)",
                                                     image: "",
+                                                    description: "Son of Daniella Givon and Johnathan Tapuhi.",
                                                     children: []
                                                 },
                                                 {
                                                     name: "Soof Tapuhi",
                                                     role: "G5: Child (Age 18)",
                                                     image: "",
+                                                    description: "Child of Daniella Givon and Johnathan Tapuhi.",
                                                     children: []
                                                 }
                                             ]
