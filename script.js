@@ -767,7 +767,15 @@ const familyData = {
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
                                             description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                                            children: []
+                                            children: [
+                                                {
+                                                    name: "Hanna Font",
+                                                    role: "G6: Daughter",
+                                                    image: "",
+                                                    description: "Daughter of Judit Polgár, the strongest female chess player in history.",
+                                                    children: []
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
