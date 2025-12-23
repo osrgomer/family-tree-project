@@ -258,11 +258,12 @@ const familyData = {
             ]
         },
         {
-            name: "Zvi Givon",
+            name: "Zvi Givon (Gelbman)",
             role: "G2: Patriarch",
             image: "",
             coords: [32.0853, 34.7818],
             locationName: "Tel Aviv, Israel",
+            description: "Born Zvi Gelbman. Son of Victoria Zoref.",
             children: [
                 {
                     name: "Thomas (Tsvi) Givon",
@@ -732,6 +733,119 @@ const familyData = {
                                         }
                                     ]
 
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Zoref Family",
+            role: "G0: Patriarch & Matriarch",
+            image: "",
+            children: [
+                {
+                    name: "Yehuda Zoref",
+                    role: "G1: Patriarch",
+                    image: "",
+                    partner: {
+                        name: "Zimbul Behar",
+                        role: "G1: Matriarch",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Marko Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            partner: {
+                                name: "Pavlina Zoref",
+                                role: "G2: Wife",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Dror Zoref",
+                                    role: "G3: Son (Lives in USA)",
+                                    image: "",
+                                    coords: [40.7128, -74.0060],
+                                    locationName: "USA",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Valentina Zoref",
+                            role: "G2: Sibling (Blind from age 40)",
+                            image: "",
+                            description: "Never married. Lost sight around age 40.",
+                            children: []
+                        },
+                        {
+                            name: "Victoria Zoref",
+                            role: "G2: Matriarch (Poor sense of smell)",
+                            image: "",
+                            description: "Mother of Moshe Givon. Had impaired sense of smell.",
+                            children: []
+                        },
+                        {
+                            name: "Jac Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            partner: {
+                                name: "Lily Zoref",
+                                role: "G2: Wife",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Sioma Zoref",
+                                    role: "G3: Son",
+                                    image: "",
+                                    partner: {
+                                        name: "Yafa Zoref",
+                                        role: "G3: Wife",
+                                        image: ""
+                                    },
+                                    children: [
+                                        {
+                                            name: "Erez Zoref",
+                                            role: "G4: Son",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Asaf Zoref",
+                                            role: "G4: Son",
+                                            image: "",
+                                            partner: {
+                                                name: "Keren Zoref",
+                                                role: "G4: Wife",
+                                                image: ""
+                                            },
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Yehezkel Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Yuda Zoref",
+                                    role: "G3: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Daniella Zoref",
+                                    role: "G3: Daughter",
+                                    image: "",
+                                    children: []
                                 }
                             ]
                         }
