@@ -374,7 +374,7 @@ const familyData = {
                             partner: {
                                 name: "Arturo Whitelegg",
                                 role: "Partner",
-                                image: "",
+                                image: "https://static.wixstatic.com/media/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg/v1/fit/w_1277,h_763,q_90,enc_avif,quality_auto/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg",
                                 coords: [37.329767, -8.733916],
                                 locationName: "Aljezur, Portugal"
                             },
