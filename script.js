@@ -739,7 +739,7 @@ const familyData = {
                                     partner: {
                                         name: "Klára Polgár (Altberger)",
                                         role: "G4: Mother of Chess Champions",
-                                        image: ""
+                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg"
                                     },
                                     children: [
                                         {
