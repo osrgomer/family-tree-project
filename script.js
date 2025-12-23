@@ -769,8 +769,9 @@ const familyData = {
                                             description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
                                             partner: {
                                                 name: "Gusztáv Font",
-                                                role: "G5: Husband",
-                                                image: ""
+                                                role: "G5: Veterinarian",
+                                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
+                                                description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
                                             },
                                             children: [
                                                 {
