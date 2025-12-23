@@ -739,7 +739,8 @@ const familyData = {
                                     partner: {
                                         name: "Klára Polgár (Altberger)",
                                         role: "G4: Mother of Chess Champions",
-                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg"
+                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
+                                        description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
                                     },
                                     children: [
                                         {
@@ -760,7 +761,20 @@ const familyData = {
                                                 image: ""
                                             },
                                             partnerLeft: true,
-                                            children: []
+                                            children: [
+                                                {
+                                                    name: "Tom Shutzman",
+                                                    role: "G6: Son (from first marriage)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Leeam Shutzman",
+                                                    role: "G6: Child (from first marriage)",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Sofia Polgár (Zsófia)",
@@ -769,7 +783,25 @@ const familyData = {
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
                                             description: "Middle sister. International Master known for creative and artistic chess approach.",
-                                            children: []
+                                            partner: {
+                                                name: "Yona Kosashvili",
+                                                role: "G5: Husband",
+                                                image: ""
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Yoav Kosashvili",
+                                                    role: "G6: Son",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Alon Kosashvili",
+                                                    role: "G6: Son",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Judit Polgár",
