@@ -587,7 +587,7 @@ const familyData = {
                                                     name: "Iris Leal",
                                                     role: "G5: Daughter",
                                                     image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
-                                                    description: "Born Iris Frumerman. Daughter of Haya Ran and Moshe Ran. First married to Leal, then to Tamir Sher.",
+                                                    description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
                                                     partner: {
                                                         name: "Dudi Leal",
                                                         role: "G5: First Husband",
