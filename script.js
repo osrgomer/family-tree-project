@@ -638,7 +638,7 @@ const familyData = {
                                 {
                                     name: "Dror Zoref",
                                     role: "G3: Son (Lives in USA)",
-                                    image: "",
+                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/272966724_10159688806902836_1849987475025400659_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Q8x7aqLWb9gQ7kNvwGMzGj6&_nc_oc=AdnMuLR351sRjhQElYCS5SqEktzYb2oj4oowXbmUbZ5Due0YvaRw9mblJm9QO7vWqY4&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=yh-MHO_pFrTlNsGxbUdZGQ&oh=00_AflRXU9DcokPMLpX_LE1Xmah3FLHo-9z5Ytnki9xu1iswA&oe=6950CEDA",
                                     coords: [40.7128, -74.0060],
                                     locationName: "USA",
                                     children: []
