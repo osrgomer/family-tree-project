@@ -853,7 +853,75 @@ const familyData = {
                 }
             ]
         }
-    ]
+    ],
+    {
+        name: "Gelbman Family",
+        role: "G1: Patriarch & Matriarch",
+        image: "",
+        children: [
+            {
+                name: "Sarah Gelbman",
+                role: "G2: Sibling of Zvi",
+                image: "",
+                children: [
+                    {
+                        name: "Ármin Polgár (Proszwimmer)",
+                        role: "G3: Holocaust Survivor (1900-1992)",
+                        image: "",
+                        description: "Born Ármin Proszwimmer. Holocaust survivor who survived forced labor during WWII. Changed surname to Polgár after the war.",
+                        children: [
+                            {
+                                name: "László Polgár",
+                                role: "G4: Chess Teacher & Psychologist (b. 1946)",
+                                image: "",
+                                description: "Educational psychologist who proved 'geniuses are made, not born' by raising chess prodigy daughters.",
+                                partner: {
+                                    name: "Klára Polgár",
+                                    role: "G4: Mother of Chess Champions",
+                                    image: ""
+                                },
+                                children: [
+                                    {
+                                        name: "Susan Polgár (Zsuzsa)",
+                                        role: "G5: Chess Grandmaster",
+                                        image: "",
+                                        description: "Eldest of the Polgár sisters, chess prodigy and grandmaster.",
+                                        children: []
+                                    },
+                                    {
+                                        name: "Sofia Polgár (Zsófia)",
+                                        role: "G5: Chess Grandmaster",
+                                        image: "",
+                                        description: "Middle sister, chess prodigy and grandmaster.",
+                                        children: []
+                                    },
+                                    {
+                                        name: "Judit Polgár",
+                                        role: "G5: Chess Grandmaster (Strongest Female Player)",
+                                        image: "",
+                                        description: "Youngest sister, considered the strongest female chess player of all time.",
+                                        children: []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "Edit Gelbman",
+                role: "G2: Sibling of Zvi",
+                image: "",
+                children: []
+            },
+            {
+                name: "Zvi Givon (Gelbman)",
+                role: "G2: Patriarch",
+                image: "",
+                children: []
+            }
+        ]
+    }
 };
 
 /**
