@@ -749,6 +749,17 @@ const familyData = {
                                             coords: [40.7128, -74.0060],
                                             locationName: "New York, USA",
                                             description: "Eldest sister. First woman to earn Grandmaster title through tournament play. Women's World Champion 1996-1999.",
+                                            partner: {
+                                                name: "Jacob Shutzman",
+                                                role: "G5: First Husband (m. 1994–2006)",
+                                                image: ""
+                                            },
+                                            secondPartner: {
+                                                name: "Paul Truong",
+                                                role: "G5: Second Husband (m. 2006)",
+                                                image: ""
+                                            },
+                                            partnerLeft: true,
                                             children: []
                                         },
                                         {
