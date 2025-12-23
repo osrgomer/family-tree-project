@@ -732,7 +732,7 @@ const familyData = {
                                 {
                                     name: "László Polgár",
                                     role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                                    image: "https://pt.wikipedia.org/wiki/Ficheiro:Laszlo_Polgar.jpg",
+                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
                                     coords: [47.4979, 19.0402],
                                     locationName: "Budapest, Hungary",
                                     description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
