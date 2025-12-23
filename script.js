@@ -915,10 +915,61 @@ const familyData = {
                 children: []
             },
             {
-                name: "Zvi Givon (Gelbman)",
-                role: "G2: Patriarch",
+                name: "Moshe Givon (Gelbman)",
+                role: "G2: Patriarch (Changed surname from Gelbman)",
                 image: "",
-                children: []
+                description: "Born Moshe Gelbman, changed surname to Givon. Father of the Givon family line.",
+                partner: {
+                    name: "Victoria Zoref",
+                    role: "G2: Matriarch (Poor sense of smell)",
+                    image: ""
+                },
+                children: [
+                    {
+                        name: "Yehuda Givon",
+                        role: "G3: Son",
+                        image: "",
+                        partner: {
+                            name: "Rivka Givon",
+                            role: "G3: Wife",
+                            image: ""
+                        },
+                        coords: [32.0853, 34.7818],
+                        locationName: "Tel Aviv, Israel",
+                        children: [
+                            {
+                                name: "Moshe Givon",
+                                role: "G4: Son",
+                                image: "",
+                                partner: {
+                                    name: "Nomi Rimon",
+                                    role: "G4: Wife (Daughter of Efraim Eliezer Rimon)",
+                                    image: ""
+                                },
+                                coords: [32.0853, 34.7818],
+                                locationName: "Tel Aviv, Israel",
+                                children: [
+                                    {
+                                        name: "Omer Shalom Rimon (OSRG)",
+                                        role: "G5: Son (Named after Shalom Weissbarst)",
+                                        image: "",
+                                        coords: [32.0853, 34.7818],
+                                        locationName: "Tel Aviv, Israel",
+                                        children: []
+                                    },
+                                    {
+                                        name: "Tal Rimon",
+                                        role: "G5: Son",
+                                        image: "",
+                                        coords: [32.0853, 34.7818],
+                                        locationName: "Tel Aviv, Israel",
+                                        children: []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
