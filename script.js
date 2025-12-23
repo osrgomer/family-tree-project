@@ -1001,7 +1001,7 @@ description: "Born Moshe Gelbman in Hungary. Changed surname to Givon when he mo
             }
         ]
     }
-};
+];
 
 /**
  * Helper to create a single card DOM element
