@@ -779,6 +779,13 @@ const familyData = {
                                                     image: "",
                                                     description: "Daughter of Judit Polgár and Gusztáv Font.",
                                                     children: []
+                                                },
+                                                {
+                                                    name: "Oliver Font",
+                                                    role: "G6: Son",
+                                                    image: "",
+                                                    description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
+                                                    children: []
                                                 }
                                             ]
                                         }
