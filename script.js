@@ -1000,7 +1000,8 @@ const familyData = {
                 }
             ]
         }
-    ];
+    ]
+};
 
 /**
  * Helper to create a single card DOM element
