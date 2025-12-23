@@ -68,10 +68,11 @@ const familyData = {
                                                     image: "https://bluefringes.s3.amazonaws.com/wp-content/uploads/2020/01/17122129/0080_Yosef-Zvi-Rimon.jpg",
                                                     coords: [31.6167, 35.1167],
                                                     locationName: "Alon Shvut, Israel",
-                                                    description: "Distinguished rabbi and halachic authority. Great-grandson of Ephraim Eliezer Granat Rimon, grandson of poet Yosef Zvi Rimon. Father David served in Haganah.",
+                                                    description: "Distinguished rabbi and halachic authority. Chief Rabbi of Gush Etzion, Nasi of World Mizrachi, Rosh Yeshiva of Lev Academic Center (JCT). Great-grandson of Ephraim Eliezer Granat Rimon, grandson of poet Yosef Zvi Rimon. Father David served in Haganah.",
                                                     partner: {
-                                                        name: "Rabbanit Sharon Rimon",
-                                                        role: "G3: Rabbanit (Daughter of Yerucham's Rosh Yeshiva)",
+                                                        name: "Rabbanit Sharon Rimon (Blumenzweig)",
+                                                        role: "G3: Tanach Scholar & Educator",
+                                                        description: "Daughter of Rabbi Eliyahu Blumenzweig (founder of Yeshivat Hesder Yerucham). Content editor for HaTanakh website, teacher in women's midrashot, author of 'Prisms: Perspectives on the Parasha'.",
                                                         image: "https://mizrachi.org/wp-content/uploads/2022/04/HaMizrachi-Pesach-27.jpg"
                                                     },
                                                     children: [
