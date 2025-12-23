@@ -499,7 +499,7 @@ const familyData = {
                                         {
                                             name: "Thomas (Tsvi) Givon",
                                             role: "G4: Distinguished Professor (Linguistics)",
-                                            image: "",
+                                            image: "https://cas.uoregon.edu/sites/default/files/uo_profiles/tgivon_cas_499767.png",
                                             coords: [45.5152, -122.6784],
                                             locationName: "Oregon, USA",
                                             description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus.",
