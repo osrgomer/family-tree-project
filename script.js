@@ -745,11 +745,11 @@ const familyData = {
                                     children: [
                                         {
                                             name: "Susan Polgár (Zsuzsa)",
-                                            role: "G5: Chess Grandmaster (b. 1969)",
+                                            role: "G5: Grandmaster & Women's World Champion (b. 1969)",
                                             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
                                             coords: [40.7128, -74.0060],
                                             locationName: "New York, USA",
-                                            description: "Eldest sister. First woman to earn Grandmaster title through tournament play. Women's World Champion 1996-1999.",
+                                            description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
                                             partner: {
                                                 name: "Jacob Shutzman",
                                                 role: "G5: First Husband (m. 1994–2006)",
