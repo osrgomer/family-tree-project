@@ -508,7 +508,7 @@ const familyData = {
                                             partner: {
                                                 name: "Linda Givon",
                                                 role: "Partner (Second Wife)",
-                                                image: ""
+                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/503846725_122133761840783651_9154276442130859309_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Syu0j3XfFSsQ7kNvwFOnBm9&_nc_oc=Adl2kAchI2lUSXoZMMKrPQwQfJZgGEP_-ey_caywb8NteS24vPXdVRM7KNb6WTLYg4o&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=LnbX0EfZGLPepb8ocOLk4Q&oh=00_AfmOt2Fk4Y582w-fDSs5fMyENQHq02TdmliSkPfyI8gvXw&oe=6950D8F3"
                                             },
                                             children: [
                                                 {
