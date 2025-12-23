@@ -852,156 +852,155 @@ const familyData = {
                     ]
                 }
             ]
-        }
-    ],
-    {
-        name: "Gelbman Family",
-        role: "G1: Hungarian Jewish Family",
-        image: "",
-        description: "Hungarian Jewish family. Brothers Moshe and Zvi - Moshe changed surname to Givon, Zvi kept Gelbman.",
-        coords: [47.4979, 19.0402],
-        locationName: "Budapest, Hungary",
-        children: [
-            {
-                name: "Sarah Gelbman",
-                role: "G2: Sister",
-                image: "",
-                coords: [47.4979, 19.0402],
-                locationName: "Budapest, Hungary",
-                children: [
-                    {
-                        name: "Ármin Polgár (Proszwimmer)",
-                        role: "G3: Holocaust Survivor (1900-1992)",
-                        image: "",
-                        coords: [47.4979, 19.0402],
-                        locationName: "Budapest, Hungary",
-                        description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war.",
-                        children: [
-                            {
-                                name: "László Polgár",
-                                role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                                image: "",
-                                coords: [47.4979, 19.0402],
-                                locationName: "Budapest, Hungary",
-                                description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
-                                partner: {
-                                    name: "Klára Polgár (Altberger)",
-                                    role: "G4: Mother of Chess Champions",
-                                    image: ""
-                                },
-                                children: [
-                                    {
-                                        name: "Susan Polgár (Zsuzsa)",
-                                        role: "G5: Chess Grandmaster (b. 1969)",
-                                        image: "",
-                                        coords: [40.7128, -74.0060],
-                                        locationName: "New York, USA",
-                                        description: "Eldest sister. First woman to earn Grandmaster title through tournament play. Women's World Champion 1996-1999.",
-                                        children: []
+        },
+        {
+            name: "Gelbman Family",
+            role: "G1: Hungarian Jewish Family",
+            image: "",
+            description: "Hungarian Jewish family. Brothers Moshe and Zvi - Moshe changed surname to Givon, Zvi kept Gelbman.",
+            coords: [47.4979, 19.0402],
+            locationName: "Budapest, Hungary",
+            children: [
+                {
+                    name: "Sarah Gelbman",
+                    role: "G2: Sister",
+                    image: "",
+                    coords: [47.4979, 19.0402],
+                    locationName: "Budapest, Hungary",
+                    children: [
+                        {
+                            name: "Ármin Polgár (Proszwimmer)",
+                            role: "G3: Holocaust Survivor (1900-1992)",
+                            image: "",
+                            coords: [47.4979, 19.0402],
+                            locationName: "Budapest, Hungary",
+                            description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war.",
+                            children: [
+                                {
+                                    name: "László Polgár",
+                                    role: "G4: Chess Teacher & Psychologist (b. 1946)",
+                                    image: "",
+                                    coords: [47.4979, 19.0402],
+                                    locationName: "Budapest, Hungary",
+                                    description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
+                                    partner: {
+                                        name: "Klára Polgár (Altberger)",
+                                        role: "G4: Mother of Chess Champions",
+                                        image: ""
                                     },
-                                    {
-                                        name: "Sofia Polgár (Zsófia)",
-                                        role: "G5: Chess Grandmaster (b. 1974)",
-                                        image: "",
-                                        coords: [47.4979, 19.0402],
-                                        locationName: "Budapest, Hungary",
-                                        description: "Middle sister. International Master known for creative and artistic chess approach.",
-                                        children: []
-                                    },
-                                    {
-                                        name: "Judit Polgár",
-                                        role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                                        image: "",
-                                        coords: [47.4979, 19.0402],
-                                        locationName: "Budapest, Hungary",
-                                        description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                                        children: []
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                name: "Edit Gelbman",
-                role: "G2: Sister",
-                image: "",
-                coords: [47.4979, 19.0402],
-                locationName: "Budapest, Hungary",
-                children: []
-            },
-            {
-                name: "Zvi Gelbman",
-                role: "G2: Brother (Kept surname)",
-                image: "",
-                coords: [47.4979, 19.0402],
-                locationName: "Budapest, Hungary",
-                description: "Brother of Moshe Givon. Unlike Moshe, Zvi kept the original Gelbman surname.",
-                children: []
-            },
-            {
-                name: "Moshe Givon (Gelbman)",
-                role: "G2: Patriarch (Changed surname from Gelbman)",
-                image: "",
-description: "Born Moshe Gelbman in Hungary. Changed surname to Givon when he moved to Israel. Father of the Givon family line.",
-                coords: [32.0853, 34.7818],
-                locationName: "Tel Aviv, Israel",
-                partner: {
-                    name: "Victoria Zoref",
-                    role: "G2: Matriarch (Poor sense of smell)",
-                    image: ""
+                                    children: [
+                                        {
+                                            name: "Susan Polgár (Zsuzsa)",
+                                            role: "G5: Chess Grandmaster (b. 1969)",
+                                            image: "",
+                                            coords: [40.7128, -74.0060],
+                                            locationName: "New York, USA",
+                                            description: "Eldest sister. First woman to earn Grandmaster title through tournament play. Women's World Champion 1996-1999.",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Sofia Polgár (Zsófia)",
+                                            role: "G5: Chess Grandmaster (b. 1974)",
+                                            image: "",
+                                            coords: [47.4979, 19.0402],
+                                            locationName: "Budapest, Hungary",
+                                            description: "Middle sister. International Master known for creative and artistic chess approach.",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Judit Polgár",
+                                            role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
+                                            image: "",
+                                            coords: [47.4979, 19.0402],
+                                            locationName: "Budapest, Hungary",
+                                            description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
-                children: [
-                    {
-                        name: "Yehuda Givon",
-                        role: "G3: Son",
-                        image: "",
-                        partner: {
-                            name: "Rivka Givon",
-                            role: "G3: Wife",
-                            image: ""
-                        },
-                        coords: [32.0853, 34.7818],
-                        locationName: "Tel Aviv, Israel",
-                        children: [
-                            {
-                                name: "Moshe Givon",
-                                role: "G4: Son",
-                                image: "",
-                                partner: {
-                                    name: "Nomi Rimon",
-                                    role: "G4: Wife (Daughter of Efraim Eliezer Rimon)",
-                                    image: ""
-                                },
-                                coords: [32.0853, 34.7818],
-                                locationName: "Tel Aviv, Israel",
-                                children: [
-                                    {
-                                        name: "Omer Shalom Rimon (OSRG)",
-                                        role: "G5: Son (Named after Shalom Weissbarst)",
-                                        image: "",
-                                        coords: [32.0853, 34.7818],
-                                        locationName: "Tel Aviv, Israel",
-                                        children: []
+                {
+                    name: "Edit Gelbman",
+                    role: "G2: Sister",
+                    image: "",
+                    coords: [47.4979, 19.0402],
+                    locationName: "Budapest, Hungary",
+                    children: []
+                },
+                {
+                    name: "Zvi Gelbman",
+                    role: "G2: Brother (Kept surname)",
+                    image: "",
+                    coords: [47.4979, 19.0402],
+                    locationName: "Budapest, Hungary",
+                    description: "Brother of Moshe Givon. Unlike Moshe, Zvi kept the original Gelbman surname.",
+                    children: []
+                },
+                {
+                    name: "Moshe Givon (Gelbman)",
+                    role: "G2: Patriarch (Changed surname from Gelbman)",
+                    image: "",
+                    description: "Born Moshe Gelbman in Hungary. Changed surname to Givon when he moved to Israel. Father of the Givon family line.",
+                    coords: [32.0853, 34.7818],
+                    locationName: "Tel Aviv, Israel",
+                    partner: {
+                        name: "Victoria Zoref",
+                        role: "G2: Matriarch (Poor sense of smell)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Yehuda Givon",
+                            role: "G3: Son",
+                            image: "",
+                            partner: {
+                                name: "Rivka Givon",
+                                role: "G3: Wife",
+                                image: ""
+                            },
+                            coords: [32.0853, 34.7818],
+                            locationName: "Tel Aviv, Israel",
+                            children: [
+                                {
+                                    name: "Moshe Givon",
+                                    role: "G4: Son",
+                                    image: "",
+                                    partner: {
+                                        name: "Nomi Rimon",
+                                        role: "G4: Wife (Daughter of Efraim Eliezer Rimon)",
+                                        image: ""
                                     },
-                                    {
-                                        name: "Tal Rimon",
-                                        role: "G5: Son",
-                                        image: "",
-                                        coords: [32.0853, 34.7818],
-                                        locationName: "Tel Aviv, Israel",
-                                        children: []
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-];
+                                    coords: [32.0853, 34.7818],
+                                    locationName: "Tel Aviv, Israel",
+                                    children: [
+                                        {
+                                            name: "Omer Shalom Rimon (OSRG)",
+                                            role: "G5: Son (Named after Shalom Weissbarst)",
+                                            image: "",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Tal Rimon",
+                                            role: "G5: Son",
+                                            image: "",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ];
 
 /**
  * Helper to create a single card DOM element
