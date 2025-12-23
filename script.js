@@ -1657,7 +1657,8 @@ function addHistoricalLocations() {
         { name: "Zichron Yaakov, Israel", coords: [32.5708, 34.9533], description: "Death place of Esther Hava Elstein (1918)" },
         { name: "Beersheba, Israel", coords: [31.2518, 34.7915], description: "Birthplace of Gil Rimon (1972)" },
         { name: "Ukraine", coords: [48.3794, 31.1656], description: "Birthplace of Tova Wallach (1917)" },
-        { name: "Jerusalem, Israel", coords: [31.7683, 35.2137], description: "Immigration destination (1921)" }
+        { name: "Jerusalem, Israel", coords: [31.7683, 35.2137], description: "Immigration destination (1921)" },
+        { name: "Gyöngyös, Hungary", coords: [47.7833, 19.9333], description: "Birthplace of László Polgár (1946)" }
     ];
 
     historicalLocations.forEach(location => {
