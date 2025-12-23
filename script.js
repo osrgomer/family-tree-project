@@ -778,14 +778,14 @@ const familyData = {
                                         },
                                         {
                                             name: "Sofia Polgár (Zsófia)",
-                                            role: "G5: Chess Grandmaster (b. 1974)",
+                                            role: "G5: International Master & Artist (b. 1974)",
                                             image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
-                                            description: "Middle sister. International Master known for creative and artistic chess approach.",
+                                            description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
                                             partner: {
                                                 name: "Yona Kosashvili",
-                                                role: "G5: Husband",
+                                                role: "G5: Husband (m. 1999)",
                                                 image: ""
                                             },
                                             children: [
