@@ -465,6 +465,7 @@ const familyData = {
                                         {
                                             name: "Ronnie Heller",
                                             role: "G4: Choreographer",
+                                            image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
                                             children: [
                                                 {
                                                     name: "Amir Heller",
