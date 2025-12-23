@@ -72,7 +72,7 @@ const familyData = {
                                                     partner: {
                                                         name: "Rabbanit Sharon Rimon",
                                                         role: "G3: Rabbanit (Daughter of Yerucham's Rosh Yeshiva)",
-                                                        image: ""
+                                                        image: "https://mizrachi.org/wp-content/uploads/2022/04/HaMizrachi-Pesach-27.jpg"
                                                     },
                                                     children: [
                                                         {
