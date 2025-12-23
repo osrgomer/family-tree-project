@@ -64,9 +64,66 @@ const familyData = {
                                             children: [
                                                 {
                                                     name: "Rabbi Yosef Zvi Rimon",
-                                                    role: "G3: Halachic Authority",
-                                                    image: "",
-                                                    children: []
+                                                    role: "G3: Halachic Authority & Rabbi",
+                                                    image: "https://bluefringes.s3.amazonaws.com/wp-content/uploads/2020/01/17122129/0080_Yosef-Zvi-Rimon.jpg",
+                                                    coords: [31.6167, 35.1167],
+                                                    locationName: "Alon Shvut, Israel",
+                                                    description: "Distinguished rabbi and halachic authority. Great-grandson of Ephraim Eliezer Granat Rimon, grandson of poet Yosef Zvi Rimon. Father David served in Haganah.",
+                                                    partner: {
+                                                        name: "Rabbanit Sharon Rimon",
+                                                        role: "G3: Rabbanit (Daughter of Yerucham's Rosh Yeshiva)",
+                                                        image: ""
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "Daughter 1 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 2 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 3 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 4 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 5 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 6 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 7 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Daughter 8 Rimon",
+                                                            role: "G4: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         },
