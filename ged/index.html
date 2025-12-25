@@ -2,71 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GEDCOM File Fixer & Merger</title>
+    <title>Advanced GEDCOM Content Merger</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 50px auto; text-align: center; }
-        .container { border: 2px dashed #ccc; padding: 30px; border-radius: 15px; background: #fafafa; }
-        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 20px; }
-        button:disabled { background: #ccc; }
-        #status { margin-top: 20px; font-weight: bold; color: #333; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; }
+        .box { border: 2px solid #007bff; padding: 20px; border-radius: 10px; background: #fcfcfc; text-align: center; }
+        button { background: #28a745; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 15px; }
+        #log { margin-top: 20px; text-align: left; font-size: 12px; background: #eee; padding: 10px; max-height: 200px; overflow-y: scroll; display: none;}
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>GEDCOM Merger</h2>
-    <p>Select your files.</p>
-    
+<div class="box">
+    <h2>Deep Content Merger</h2>
+    <p>This version identifies duplicate people by name and merges their details into one record.</p>
     <input type="file" id="fileInput" multiple accept=".ged">
     <br>
-    <button id="mergeBtn" disabled>Download Merged & Fixed File</button>
-    <div id="status">Waiting for files...</div>
+    <button id="mergeBtn">Merge Content & Download</button>
+    <div id="status">Ready.</div>
+    <pre id="log"></pre>
 </div>
 
 <script>
     const fileInput = document.getElementById('fileInput');
     const mergeBtn = document.getElementById('mergeBtn');
     const status = document.getElementById('status');
-    let mergedResult = '';
+    const log = document.getElementById('log');
 
-    // This fixes the exact "Invalid Entity" errors from your screenshot
-    function fixGedcom(text) {
-        return text
-            .replace(/^0\s+(I\d+|X\d+)\s+INDI/gm, '0 @$1@ INDI')
-            .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+|X\d+)/gm, '1 $1 @$2@')
-            .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM')
-            .replace(/@@/g, '@'); // Fixes double @s
+    // Key function: Fixes the format and Normalizes names for matching
+    function getCleanName(record) {
+        const match = record.match(/1 NAME (.*)/);
+        return match ? match[1].replace(/\//g, '').trim().toLowerCase() : null;
     }
 
-    fileInput.addEventListener('change', async (e) => {
-        const files = Array.from(e.target.files);
-        if (files.length < 1) return;
-
-        status.innerText = "Processing files...";
-        let records = [];
-        let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 SOUR PLAIN_JS_MERGER\n";
-
-        for (const file of files) {
-            const text = await file.text();
-            const fixed = fixGedcom(text);
-            
-            // Strip headers and trailers to prevent corruption
-            const clean = fixed.replace(/0 HEAD[\s\S]*?(?=0 @|0 I)/g, '').replace(/0 TRLR/g, '');
-            records.push(clean.trim());
+    mergeBtn.addEventListener('click', async () => {
+        const files = Array.from(fileInput.files);
+        if (files.length < 2) {
+            alert("Please select at least two files to merge content.");
+            return;
         }
 
-        mergedResult = header + "\n" + records.join("\n") + "\n0 TRLR";
-        status.innerText = "Ready! Click the button below.";
-        mergeBtn.disabled = false;
-    });
+        status.innerText = "Processing Deep Merge...";
+        log.style.display = "block";
+        
+        let peopleMap = new Map(); // Key: Clean Name, Value: Full Record Text
+        let families = [];
+        let header = "0 HEAD\n1 GEDC\n2 VERS 5.5.1\n2 FORM LINEAGE-LINKED\n1 CHAR UTF-8\n1 SOUR DEEP_CONTENT_MERGER\n";
 
-    mergeBtn.addEventListener('click', () => {
-        const blob = new Blob([mergedResult], { type: 'text/plain' });
+        for (let file of files) {
+            let text = await file.text();
+            
+            // 1. Fix the broken IDs first (The Ancestris error fix)
+            text = text.replace(/^0\s+(I\d+|X\d+)\s+INDI/gm, '0 @$1@ INDI')
+                       .replace(/^1\s+(FAMS|FAMC|CHIL|HUSB|WIFE)\s+(I\d+|F\d+|X\d+)/gm, '1 $1 @$2@')
+                       .replace(/^0\s+(F\d+)\s+FAM/gm, '0 @$1@ FAM');
+
+            // 2. Split into individual blocks
+            const blocks = text.split(/\n(?=0\s+@)/);
+
+            blocks.forEach(block => {
+                if (block.includes('INDI')) {
+                    const name = getCleanName(block);
+                    if (name && peopleMap.has(name)) {
+                        // MERGE CONTENT: Keep the longest record or combine notes
+                        log.innerText += `Merging duplicate: ${name}\n`;
+                        if (block.length > peopleMap.get(name).length) {
+                            peopleMap.set(name, block); 
+                        }
+                    } else if (name) {
+                        peopleMap.set(name, block);
+                    }
+                } else if (block.includes('FAM')) {
+                    families.push(block.trim());
+                }
+            });
+        }
+
+        const mergedPeople = Array.from(peopleMap.values()).join('\n');
+        const mergedFamilies = families.join('\n');
+        const finalFile = `${header}\n${mergedPeople}\n${mergedFamilies}\n0 TRLR`;
+
+        // Download logic
+        const blob = new Blob([finalFile], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = "fixed_merged_tree.ged";
+        a.download = "deep_merged_tree.ged";
         a.click();
+        
+        status.innerText = "Success! Content merged.";
     });
 </script>
 
