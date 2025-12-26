@@ -15,11 +15,17 @@ const familyData = {
                     name: "Yosef Granat",
                     role: "G-2: Ancestor",
                     image: "",
+                    coords: [52.9566, 19.8893],
+                    locationName: "Biezun, Poland",
+                    description: "The early ancestor from the Bieżuń/Mazovian region.",
                     children: [
                         {
                             name: "Hirsch Granat",
                             role: "G-1: Ancestor",
                             image: "",
+                            coords: [52.9566, 19.8894], // Slight offset
+                            locationName: "Biezun, Poland",
+                            description: "Ancestor and namesake for the Granat/Rimon branch.",
                             partner: {
                                 name: "Gita Granat",
                                 role: "G-1: Ancestor",
@@ -64,9 +70,11 @@ const familyData = {
                                                     children: [
                                                         {
                                                             name: "David Rimon",
-                                                            role: "G3: Haganah Member",
+                                                            role: "G3: Haganah Member (1916–2002)",
                                                             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%D7%93%D7%95%D7%93_%D7%A8%D7%99%D7%9E%D7%95%D7%9F_-_%D7%A7%D7%91%D7%9C%D7%AA_%D7%99%D7%A7%D7%99%D7%A8_%D7%94%D7%A2%D7%99%D7%A8_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91.tif/lossy-page1-200px-%D7%93%D7%95%D7%93_%D7%A8%D7%99%D7%9E%D7%95%D7%9F_-_%D7%A7%D7%91%D7%9C%D7%AA_%D7%99%D7%A7%D7%99%D7%A8_%D7%94%D7%A2%D7%99%D7%A8_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91.tif.jpg",
-                                                            description: "Served in the Haganah in Tel Aviv.",
+                                                            coords: [32.0667, 34.7772],
+                                                            locationName: "Tel Aviv-Yafo, Israel",
+                                                            description: "Haganah member, Military Police founder, and Yakir Tel Aviv (1998). Founded the 'Rimon School'.",
                                                             children: [
                                                                 {
                                                                     name: "Rabbi Yosef Zvi Rimon",
@@ -114,7 +122,9 @@ const familyData = {
                                             name: "Yaakov Haim (Zvi) Rimon (Granat)",
                                             role: "G2: Author & Social Worker (1890–1973) (Deceased)",
                                             image: "",
-                                            description: "Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
+                                            coords: [32.0554, 34.7531],
+                                            locationName: "Jaffa, Israel",
+                                            description: "Renowned Hebrew poet and author of the religious-Zionist movement. Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
                                             partner: {
                                                 name: "Bracha Rimon (Laznowsky)",
                                                 role: "G2: Matriarch (b. Kutno)",
