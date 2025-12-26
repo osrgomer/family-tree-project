@@ -1021,125 +1021,127 @@ const familyData = {
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        {
+            name: "DUNICA",
+            type: "Creative Venture",
+            description: "Artistic workshop and craftsmanship collective",
+            children: [
+                {
+                    name: "Amir Heller",
+                    role: "Pro Surfer",
+                    coords: [37.330462, -8.731486],
+                    locationName: "Aljezur, Portugal",
+                    children: []
                 },
                 {
-                    name: "DUNICA",
-                    type: "Creative Venture",
-                    description: "Artistic workshop and craftsmanship collective",
+                    name: "Projects",
                     children: [
-                        {
-                            name: "Amir Heller",
-                            role: "Pro Surfer / Lead Craftsman",
-                            coords: [37.330462, -8.731486],
-                            locationName: "Aljezur, Portugal",
-                            children: []
-                        },
-                        {
-                            name: "Projects",
-                            children: [
-                                { name: "Woodworking & Design", role: "Venture Branch", children: [] },
-                                { name: "Community Workshops", role: "Venture Branch", children: [] }
-                            ]
-                        }
+                        { name: "Woodworking & Design", role: "Venture Branch", children: [] },
+                        { name: "Community Workshops", role: "Venture Branch", children: [] }
                     ]
                 }
             ]
-        };
+        }
+    ]
+};
 
-    /**
-     * Helper to create a single card DOM element
-     */
-    function createCard(member) {
-        const card = document.createElement('div');
-// Unique ID for searching and jumping
-card.id = 'member-' + member.name.replace(/\s+/g, '-').toLowerCase();
+/**
+ * Helper to create a single card DOM element
+ */
+function createCard(member) {
+    const card = document.createElement('div');
+    // Unique ID for searching and jumping
+    card.id = 'member-' + member.name.replace(/\s+/g, '-').toLowerCase();
 
-let cardClass = 'member-card';
-if (member.type === 'venture') cardClass += ' venture-card';
-if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
-card.className = cardClass;
+    let cardClass = 'member-card';
+    if (member.type === 'venture') cardClass += ' venture-card';
+    if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
+    card.className = cardClass;
 
-const inner = document.createElement('div');
-inner.className = 'card-inner';
+    const inner = document.createElement('div');
+    inner.className = 'card-inner';
 
-// FRONT
-const front = document.createElement('div');
-front.className = 'card-front';
+    // FRONT
+    const front = document.createElement('div');
+    front.className = 'card-front';
 
-// Image Placeholder
-const imgContainer = document.createElement('div');
-imgContainer.className = 'image-placeholder';
-if (member.image) {
-    const img = document.createElement('img');
-    img.src = member.image;
-    img.alt = member.name;
-    imgContainer.appendChild(img);
-} else {
-    // Icon logic
-    let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
-    let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
+    // Image Placeholder
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'image-placeholder';
+    if (member.image) {
+        const img = document.createElement('img');
+        img.src = member.image;
+        img.alt = member.name;
+        imgContainer.appendChild(img);
+    } else {
+        // Icon logic
+        let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
+        let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
 
-    if (member.type === 'venture') {
-        // DNA/Biology icon for biotech (abstract)
-        iconPath = "M2 15c6.667-6 13.333 0 20-6";
-        iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
-    }
+        if (member.type === 'venture') {
+            // DNA/Biology icon for biotech (abstract)
+            iconPath = "M2 15c6.667-6 13.333 0 20-6";
+            iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
+        }
 
-    imgContainer.innerHTML = `
+        imgContainer.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="${member.type === 'venture' ? '#38bdf8' : '#94a3b8'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="${iconPath}"></path>
                 ${iconCircle}
             </svg>
         `;
-}
-
-// Text Content
-const nameData = document.createElement('div');
-nameData.className = 'member-name';
-
-// Format name to break parenthetical surnames to new line
-let formattedName = member.name;
-if (formattedName.includes('(') && formattedName.includes(')')) {
-    // Find the last parenthetical part (surname)
-    const lastParenIndex = formattedName.lastIndexOf('(');
-    if (lastParenIndex > 0) {
-        const beforeParen = formattedName.substring(0, lastParenIndex).trim();
-        const parenPart = formattedName.substring(lastParenIndex).trim();
-        formattedName = beforeParen + '\n' + parenPart;
     }
-}
-nameData.textContent = formattedName;
 
-const roleData = document.createElement('div');
-roleData.className = 'member-role';
-roleData.textContent = member.role;
+    // Text Content
+    const nameData = document.createElement('div');
+    nameData.className = 'member-name';
 
-front.appendChild(imgContainer);
-front.appendChild(nameData);
-front.appendChild(roleData);
+    // Format name to break parenthetical surnames to new line
+    let formattedName = member.name;
+    if (formattedName.includes('(') && formattedName.includes(')')) {
+        // Find the last parenthetical part (surname)
+        const lastParenIndex = formattedName.lastIndexOf('(');
+        if (lastParenIndex > 0) {
+            const beforeParen = formattedName.substring(0, lastParenIndex).trim();
+            const parenPart = formattedName.substring(lastParenIndex).trim();
+            formattedName = beforeParen + '\n' + parenPart;
+        }
+    }
+    nameData.textContent = formattedName;
 
-// BACK
-const back = document.createElement('div');
-back.className = 'card-back';
+    const roleData = document.createElement('div');
+    roleData.className = 'member-role';
+    roleData.textContent = member.role;
 
-const backTitle = document.createElement('div');
-backTitle.className = 'member-name';
-backTitle.textContent = "Legacy Details";
-backTitle.style.fontSize = '1rem';
-backTitle.style.marginBottom = '1rem';
+    front.appendChild(imgContainer);
+    front.appendChild(nameData);
+    front.appendChild(roleData);
 
-const backInfo = document.createElement('div');
-backInfo.className = 'member-role';
-backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
+    // BACK
+    const back = document.createElement('div');
+    back.className = 'card-back';
 
-back.appendChild(backTitle);
-back.appendChild(backInfo);
+    const backTitle = document.createElement('div');
+    backTitle.className = 'member-name';
+    backTitle.textContent = "Legacy Details";
+    backTitle.style.fontSize = '1rem';
+    backTitle.style.marginBottom = '1rem';
 
-inner.appendChild(front);
-inner.appendChild(back);
-card.appendChild(inner);
+    const backInfo = document.createElement('div');
+    backInfo.className = 'member-role';
+    backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
 
-return card;
+    back.appendChild(backTitle);
+    back.appendChild(backInfo);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+
+    return card;
 }
 
 function createTreeElement(member) {
