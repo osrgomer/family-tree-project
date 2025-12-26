@@ -1189,9 +1189,12 @@ function initControls() {
                 if (mapInitialized && map) {
                     const lineageData = familyData.children[index];
                     if (lineageData && lineageData.coords) {
-                        map.flyTo(lineageData.coords, 12, { animate: true, duration: 1.5 });
+                        map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
                     }
                 }
+
+                // Update hash for mobile sharing
+                window.location.hash = `lineage-${index}`;
             }
         });
     });
