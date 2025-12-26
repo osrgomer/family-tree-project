@@ -1400,9 +1400,20 @@ function initControls() {
                 navBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
-                // Focus the root card of this lineage
+                // Focus the root card of this lineage in Tree View
                 const rootCard = targetSection.querySelector('.member-card');
                 scrollToElement(rootCard);
+
+                // Auto-Zoom on Map if initialized
+                if (mapInitialized && map) {
+                    const lineageData = familyData.children[index];
+                    if (lineageData && lineageData.coords) {
+                        map.flyTo(lineageData.coords, 12, { animate: true, duration: 1.5 });
+                    } else if (lineageData && lineageData.children && lineageData.children[0] && lineageData.children[0].coords) {
+                        // Fallback to first child coords
+                        map.flyTo(lineageData.children[0].coords, 12, { animate: true, duration: 1.5 });
+                    }
+                }
             }
         });
     });
