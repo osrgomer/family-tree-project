@@ -839,211 +839,59 @@ const familyData = {
                                                     ]
                                                 }
                                             ]
-                                        },
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Baruch Tzvi Hirsh Cohen",
+                            role: "Paternal Roots (1852–1941)",
+                            image: "",
+                            partner: {
+                                name: "Peril Pnina Cohen",
+                                role: "Great-Grandmother (1856–1925)",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Rabi Mosheh David Rozental Hacohen",
+                                    role: "G2: Rabbi & Scholar",
+                                    image: "",
+                                    partner: {
+                                        name: "Lieba Leah Cohen Rozental",
+                                        role: "G2: Matriarch (1886–1966)",
+                                        image: ""
+                                    },
+                                    children: [
                                         {
-                                            name: "Baruch Tzvi Hirsh Cohen",
-                                            role: "Paternal Roots (1852–1941)",
+                                            name: "Benjamin Cohen",
+                                            role: "G3: Husband (1921–1981)",
                                             image: "",
-                                            partner: {
-                                                name: "Peril Pnina Cohen",
-                                                role: "Great-Grandmother (1856–1925)",
-                                                image: ""
-                                            },
                                             children: [
                                                 {
-                                                    name: "Rabi Mosheh David Rozental Hacohen",
-                                                    role: "G2: Rabbi & Scholar",
+                                                    name: "Yoram Cohen",
+                                                    role: "G4: Legacy Representative",
                                                     image: "",
-                                                    partner: {
-                                                        name: "Lieba Leah Cohen Rozental",
-                                                        role: "G2: Matriarch (1886–1966)",
-                                                        image: ""
-                                                    },
                                                     children: [
                                                         {
-                                                            name: "Benjamin Cohen",
-                                                            role: "G3: Husband (1921–1981)",
+                                                            name: "Michal Cohen",
+                                                            role: "G5: Daughter",
                                                             image: "",
-                                                            children: [
-                                                                {
-                                                                    name: "Yoram Cohen",
-                                                                    role: "G4: Legacy Representative",
-                                                                    image: "",
-                                                                    children: [
-                                                                        {
-                                                                            name: "Michal Cohen",
-                                                                            role: "G5: Daughter",
-                                                                            image: "",
-                                                                            children: []
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    name: "Dafna Cohen",
-                                                                    role: "G4: Sister",
-                                                                    image: "",
-                                                                    children: [
-                                                                        {
-                                                                            name: "Uri Cohen",
-                                                                            role: "G5: Son",
-                                                                            image: "",
-                                                                            children: []
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Diamentstein Family",
-                                            role: "G1: Patriarch & Matriarch",
-                                            image: "",
-                                            children: [
-                                                {
-                                                    name: "Leah Diamentstein",
-                                                    role: "G2: Matriarch (Deceased)",
-                                                    description: "Sister of Rachel Diamentstein.",
-                                                    partner: {
-                                                        name: "Ze'ev Gurfinkel",
-                                                        role: "G2: Patriarch (Deceased)"
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Ran Nergal",
-                                                            role: "G3: Sibling",
-                                                            coords: [32.0853, 34.7818],
-                                                            locationName: "Tel Aviv, Israel",
-                                                            children: [
-                                                                {
-                                                                    name: "Kohava Nergal",
-                                                                    role: "G3: First Wife",
-                                                                    children: [
-                                                                        { name: "Tali Nergal", role: "G4: Daughter" },
-                                                                        { name: "Livnat Nergal", role: "G4: Daughter" }
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    name: "Rachel Nergal",
-                                                                    role: "G3: Second Wife",
-                                                                    children: [
-                                                                        { name: "Ziv Nergal", role: "G4: Child" },
-                                                                        { name: "Chen Nergal", role: "G4: Child" }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            name: "Deborah Miriam Givon (Gurfinkel)",
-                                                            role: "G3: Early Childhood Expert",
-                                                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
                                                             children: []
                                                         }
                                                     ]
                                                 },
                                                 {
-                                                    name: "Rachel Diamentstein",
-                                                    role: "G2: Sibling (Deceased)",
-                                                    description: "Sister of Leah Diamentstein.",
-                                                    partner: {
-                                                        name: "Bernard Ashkenazy",
-                                                        role: "Partner (Deceased)"
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Herbert Ashkenazy",
-                                                            role: "G3: Son of Rachel & Bernard",
-                                                            partner: {
-                                                                name: "Ruth Ashkenazy",
-                                                                role: "Partner"
-                                                            },
-                                                            children: [
-                                                                {
-                                                                    name: "Leah Ashkenazy",
-                                                                    role: "G4: Sibling",
-                                                                    children: [
-                                                                        { name: "Girl Reid 1", role: "G5: Daughter" },
-                                                                        { name: "Girl Reid 2", role: "G5: Daughter" }
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    name: "David Ashkenazy",
-                                                                    role: "G4: Sibling",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Miriam Ashkenazy",
-                                                                    role: "G4: Sibling",
-                                                                    children: [
-                                                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
-                                                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Hirsch Weissbarst",
-                                            role: "G-1: Ancestor",
-                                            image: "",
-                                            partner: {
-                                                name: "Beile Frenkel",
-                                                role: "G-1: Ancestor",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Rachmiel Muhlrad-Weissburst",
-                                                    role: "G0: Ancestor",
+                                                    name: "Dafna Cohen",
+                                                    role: "G4: Sister",
                                                     image: "",
-                                                    partner: {
-                                                        name: "Scheindel Weissbarst",
-                                                        role: "G0: Ancestor (b. 1861)",
-                                                        image: ""
-                                                    },
                                                     children: [
                                                         {
-                                                            name: "Zvi Weissburst",
-                                                            role: "G1: Merchant (b. 1888)",
+                                                            name: "Uri Cohen",
+                                                            role: "G5: Son",
                                                             image: "",
-                                                            partner: {
-                                                                name: "Sara Weissbarst",
-                                                                role: "G1: Matriarch",
-                                                                image: ""
-                                                            },
-                                                            children: [
-                                                                {
-                                                                    name: "Shalom Weissbarst",
-                                                                    role: "G2: Architect (1915-2002) (Deceased)",
-                                                                    image: "",
-                                                                    coords: [32.7940, 34.9896],
-                                                                    locationName: "Haifa, Israel",
-                                                                    description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
-                                                                    partner: {
-                                                                        name: "Tova (Gita) Wallach",
-                                                                        role: "Partner (1917-2002)",
-                                                                        image: "",
-                                                                        description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
-                                                                    },
-                                                                    children: [
-                                                                        {
-                                                                            name: "Talma Rimon",
-                                                                            role: "G3: Daughter of Shalom",
-                                                                            image: "",
-                                                                            coords: [32.0853, 34.7818],
-                                                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                                                            description: "Daughter of Shalom Weissbarst.",
-                                                                            children: []
-                                                                        }
-                                                                    ]
-
-                                                                }
-                                                            ]
+                                                            children: []
                                                         }
                                                     ]
                                                 }
@@ -1051,6 +899,166 @@ const familyData = {
                                         }
                                     ]
                                 }
+                            ]
+                        },
+                        {
+                            name: "Diamentstein Family",
+                            role: "G1: Patriarch & Matriarch",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Leah Diamentstein",
+                                    role: "G2: Matriarch (Deceased)",
+                                    description: "Sister of Rachel Diamentstein.",
+                                    partner: {
+                                        name: "Ze'ev Gurfinkel",
+                                        role: "G2: Patriarch (Deceased)"
+                                    },
+                                    children: [
+                                        {
+                                            name: "Ran Nergal",
+                                            role: "G3: Sibling",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            children: [
+                                                {
+                                                    name: "Kohava Nergal",
+                                                    role: "G3: First Wife",
+                                                    children: [
+                                                        { name: "Tali Nergal", role: "G4: Daughter" },
+                                                        { name: "Livnat Nergal", role: "G4: Daughter" }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Rachel Nergal",
+                                                    role: "G3: Second Wife",
+                                                    children: [
+                                                        { name: "Ziv Nergal", role: "G4: Child" },
+                                                        { name: "Chen Nergal", role: "G4: Child" }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Deborah Miriam Givon (Gurfinkel)",
+                                            role: "G3: Early Childhood Expert",
+                                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Rachel Diamentstein",
+                                    role: "G2: Sibling (Deceased)",
+                                    description: "Sister of Leah Diamentstein.",
+                                    partner: {
+                                        name: "Bernard Ashkenazy",
+                                        role: "Partner (Deceased)"
+                                    },
+                                    children: [
+                                        {
+                                            name: "Herbert Ashkenazy",
+                                            role: "G3: Son of Rachel & Bernard",
+                                            partner: {
+                                                name: "Ruth Ashkenazy",
+                                                role: "Partner"
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Leah Ashkenazy",
+                                                    role: "G4: Sibling",
+                                                    children: [
+                                                        { name: "Girl Reid 1", role: "G5: Daughter" },
+                                                        { name: "Girl Reid 2", role: "G5: Daughter" }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "David Ashkenazy",
+                                                    role: "G4: Sibling",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Miriam Ashkenazy",
+                                                    role: "G4: Sibling",
+                                                    children: [
+                                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
+                                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Hirsch Weissbarst",
+            role: "G-1: Ancestor",
+            image: "",
+            partner: {
+                name: "Beile Frenkel",
+                role: "G-1: Ancestor",
+                image: ""
+            },
+            children: [
+                {
+                    name: "Rachmiel Muhlrad-Weissburst",
+                    role: "G0: Ancestor",
+                    image: "",
+                    partner: {
+                        name: "Scheindel Weissbarst",
+                        role: "G0: Ancestor (b. 1861)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Zvi Weissburst",
+                            role: "G1: Merchant (b. 1888)",
+                            image: "",
+                            partner: {
+                                name: "Sara Weissbarst",
+                                role: "G1: Matriarch",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Shalom Weissbarst",
+                                    role: "G2: Architect (1915-2002) (Deceased)",
+                                    image: "",
+                                    coords: [32.7940, 34.9896],
+                                    locationName: "Haifa, Israel",
+                                    description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
+                                    partner: {
+                                        name: "Tova (Gita) Wallach",
+                                        role: "Partner (1917-2002)",
+                                        image: "",
+                                        description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
+                                    },
+                                    children: [
+                                        {
+                                            name: "Talma Rimon",
+                                            role: "G3: Daughter of Shalom",
+                                            image: "",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
+                                            description: "Daughter of Shalom Weissbarst.",
+                                            children: []
+                                        }
+                                    ]
+
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
                             ]
                         }
                     ]
