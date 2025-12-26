@@ -729,6 +729,31 @@ header p {
     }
 }
 
+/* Venture Card Styling (DUNICA, etc.) */
+.member-card.venture-card {
+    border: 2px solid rgba(56, 189, 248, 0.4);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(56, 189, 248, 0.1));
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2), inset 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.member-card.venture-card .member-role {
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.member-card.venture-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.member-card.venture-card .image-placeholder {
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 12px;
+}
+
 
 
 /* Background Animation */
@@ -747,6 +772,7 @@ header p {
     white-space: nowrap;
     min-width: min-content;
 }
+
 /* Historical marker styling */
 .historical-marker {
     background: rgba(255, 193, 7, 0.8) !important;
