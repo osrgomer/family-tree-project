@@ -1517,3 +1517,48 @@ function exportToGedcom() {
     a.click();
     URL.revokeObjectURL(url);
 }
+
+/**
+ * QR Code Logic
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const showQrBtn = document.getElementById('show-qr');
+    const closeQrBtn = document.getElementById('close-qr');
+    const qrPopup = document.getElementById('qr-popup');
+    const qrContainer = document.getElementById('qrcode');
+
+    if (showQrBtn && qrPopup && qrContainer) {
+        // Generate QR Code
+        // Use current URL, or a placeholder if running locally on file://
+        const currentUrl = window.location.href;
+
+        try {
+            new QRCode(qrContainer, {
+                text: currentUrl,
+                width: 128,
+                height: 128,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        } catch (e) {
+            console.error("QR Code generation failed:", e);
+            qrContainer.innerHTML = "QR Error";
+        }
+
+        showQrBtn.addEventListener('click', () => {
+            qrPopup.classList.toggle('hidden');
+        });
+
+        closeQrBtn.addEventListener('click', () => {
+            qrPopup.classList.add('hidden');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!showQrBtn.contains(e.target) && !qrPopup.contains(e.target)) {
+                qrPopup.classList.add('hidden');
+            }
+        });
+    }
+});

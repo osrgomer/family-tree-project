@@ -132,6 +132,27 @@
         </div>
     </div>
 
+    <footer id="legacy-footer">
+        <div class="qr-container">
+            <button id="show-qr" class="qr-btn" title="Scan to open on mobile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h6v6h-6zM7 7h.01M19 7h.01M7 19h.01M19 19h.01M11 11h2v2h-2zM11 7h2v2h-2zM7 11h2v2h-2z" />
+                </svg>
+                <span>Mobile Share</span>
+            </button>
+            <div id="qr-popup" class="qr-popup hidden">
+                <div id="qrcode"></div>
+                <p>Scan to view on mobile</p>
+                <button id="close-qr" class="close-qr">&times;</button>
+            </div>
+        </div>
+        <div class="footer-legal">
+            &copy; 2025 The Rimon-Givon Legacy
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="debug.js"></script>
