@@ -329,8 +329,8 @@ const familyData = {
                                         name: "Ronnie Heller",
                                         role: "G3: Matriarch",
                                         image: "",
-                                        coords: [37.330462, -8.731486],
-                                        locationName: "Aljezur, Portugal"
+                                        coords: [32.0805, 34.7733],
+                                        locationName: "Bar Kochba, Tel Aviv, Israel"
                                     },
                                     children: [
                                         {
@@ -355,6 +355,154 @@ const familyData = {
                                             role: "G4: Mother of Omer/Nomi/Eyal",
                                             image: "",
                                             children: [] // (Assuming children are defined elsewhere or omitted for brevity in this fix block)
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Zvi Givon (Gelbman)",
+                                    role: "G3: Brother (Kept Gelbman surname)",
+                                    image: "",
+                                    coords: [32.0853, 34.7818],
+                                    locationName: "Tel Aviv, Israel",
+                                    description: "Brother of Moshe Givon. Born Zvi Gelbman, son of Victoria Zoref.",
+                                    children: [
+                                        {
+                                            name: "Thomas (Tsvi) Givon",
+                                            role: "G4: Distinguished Professor (Linguistics)",
+                                            image: "https://cas.uoregon.edu/sites/default/files/uo_profiles/tgivon_cas_499767.png",
+                                            coords: [44.0448, -123.0726],
+                                            locationName: "Eugene, Oregon, USA",
+                                            description: "Known by the nickname 'Talmy', he is a world-renowned linguist and Distinguished Professor Emeritus at the University of Oregon.",
+                                            partner: {
+                                                name: "Linda Givon",
+                                                role: "Partner (Second Wife)",
+                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/503846725_122133761840783651_9154276442130859309_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Syu0j3XfFSsQ7kNvwFOnBm9&_nc_oc=Adl2kAchI2lUSXoZMMKrPQwQfJZgGEP_-ey_caywb8NteS24vPXdVRM7KNb6WTLYg4o&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=LnbX0EfZGLPepb8ocOLk4Q&oh=00_AfmOt2Fk4Y582w-fDSs5fMyENQHq02TdmliSkPfyI8gvXw&oe=6950D8F3"
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Chris Givon",
+                                                    role: "G5: Son (from first marriage)",
+                                                    children: [
+                                                        {
+                                                            name: "Raquel Givon",
+                                                            role: "G6: Daughter",
+                                                            children: [
+                                                                { name: "Son", role: "G7: Grandson" },
+                                                                { name: "Daughter", role: "G7: Granddaughter" }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Nathaniel Givon",
+                                                    role: "G5: Son (with Linda)",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Haya Ran",
+                                            role: "G4: Daughter (Deceased)",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            image: "",
+                                            partner: {
+                                                name: "Amnon Marton",
+                                                role: "G4: First Husband",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Tel Aviv, Israel",
+                                                image: ""
+                                            },
+                                            secondPartner: {
+                                                name: "Moshe Ran",
+                                                role: "G4: Second Husband",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Tel Aviv, Israel",
+                                                image: ""
+                                            },
+                                            partnerLeft: true,
+                                            children: [
+                                                {
+                                                    name: "Yifat Marton",
+                                                    role: "G5: Daughter (Deceased)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Orit Marton",
+                                                    role: "G5: Daughter",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Tzafra Marton",
+                                                    role: "G5: Daughter",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Gal M. Ran",
+                                                    role: "G5: Son",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
+                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Maya Ran",
+                                                    role: "G5: Daughter (Deceased)",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
+                                                    image: "",
+                                                    children: [
+                                                        {
+                                                            name: "Matan Punk",
+                                                            role: "G6: Son",
+                                                            coords: [32.0853, 34.7818],
+                                                            locationName: "Tel Aviv, Israel",
+                                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Iris Leal",
+                                                    role: "G5: Daughter",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
+                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
+                                                    description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
+                                                    partner: {
+                                                        name: "Dudi Leal",
+                                                        role: "G5: First Husband",
+                                                        image: ""
+                                                    },
+                                                    secondPartner: {
+                                                        name: "Tamir Sher",
+                                                        role: "G5: Second Husband",
+                                                        image: ""
+                                                    },
+                                                    partnerLeft: true,
+                                                    children: [
+                                                        {
+                                                            name: "Jorden Leal",
+                                                            role: "G6: Daughter (first marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Itamar Sher",
+                                                            role: "G6: Son (second marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Ari Sher",
+                                                            role: "G6: Daughter (second marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
