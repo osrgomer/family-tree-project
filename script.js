@@ -1005,7 +1005,7 @@ const familyData = {
             name: "Beile Frenkel",
             role: "G-1: Ancestor",
             image: ""
-            },
+    },
         children: [
             {
                 name: "Rachmiel Muhlrad-Weissburst",
@@ -1015,7 +1015,7 @@ const familyData = {
                     name: "Scheindel Weissbarst",
                     role: "G0: Ancestor (b. 1861)",
                     image: ""
-                    },
+            },
                 children: [
                     {
                         name: "Zvi Weissburst",
@@ -1025,7 +1025,7 @@ const familyData = {
                             name: "Sara Weissbarst",
                             role: "G1: Matriarch",
                             image: ""
-                            },
+                    },
                         children: [
                             {
                                 name: "Shalom Weissbarst",
@@ -1039,7 +1039,7 @@ const familyData = {
                             role: "Partner (1917-2002)",
                             image: "",
                             description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
-                                    },
+                            },
                         children: [
                             {
                                 name: "Talma Rimon",
@@ -1055,10 +1055,10 @@ const familyData = {
             }
         ]
     }
-                ]
-            }
-        ]
-    }
+            ]
+        }
+    ]
+}
 ]
 };
 
