@@ -341,8 +341,8 @@ const familyData = {
                             image: "",
                             description: "Mother of Moshe Givon. Had impaired sense of smell.",
                             partner: {
-                                name: "Gelbman Patriarch",
-                                role: "G2: Hungarian Father",
+                                name: "Zvi Gelbman",
+                                role: "G2: Patriarch",
                                 image: ""
                             },
                             children: [
@@ -532,364 +532,318 @@ const familyData = {
                                                 }
                                             ]
                                         },
-                                        {
-                                            name: "Haya Ran",
-                                            role: "G4: Daughter (Deceased)",
-                                            image: "",
-                                            partner: {
-                                                name: "Amnon Marton",
-                                                role: "G4: First Husband",
-                                                image: ""
+                                        name: "Haya Ran",
+                                        role: "G4: Daughter (Deceased)",
+                                        coords: [32.0853, 34.7818],
+                                        locationName: "Tel Aviv, Israel",
+                                        image: "",
+                                        partner: {
+                                            name: "Amnon Marton",
+                                            role: "G4: First Husband",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            image: ""
+                                        },
+                                        secondPartner: {
+                                            name: "Moshe Ran",
+                                            role: "G4: Second Husband",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            image: ""
+                                        },
+                                        partnerLeft: true,
+                                        children: [
+                                            {
+                                                name: "Yifat Marton",
+                                                role: "G5: Daughter (Deceased)",
+                                                image: "",
+                                                children: []
                                             },
-                                            secondPartner: {
-                                                name: "Moshe Ran",
-                                                role: "G4: Second Husband",
-                                                image: ""
+                                            {
+                                                name: "Orit Marton",
+                                                role: "G5: Daughter",
+                                                children: []
                                             },
-                                            partnerLeft: true,
-                                            children: [
-                                                {
-                                                    name: "Yifat Marton",
-                                                    role: "G5: Daughter (Deceased)",
-                                                    image: "",
-                                                    children: []
+                                            {
+                                                name: "Tzafra Marton",
+                                                role: "G5: Daughter",
+                                                children: []
+                                            },
+                                            {
+                                                name: "Gal M. Ran",
+                                                role: "G5: Son",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Tel Aviv, Israel",
+                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
+                                                children: []
+                                            },
+                                            {
+                                                name: "Maya Ran",
+                                                role: "G5: Daughter (Deceased)",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Tel Aviv, Israel",
+                                                image: "",
+                                                children: [
+                                                    {
+                                                        name: "Matan Punk",
+                                                        role: "G6: Son",
+                                                        coords: [32.0853, 34.7818],
+                                                        locationName: "Tel Aviv, Israel",
+                                                        image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
+                                                        children: []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                name: "Iris Leal",
+                                                role: "G5: Daughter",
+                                                coords: [32.0853, 34.7818],
+                                                locationName: "Tel Aviv, Israel",
+                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
+                                                description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
+                                                partner: {
+                                                    name: "Dudi Leal",
+                                                    role: "G5: First Husband",
+                                                    image: ""
                                                 },
-                                                {
-                                                    name: "Orit Marton",
-                                                    role: "G5: Daughter",
-                                                    children: []
+                                                secondPartner: {
+                                                    name: "Tamir Sher",
+                                                    role: "G5: Second Husband",
+                                                    image: ""
                                                 },
-                                                {
-                                                    name: "Tzafra Marton",
-                                                    role: "G5: Daughter",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Gal M. Ran",
-                                                    role: "G5: Son",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Maya Ran",
-                                                    role: "G5: Daughter (Deceased)",
-                                                    image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Matan Punk",
-                                                            role: "G6: Son",
-                                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Iris Leal",
-                                                    role: "G5: Daughter",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
-                                                    description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
-                                                    partner: {
-                                                        name: "Dudi Leal",
-                                                        role: "G5: First Husband",
-                                                        image: ""
+                                                partnerLeft: true,
+                                                children: [
+                                                    {
+                                                        name: "Jorden Leal",
+                                                        role: "G6: Daughter (first marriage)",
+                                                        image: "",
+                                                        children: []
                                                     },
-                                                    secondPartner: {
-                                                        name: "Tamir Sher",
-                                                        role: "G5: Second Husband",
-                                                        image: ""
+                                                    {
+                                                        name: "Itamar Sher",
+                                                        role: "G6: Son (second marriage)",
+                                                        image: "",
+                                                        children: []
                                                     },
-                                                    partnerLeft: true,
-                                                    children: [
-                                                        {
-                                                            name: "Jorden Leal",
-                                                            role: "G6: Daughter (first marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Itamar Sher",
-                                                            role: "G6: Son (second marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Ari Sher",
-                                                            role: "G6: Daughter (second marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                }
-                                            ]
+                                                    {
+                                                        name: "Ari Sher",
+                                                        role: "G6: Daughter (second marriage)",
+                                                        image: "",
+                                                        children: []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                         }
-                                    ]
-                                }
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    name: "Marko Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    partner: {
+                        name: "Pavlina Zoref",
+                        role: "G2: Wife",
+                        image: ""
+                    },
+                    children: [
                         {
-                            name: "Marko Zoref",
-                            role: "G2: Sibling",
+                            name: "Dror Zoref",
+                            role: "G3: Son (Lives in USA)",
+                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/272966724_10159688806902836_1849987475025400659_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Q8x7aqLWb9gQ7kNvwGMzGj6&_nc_oc=AdnMuLR351sRjhQElYCS5SqEktzYb2oj4oowXbmUbZ5Due0YvaRw9mblJm9QO7vWqY4&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=yh-MHO_pFrTlNsGxbUdZGQ&oh=00_AflRXU9DcokPMLpX_LE1Xmah3FLHo-9z5Ytnki9xu1iswA&oe=6950CEDA",
+                            coords: [40.7128, -74.0060],
+                            locationName: "USA",
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    name: "Valentina Zoref",
+                    role: "G2: Sibling (Blind from age 40)",
+                    image: "",
+                    description: "Never married. Lost sight around age 40.",
+                    children: []
+                },
+                {
+                    name: "Jac Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    partner: {
+                        name: "Lily Zoref",
+                        role: "G2: Wife",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Sioma Zoref",
+                            role: "G3: Son",
                             image: "",
                             partner: {
-                                name: "Pavlina Zoref",
-                                role: "G2: Wife",
+                                name: "Yafa Zoref",
+                                role: "G3: Wife",
                                 image: ""
                             },
                             children: [
                                 {
-                                    name: "Dror Zoref",
-                                    role: "G3: Son (Lives in USA)",
-                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/272966724_10159688806902836_1849987475025400659_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Q8x7aqLWb9gQ7kNvwGMzGj6&_nc_oc=AdnMuLR351sRjhQElYCS5SqEktzYb2oj4oowXbmUbZ5Due0YvaRw9mblJm9QO7vWqY4&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=yh-MHO_pFrTlNsGxbUdZGQ&oh=00_AflRXU9DcokPMLpX_LE1Xmah3FLHo-9z5Ytnki9xu1iswA&oe=6950CEDA",
-                                    coords: [40.7128, -74.0060],
-                                    locationName: "USA",
+                                    name: "Erez Zoref",
+                                    role: "G4: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Asaf Zoref",
+                                    role: "G4: Son",
+                                    image: "",
+                                    partner: {
+                                        name: "Keren Zoref",
+                                        role: "G4: Wife",
+                                        image: ""
+                                    },
                                     children: []
                                 }
                             ]
-                        },
+                        }
+                    ]
+                },
+                {
+                    name: "Yehezkel Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    children: [
                         {
-                            name: "Valentina Zoref",
-                            role: "G2: Sibling (Blind from age 40)",
+                            name: "Yuda Zoref",
+                            role: "G3: Son",
                             image: "",
-                            description: "Never married. Lost sight around age 40.",
                             children: []
                         },
                         {
-                            name: "Jac Zoref",
-                            role: "G2: Sibling",
+                            name: "Daniella Zoref",
+                            role: "G3: Daughter",
                             image: "",
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Sarah Gelbman",
+            role: "G2: Sister (Hungarian Branch)",
+            image: "",
+            coords: [47.4979, 19.0402],
+            locationName: "Budapest, Hungary",
+            children: [
+                {
+                    name: "Ármin Polgár (Proszwimmer)",
+                    role: "G3: Holocaust Survivor (1900-1992)",
+                    image: "",
+                    coords: [47.4979, 19.0402],
+                    locationName: "Budapest, Hungary",
+                    description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war.",
+                    children: [
+                        {
+                            name: "László Polgár",
+                            role: "G4: Chess Teacher & Psychologist (b. 1946)",
+                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
+                            coords: [47.4979, 19.0402],
+                            locationName: "Budapest, Hungary",
+                            description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
                             partner: {
-                                name: "Lily Zoref",
-                                role: "G2: Wife",
-                                image: ""
+                                name: "Klára Polgár (Altberger)",
+                                role: "G4: Mother of Chess Champions",
+                                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
+                                description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
                             },
                             children: [
                                 {
-                                    name: "Sioma Zoref",
-                                    role: "G3: Son",
-                                    image: "",
+                                    name: "Susan Polgár (Zsuzsa)",
+                                    role: "G5: Grandmaster & Women's World Champion (b. 1969)",
+                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
+                                    coords: [40.7128, -74.0060],
+                                    locationName: "New York, USA",
+                                    description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
                                     partner: {
-                                        name: "Yafa Zoref",
-                                        role: "G3: Wife",
+                                        name: "Jacob Shutzman",
+                                        role: "G5: First Husband (m. 1994–2006)",
+                                        image: ""
+                                    },
+                                    secondPartner: {
+                                        name: "Paul Truong",
+                                        role: "G5: Chess Master & Author (b. 1965)",
+                                        image: "",
+                                        description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
+                                    },
+                                    partnerLeft: true,
+                                    children: [
+                                        {
+                                            name: "Tom Shutzman",
+                                            role: "G6: Son (from first marriage)",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Leeam Shutzman",
+                                            role: "G6: Child (from first marriage)",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Sofia Polgár (Zsófia)",
+                                    role: "G5: International Master & Artist (b. 1974)",
+                                    image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
+                                    coords: [47.4979, 19.0402],
+                                    locationName: "Budapest, Hungary",
+                                    description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
+                                    partner: {
+                                        name: "Yona Kosashvili",
+                                        role: "G5: Husband (m. 1999)",
                                         image: ""
                                     },
                                     children: [
                                         {
-                                            name: "Erez Zoref",
-                                            role: "G4: Son",
+                                            name: "Yoav Kosashvili",
+                                            role: "G6: Son",
                                             image: "",
                                             children: []
                                         },
                                         {
-                                            name: "Asaf Zoref",
-                                            role: "G4: Son",
+                                            name: "Alon Kosashvili",
+                                            role: "G6: Son",
                                             image: "",
-                                            partner: {
-                                                name: "Keren Zoref",
-                                                role: "G4: Wife",
-                                                image: ""
-                                            },
                                             children: []
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            name: "Yehezkel Zoref",
-                            role: "G2: Sibling",
-                            image: "",
-                            children: [
-                                {
-                                    name: "Yuda Zoref",
-                                    role: "G3: Son",
-                                    image: "",
-                                    children: []
                                 },
                                 {
-                                    name: "Daniella Zoref",
-                                    role: "G3: Daughter",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Sarah Gelbman",
-                    role: "G2: Sister (Hungarian Branch)",
-                    image: "",
-                    coords: [47.4979, 19.0402],
-                    locationName: "Budapest, Hungary",
-                    children: [
-                        {
-                            name: "Ármin Polgár (Proszwimmer)",
-                            role: "G3: Holocaust Survivor (1900-1992)",
-                            image: "",
-                            coords: [47.4979, 19.0402],
-                            locationName: "Budapest, Hungary",
-                            description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war.",
-                            children: [
-                                {
-                                    name: "László Polgár",
-                                    role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
+                                    name: "Judit Polgár",
+                                    role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
+                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
                                     coords: [47.4979, 19.0402],
                                     locationName: "Budapest, Hungary",
-                                    description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
+                                    description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
                                     partner: {
-                                        name: "Klára Polgár (Altberger)",
-                                        role: "G4: Mother of Chess Champions",
-                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
-                                        description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
+                                        name: "Gusztáv Font",
+                                        role: "G5: Veterinarian",
+                                        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
+                                        description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
                                     },
                                     children: [
                                         {
-                                            name: "Susan Polgár (Zsuzsa)",
-                                            role: "G5: Grandmaster & Women's World Champion (b. 1969)",
-                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
-                                            coords: [40.7128, -74.0060],
-                                            locationName: "New York, USA",
-                                            description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
-                                            partner: {
-                                                name: "Jacob Shutzman",
-                                                role: "G5: First Husband (m. 1994–2006)",
-                                                image: ""
-                                            },
-                                            secondPartner: {
-                                                name: "Paul Truong",
-                                                role: "G5: Chess Master & Author (b. 1965)",
-                                                image: "",
-                                                description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
-                                            },
-                                            partnerLeft: true,
-                                            children: [
-                                                {
-                                                    name: "Tom Shutzman",
-                                                    role: "G6: Son (from first marriage)",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Leeam Shutzman",
-                                                    role: "G6: Child (from first marriage)",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Sofia Polgár (Zsófia)",
-                                            role: "G5: International Master & Artist (b. 1974)",
-                                            image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
-                                            coords: [47.4979, 19.0402],
-                                            locationName: "Budapest, Hungary",
-                                            description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
-                                            partner: {
-                                                name: "Yona Kosashvili",
-                                                role: "G5: Husband (m. 1999)",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Yoav Kosashvili",
-                                                    role: "G6: Son",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Alon Kosashvili",
-                                                    role: "G6: Son",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Judit Polgár",
-                                            role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
-                                            coords: [47.4979, 19.0402],
-                                            locationName: "Budapest, Hungary",
-                                            description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                                            partner: {
-                                                name: "Gusztáv Font",
-                                                role: "G5: Veterinarian",
-                                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
-                                                description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Hanna Font",
-                                                    role: "G6: Daughter",
-                                                    image: "",
-                                                    description: "Daughter of Judit Polgár and Gusztáv Font.",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Oliver Font",
-                                                    role: "G6: Son",
-                                                    image: "",
-                                                    description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Baruch Tzvi Hirsh Cohen",
-            role: "Paternal Roots (1852–1941)",
-            image: "",
-            partner: {
-                name: "Peril Pnina Cohen",
-                role: "Great-Grandmother (1856–1925)",
-                image: ""
-            },
-            children: [
-                {
-                    name: "Rabi Mosheh David Rozental Hacohen",
-                    role: "G2: Rabbi & Scholar",
-                    image: "",
-                    partner: {
-                        name: "Lieba Leah Cohen Rozental",
-                        role: "G2: Matriarch (1886–1966)",
-                        image: ""
-                    },
-                    children: [
-                        {
-                            name: "Benjamin Cohen",
-                            role: "G3: Husband (1921–1981)",
-                            image: "",
-                            children: [
-                                {
-                                    name: "Yoram Cohen",
-                                    role: "G4: Legacy Representative",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Michal Cohen",
-                                            role: "G5: Daughter",
+                                            name: "Hanna Font",
+                                            role: "G6: Daughter",
                                             image: "",
+                                            description: "Daughter of Judit Polgár and Gusztáv Font.",
                                             children: []
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Dafna Cohen",
-                                    role: "G4: Sister",
-                                    image: "",
-                                    children: [
+                                        },
                                         {
-                                            name: "Uri Cohen",
-                                            role: "G5: Son",
+                                            name: "Oliver Font",
+                                            role: "G6: Son",
                                             image: "",
+                                            description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
                                             children: []
                                         }
                                     ]
@@ -899,159 +853,218 @@ const familyData = {
                     ]
                 }
             ]
-        },
-        {
-            name: "Diamentstein Family",
-            role: "G1: Patriarch & Matriarch",
-            image: "",
-            children: [
-                {
-                    name: "Leah Diamentstein",
-                    role: "G2: Matriarch (Deceased)",
-                    description: "Sister of Rachel Diamentstein.",
-                    partner: {
-                        name: "Ze'ev Gurfinkel",
-                        role: "G2: Patriarch (Deceased)"
-                    },
-                    children: [
-                        {
-                            name: "Ran Nergal",
-                            role: "G3: Sibling",
-                            coords: [32.0853, 34.7818],
-                            locationName: "Tel Aviv, Israel",
-                            children: [
-                                {
-                                    name: "Kohava Nergal",
-                                    role: "G3: First Wife",
-                                    children: [
-                                        { name: "Tali Nergal", role: "G4: Daughter" },
-                                        { name: "Livnat Nergal", role: "G4: Daughter" }
-                                    ]
-                                },
-                                {
-                                    name: "Rachel Nergal",
-                                    role: "G3: Second Wife",
-                                    children: [
-                                        { name: "Ziv Nergal", role: "G4: Child" },
-                                        { name: "Chen Nergal", role: "G4: Child" }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            name: "Deborah Miriam Givon (Gurfinkel)",
-                            role: "G3: Early Childhood Expert",
-                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
-                            children: []
-                        }
-                    ]
-                },
-                {
-                    name: "Rachel Diamentstein",
-                    role: "G2: Sibling (Deceased)",
-                    description: "Sister of Leah Diamentstein.",
-                    partner: {
-                        name: "Bernard Ashkenazy",
-                        role: "Partner (Deceased)"
-                    },
-                    children: [
-                        {
-                            name: "Herbert Ashkenazy",
-                            role: "G3: Son of Rachel & Bernard",
-                            partner: {
-                                name: "Ruth Ashkenazy",
-                                role: "Partner"
-                            },
-                            children: [
-                                {
-                                    name: "Leah Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: [
-                                        { name: "Girl Reid 1", role: "G5: Daughter" },
-                                        { name: "Girl Reid 2", role: "G5: Daughter" }
-                                    ]
-                                },
-                                {
-                                    name: "David Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: []
-                                },
-                                {
-                                    name: "Miriam Ashkenazy",
-                                    role: "G4: Sibling",
-                                    children: [
-                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
-                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            name: "Hirsch Weissbarst",
-            role: "G-1: Ancestor",
-            image: "",
-            partner: {
-                name: "Beile Frenkel",
-                role: "G-1: Ancestor",
-                image: ""
+        }
+    ]
+},
+    {
+        name: "Baruch Tzvi Hirsh Cohen",
+        role: "Paternal Roots (1852–1941)",
+        image: "",
+        partner: {
+            name: "Peril Pnina Cohen",
+            role: "Great-Grandmother (1856–1925)",
+            image: ""
             },
-            children: [
-                {
-                    name: "Rachmiel Muhlrad-Weissburst",
-                    role: "G0: Ancestor",
-                    image: "",
-                    partner: {
-                        name: "Scheindel Weissbarst",
-                        role: "G0: Ancestor (b. 1861)",
-                        image: ""
+        children: [
+            {
+                name: "Rabi Mosheh David Rozental Hacohen",
+                role: "G2: Rabbi & Scholar",
+                image: "",
+                partner: {
+                    name: "Lieba Leah Cohen Rozental",
+                    role: "G2: Matriarch (1886–1966)",
+                    image: ""
                     },
-                    children: [
-                        {
-                            name: "Zvi Weissburst",
-                            role: "G1: Merchant (b. 1888)",
-                            image: "",
-                            partner: {
-                                name: "Sara Weissbarst",
-                                role: "G1: Matriarch",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Shalom Weissbarst",
-                                    role: "G2: Architect (1915-2002) (Deceased)",
-                                    image: "",
-                                    coords: [32.7940, 34.9896],
-                                    locationName: "Haifa, Israel",
-                                    description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
-                                    partner: {
-                                        name: "Tova (Gita) Wallach",
-                                        role: "Partner (1917-2002)",
+                children: [
+                    {
+                        name: "Benjamin Cohen",
+                        role: "G3: Husband (1921–1981)",
+                        image: "",
+                        children: [
+                            {
+                                name: "Yoram Cohen",
+                                role: "G4: Legacy Representative",
+                                image: "",
+                                children: [
+                                    {
+                                        name: "Michal Cohen",
+                                        role: "G5: Daughter",
                                         image: "",
-                                        description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
-                                    },
-                                    children: [
-                                        {
-                                            name: "Talma Rimon",
-                                            role: "G3: Daughter of Shalom",
-                                            image: "",
-                                            coords: [32.0853, 34.7818],
-                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                            description: "Daughter of Shalom Weissbarst.",
-                                            children: []
-                                        }
-                                    ]
-
+                                        children: []
+                                    }
+                                ]
+                            },
+                            {
+                                name: "Dafna Cohen",
+                                role: "G4: Sister",
+                                image: "",
+                                children: [
+                                    {
+                                        name: "Uri Cohen",
+                                        role: "G5: Son",
+                                        image: "",
+                                        children: []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Diamentstein Family",
+        role: "G1: Patriarch & Matriarch",
+        image: "",
+        children: [
+            {
+                name: "Leah Diamentstein",
+                role: "G2: Matriarch (Deceased)",
+                description: "Sister of Rachel Diamentstein.",
+                partner: {
+                    name: "Ze'ev Gurfinkel",
+                    role: "G2: Patriarch (Deceased)"
+                    },
+                children: [
+                    {
+                        name: "Ran Nergal",
+                        role: "G3: Sibling",
+                        coords: [32.0853, 34.7818],
+                locationName: "Tel Aviv, Israel",
+                children: [
+                    {
+                        name: "Kohava Nergal",
+                        role: "G3: First Wife",
+                        children: [
+                            { name: "Tali Nergal", role: "G4: Daughter" },
+                            { name: "Livnat Nergal", role: "G4: Daughter" }
+                        ]
+                    },
+                    {
+                        name: "Rachel Nergal",
+                        role: "G3: Second Wife",
+                        children: [
+                            { name: "Ziv Nergal", role: "G4: Child" },
+                            { name: "Chen Nergal", role: "G4: Child" }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "Deborah Miriam Givon (Gurfinkel)",
+                role: "G3: Early Childhood Expert",
+                description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
+                children: []
+            }
+        ]
+    },
+    {
+        name: "Rachel Diamentstein",
+        role: "G2: Sibling (Deceased)",
+        description: "Sister of Leah Diamentstein.",
+        partner: {
+            name: "Bernard Ashkenazy",
+            role: "Partner (Deceased)"
+                    },
+        children: [
+            {
+                name: "Herbert Ashkenazy",
+                role: "G3: Son of Rachel & Bernard",
+                partner: {
+                    name: "Ruth Ashkenazy",
+                    role: "Partner"
+                            },
+                children: [
+                    {
+                        name: "Leah Ashkenazy",
+                        role: "G4: Sibling",
+                        children: [
+                            { name: "Girl Reid 1", role: "G5: Daughter" },
+                            { name: "Girl Reid 2", role: "G5: Daughter" }
+                        ]
+                    },
+                    {
+                        name: "David Ashkenazy",
+                        role: "G4: Sibling",
+                        children: []
+                    },
+                    {
+                        name: "Miriam Ashkenazy",
+                        role: "G4: Sibling",
+                        children: [
+                            { name: "Altamo Ashkenazy", role: "G5: Child" },
+                            { name: "Ezria Ashkenazy", role: "G5: Child" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+            ]
+        },
+{
+    name: "Hirsch Weissbarst",
+        role: "G-1: Ancestor",
+            image: "",
+                partner: {
+        name: "Beile Frenkel",
+            role: "G-1: Ancestor",
+                image: ""
+    },
+    children: [
+        {
+            name: "Rachmiel Muhlrad-Weissburst",
+            role: "G0: Ancestor",
+            image: "",
+            partner: {
+                name: "Scheindel Weissbarst",
+                role: "G0: Ancestor (b. 1861)",
+                image: ""
+            },
+            children: [
+                {
+                    name: "Zvi Weissburst",
+                    role: "G1: Merchant (b. 1888)",
+                    image: "",
+                    partner: {
+                        name: "Sara Weissbarst",
+                        role: "G1: Matriarch",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Shalom Weissbarst",
+                            role: "G2: Architect (1915-2002) (Deceased)",
+                            image: "",
+                            coords: [32.7940, 34.9896],
+                            locationName: "Haifa, Israel",
+                            description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
+                            partner: {
+                                name: "Tova (Gita) Wallach",
+                                role: "Partner (1917-2002)",
+                                image: "",
+                                description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
+                            },
+                            children: [
+                                {
+                                    name: "Talma Rimon",
+                                    role: "G3: Daughter of Shalom",
+                                    image: "",
+                                    coords: [32.0853, 34.7818],
+                                    locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
+                                    description: "Daughter of Shalom Weissbarst.",
+                                    children: []
                                 }
                             ]
+
                         }
                     ]
                 }
             ]
-        },
+        }
+    ]
+},
 
     ]
 };
@@ -1106,7 +1119,7 @@ function createCard(member) {
     // Text Content
     const nameData = document.createElement('div');
     nameData.className = 'member-name';
-    
+
     // Format name to break parenthetical surnames to new line
     let formattedName = member.name;
     if (formattedName.includes('(') && formattedName.includes(')')) {
@@ -1286,10 +1299,10 @@ function initControls() {
         element.classList.add('spotlight');
 
         // Use scrollIntoView for reliable centering
-        element.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'center', 
-            inline: 'center' 
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
         });
 
         setTimeout(() => element.classList.remove('spotlight'), 3000);
@@ -1313,15 +1326,15 @@ function initControls() {
             cards.forEach(card => {
                 const nameEl = card.querySelector('.member-name');
                 const roleEl = card.querySelector('.member-role');
-                
+
                 if (nameEl && nameEl.textContent.toLowerCase().includes(query)) {
                     const name = nameEl.textContent;
                     const role = roleEl ? roleEl.textContent : 'Family Member';
-                    
+
                     // Use name as unique key to prevent duplicates
                     if (!seen.has(name)) {
                         seen.add(name);
-                        
+
                         // Find lineage
                         const section = card.closest('.lineage-section');
                         let lineage = 'Family';
@@ -1339,7 +1352,7 @@ function initControls() {
                                 lineage = 'Weissbarst';
                             }
                         }
-                        
+
                         matches.push({ name, role, lineage, element: card });
                     }
                 }
@@ -1377,7 +1390,7 @@ function initControls() {
             searchResults.style.display = 'none';
         }
     });
-    
+
     // Close search on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && searchResults) {
@@ -1421,9 +1434,9 @@ function initControls() {
         btn.addEventListener('click', () => {
             const genTag = btn.dataset.gen; // "G0" or "G5"
             let cards = Array.from(document.querySelectorAll('.member-card'));
-            
+
             let target;
-            
+
             if (genTag === 'G0') {
                 // Roots: Find the oldest generation (G-2, G-1, G0)
                 const rootGenerations = ['G-2:', 'G-1:', 'G0:'];
@@ -1441,7 +1454,7 @@ function initControls() {
                 cards.forEach(card => {
                     const roleEl = card.querySelector('.member-role');
                     const role = roleEl ? roleEl.textContent : '';
-                    
+
                     // Look for age patterns like "Age 1.5", "Age 2", etc.
                     const ageMatch = role.match(/Age (\d+(?:\.\d+)?)/i);
                     if (ageMatch) {
@@ -1452,7 +1465,7 @@ function initControls() {
                         }
                     }
                 });
-                
+
                 // If no age found, fallback to Ana Rimon or any G5
                 if (!target) {
                     target = cards.find(c => {
@@ -1461,7 +1474,7 @@ function initControls() {
                     });
                 }
             }
-            
+
             if (target) {
                 genBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
@@ -1547,7 +1560,7 @@ function initControls() {
     const move = (e) => {
         if (!isDown) return;
         e.preventDefault();
-        
+
         // Use built-in movementX/Y for frame-to-frame movement
         viewport.scrollLeft -= e.movementX;
         viewport.scrollTop -= e.movementY;
@@ -1644,6 +1657,14 @@ function addMarkersToMap(member) {
             .bindPopup(`<strong>${member.partner.name}</strong><br>${member.partner.role}<br><em>${member.partner.locationName || 'Known Location'}</em>`);
     }
 
+    if (member.secondPartner && member.secondPartner.coords) {
+        const lat = member.secondPartner.coords[0] + (Math.random() - 0.5) * 0.005;
+        const lng = member.secondPartner.coords[1] + (Math.random() - 0.5) * 0.005;
+
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup(`<strong>${member.secondPartner.name}</strong><br>${member.secondPartner.role}<br><em>${member.secondPartner.locationName || 'Known Location'}</em>`);
+    }
+
     if (member.children) {
         member.children.forEach(child => addMarkersToMap(child));
     }
@@ -1665,7 +1686,7 @@ function addHistoricalLocations() {
     historicalLocations.forEach(location => {
         const marker = L.marker(location.coords).addTo(map);
         marker.bindPopup(`<strong>${location.name}</strong><br><em>Historical Location</em><br>${location.description}`);
-        
+
         // Use different icon for historical locations
         marker.setIcon(L.divIcon({
             className: 'historical-marker',
@@ -1686,38 +1707,38 @@ function exportToGedcom() {
     function addPerson(member, parentFamilyId = null) {
         const id = `I${individualId++}`;
         personMap.set(member.name, id);
-        
+
         gedcom += `0 ${id} INDI\n`;
         gedcom += `1 NAME ${member.name}\n`;
         if (member.role) gedcom += `1 NOTE ${member.role}\n`;
         if (member.coords) gedcom += `1 RESI\n2 PLAC ${member.locationName || 'Unknown'}\n`;
         if (parentFamilyId) gedcom += `1 FAMC @${parentFamilyId}@\n`;
-        
+
         if (member.partner) {
             const famId = `F${familyId++}`;
             const spouseId = `I${individualId++}`;
             personMap.set(member.partner.name, spouseId);
-            
+
             gedcom += `1 FAMS @${famId}@\n`;
-            
+
             gedcom += `0 ${spouseId} INDI\n`;
             gedcom += `1 NAME ${member.partner.name}\n`;
             if (member.partner.role) gedcom += `1 NOTE ${member.partner.role}\n`;
             gedcom += `1 FAMS @${famId}@\n`;
-            
+
             families.push({ id: famId, husband: id, wife: spouseId, children: member.children || [] });
         }
-        
+
         return id;
     }
 
     function processTree(member, parentFamilyId = null) {
         const personId = addPerson(member, parentFamilyId);
-        
+
         if (member.children && member.children.length > 0) {
             const currentFamily = families.find(f => f.husband === personId || f.wife === personId);
             const childFamilyId = currentFamily ? currentFamily.id : null;
-            
+
             member.children.forEach(child => {
                 processTree(child, childFamilyId);
             });
