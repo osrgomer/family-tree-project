@@ -602,9 +602,7 @@ children: [
                                     ]
                                 }
                             ]
-}
-                    ]
-                },
+},
 {
     name: "Marko Zoref",
         role: "G2: Sibling",
