@@ -285,560 +285,538 @@ const familyData = {
             ]
         },
         {
-            name: "Zoref-Gelbman-Givon Family",
-            role: "G0: United Hungarian-Israeli Family",
+            name: "Yehuda Zoref",
+            role: "G1: Patriarch",
             image: "",
-            description: "Connected family spanning Hungary to Israel. Zoref family connects to Gelbman brothers, with Moshe changing surname to Givon.",
-            coords: [47.4979, 19.0402],
-            locationName: "Budapest, Hungary (Origins)",
+            partner: {
+                name: "Zimbul Behar",
+                role: "G1: Matriarch",
+                image: ""
+            },
             children: [
                 {
-                    name: "Yehuda Zoref",
-                    role: "G1: Patriarch",
+                    name: "Victoria Zoref",
+                    role: "G2: Matriarch (Poor sense of smell)",
                     image: "",
+                    description: "Mother of Moshe Givon. Had impaired sense of smell.",
                     partner: {
-                        name: "Zimbul Behar",
-                        role: "G1: Matriarch",
+                        name: "Zvi Gelbman",
+                        role: "G2: Patriarch",
                         image: ""
                     },
                     children: [
                         {
-                            name: "Victoria Zoref",
-                            role: "G2: Matriarch (Poor sense of smell)",
+                            name: "Moshe Givon (Gelbman)",
+                            role: "G3: Marketing Expert (Changed surname)",
                             image: "",
-                            description: "Mother of Moshe Givon. Had impaired sense of smell.",
+                            coords: [31.8167, 34.7833],
+                            locationName: "Meishar, near Gedera, Israel",
+                            description: "Born Moshe Gelbman in Hungary. Son of Victoria Zoref. Changed surname to Givon when he moved to Israel.",
                             partner: {
-                                name: "Zvi Gelbman",
-                                role: "G2: Patriarch",
-                                image: ""
+                                name: "Deborah Miriam Givon (Gurfinkel)",
+                                role: "G3: Early Childhood Expert",
+                                description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel. Lives happily with Moshe in Meishar.",
+                                image: "",
+                                coords: [31.8167, 34.7833],
+                                locationName: "Meishar, near Gedera, Israel"
                             },
                             children: [
                                 {
-                                    name: "Moshe Givon (Gelbman)",
-                                    role: "G3: Marketing Expert (Changed surname)",
-                                    image: "",
+                                    name: "Dr. Assaf Givon",
+                                    role: "G4: Orthopedic Surgeon",
+                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
                                     coords: [31.8167, 34.7833],
-                                    locationName: "Meishar, near Gedera, Israel",
-                                    description: "Born Moshe Gelbman in Hungary. Son of Victoria Zoref. Changed surname to Givon when he moved to Israel.",
+                                    locationName: "Meishar, Israel",
                                     partner: {
-                                        name: "Deborah Miriam Givon (Gurfinkel)",
-                                        role: "G3: Early Childhood Expert",
-                                        description: "Daughter of Ze'ev Gurfinkel and Leah Diamentstein. Born Deborah Miriam Gurfinkel. Lives happily with Moshe in Meishar.",
-                                        image: "",
-                                        coords: [31.8167, 34.7833],
-                                        locationName: "Meishar, near Gedera, Israel"
+                                        name: "Ruth Givon",
+                                        role: "Partner",
+                                        image: ""
                                     },
                                     children: [
                                         {
-                                            name: "Dr. Assaf Givon",
-                                            role: "G4: Orthopedic Surgeon",
-                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwXTBJQZQH9H7s7jnJ9AnH2nx4BMlMYV4U1Q&s",
-                                            coords: [31.8167, 34.7833],
-                                            locationName: "Meishar, Israel",
-                                            partner: {
-                                                name: "Ruth Givon",
-                                                role: "Partner",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Ivry Givon",
-                                                    role: "G5: Son (Age 9-10)",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Lily Givon",
-                                                    role: "G5: Daughter (Age 6-7)",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
+                                            name: "Ivry Givon",
+                                            role: "G5: Son (Age 9-10)",
+                                            image: "",
+                                            children: []
                                         },
                                         {
-                                            name: "Daniella Givon",
-                                            role: "G4: CEO, Unik",
-                                            image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
-                                            coords: [32.0853, 34.7818],
-                                            locationName: "Tel Aviv, Israel",
-                                            partner: {
-                                                name: "Nissim Douek",
-                                                role: "Partner",
-                                                image: "https://media.licdn.com/dms/image/v2/C5603AQGg5A2CPy1q4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1603183059658?e=2147483647&v=beta&t=KWSh0XWuCXFYbg1sHPukZOzfEP9AkY-W4LDZMkXZoeA"
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Nave Midbar Tapuhi",
-                                                    role: "G5: Son (Age 21)",
-                                                    image: "",
-                                                    description: "Son of Daniella Givon and Johnathan Tapuhi.",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Soof Tapuhi",
-                                                    role: "G5: Child (Age 18)",
-                                                    image: "",
-                                                    description: "Child of Daniella Givon and Johnathan Tapuhi.",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Daphna Givon",
-                                            role: "G4: Botanical Expert",
-                                            image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/94432436_10222579086852096_7837351610438123520_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9aQLxujBgTEQ7kNvwHwhXiR&_nc_oc=AdkrUeAUt_cU2GunGtCxAzBS61nTRlVVV-koUzJTDuMJUbOvUb98w2YdURzHLfgcRwU&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=c2gH7rGbsMLbYTB7DTjWmg&oh=00_AfleKGkY55UOGMBsuJe-hPGTZE42xTlYyauBuDvnEHLLaQ&oe=696E63ED",
-                                            coords: [37.329767, -8.733916],
-                                            locationName: "Aljezur, Portugal",
-                                            partner: {
-                                                name: "Arturo Whitelegg",
-                                                role: "Partner",
-                                                image: "https://static.wixstatic.com/media/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg/v1/fit/w_1277,h_763,q_90,enc_avif,quality_auto/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg",
-                                                coords: [37.329767, -8.733916],
-                                                locationName: "Aljezur, Portugal"
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Lian Givon Whitelegg",
-                                                    role: "G5: Son (Age 15)",
-                                                    image: "",
-                                                    coords: [37.329767, -8.733916],
-                                                    locationName: "Aljezur, Portugal",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Alma Givon Whitelegg",
-                                                    role: "G5: Daughter (Age 13.5)",
-                                                    image: "",
-                                                    coords: [37.329767, -8.733916],
-                                                    locationName: "Aljezur, Portugal",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Yanai Givon Whitelegg",
-                                                    role: "G5: Son (Age 9-10)",
-                                                    image: "",
-                                                    coords: [37.329767, -8.733916],
-                                                    locationName: "Aljezur, Portugal",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Ilay Givon Whitelegg",
-                                                    role: "G5: Son (Age 5)",
-                                                    image: "",
-                                                    coords: [37.329767, -8.733916],
-                                                    locationName: "Aljezur, Portugal",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Ronnie Heller",
-                                            role: "G4: Choreographer",
-                                            image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
-                                            children: [
-                                                {
-                                                    name: "Amir Heller",
-                                                    role: "G5: Son (Age 21)",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "David Heller",
-                                                    role: "G5: Son (Age 15-16)",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "DUNICA",
-                                            role: "Shared Venture: Biotech & Therapeutics",
-                                            description: "A pioneering biomedical venture co-founded by Daniella Givon.",
-                                            type: "venture",
+                                            name: "Lily Givon",
+                                            role: "G5: Daughter (Age 6-7)",
+                                            image: "",
                                             children: []
                                         }
                                     ]
                                 },
                                 {
-                                    name: "Zvi Givon (Gelbman)",
-                                    role: "G3: Brother (Kept Gelbman surname)",
-                                    image: "",
+                                    name: "Daniella Givon",
+                                    role: "G4: CEO, Unik",
+                                    image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-19-142857.png",
                                     coords: [32.0853, 34.7818],
                                     locationName: "Tel Aviv, Israel",
-                                    description: "Brother of Moshe Givon. Born Zvi Gelbman, son of Victoria Zoref.",
+                                    partner: {
+                                        name: "Nissim Douek",
+                                        role: "Partner",
+                                        image: "https://media.licdn.com/dms/image/v2/C5603AQGg5A2CPy1q4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1603183059658?e=2147483647&v=beta&t=KWSh0XWuCXFYbg1sHPukZOzfEP9AkY-W4LDZMkXZoeA"
+                                    },
                                     children: [
                                         {
-                                            name: "Thomas (Tsvi) Givon",
-                                            role: "G4: Distinguished Professor (Linguistics)",
-                                            image: "https://cas.uoregon.edu/sites/default/files/uo_profiles/tgivon_cas_499767.png",
-                                            coords: [45.5152, -122.6784],
-                                            locationName: "Oregon, USA",
-                                            description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus.",
-                                            partner: {
-                                                name: "Linda Givon",
-                                                role: "Partner (Second Wife)",
-                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/503846725_122133761840783651_9154276442130859309_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Syu0j3XfFSsQ7kNvwFOnBm9&_nc_oc=Adl2kAchI2lUSXoZMMKrPQwQfJZgGEP_-ey_caywb8NteS24vPXdVRM7KNb6WTLYg4o&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=LnbX0EfZGLPepb8ocOLk4Q&oh=00_AfmOt2Fk4Y582w-fDSs5fMyENQHq02TdmliSkPfyI8gvXw&oe=6950D8F3"
-                                            },
+                                            name: "Nave Midbar Tapuhi",
+                                            role: "G5: Son (Age 21)",
+                                            image: "",
+                                            description: "Son of Daniella Givon and Johnathan Tapuhi.",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Soof Tapuhi",
+                                            role: "G5: Child (Age 18)",
+                                            image: "",
+                                            description: "Child of Daniella Givon and Johnathan Tapuhi.",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Daphna Givon",
+                                    role: "G4: Botanical Expert",
+                                    image: "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/94432436_10222579086852096_7837351610438123520_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9aQLxujBgTEQ7kNvwHwhXiR&_nc_oc=AdkrUeAUt_cU2GunGtCxAzBS61nTRlVVV-koUzJTDuMJUbOvUb98w2YdURzHLfgcRwU&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=c2gH7rGbsMLbYTB7DTjWmg&oh=00_AfleKGkY55UOGMBsuJe-hPGTZE42xTlYyauBuDvnEHLLaQ&oe=696E63ED",
+                                    coords: [37.329767, -8.733916],
+                                    locationName: "Aljezur, Portugal",
+                                    partner: {
+                                        name: "Arturo Whitelegg",
+                                        role: "Partner",
+                                        image: "https://static.wixstatic.com/media/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg/v1/fit/w_1277,h_763,q_90,enc_avif,quality_auto/c9e8a9_dbb62a3d70b24ebcbd15b0c1386e498a~mv2.jpg",
+                                        coords: [37.329767, -8.733916],
+                                        locationName: "Aljezur, Portugal"
+                                    },
+                                    children: [
+                                        {
+                                            name: "Lian Givon Whitelegg",
+                                            role: "G5: Son (Age 15)",
+                                            image: "",
+                                            coords: [37.329767, -8.733916],
+                                            locationName: "Aljezur, Portugal",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Alma Givon Whitelegg",
+                                            role: "G5: Daughter (Age 13.5)",
+                                            image: "",
+                                            coords: [37.329767, -8.733916],
+                                            locationName: "Aljezur, Portugal",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Yanai Givon Whitelegg",
+                                            role: "G5: Son (Age 9-10)",
+                                            image: "",
+                                            coords: [37.329767, -8.733916],
+                                            locationName: "Aljezur, Portugal",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Ilay Givon Whitelegg",
+                                            role: "G5: Son (Age 5)",
+                                            image: "",
+                                            coords: [37.329767, -8.733916],
+                                            locationName: "Aljezur, Portugal",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Ronnie Heller",
+                                    role: "G4: Choreographer",
+                                    image: "https://static.wixstatic.com/media/c9e8a9_65a9fe53589745fea8c6530db75621c2~mv2_d_2048_1370_s_2.jpg/v1/crop/x_51,y_0,w_1369,h_1370/fill/w_160,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1398405_636735436366394_1523544042_o.jpg",
+                                    children: [
+                                        {
+                                            name: "Amir Heller",
+                                            role: "G5: Son (Age 21)",
+                                            children: []
+                                        },
+                                        {
+                                            name: "David Heller",
+                                            role: "G5: Son (Age 15-16)",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "DUNICA",
+                                    role: "Shared Venture: Biotech & Therapeutics",
+                                    description: "A pioneering biomedical venture co-founded by Daniella Givon.",
+                                    type: "venture",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Zvi Givon (Gelbman)",
+                            role: "G3: Brother (Kept Gelbman surname)",
+                            image: "",
+                            coords: [32.0853, 34.7818],
+                            locationName: "Tel Aviv, Israel",
+                            description: "Brother of Moshe Givon. Born Zvi Gelbman, son of Victoria Zoref.",
+                            children: [
+                                {
+                                    name: "Thomas (Tsvi) Givon",
+                                    role: "G4: Distinguished Professor (Linguistics)",
+                                    image: "https://cas.uoregon.edu/sites/default/files/uo_profiles/tgivon_cas_499767.png",
+                                    coords: [45.5152, -122.6784],
+                                    locationName: "Oregon, USA",
+                                    description: "Known by the nickname 'Talmy', he is a world-renowned Israeli linguist and Distinguished Professor Emeritus.",
+                                    partner: {
+                                        name: "Linda Givon",
+                                        role: "Partner (Second Wife)",
+                                        image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/503846725_122133761840783651_9154276442130859309_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Syu0j3XfFSsQ7kNvwFOnBm9&_nc_oc=Adl2kAchI2lUSXoZMMKrPQwQfJZgGEP_-ey_caywb8NteS24vPXdVRM7KNb6WTLYg4o&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=LnbX0EfZGLPepb8ocOLk4Q&oh=00_AfmOt2Fk4Y582w-fDSs5fMyENQHq02TdmliSkPfyI8gvXw&oe=6950D8F3"
+                                    },
+                                    children: [
+                                        {
+                                            name: "Chris Givon",
+                                            role: "G5: Son (from first marriage)",
                                             children: [
                                                 {
-                                                    name: "Chris Givon",
-                                                    role: "G5: Son (from first marriage)",
+                                                    name: "Raquel Givon",
+                                                    role: "G6: Daughter",
                                                     children: [
-                                                        {
-                                                            name: "Raquel Givon",
-                                                            role: "G6: Daughter",
-                                                            children: [
-                                                                { name: "Son", role: "G7: Grandson" },
-                                                                { name: "Daughter", role: "G7: Granddaughter" }
-                                                            ]
-                                                        }
+                                                        { name: "Son", role: "G7: Grandson" },
+                                                        { name: "Daughter", role: "G7: Granddaughter" }
                                                     ]
-                                                },
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Nathaniel Givon",
+                                            role: "G5: Son (with Linda)",
+                                            children: []
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Haya Ran",
+                                    role: "G4: Daughter (Deceased)",
+                                    coords: [32.0853, 34.7818],
+                                    locationName: "Tel Aviv, Israel",
+                                    image: "",
+                                    partner: {
+                                        name: "Amnon Marton",
+                                        role: "G4: First Husband",
+                                        coords: [32.0853, 34.7818],
+                                        locationName: "Tel Aviv, Israel",
+                                        image: ""
+                                    },
+                                    secondPartner: {
+                                        name: "Moshe Ran",
+                                        role: "G4: Second Husband",
+                                        coords: [32.0853, 34.7818],
+                                        locationName: "Tel Aviv, Israel",
+                                        image: ""
+                                    },
+                                    partnerLeft: true,
+                                    children: [
+                                        {
+                                            name: "Yifat Marton",
+                                            role: "G5: Daughter (Deceased)",
+                                            image: "",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Orit Marton",
+                                            role: "G5: Daughter",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Tzafra Marton",
+                                            role: "G5: Daughter",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Gal M. Ran",
+                                            role: "G5: Son",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Maya Ran",
+                                            role: "G5: Daughter (Deceased)",
+                                            coords: [32.0853, 34.7818],
+                                            locationName: "Tel Aviv, Israel",
+                                            image: "",
+                                            children: [
                                                 {
-                                                    name: "Nathaniel Givon",
-                                                    role: "G5: Son (with Linda)",
+                                                    name: "Matan Punk",
+                                                    role: "G6: Son",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
+                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
                                                     children: []
                                                 }
                                             ]
                                         },
                                         {
-                                            name: "Haya Ran",
-                                            role: "G4: Daughter (Deceased)",
+                                            name: "Iris Leal",
+                                            role: "G5: Daughter",
                                             coords: [32.0853, 34.7818],
                                             locationName: "Tel Aviv, Israel",
-                                            image: "",
+                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
+                                            description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
                                             partner: {
-                                                name: "Amnon Marton",
-                                                role: "G4: First Husband",
-                                                coords: [32.0853, 34.7818],
-                                                locationName: "Tel Aviv, Israel",
+                                                name: "Dudi Leal",
+                                                role: "G5: First Husband",
                                                 image: ""
                                             },
                                             secondPartner: {
-                                                name: "Moshe Ran",
-                                                role: "G4: Second Husband",
-                                                coords: [32.0853, 34.7818],
-                                                locationName: "Tel Aviv, Israel",
+                                                name: "Tamir Sher",
+                                                role: "G5: Second Husband",
                                                 image: ""
                                             },
                                             partnerLeft: true,
                                             children: [
                                                 {
-                                                    name: "Yifat Marton",
-                                                    role: "G5: Daughter (Deceased)",
+                                                    name: "Jorden Leal",
+                                                    role: "G6: Daughter (first marriage)",
                                                     image: "",
                                                     children: []
                                                 },
                                                 {
-                                                    name: "Orit Marton",
-                                                    role: "G5: Daughter",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Tzafra Marton",
-                                                    role: "G5: Daughter",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Gal M. Ran",
-                                                    role: "G5: Son",
-                                                    coords: [32.0853, 34.7818],
-                                                    locationName: "Tel Aviv, Israel",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Maya Ran",
-                                                    role: "G5: Daughter (Deceased)",
-                                                    coords: [32.0853, 34.7818],
-                                                    locationName: "Tel Aviv, Israel",
+                                                    name: "Itamar Sher",
+                                                    role: "G6: Son (second marriage)",
                                                     image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Matan Punk",
-                                                            role: "G6: Son",
-                                                            coords: [32.0853, 34.7818],
-                                                            locationName: "Tel Aviv, Israel",
-                                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
-                                                            children: []
-                                                        }
-                                                    ]
+                                                    children: []
                                                 },
                                                 {
-                                                    name: "Iris Leal",
-                                                    role: "G5: Daughter",
-                                                    coords: [32.0853, 34.7818],
-                                                    locationName: "Tel Aviv, Israel",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
-                                                    description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
-                                                    partner: {
-                                                        name: "Dudi Leal",
-                                                        role: "G5: First Husband",
-                                                        image: ""
-                                                    },
-                                                    secondPartner: {
-                                                        name: "Tamir Sher",
-                                                        role: "G5: Second Husband",
-                                                        image: ""
-                                                    },
-                                                    partnerLeft: true,
-                                                    children: [
-                                                        {
-                                                            name: "Jorden Leal",
-                                                            role: "G6: Daughter (first marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Itamar Sher",
-                                                            role: "G6: Son (second marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Ari Sher",
-                                                            role: "G6: Daughter (second marriage)",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
+                                                    name: "Ari Sher",
+                                                    role: "G6: Daughter (second marriage)",
+                                                    image: "",
+                                                    children: []
                                                 }
                                             ]
                                         }
                                     ]
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            name: "Marko Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            partner: {
+                                name: "Pavlina",
+                                role: "G2: Wife",
+                                image: ""
+                            },
+                            children: [
                                 {
-                                    name: "Marko Zoref",
-                                    role: "G2: Sibling",
-                                    image: "",
-                                    partner: {
-                                        name: "Pavlina",
-                                        role: "G2: Wife",
-                                        image: ""
-                                    },
-                                    children: [
-                                        {
-                                            name: "Dror Zoref",
-                                            role: "G3: Son (USA)",
-                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/272966724_10159688806902836_1849987475025400659_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Q8x7aqLWb9gQ7kNvwGMzGj6&_nc_oc=AdnMuLR351sRjhQElYCS5SqEktzYb2oj4oowXbmUbZ5Due0YvaRw9mblJm9QO7vWqY4&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=yh-MHO_pFrTlNsGxbUdZGQ&oh=00_AflRXU9DcokPMLpX_LE1Xmah3FLHo-9z5Ytnki9xu1iswA&oe=6950CEDA",
-                                            coords: [40.7128, -74.0060],
-                                            locationName: "USA",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Son (Unknown)",
-                                            role: "G3: Son",
-                                            children: []
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Valentina Zoref",
-                                    role: "G2: Sibling (Blind from age 40)",
-                                    image: "",
-                                    description: "Never married. Lost sight around age 40.",
+                                    name: "Dror Zoref",
+                                    role: "G3: Son (USA)",
+                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/272966724_10159688806902836_1849987475025400659_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Q8x7aqLWb9gQ7kNvwGMzGj6&_nc_oc=AdnMuLR351sRjhQElYCS5SqEktzYb2oj4oowXbmUbZ5Due0YvaRw9mblJm9QO7vWqY4&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=yh-MHO_pFrTlNsGxbUdZGQ&oh=00_AflRXU9DcokPMLpX_LE1Xmah3FLHo-9z5Ytnki9xu1iswA&oe=6950CEDA",
+                                    coords: [40.7128, -74.0060],
+                                    locationName: "USA",
                                     children: []
                                 },
                                 {
-                                    name: "Jac Zoref",
-                                    role: "G2: Sibling",
+                                    name: "Son (Unknown)",
+                                    role: "G3: Son",
+                                    children: []
+                                }
+                            ]
+                        },
+                        {
+                            name: "Valentina Zoref",
+                            role: "G2: Sibling (Blind from age 40)",
+                            image: "",
+                            description: "Never married. Lost sight around age 40.",
+                            children: []
+                        },
+                        {
+                            name: "Jac Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            partner: {
+                                name: "Lily",
+                                role: "G2: Wife",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Sioma Zoref",
+                                    role: "G3: Son",
                                     image: "",
                                     partner: {
-                                        name: "Lily",
-                                        role: "G2: Wife",
+                                        name: "Yafa Zoref",
+                                        role: "G3: Wife",
                                         image: ""
                                     },
                                     children: [
                                         {
-                                            name: "Sioma Zoref",
-                                            role: "G3: Son",
-                                            image: "",
-                                            partner: {
-                                                name: "Yafa Zoref",
-                                                role: "G3: Wife",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Erez Zoref",
-                                                    role: "G4: Son",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Asaf Zoref",
-                                                    role: "G4: Son",
-                                                    image: "",
-                                                    partner: {
-                                                        name: "Keren",
-                                                        role: "G4: Wife",
-                                                        image: ""
-                                                    },
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: "Yehezkel Zoref",
-                                    role: "G2: Sibling",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Yuda Zoref",
-                                            role: "G3: Son",
+                                            name: "Erez Zoref",
+                                            role: "G4: Son",
                                             image: "",
                                             children: []
                                         },
                                         {
-                                            name: "Daniella Zoref",
-                                            role: "G3: Daughter",
+                                            name: "Asaf Zoref",
+                                            role: "G4: Son",
                                             image: "",
+                                            partner: {
+                                                name: "Keren",
+                                                role: "G4: Wife",
+                                                image: ""
+                                            },
                                             children: []
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Yehezkel Zoref",
+                            role: "G2: Sibling",
+                            image: "",
+                            children: [
+                                {
+                                    name: "Yuda Zoref",
+                                    role: "G3: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Daniella Zoref",
+                                    role: "G3: Daughter",
+                                    image: "",
+                                    children: []
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    name: "Gelbman-Polgár Lineage",
-                    role: "Hungarian Branch",
+                    name: "Gelbman Patriarch",
+                    role: "G1: Ancestor",
                     children: [
                         {
-                            name: "Gelbman Patriarch",
-                            role: "G1: Ancestor",
+                            name: "Sarah Gelbman",
+                            role: "G2: Matriarch (Hungarian Branch)",
+                            description: "Sister of Zvi, Edit, and an unknown brother.",
+                            coords: [47.4979, 19.0402],
+                            locationName: "Budapest, Hungary",
+                            partner: {
+                                name: "Sándor Proszwimmer",
+                                role: "G2: Husband",
+                                description: "Father of Ármin Polgár."
+                            },
                             children: [
                                 {
-                                    name: "Zvi Gelbman",
-                                    role: "G2: Patriarch",
-                                    description: "Father of Moshe Givon. Married Victoria Zoref.",
-                                    children: []
-                                },
-                                {
-                                    name: "Sarah Gelbman",
-                                    role: "G2: Matriarch (Hungarian Branch)",
-                                    description: "Sister of Zvi, Edit, and an unknown brother.",
+                                    name: "Ármin Polgár (Proszwimmer)",
+                                    role: "G3: Holocaust Survivor (1900-1992)",
+                                    image: "",
                                     coords: [47.4979, 19.0402],
                                     locationName: "Budapest, Hungary",
-                                    partner: {
-                                        name: "Sándor Proszwimmer",
-                                        role: "G2: Husband",
-                                        description: "Father of Ármin Polgár."
-                                    },
+                                    description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war. His parents were Sándor and Sarah.",
                                     children: [
                                         {
-                                            name: "Ármin Polgár (Proszwimmer)",
-                                            role: "G3: Holocaust Survivor (1900-1992)",
-                                            image: "",
+                                            name: "László Polgár",
+                                            role: "G4: Chess Teacher & Psychologist (b. 1946)",
+                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
                                             coords: [47.4979, 19.0402],
                                             locationName: "Budapest, Hungary",
-                                            description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war. His parents were Sándor and Sarah.",
+                                            description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
+                                            partner: {
+                                                name: "Klára Polgár (Altberger)",
+                                                role: "G4: Mother of Chess Champions",
+                                                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
+                                                description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
+                                            },
                                             children: [
                                                 {
-                                                    name: "László Polgár",
-                                                    role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
+                                                    name: "Susan Polgár (Zsuzsa)",
+                                                    role: "G5: Grandmaster & Women's World Champion (b. 1969)",
+                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
+                                                    coords: [40.7128, -74.0060],
+                                                    locationName: "New York, USA",
+                                                    description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
+                                                    partner: {
+                                                        name: "Jacob Shutzman",
+                                                        role: "G5: First Husband (m. 1994–2006)",
+                                                        image: ""
+                                                    },
+                                                    secondPartner: {
+                                                        name: "Paul Truong",
+                                                        role: "G5: Chess Master & Author (b. 1965)",
+                                                        image: "",
+                                                        description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
+                                                    },
+                                                    partnerLeft: true,
+                                                    children: [
+                                                        {
+                                                            name: "Tom Shutzman",
+                                                            role: "G6: Son (from first marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Leeam Shutzman",
+                                                            role: "G6: Child (from first marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Sofia Polgár (Zsófia)",
+                                                    role: "G5: International Master & Artist (b. 1974)",
+                                                    image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
                                                     coords: [47.4979, 19.0402],
                                                     locationName: "Budapest, Hungary",
-                                                    description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
+                                                    description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
                                                     partner: {
-                                                        name: "Klára Polgár (Altberger)",
-                                                        role: "G4: Mother of Chess Champions",
-                                                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
-                                                        description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
+                                                        name: "Yona Kosashvili",
+                                                        role: "G5: Husband (m. 1999)",
+                                                        image: ""
                                                     },
                                                     children: [
                                                         {
-                                                            name: "Susan Polgár (Zsuzsa)",
-                                                            role: "G5: Grandmaster & Women's World Champion (b. 1969)",
-                                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
-                                                            coords: [40.7128, -74.0060],
-                                                            locationName: "New York, USA",
-                                                            description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
-                                                            partner: {
-                                                                name: "Jacob Shutzman",
-                                                                role: "G5: First Husband (m. 1994–2006)",
-                                                                image: ""
-                                                            },
-                                                            secondPartner: {
-                                                                name: "Paul Truong",
-                                                                role: "G5: Chess Master & Author (b. 1965)",
-                                                                image: "",
-                                                                description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
-                                                            },
-                                                            partnerLeft: true,
-                                                            children: [
-                                                                {
-                                                                    name: "Tom Shutzman",
-                                                                    role: "G6: Son (from first marriage)",
-                                                                    image: "",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Leeam Shutzman",
-                                                                    role: "G6: Child (from first marriage)",
-                                                                    image: "",
-                                                                    children: []
-                                                                }
-                                                            ]
+                                                            name: "Yoav Kosashvili",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            children: []
                                                         },
                                                         {
-                                                            name: "Sofia Polgár (Zsófia)",
-                                                            role: "G5: International Master & Artist (b. 1974)",
-                                                            image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
-                                                            coords: [47.4979, 19.0402],
-                                                            locationName: "Budapest, Hungary",
-                                                            description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
-                                                            partner: {
-                                                                name: "Yona Kosashvili",
-                                                                role: "G5: Husband (m. 1999)",
-                                                                image: ""
-                                                            },
-                                                            children: [
-                                                                {
-                                                                    name: "Yoav Kosashvili",
-                                                                    role: "G6: Son",
-                                                                    image: "",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Alon Kosashvili",
-                                                                    role: "G6: Son",
-                                                                    image: "",
-                                                                    children: []
-                                                                }
-                                                            ]
+                                                            name: "Alon Kosashvili",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Judit Polgár",
+                                                    role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
+                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
+                                                    coords: [47.4979, 19.0402],
+                                                    locationName: "Budapest, Hungary",
+                                                    description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
+                                                    partner: {
+                                                        name: "Gusztáv Font",
+                                                        role: "G5: Veterinarian",
+                                                        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
+                                                        description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "Hanna Font",
+                                                            role: "G6: Daughter",
+                                                            image: "",
+                                                            description: "Daughter of Judit Polgár and Gusztáv Font.",
+                                                            children: []
                                                         },
                                                         {
-                                                            name: "Judit Polgár",
-                                                            role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
-                                                            coords: [47.4979, 19.0402],
-                                                            locationName: "Budapest, Hungary",
-                                                            description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                                                            partner: {
-                                                                name: "Gusztáv Font",
-                                                                role: "G5: Veterinarian",
-                                                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
-                                                                description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
-                                                            },
-                                                            children: [
-                                                                {
-                                                                    name: "Hanna Font",
-                                                                    role: "G6: Daughter",
-                                                                    image: "",
-                                                                    description: "Daughter of Judit Polgár and Gusztáv Font.",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Oliver Font",
-                                                                    role: "G6: Son",
-                                                                    image: "",
-                                                                    description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
-                                                                    children: []
-                                                                }
-                                                            ]
+                                                            name: "Oliver Font",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
+                                                            children: []
                                                         }
                                                     ]
                                                 }
@@ -863,7 +841,7 @@ const familyData = {
             },
             children: [
                 {
-                    name: "Rabi Mosheh David Rozental Hacohen",
+                    name: "Rabbi Mosheh David Rozental Hacohen",
                     role: "G2: Rabbi & Scholar",
                     image: "",
                     partner: {
