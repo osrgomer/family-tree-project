@@ -962,9 +962,10 @@ function renderTree() {
 
     // Render each main lineage as its own independent tree
     if (familyData.children) {
-        familyData.children.forEach(lineage => {
+        familyData.children.forEach((lineage, index) => {
             const lineageSection = document.createElement('div');
             lineageSection.className = 'lineage-section';
+            lineageSection.id = `lineage-section-${index}`; // Add unique ID for finding by index
             // store the lineage name to make navigation robust to ordering
             lineageSection.dataset.lineageName = (lineage.name || '').toLowerCase();
 
@@ -1152,8 +1153,9 @@ function initControls() {
                 return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
             });
 
-            if (!targetSection && sections[index]) {
-                targetSection = sections[index];
+            // Fallback: Use direct ID lookup if name match fails
+            if (!targetSection) {
+                targetSection = document.getElementById(`lineage-section-${index}`);
             }
 
             if (targetSection) {
@@ -1172,6 +1174,22 @@ function initControls() {
                     } else if (lineageData && lineageData.children && lineageData.children[0] && lineageData.children[0].coords) {
                         // Fallback to first child coords
                         map.flyTo(lineageData.children[0].coords, 12, { animate: true, duration: 1.5 });
+                    }
+                }
+            } else if (sections[index]) {
+                // Fallback: If name matching failed, trust the index 100%
+                targetSection = sections[index];
+                navBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const rootCard = targetSection.querySelector('.member-card');
+                scrollToElement(rootCard);
+
+                // Auto-Zoom on Map if initialized
+                if (mapInitialized && map) {
+                    const lineageData = familyData.children[index];
+                    if (lineageData && lineageData.coords) {
+                        map.flyTo(lineageData.coords, 12, { animate: true, duration: 1.5 });
                     }
                 }
             }
