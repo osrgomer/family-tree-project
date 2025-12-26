@@ -689,296 +689,291 @@ const familyData = {
                                     children: []
                                 }
                             ]
+                        },
+                        {
+                            name: "Sarah Gelbman",
+                            role: "G2: Matriarch (Hungarian Branch)",
+                            description: "Sister of Zvi, Edit, and an unknown brother.",
+                            coords: [47.4979, 19.0402],
+                            locationName: "Budapest, Hungary",
+                            partner: {
+                                name: "Sándor Proszwimmer",
+                                role: "G2: Husband",
+                                description: "Father of Ármin Polgár."
+                            },
+                            children: [
+                                {
+                                    name: "Ármin Polgár (Proszwimmer)",
+                                    role: "G3: Holocaust Survivor (1900-1992)",
+                                    image: "",
+                                    coords: [47.4979, 19.0402],
+                                    locationName: "Budapest, Hungary",
+                                    description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war. His parents were Sándor and Sarah.",
+                                    children: [
+                                        {
+                                            name: "László Polgár",
+                                            role: "G4: Chess Teacher & Psychologist (b. 1946)",
+                                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
+                                            coords: [47.4979, 19.0402],
+                                            locationName: "Budapest, Hungary",
+                                            description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
+                                            partner: {
+                                                name: "Klára Polgár (Altberger)",
+                                                role: "G4: Mother of Chess Champions",
+                                                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
+                                                description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Susan Polgár (Zsuzsa)",
+                                                    role: "G5: Grandmaster & Women's World Champion (b. 1969)",
+                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
+                                                    coords: [40.7128, -74.0060],
+                                                    locationName: "New York, USA",
+                                                    description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
+                                                    partner: {
+                                                        name: "Jacob Shutzman",
+                                                        role: "G5: First Husband (m. 1994–2006)",
+                                                        image: ""
+                                                    },
+                                                    secondPartner: {
+                                                        name: "Paul Truong",
+                                                        role: "G5: Chess Master & Author (b. 1965)",
+                                                        image: "",
+                                                        description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
+                                                    },
+                                                    partnerLeft: true,
+                                                    children: [
+                                                        {
+                                                            name: "Tom Shutzman",
+                                                            role: "G6: Son (from first marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Leeam Shutzman",
+                                                            role: "G6: Child (from first marriage)",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Sofia Polgár (Zsófia)",
+                                                    role: "G5: International Master & Artist (b. 1974)",
+                                                    image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
+                                                    coords: [47.4979, 19.0402],
+                                                    locationName: "Budapest, Hungary",
+                                                    description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
+                                                    partner: {
+                                                        name: "Yona Kosashvili",
+                                                        role: "G5: Husband (m. 1999)",
+                                                        image: ""
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "Yoav Kosashvili",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Alon Kosashvili",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Judit Polgár",
+                                                    role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
+                                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
+                                                    coords: [47.4979, 19.0402],
+                                                    locationName: "Budapest, Hungary",
+                                                    description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
+                                                    partner: {
+                                                        name: "Gusztáv Font",
+                                                        role: "G5: Veterinarian",
+                                                        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
+                                                        description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "Hanna Font",
+                                                            role: "G6: Daughter",
+                                                            image: "",
+                                                            description: "Daughter of Judit Polgár and Gusztáv Font.",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Oliver Font",
+                                                            role: "G6: Son",
+                                                            image: "",
+                                                            description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
                         }
                     ]
                 }
             ]
         },
-                }
-            ]
-        },
-{
-    name: "Sarah Gelbman",
-        role: "G2: Matriarch (Hungarian Branch)",
-            description: "Sister of Zvi, Edit, and an unknown brother.",
-                coords: [47.4979, 19.0402],
-                    locationName: "Budapest, Hungary",
-                        partner: {
-        name: "Sándor Proszwimmer",
-            role: "G2: Husband",
-                description: "Father of Ármin Polgár."
-    },
-    children: [
         {
-            name: "Ármin Polgár (Proszwimmer)",
-            role: "G3: Holocaust Survivor (1900-1992)",
-            image: "",
-            coords: [47.4979, 19.0402],
-            locationName: "Budapest, Hungary",
-            description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war. His parents were Sándor and Sarah.",
-            children: [
-                {
-                    name: "László Polgár",
-                    role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
-                    coords: [47.4979, 19.0402],
-                    locationName: "Budapest, Hungary",
-                    description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
-                    partner: {
-                        name: "Klára Polgár (Altberger)",
-                        role: "G4: Mother of Chess Champions",
-                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
-                        description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
-                    },
-                    children: [
-                        {
-                            name: "Susan Polgár (Zsuzsa)",
-                            role: "G5: Grandmaster & Women's World Champion (b. 1969)",
-                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
-                            coords: [40.7128, -74.0060],
-                            locationName: "New York, USA",
-                            description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
-                            partner: {
-                                name: "Jacob Shutzman",
-                                role: "G5: First Husband (m. 1994–2006)",
-                                image: ""
-                            },
-                            secondPartner: {
-                                name: "Paul Truong",
-                                role: "G5: Chess Master & Author (b. 1965)",
-                                image: "",
-                                description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
-                            },
-                            partnerLeft: true,
-                            children: [
-                                {
-                                    name: "Tom Shutzman",
-                                    role: "G6: Son (from first marriage)",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Leeam Shutzman",
-                                    role: "G6: Child (from first marriage)",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Sofia Polgár (Zsófia)",
-                            role: "G5: International Master & Artist (b. 1974)",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
-                            coords: [47.4979, 19.0402],
-                            locationName: "Budapest, Hungary",
-                            description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
-                            partner: {
-                                name: "Yona Kosashvili",
-                                role: "G5: Husband (m. 1999)",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Yoav Kosashvili",
-                                    role: "G6: Son",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Alon Kosashvili",
-                                    role: "G6: Son",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Judit Polgár",
-                            role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
-                            coords: [47.4979, 19.0402],
-                            locationName: "Budapest, Hungary",
-                            description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                            partner: {
-                                name: "Gusztáv Font",
-                                role: "G5: Veterinarian",
-                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
-                                description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
-                            },
-                            children: [
-                                {
-                                    name: "Hanna Font",
-                                    role: "G6: Daughter",
-                                    image: "",
-                                    description: "Daughter of Judit Polgár and Gusztáv Font.",
-                                    children: []
-                                },
-                                {
-                                    name: "Oliver Font",
-                                    role: "G6: Son",
-                                    image: "",
-                                    description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
-                                    children: []
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-                    ]
-                }
-            ]
-        },
-{
-    name: "Baruch Tzvi Hirsh Cohen",
-        role: "Paternal Roots (1852–1941)",
-            image: "",
-                partner: {
-        name: "Peril Pnina Cohen",
-            role: "Great-Grandmother (1856–1925)",
-                image: ""
-    },
-    children: [
-        {
-            name: "Rabbi Mosheh David Rozental Hacohen",
-            role: "G2: Rabbi & Scholar",
+            name: "Baruch Tzvi Hirsh Cohen",
+            role: "Paternal Roots (1852–1941)",
             image: "",
             partner: {
-                name: "Lieba Leah Cohen Rozental",
-                role: "G2: Matriarch (1886–1966)",
+                name: "Peril Pnina Cohen",
+                role: "Great-Grandmother (1856–1925)",
                 image: ""
             },
             children: [
                 {
-                    name: "Benjamin Cohen",
-                    role: "G3: Husband (1921–1981)",
+                    name: "Rabbi Mosheh David Rozental Hacohen",
+                    role: "G2: Rabbi & Scholar",
                     image: "",
+                    partner: {
+                        name: "Lieba Leah Cohen Rozental",
+                        role: "G2: Matriarch (1886–1966)",
+                        image: ""
+                    },
                     children: [
                         {
-                            name: "Yoram Cohen",
-                            role: "G4: Legacy Representative",
+                            name: "Benjamin Cohen",
+                            role: "G3: Husband (1921–1981)",
                             image: "",
                             children: [
                                 {
-                                    name: "Michal Cohen",
-                                    role: "G5: Daughter",
+                                    name: "Yoram Cohen",
+                                    role: "G4: Legacy Representative",
                                     image: "",
-                                    children: []
-                                }
-                            ]
-                        },
-                        {
-                            name: "Dafna Cohen",
-                            role: "G4: Sister",
-                            image: "",
-                            children: [
+                                    children: [
+                                        {
+                                            name: "Michal Cohen",
+                                            role: "G5: Daughter",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
+                                },
                                 {
-                                    name: "Uri Cohen",
-                                    role: "G5: Son",
+                                    name: "Dafna Cohen",
+                                    role: "G4: Sister",
                                     image: "",
-                                    children: []
+                                    children: [
+                                        {
+                                            name: "Uri Cohen",
+                                            role: "G5: Son",
+                                            image: "",
+                                            children: []
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ]
                 }
             ]
-        }
-    ]
-},
-{
-    name: "The Diamentstein Lineage",
-        role: "G1: Patriarch & Matriarch",
+        },
+        {
+            name: "The Diamentstein Lineage",
+            role: "G1: Patriarch & Matriarch",
             image: "",
-                children: [
-                    {
-                        name: "Leah Diamentstein",
-                        role: "G2: Matriarch (Deceased)",
-                        description: "Sister of Rachel Diamentstein.",
-                        partner: {
-                            name: "Ze'ev Gurfinkel",
-                            role: "G2: Patriarch (Deceased)"
-                        },
-                        children: [
-                            {
-                                name: "Ran Nergal",
-                                role: "G3: Sibling",
-                                coords: [32.0853, 34.7818],
-                                locationName: "Tel Aviv, Israel",
-                                children: [
-                                    {
-                                        name: "Kohava Nergal",
-                                        role: "G3: First Wife",
-                                        children: [
-                                            { name: "Tali Nergal", role: "G4: Daughter" },
-                                            { name: "Livnat Nergal", role: "G4: Daughter" }
-                                        ]
-                                    },
-                                    {
-                                        name: "Rachel Nergal",
-                                        role: "G3: Second Wife",
-                                        children: [
-                                            { name: "Ziv Nergal", role: "G4: Child" },
-                                            { name: "Chen Nergal", role: "G4: Child" }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                name: "Deborah Miriam Givon (Gurfinkel)",
-                                role: "G3: Early Childhood Expert",
-                                description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
-                                children: []
-                            }
-                        ]
+            children: [
+                {
+                    name: "Leah Diamentstein",
+                    role: "G2: Matriarch (Deceased)",
+                    description: "Sister of Rachel Diamentstein.",
+                    partner: {
+                        name: "Ze'ev Gurfinkel",
+                        role: "G2: Patriarch (Deceased)"
                     },
-                    {
-                        name: "Rachel Diamentstein",
-                        role: "G2: Sibling (Deceased)",
-                        description: "Sister of Leah Diamentstein.",
-                        partner: {
-                            name: "Bernard Ashkenazy",
-                            role: "Partner (Deceased)"
-                        },
-                        children: [
-                            {
-                                name: "Herbert Ashkenazy",
-                                role: "G3: Son of Rachel & Bernard",
-                                partner: {
-                                    name: "Ruth Ashkenazy",
-                                    role: "Partner"
+                    children: [
+                        {
+                            name: "Ran Nergal",
+                            role: "G3: Sibling",
+                            coords: [32.0853, 34.7818],
+                            locationName: "Tel Aviv, Israel",
+                            children: [
+                                {
+                                    name: "Kohava Nergal",
+                                    role: "G3: First Wife",
+                                    children: [
+                                        { name: "Tali Nergal", role: "G4: Daughter" },
+                                        { name: "Livnat Nergal", role: "G4: Daughter" }
+                                    ]
                                 },
-                                children: [
-                                    {
-                                        name: "Leah Ashkenazy",
-                                        role: "G4: Sibling",
-                                        children: [
-                                            { name: "Girl Reid 1", role: "G5: Daughter" },
-                                            { name: "Girl Reid 2", role: "G5: Daughter" }
-                                        ]
-                                    },
-                                    {
-                                        name: "David Ashkenazy",
-                                        role: "G4: Sibling",
-                                        children: []
-                                    },
-                                    {
-                                        name: "Miriam Ashkenazy",
-                                        role: "G4: Sibling",
-                                        children: [
-                                            { name: "Altamo Ashkenazy", role: "G5: Child" },
-                                            { name: "Ezria Ashkenazy", role: "G5: Child" }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-},
+                                {
+                                    name: "Rachel Nergal",
+                                    role: "G3: Second Wife",
+                                    children: [
+                                        { name: "Ziv Nergal", role: "G4: Child" },
+                                        { name: "Chen Nergal", role: "G4: Child" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Deborah Miriam Givon (Gurfinkel)",
+                            role: "G3: Early Childhood Expert",
+                            description: "Born Deborah Miriam Gurfinkel. Sister of Ran Nergal. Daughter of Leah and Ze'ev.",
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    name: "Rachel Diamentstein",
+                    role: "G2: Sibling (Deceased)",
+                    description: "Sister of Leah Diamentstein.",
+                    partner: {
+                        name: "Bernard Ashkenazy",
+                        role: "Partner (Deceased)"
+                    },
+                    children: [
+                        {
+                            name: "Herbert Ashkenazy",
+                            role: "G3: Son of Rachel & Bernard",
+                            partner: {
+                                name: "Ruth Ashkenazy",
+                                role: "Partner"
+                            },
+                            children: [
+                                {
+                                    name: "Leah Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Girl Reid 1", role: "G5: Daughter" },
+                                        { name: "Girl Reid 2", role: "G5: Daughter" }
+                                    ]
+                                },
+                                {
+                                    name: "David Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: []
+                                },
+                                {
+                                    name: "Miriam Ashkenazy",
+                                    role: "G4: Sibling",
+                                    children: [
+                                        { name: "Altamo Ashkenazy", role: "G5: Child" },
+                                        { name: "Ezria Ashkenazy", role: "G5: Child" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+                }
+            ]
+        },
 {
     name: "Hirsch Weissbarst",
         role: "G-1: Ancestor",
@@ -1033,7 +1028,6 @@ const familyData = {
                                     children: []
                                 }
                             ]
-
                         }
                     ]
                 }
