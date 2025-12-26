@@ -1551,7 +1551,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (showQrBtn && qrPopup && qrContainer) {
         // Generate QR Code
         // Use current URL, or a placeholder if running locally on file://
-        const currentUrl = window.location.href;
+        const testUrl = window.location.href;
 
         try {
             new QRCode(qrContainer, {
