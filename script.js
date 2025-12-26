@@ -294,7 +294,7 @@ const familyData = {
                 {
                     name: "Givon",
                     role: "Heritage: Zoref-Gelbman-Givon",
-                    coords: [32.0746, 34.7778],
+                    coords: [37.330462, -8.731486],
                     children: [
                         {
                             name: "Yehuda Zoref",
@@ -1170,12 +1170,12 @@ function initControls() {
                 if (mapInitialized && map) {
                     const lineageData = familyData.children[index];
                     if (lineageData && lineageData.coords) {
-                        map.flyTo(lineageData.coords, 12, { animate: true, duration: 1.5 });
-                    } else if (lineageData && lineageData.children && lineageData.children[0] && lineageData.children[0].coords) {
-                        // Fallback to first child coords
-                        map.flyTo(lineageData.children[0].coords, 12, { animate: true, duration: 1.5 });
+                        map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
                     }
                 }
+
+                // Update hash for mobile sharing
+                window.location.hash = `lineage-${index}`;
             } else if (sections[index]) {
                 // Fallback: If name matching failed, trust the index 100%
                 targetSection = sections[index];
