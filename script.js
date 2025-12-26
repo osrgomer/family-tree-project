@@ -1549,25 +1549,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrContainer = document.getElementById('qrcode');
 
     if (showQrBtn && qrPopup && qrContainer) {
-        // Generate QR Code
-        // Use current URL, or a placeholder if running locally on file://
-        const testUrl = window.location.href;
+        const updateQRCode = () => {
+            qrContainer.innerHTML = ""; // Clear existing code
+            const currentUrl = window.location.href; // Captures current hash/state
 
-        try {
-            new QRCode(qrContainer, {
-                text: currentUrl,
-                width: 128,
-                height: 128,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
-        } catch (e) {
-            console.error("QR Code generation failed:", e);
-            qrContainer.innerHTML = "QR Error";
-        }
+            try {
+                new QRCode(qrContainer, {
+                    text: currentUrl,
+                    width: 128,
+                    height: 128,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            } catch (e) {
+                console.error("QR Code generation failed:", e);
+                qrContainer.innerHTML = "QR Error";
+            }
+        };
 
         showQrBtn.addEventListener('click', () => {
+            updateQRCode();
             qrPopup.classList.toggle('hidden');
         });
 
@@ -1581,5 +1583,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 qrPopup.classList.add('hidden');
             }
         });
+
+        // Initial generation
+        updateQRCode();
+    }
+
+    // Auto-navigate if hash exists on load
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        if (hash.startsWith('#lineage-')) {
+            const index = parseInt(hash.split('-')[1]);
+            // Small delay to ensure renderTree() has completed
+            setTimeout(() => {
+                const btn = document.querySelector(`.nav-jump-btn[data-lineage="${index}"]`);
+                if (btn) btn.click();
+            }, 800);
+        }
     }
 });
