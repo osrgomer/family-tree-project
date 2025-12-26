@@ -442,11 +442,15 @@ const familyData = {
                                                         {
                                                             name: "Amir Heller",
                                                             role: "G5: Pro Surfer",
+                                                            coords: [37.330462, -8.731486],
+                                                            locationName: "Aljezur, Portugal",
                                                             children: []
                                                         },
                                                         {
                                                             name: "David Heller",
                                                             role: "G5: Son (Age 15-16)",
+                                                            coords: [37.330462, -8.731486],
+                                                            locationName: "Aljezur, Portugal",
                                                             children: []
                                                         }
                                                     ]
@@ -678,23 +682,12 @@ const familyData = {
                                             name: "Yehezkel Zoref",
                                             role: "G2: Sibling",
                                             image: "",
-                                            children: [
-                                                {
-                                                    name: "Yuda Zoref",
-                                                    role: "G3: Son",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Daniella Zoref",
-                                                    role: "G3: Daughter",
-                                                    image: "",
-                                                }
-                                            ]
+                                            children: []
                                         }
                                     ]
                                 }
                             ]
+                        },
                         {
                             name: "Sarah Gelbman",
                             role: "G2: Matriarch (Hungarian Branch)",
@@ -710,10 +703,9 @@ const familyData = {
                                 {
                                     name: "Ármin Polgár (Proszwimmer)",
                                     role: "G3: Holocaust Survivor (1900-1992)",
-                                    image: "",
                                     coords: [47.4979, 19.0402],
                                     locationName: "Budapest, Hungary",
-                                    description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war.",
+                                    description: "Born Ármin Proszwimmer. Holocaust survivor who changed surname to Polgár. Father of László Polgár.",
                                     children: []
                                 }
                             ]
@@ -722,130 +714,6 @@ const familyData = {
                 }
             ]
         },
-        partner: {
-            name: "Sándor Proszwimmer",
-            role: "G2: Husband",
-            description: "Father of Ármin Polgár."
-        },
-        children: [
-            {
-                name: "Ármin Polgár (Proszwimmer)",
-                role: "G3: Holocaust Survivor (1900-1992)",
-                image: "",
-                coords: [47.4979, 19.0402],
-                locationName: "Budapest, Hungary",
-                description: "Born Ármin Proszwimmer. Holocaust survivor who endured forced labor during WWII. Changed surname to Polgár (meaning 'citizen') after the war. His parents were Sándor and Sarah.",
-                children: [
-                    {
-                        name: "László Polgár",
-                        role: "G4: Chess Teacher & Psychologist (b. 1946)",
-                        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqfLoQwhHSvq8u1a9Daecw1HRwGH3Ia33dYaamKGP0QePlI69BdXM0kzWt6O6vbrzVT3-I8m6PBr5bblEZmYjfkxBgg4sI1k3UkF4fg&s=10",
-                        coords: [47.4979, 19.0402],
-                        locationName: "Budapest, Hungary",
-                        description: "Educational psychologist who believed 'geniuses are made, not born.' Proved his theory by raising three chess prodigy daughters.",
-                        partner: {
-                            name: "Klára Polgár (Altberger)",
-                            role: "G4: Mother of Chess Champions",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Klara_Polgar.jpg/250px-Klara_Polgar.jpg",
-                            description: "Mother of three chess grandmaster daughters. Grandmother to Hanna Font, Tom Shutzman, Leeam Shutzman, Oliver Font, Yoav Kosashvili, and Alon Kosashvili."
-                        },
-                        children: [
-                            {
-                                name: "Susan Polgár (Zsuzsa)",
-                                role: "G5: Grandmaster & Women's World Champion (b. 1969)",
-                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpI-fCNl5iANBj-lpiNUEk6pVCNW-MP_AQwgSiye7utBIXqsvQm2J64xs_TORZrEcpXx1Guik-EI34wMJ8u84q1Y74iwUPxq7f590y-Q&s=10",
-                                coords: [40.7128, -74.0060],
-                                locationName: "New York, USA",
-                                description: "Hungarian-American chess grandmaster. Women's World Chess Champion 1996-1999. First woman to earn Grandmaster title through tournament play. Became world's top-ranked female player at age 15 (1984).",
-                                partner: {
-                                    name: "Jacob Shutzman",
-                                    role: "G5: First Husband (m. 1994–2006)",
-                                    image: ""
-                                },
-                                secondPartner: {
-                                    name: "Paul Truong",
-                                    role: "G5: Chess Master & Author (b. 1965)",
-                                    image: "",
-                                    description: "American-Cambodian chess player, trainer, and organizer. Born Trương Hoài Nhân in Saigon. USCF National Master and FIDE Master. Author of 'Breaking Through: How the Polgar Sisters Changed the Game of Chess'."
-                                },
-                                partnerLeft: true,
-                                children: [
-                                    {
-                                        name: "Tom Shutzman",
-                                        role: "G6: Son (from first marriage)",
-                                        image: "",
-                                        children: []
-                                    },
-                                    {
-                                        name: "Leeam Shutzman",
-                                        role: "G6: Child (from first marriage)",
-                                        image: "",
-                                        children: []
-                                    }
-                                ]
-                            },
-                            {
-                                name: "Sofia Polgár (Zsófia)",
-                                role: "G5: International Master & Artist (b. 1974)",
-                                image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Sofivdk.jpg",
-                                coords: [47.4979, 19.0402],
-                                locationName: "Budapest, Hungary",
-                                description: "Hungarian-Israeli chess player, teacher, and artist. International Master and Woman Grandmaster. Author of 'Polgar Tactics: 77 Chess Combinations'. Middle sister known for creative chess approach.",
-                                partner: {
-                                    name: "Yona Kosashvili",
-                                    role: "G5: Husband (m. 1999)",
-                                    image: ""
-                                },
-                                children: [
-                                    {
-                                        name: "Yoav Kosashvili",
-                                        role: "G6: Son",
-                                        image: "",
-                                        children: []
-                                    },
-                                    {
-                                        name: "Alon Kosashvili",
-                                        role: "G6: Son",
-                                        image: "",
-                                        children: []
-                                    }
-                                ]
-                            },
-                            {
-                                name: "Judit Polgár",
-                                role: "G5: Chess Grandmaster (b. 1976) - Strongest Female Ever",
-                                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJPKeIS16peXcBNYeyv-eiMN9aQ1VguRTnZZyzINcyjiQ48J0p8vCsEtr-_0kXvZR0antYyUFKm183Kc0O9PNSJiMKM-NuLqlTMqR0cQ&s=10",
-                                coords: [47.4979, 19.0402],
-                                locationName: "Budapest, Hungary",
-                                description: "Youngest sister. Strongest female chess player ever. Defeated Kasparov, Karpov, and Spassky. Youngest to break FIDE top 10.",
-                                partner: {
-                                    name: "Gusztáv Font",
-                                    role: "G5: Veterinarian",
-                                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPI8Bo1otbCR4E4VxBvD3xoae9HSwc4D-xHBXuyYFHSjoumRB1Lt-LoTmY1os7n6Z2DnpoWHUwL7gzcZuhi-3UCsEqtwJ_wNhhcdPivA&s=10",
-                                    description: "Hungarian veterinarian, husband of Judit Polgár, father of Hanna and Oliver Font."
-                                },
-                                children: [
-                                    {
-                                        name: "Hanna Font",
-                                        role: "G6: Daughter",
-                                        image: "",
-                                        description: "Daughter of Judit Polgár and Gusztáv Font.",
-                                        children: []
-                                    },
-                                    {
-                                        name: "Oliver Font",
-                                        role: "G6: Son",
-                                        image: "",
-                                        description: "Son of Judit Polgár and Gusztáv Font. Brother of Hanna Font.",
-                                        children: []
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
         {
             name: "Cohen",
             role: "Heritage: Paternal Roots",
@@ -854,272 +722,186 @@ const familyData = {
                 {
                     name: "Baruch Tzvi Hirsh Cohen",
                     role: "Paternal Roots (1852–1941)",
-                    image: "",
-                    partner: {
-                        name: "Peril Pnina Cohen",
-                        role: "Great-Grandmother (1856–1925)",
-                        image: ""
-                    },
                     children: [
                         {
                             name: "Rabbi Mosheh David Rozental Hacohen",
                             role: "G2: Rabbi & Scholar",
-                            image: "",
-                            partner: {
-                                name: "Lieba Leah Cohen Rozental",
-                                role: "G2: Matriarch (1886–1966)",
-                                image: ""
-                            },
                             children: [
                                 {
                                     name: "Benjamin Cohen",
                                     role: "G3: Husband (1921–1981)",
-                                    image: "",
-                                    children: [
-                                        {
-                                            name: "Yoram Cohen",
-                                            role: "G4: Legacy Representative",
-                                            image: "",
-                                            children: [
-                                                {
-                                                    name: "Michal Cohen",
-                                                    role: "G5: Daughter",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            name: "Dafna Cohen",
-                                            role: "G4: Sister",
-                                            image: "",
-                                            children: [
-                                                {
-                                                    name: "Uri Cohen",
-                                                    role: "G5: Son",
-                                                    image: "",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-        {
-                    name: "Diamentstein",
-                    role: "Heritage: Sátoraljaújhely, Hungary",
-                    coords: [48.3949, 21.6586],
-                    children: [
-                        {
-                            name: "Leah Diamentstein",
-                            role: "G2: Matriarch (Deceased)",
-                            coords: [48.3949, 21.6586],
-                            locationName: "Sátoraljaújhely, Hungary",
-                            description: "Sister of Rachel Diamentstein. Ancestral root in Hungary.",
-                            image: "",
-                            partner: {
-                                name: "Ze'ev Gurfinkel",
-                                role: "G2: Patriarch (Deceased)"
-                            },
-                            children: [
-                                {
-                                    name: "Ran Nergal",
-                                    role: "G3: Sibling",
-                                    coords: [32.0853, 34.7818],
-                                    locationName: "Tel Aviv, Israel",
                                     children: []
                                 }
-                            ]
-                        },
-                        {
-                            name: "Rachel Diamentstein",
-                            role: "G2: Sibling (Deceased)",
-                            coords: [48.3949, 21.6586],
-                            locationName: "Sátoraljaújhely, Hungary",
-                            description: "Sister of Leah Diamentstein.",
-                            image: "",
-                            partner: {
-                                name: "Bernard Ashkenazy",
-                                role: "Partner (Deceased)"
-                            },
-                            children: []
-                        }
-                    ]
-                },
-                {
-                    name: "Hirsch Weissbarst",
-                    role: "G-1: Ancestor",
-                    image: "",
-                    partner: {
-                        name: "Beile Frenkel",
-                        role: "G-1: Ancestor",
-                        image: ""
-                    },
-                    children: [
-                        {
-                            name: "Rachmiel Muhlrad-Weissburst",
-                            role: "G0: Ancestor",
-                            image: "",
-                            partner: {
-                                name: "Scheindel Weissbarst",
-                                role: "G0: Ancestor (b. 1861)",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Zvi Weissburst",
-                                    role: "G1: Merchant (b. 1888)",
-                                    image: "",
-                                    partner: {
-                                        name: "Sara Weissbarst",
-                                        role: "G1: Matriarch",
-                                        image: ""
-                                    },
-                                    children: [
-                                        {
-                                            name: "Shalom Weissbarst",
-                                            role: "G2: Architect (1915-2002) (Deceased)",
-                                            image: "",
-                                            coords: [32.7940, 34.9896],
-                                            locationName: "Haifa, Israel",
-                                            description: "A distinguished architect and father of Talma Rimon. Born in Haifa (1915), he bridged the Weissbarst heritage with the family legacy.",
-                                            partner: {
-                                                name: "Tova (Gita) Wallach",
-                                                role: "Partner (1917-2002)",
-                                                image: "",
-                                                description: "Born in Ukraine (Dec 1917), immigrated to Jerusalem in 1921. Daughter of Shmuel Eliezer Wallach and Tsipora Kaminetsky."
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Talma Rimon",
-                                                    role: "G3: Daughter of Shalom",
-                                                    image: "",
-                                                    coords: [32.0853, 34.7818],
-                                                    locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                                    description: "Daughter of Shalom Weissbarst.",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-        {
-                    name: "DUNICA",
-                    type: "venture",
-                    coords: [37.330462, -8.731486],
-                    description: "Artistic workshop and craftsmanship collective (Ex-Company)",
-                    children: [
-                        {
-                            name: "Projects",
-                            children: [
-                                { name: "Woodworking & Design", role: "Venture Branch", children: [] },
-                                { name: "Community Workshops", role: "Venture Branch", children: [] }
                             ]
                         }
                     ]
                 }
             ]
-        };
+        },
+        {
+            name: "Diamentstein",
+            role: "Heritage: Sátoraljaújhely, Hungary",
+            coords: [48.3949, 21.6586],
+            children: [
+                {
+                    name: "Leah Diamentstein",
+                    role: "G2: Matriarch",
+                    coords: [48.3949, 21.6586],
+                    description: "Sister of Rachel Diamentstein. Ancestral root in Hungary.",
+                    children: []
+                },
+                {
+                    name: "Rachel Diamentstein",
+                    role: "G2: Sibling",
+                    coords: [48.3949, 21.6586],
+                    description: "Sister of Leah Diamentstein.",
+                    children: []
+                }
+            ]
+        },
+        {
+            name: "Weissbarst",
+            role: "Heritage: Haifa & Tel Aviv",
+            coords: [32.7940, 34.9896],
+            children: [
+                {
+                    name: "Hirsch Weissbarst",
+                    role: "G-1: Ancestor",
+                    children: [
+                        {
+                            name: "Rachmiel Muhlrad-Weissburst",
+                            role: "G0: Ancestor",
+                            children: [
+                                {
+                                    name: "Zvi Weissburst",
+                                    role: "G1: Merchant",
+                                    children: [
+                                        {
+                                            name: "Shalom Weissbarst",
+                                            role: "G2: Architect (1915-2002)",
+                                            coords: [32.7940, 34.9896],
+                                            description: "Distinguished architect and father of Talma Rimon.",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "DUNICA",
+            type: "venture",
+            coords: [37.330462, -8.731486],
+            description: "Artistic workshop and craftsmanship collective (Ex-Company)",
+            children: [
+                {
+                    name: "The Workshop",
+                    role: "Historical Focus",
+                    description: "The core of the collective's operations in Aljezur.",
+                    children: []
+                }
+            ]
+        }
+    ]
+};
 
-    /**
-     * Helper to create a single card DOM element
-     */
-    function createCard(member) {
-        const card = document.createElement('div');
-// Unique ID for searching and jumping
-card.id = 'member-' + member.name.replace(/\s+/g, '-').toLowerCase();
+/**
+ * Helper to create a single card DOM element
+ */
+function createCard(member) {
+    const card = document.createElement('div');
+    // Unique ID for searching and jumping
+    card.id = 'member-' + member.name.replace(/\s+/g, '-').toLowerCase();
 
-let cardClass = 'member-card';
-if (member.type === 'venture') cardClass += ' venture-card';
-if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
-card.className = cardClass;
+    let cardClass = 'member-card';
+    if (member.type === 'venture') cardClass += ' venture-card';
+    if (member.role && member.role.includes('(Deceased)')) cardClass += ' deceased';
+    card.className = cardClass;
 
-const inner = document.createElement('div');
-inner.className = 'card-inner';
+    const inner = document.createElement('div');
+    inner.className = 'card-inner';
 
-// FRONT
-const front = document.createElement('div');
-front.className = 'card-front';
+    // FRONT
+    const front = document.createElement('div');
+    front.className = 'card-front';
 
-// Image Placeholder
-const imgContainer = document.createElement('div');
-imgContainer.className = 'image-placeholder';
-if (member.image) {
-    const img = document.createElement('img');
-    img.src = member.image;
-    img.alt = member.name;
-    imgContainer.appendChild(img);
-} else {
-    // Icon logic
-    let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
-    let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
+    // Image Placeholder
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'image-placeholder';
+    if (member.image) {
+        const img = document.createElement('img');
+        img.src = member.image;
+        img.alt = member.name;
+        imgContainer.appendChild(img);
+    } else {
+        // Icon logic
+        let iconPath = "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"; // Default user
+        let iconCircle = '<circle cx="12" cy="7" r="4"></circle>';
 
-    if (member.type === 'venture') {
-        // DNA/Biology icon for biotech (abstract)
-        iconPath = "M2 15c6.667-6 13.333 0 20-6";
-        iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
-    }
+        if (member.type === 'venture') {
+            // DNA/Biology icon for biotech (abstract)
+            iconPath = "M2 15c6.667-6 13.333 0 20-6";
+            iconCircle = '<path d="M9 22c6.667-6 13.333 0 20-6"></path>';
+        }
 
-    imgContainer.innerHTML = `
+        imgContainer.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="${member.type === 'venture' ? '#38bdf8' : '#94a3b8'}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="${iconPath}"></path>
                 ${iconCircle}
             </svg>
         `;
-}
-
-// Text Content
-const nameData = document.createElement('div');
-nameData.className = 'member-name';
-
-// Format name to break parenthetical surnames to new line
-let formattedName = member.name;
-if (formattedName.includes('(') && formattedName.includes(')')) {
-    // Find the last parenthetical part (surname)
-    const lastParenIndex = formattedName.lastIndexOf('(');
-    if (lastParenIndex > 0) {
-        const beforeParen = formattedName.substring(0, lastParenIndex).trim();
-        const parenPart = formattedName.substring(lastParenIndex).trim();
-        formattedName = beforeParen + '\n' + parenPart;
     }
-}
-nameData.textContent = formattedName;
 
-const roleData = document.createElement('div');
-roleData.className = 'member-role';
-roleData.textContent = member.role;
+    // Text Content
+    const nameData = document.createElement('div');
+    nameData.className = 'member-name';
 
-front.appendChild(imgContainer);
-front.appendChild(nameData);
-front.appendChild(roleData);
+    // Format name to break parenthetical surnames to new line
+    let formattedName = member.name;
+    if (formattedName.includes('(') && formattedName.includes(')')) {
+        // Find the last parenthetical part (surname)
+        const lastParenIndex = formattedName.lastIndexOf('(');
+        if (lastParenIndex > 0) {
+            const beforeParen = formattedName.substring(0, lastParenIndex).trim();
+            const parenPart = formattedName.substring(lastParenIndex).trim();
+            formattedName = beforeParen + '\n' + parenPart;
+        }
+    }
+    nameData.textContent = formattedName;
 
-// BACK
-const back = document.createElement('div');
-back.className = 'card-back';
+    const roleData = document.createElement('div');
+    roleData.className = 'member-role';
+    roleData.textContent = member.role;
 
-const backTitle = document.createElement('div');
-backTitle.className = 'member-name';
-backTitle.textContent = "Legacy Details";
-backTitle.style.fontSize = '1rem';
-backTitle.style.marginBottom = '1rem';
+    front.appendChild(imgContainer);
+    front.appendChild(nameData);
+    front.appendChild(roleData);
 
-const backInfo = document.createElement('div');
-backInfo.className = 'member-role';
-backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
+    // BACK
+    const back = document.createElement('div');
+    back.className = 'card-back';
 
-back.appendChild(backTitle);
-back.appendChild(backInfo);
+    const backTitle = document.createElement('div');
+    backTitle.className = 'member-name';
+    backTitle.textContent = "Legacy Details";
+    backTitle.style.fontSize = '1rem';
+    backTitle.style.marginBottom = '1rem';
 
-inner.appendChild(front);
-inner.appendChild(back);
-card.appendChild(inner);
+    const backInfo = document.createElement('div');
+    backInfo.className = 'member-role';
+    backInfo.textContent = member.description || `Part of the ${member.role} lineage and the core of the Rimon-Givon story.`;
 
-return card;
+    back.appendChild(backTitle);
+    back.appendChild(backInfo);
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+
+    return card;
 }
 
 function createTreeElement(member) {
