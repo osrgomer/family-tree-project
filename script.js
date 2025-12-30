@@ -153,6 +153,12 @@ const familyData = {
                                                                     children: []
                                                                 }
                                                             ]
+                                                        },
+                                                        {
+                                                            name: "Dafna Cohen",
+                                                            role: "G4: Sibling",
+                                                            image: "",
+                                                            children: []
                                                         }
                                                     ]
                                                 },
@@ -254,13 +260,13 @@ const familyData = {
                                                                 role: "Spouse",
                                                                 coords: [32.0746, 34.7778],
                                                                 locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/533403493_10163326229828001_8494516799865299173_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IolxikDnQVIQ7kNvwFMYnZf&_nc_oc=AdltJbVOONpMwdv1m4BXbw2xQ2HlYqUqhf5YkKa9LGTg-hUIPs9vB2S-C87KxA780SA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8R1DQ8G_MLMTBV8qMclJAw&oh=00_AfmUHCRSox1lt5tJsHSQYZ29VABrMGgFZFSJpT0loBZ4Tw&oe=6950EF48",
+                                                                image: "",
                                                             },
                                                             children: [
                                                                 {
                                                                     name: "Eyal Rimon",
                                                                     role: "G5: Student (Age 14)",
-                                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/533403493_10163326229828001_8494516799865299173_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IolxikDnQVIQ7kNvwFMYnZf&_nc_oc=AdltJbVOONpMwdv1m4BXbw2xQ2HlYqUqhf5YkKa9LGTg-hUIPs9vB2S-C87KxA780SA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8R1DQ8G_MLMTBV8qMclJAw&oh=00_AfmUHCRSox1lt5tJsHSQYZ29VABrMGgFZFSJpT0loBZ4Tw&oe=6950EF48",
+                                                                    image: "",
                                                                     coords: [32.0746, 34.7778],
                                                                     locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
@@ -268,7 +274,7 @@ const familyData = {
                                                                 {
                                                                     name: "Talia Rimon",
                                                                     role: "G5: Student (Age 11-12)",
-                                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/533403493_10163326229828001_8494516799865299173_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IolxikDnQVIQ7kNvwFMYnZf&_nc_oc=AdltJbVOONpMwdv1m4BXbw2xQ2HlYqUqhf5YkKa9LGTg-hUIPs9vB2S-C87KxA780SA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8R1DQ8G_MLMTBV8qMclJAw&oh=00_AfmUHCRSox1lt5tJsHSQYZ29VABrMGgFZFSJpT0loBZ4Tw&oe=6950EF48",
+                                                                    image: "",
                                                                     coords: [32.0746, 34.7778],
                                                                     locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
@@ -276,7 +282,7 @@ const familyData = {
                                                                 {
                                                                     name: "Gur Rimon",
                                                                     role: "G5: Student (Age 6-7)",
-                                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/533403493_10163326229828001_8494516799865299173_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IolxikDnQVIQ7kNvwFMYnZf&_nc_oc=AdltJbVOONpMwdv1m4BXbw2xQ2HlYqUqhf5YkKa9LGTg-hUIPs9vB2S-C87KxA780SA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8R1DQ8G_MLMTBV8qMclJAw&oh=00_AfmUHCRSox1lt5tJsHSQYZ29VABrMGgFZFSJpT0loBZ4Tw&oe=6950EF48",
+                                                                    image: "",
                                                                     coords: [32.0746, 34.7778],
                                                                     locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
@@ -284,7 +290,7 @@ const familyData = {
                                                                 {
                                                                     name: "Ana Rimon",
                                                                     role: "G5: Student (Age 1.5)",
-                                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/533403493_10163326229828001_8494516799865299173_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=IolxikDnQVIQ7kNvwFMYnZf&_nc_oc=AdltJbVOONpMwdv1m4BXbw2xQ2HlYqUqhf5YkKa9LGTg-hUIPs9vB2S-C87KxA780SA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=8R1DQ8G_MLMTBV8qMclJAw&oh=00_AfmUHCRSox1lt5tJsHSQYZ29VABrMGgFZFSJpT0loBZ4Tw&oe=6950EF48",
+                                                                    image: "",
                                                                     coords: [32.0746, 34.7778],
                                                                     locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
                                                                     children: []
@@ -334,37 +340,150 @@ const familyData = {
                                     image: "",
                                     coords: [32.0746, 34.7778],
                                     locationName: "Meishar, Israel",
-                                    description: "Born in Budapest. Married Ronnie Heller.",
+                                    description: "Born in Budapest. Married Deborah Diamentstein.",
                                     partner: {
-                                        name: "Ronnie Heller",
+                                        name: "Deborah Givon (Diamentstein)",
                                         role: "G3: Matriarch",
-                                        image: "",
-                                        coords: [32.0805, 34.7733],
-                                        locationName: "Bar Kochba, Tel Aviv, Israel"
+                                        image: ""
                                     },
                                     children: [
                                         {
-                                            name: "Amir Heller",
-                                            role: "G5: Pro Surfer (Age 21)",
-                                            image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0006.jpg",
-                                            coords: [37.330462, -8.731486],
-                                            locationName: "Aljezur, Portugal",
-                                            description: "Professional suffer.",
-                                            children: []
-                                        },
-                                        {
-                                            name: "David Heller",
-                                            role: "G5: Sibling (Age 15-16)",
-                                            image: "https://osrg.lol/wp-content/uploads/2025/12/David-Heller.jpg",
-                                            coords: [37.330462, -8.731486],
-                                            locationName: "Aljezur, Portugal",
-                                            children: []
+                                            name: "Ronnie Heller",
+                                            role: "G4: Daughter",
+                                            image: "",
+                                            coords: [32.0805, 34.7733],
+                                            locationName: "Bar Kochba, Tel Aviv, Israel",
+                                            children: [
+                                                {
+                                                    name: "Amir Heller",
+                                                    role: "G5: Pro Surfer (Age 21)",
+                                                    image: "",
+                                                    coords: [37.330462, -8.731486],
+                                                    locationName: "Aljezur, Portugal",
+                                                    description: "Professional surfer.",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "David Heller",
+                                                    role: "G5: Sibling (Age 15-16)",
+                                                    image: "",
+                                                    coords: [37.330462, -8.731486],
+                                                    locationName: "Aljezur, Portugal",
+                                                    children: []
+                                                }
+                                            ]
                                         },
                                         {
                                             name: "Daphna Givon",
-                                            role: "G4: Mother of Omer/Nomi/Eyal",
+                                            role: "G4: Daughter",
                                             image: "",
-                                            children: [] // (Assuming children are defined elsewhere or omitted for brevity in this fix block)
+                                            partner: {
+                                                name: "Arturo Whitelegg",
+                                                role: "G4: Husband",
+                                                image: ""
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Lian Whitelegg",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Alma Whitelegg",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Yanai Whitelegg",
+                                                    role: "G5: Son",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Ilay Whitelegg",
+                                                    role: "G5: Child",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Daniella Givon",
+                                            role: "G4: Daughter",
+                                            image: "",
+                                            children: [
+                                                {
+                                                    name: "Nave Midbar Tapuhi",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Soof Tapuhi",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Yael Givon Rimon",
+                                            role: "G4: Daughter",
+                                            image: "",
+                                            partner: {
+                                                name: "Gil Rimon",
+                                                role: "G4: Entrepreneur & Branding",
+                                                image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                                coords: [37.330462, -8.731486],
+                                                locationName: "Aljezur, Portugal"
+                                            },
+                                            coords: [37.330462, -8.731486],
+                                            locationName: "Aljezur, Portugal",
+                                            children: [
+                                                {
+                                                    name: "Omer Shalom Rimon",
+                                                    role: "G5: The Union (Age 13.5)",
+                                                    image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                                    description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
+                                                    coords: [37.330462, -8.731486],
+                                                    locationName: "Aljezur, Portugal",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Nomi Rimon",
+                                                    role: "G5: Daughter (Omer's Sister)",
+                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                                    coords: [37.330462, -8.731486],
+                                                    locationName: "Aljezur, Portugal",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Assaf Givon",
+                                            role: "G4: Son",
+                                            image: "",
+                                            partner: {
+                                                name: "Ruth Givon",
+                                                role: "G4: Wife",
+                                                image: ""
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Ivry Givon",
+                                                    role: "G5: Child",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Lily Givon",
+                                                    role: "G5: Child",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -386,7 +505,7 @@ const familyData = {
                                             partner: {
                                                 name: "Linda Givon",
                                                 role: "Partner (Second Wife)",
-                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/503846725_122133761840783651_9154276442130859309_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Syu0j3XfFSsQ7kNvwFOnBm9&_nc_oc=Adl2kAchI2lUSXoZMMKrPQwQfJZgGEP_-ey_caywb8NteS24vPXdVRM7KNb6WTLYg4o&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=LnbX0EfZGLPepb8ocOLk4Q&oh=00_AfmOt2Fk4Y582w-fDSs5fMyENQHq02TdmliSkPfyI8gvXw&oe=6950D8F3"
+                                                image: ""
                                             },
                                             children: [
                                                 {
@@ -453,7 +572,7 @@ const familyData = {
                                                     role: "G5: Son",
                                                     coords: [32.0853, 34.7818],
                                                     locationName: "Tel Aviv, Israel",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/437066131_10160129146198527_5926308342990968437_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Lul9qunEtK0Q7kNvwEP4ELx&_nc_oc=AdkfpdXM9BeGJfaCszTyf77hMltJiA5Ia1fLAbV947IBdD3rKFivQ2qcojwK3_9RC30&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=oL7XDiG9PS3Lr2r-1O8XKQ&oh=00_AfnFzYBZdxREjulKQoBRcVuwC_wO-Yp74JUEWbMYlY6VZg&oe=6950D33B",
+                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-30-211443.png",
                                                     children: []
                                                 },
                                                 {
@@ -468,7 +587,7 @@ const familyData = {
                                                             role: "G6: Son",
                                                             coords: [32.0853, 34.7818],
                                                             locationName: "Tel Aviv, Israel",
-                                                            image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/540989036_122137830242829366_6835664265111869651_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=NE_HQESTJJ4Q7kNvwH9nl8I&_nc_oc=AdkOzG9bjViWU5JT6yFXOnM7bTeqPRyetAnWWMvYYU75g1LtFZAUjH5xVNCC0JbSaRE&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Q0wJa_GO43ed-PxMwnFg7g&oh=00_Afn0lUpzyTBMJbcAaVnhLPHL1SFnb4Q4mDTiy6Ex4VrUqw&oe=6950C310",
+                                                            image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-30-210546.png",
                                                             children: []
                                                         }
                                                     ]
@@ -478,7 +597,7 @@ const familyData = {
                                                     role: "G5: Daughter",
                                                     coords: [32.0853, 34.7818],
                                                     locationName: "Tel Aviv, Israel",
-                                                    image: "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/461947836_3836661456554090_2781556915325872438_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3YssWM3ga0YQ7kNvwGrd8Ir&_nc_oc=AdkGvoTqov2ViRK4aYAalDCmbF1AQ9VZEUHHx45PYS-wbCwJdzTD7DNHK3NQMARqSxI&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=KwVuvDoUTwzySLHNMLgM0g&oh=00_AfnT5JHhOWbThbhzu1zhchMwI9FPx0j8QV8b3e4Mm1U38Q&oe=6950D865",
+                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/Screenshot-2025-12-30-210625.png",
                                                     description: "Born Iris Frumerman. Daughter of Moshe Ran. First married to Leal, then to Tamir Sher.",
                                                     partner: {
                                                         name: "Dudi Leal",
@@ -532,10 +651,16 @@ const familyData = {
                 {
                     name: "Baruch Tzvi Hirsh Cohen",
                     role: "Paternal Roots (1852–1941)",
+                    coords: [45.5017, -73.5673],
+                    locationName: "Montreal, Canada",
+                    description: "Pioneering Chief Rabbi known as the 'Maggid of Montreal'.",
                     children: [
                         {
                             name: "Rabbi Mosheh David Rozental Hacohen",
                             role: "G2: Rabbi & Scholar",
+                            coords: [32.7940, 34.9896],
+                            locationName: "Haifa, Israel",
+                            description: "Settled in Haifa in 1922; customs official and Lehi intelligence officer.",
                             children: [
                                 {
                                     name: "Benjamin Cohen",
@@ -577,6 +702,9 @@ const familyData = {
                 {
                     name: "Hirsch Weissbarst",
                     role: "G-1: Ancestor",
+                    coords: [52.7915, 20.1172],
+                    locationName: "Raciąż, Poland",
+                    description: "Early member of the Weissbarst line from the Raciąż region.",
                     children: [
                         {
                             name: "Rachmiel Muhlrad-Weissburst",
