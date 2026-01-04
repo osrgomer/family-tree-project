@@ -473,6 +473,7 @@ header p {
 .member-role {
     font-size: 0.75rem;
     color: var(--text-secondary);
+    white-space: pre-line;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;

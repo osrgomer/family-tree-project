@@ -241,11 +241,11 @@ const familyData = {
                                                     children: [
                                                         {
                                                             name: "Gil Rimon",
-                                                            role: "G4: Entrepreneur & Branding " + getDynamicAge("1973-10-14"),
+                                                            role: "G4: Entrepreneur & Branding\n" + getDynamicAge("1973-10-14"),
                                                             image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
                                                             partner: {
                                                                 name: "Yael Givon",
-                                                                role: "G4: Creative Director " + getDynamicAge("1974-07-11"),
+                                                                role: "G4: Creative Director\n" + getDynamicAge("1974-07-11"),
                                                                 image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
                                                                 coords: [37.330462, -8.731486],
                                                                 locationName: "Aljezur, Portugal"
@@ -368,7 +368,7 @@ const familyData = {
                                     partner: {
                                         name: "Deborah Givon (Diamentstein)",
                                         role: "G3: Matriarch",
-                                        image: ""
+                                        image: "https://osrg.lol/wp-content/uploads/2026/01/Screenshot-2026-01-04-122429.png"
                                     },
                                     children: [
                                         {
@@ -454,11 +454,11 @@ const familyData = {
                                         },
                                         {
                                             name: "Yael Givon Rimon",
-                                            role: "G4: Daughter " + getDynamicAge("1974-07-11"),
+                                            role: "G4: Daughter\n" + getDynamicAge("1974-07-11"),
                                             image: "",
                                             partner: {
                                                 name: "Gil Rimon",
-                                                role: "G4: Entrepreneur & Branding " + getDynamicAge("1973-10-14"),
+                                                role: "G4: Entrepreneur & Branding\n" + getDynamicAge("1973-10-14"),
                                                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
 
                                             },
