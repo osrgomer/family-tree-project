@@ -959,41 +959,7 @@ const familyData = {
                 }
             ]
         },
-        {
-            name: "Weissbarst",
-            role: "Heritage: Haifa & Tel Aviv",
-            coords: [32.7940, 34.9896],
-            children: [
-                {
-                    name: "Hirsch Weissbarst",
-                    role: "G-1: Ancestor",
-                    coords: [52.7915, 20.1172],
-                    locationName: "Raciąż, Poland",
-                    description: "Early member of the Weissbarst line from the Raciąż region.",
-                    children: [
-                        {
-                            name: "Rachmiel Muhlrad-Weissburst",
-                            role: "G0: Ancestor",
-                            children: [
-                                {
-                                    name: "Zvi Weissburst",
-                                    role: "G1: Merchant",
-                                    children: [
-                                        {
-                                            name: "Shalom Weissbarst",
-                                            role: "G2: Architect (1915-2002)",
-                                            coords: [32.7940, 34.9896],
-                                            description: "Distinguished architect and father of Talma Rimon.",
-                                            children: []
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
+
         {
             name: "DUNICA",
             role: "Shared Venture (Ex-Company)",
