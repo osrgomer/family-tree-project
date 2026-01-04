@@ -340,7 +340,7 @@ const familyData = {
                                     image: "",
                                     coords: [32.0746, 34.7778],
                                     locationName: "Meishar, Israel",
-                                    description: "Born in Budapest. Married Deborah Diamentstein.",
+                                    description: "Born in Budapest. Married Deborah Diamentstein. Daughter of Leah Diamentstein and Ze'ev Gurfinkel.",
                                     partner: {
                                         name: "Deborah Givon (Diamentstein)",
                                         role: "G3: Matriarch",
@@ -358,8 +358,8 @@ const familyData = {
                                                     name: "Amir Heller",
                                                     role: "G5: Pro Surfer (Age 21)",
                                                     image: "",
-                                                    coords: [37.330462, -8.731486],
-                                                    locationName: "Aljezur, Portugal",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
                                                     description: "Professional surfer.",
                                                     children: []
                                                 },
@@ -367,8 +367,8 @@ const familyData = {
                                                     name: "David Heller",
                                                     role: "G5: Sibling (Age 15-16)",
                                                     image: "",
-                                                    coords: [37.330462, -8.731486],
-                                                    locationName: "Aljezur, Portugal",
+                                                    coords: [32.0853, 34.7818],
+                                                    locationName: "Tel Aviv, Israel",
                                                     children: []
                                                 }
                                             ]
@@ -436,27 +436,23 @@ const familyData = {
                                                 name: "Gil Rimon",
                                                 role: "G4: Entrepreneur & Branding",
                                                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                                coords: [37.330462, -8.731486],
-                                                locationName: "Aljezur, Portugal"
+
                                             },
-                                            coords: [37.330462, -8.731486],
-                                            locationName: "Aljezur, Portugal",
+
                                             children: [
                                                 {
                                                     name: "Omer Shalom Rimon",
                                                     role: "G5: The Union (Age 13.5)",
                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
                                                     description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
-                                                    coords: [37.330462, -8.731486],
-                                                    locationName: "Aljezur, Portugal",
+
                                                     children: []
                                                 },
                                                 {
                                                     name: "Nomi Rimon",
                                                     role: "G5: Daughter (Omer's Sister)",
                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                                    coords: [37.330462, -8.731486],
-                                                    locationName: "Aljezur, Portugal",
+
                                                     children: []
                                                 }
                                             ]
@@ -625,6 +621,156 @@ const familyData = {
                                         }
                                     ]
                                 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Marko Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    partner: {
+                        name: "Pavlina Zoref",
+                        role: "G2: Wife",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Dror Zoref",
+                            role: "G3: Son (Lives in USA)",
+                            image: "",
+                            locationName: "USA",
+                            children: []
+                        }
+                    ]
+                },
+                {
+                    name: "Valentina Zoref",
+                    role: "G2: Sibling (Blind from age 40)",
+                    image: "",
+                    children: []
+                },
+                {
+                    name: "Jac Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    partner: {
+                        name: "Lily Zoref",
+                        role: "G2: Wife",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Sioma Zoref",
+                            role: "G3: Son",
+                            image: "",
+                            partner: {
+                                name: "Yafa Zoref",
+                                role: "G3: Wife",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Erez Zoref",
+                                    role: "G4: Son",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Asaf Zoref",
+                                    role: "G4: Son",
+                                    image: "",
+                                    partner: {
+                                        name: "Keren Zoref",
+                                        role: "G4: Wife",
+                                        image: ""
+                                    },
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Yehezkel Zoref",
+                    role: "G2: Sibling",
+                    image: "",
+                    children: [
+                        {
+                            name: "Yuda Zoref",
+                            role: "G3: Son",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Daniella Zoref",
+                            role: "G3: Daughter",
+                            image: "",
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Diamentstein",
+            role: "Heritage: Diamentstein-Gurfinkel",
+            coords: [32.0853, 34.7818],
+            children: [
+                {
+                    name: "Leah Diamentstein",
+                    role: "G2: Matriarch (Deceased)",
+                    image: "",
+                    partner: {
+                        name: "Ze'ev Gurfinkel",
+                        role: "G2: Patriarch (Deceased)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Deborah Miriam Givon (Gurfinkel)",
+                            role: "G3: Daughter (See Givon Family)",
+                            image: "",
+                            description: "Married to Moshe Givon.",
+                            children: []
+                        },
+                        {
+                            name: "Ran Nergal",
+                            role: "G3: Son",
+                            image: "",
+                            locationName: "Tel Aviv, Israel",
+                            children: [
+                                { name: "Tali Nergal", role: "G4: Daughter", children: [] },
+                                { name: "Livnat Nergal", role: "G4: Daughter", children: [] },
+                                { name: "Ziv Nergal", role: "G4: Child", children: [] },
+                                { name: "Chen Nergal", role: "G4: Child", children: [] }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Rachel Diamentstein",
+                    role: "G2: Sibling (Deceased)",
+                    image: "",
+                    partner: {
+                        name: "Bernard Ashkenazy",
+                        role: "Partner (Deceased)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Herbert Ashkenazy",
+                            role: "G3: Son",
+                            image: "",
+                            partner: {
+                                name: "Ruth Ashkenazy",
+                                role: "Partner",
+                                image: ""
+                            },
+                            children: [
+                                { name: "Leah Ashkenazy", role: "G4: Daughter", children: [] },
+                                { name: "David Ashkenazy", role: "G4: Son", children: [] },
+                                { name: "Miriam Ashkenazy", role: "G4: Daughter", children: [] }
                             ]
                         }
                     ]
