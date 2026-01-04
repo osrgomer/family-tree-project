@@ -259,7 +259,10 @@ header p {
     border-left: 2px solid var(--line-color);
 }
 
-.tree li:only-child::after,
+.tree li:only-child::after {
+    border-top: none;
+}
+
 .tree li:only-child::before {
     display: none;
 }

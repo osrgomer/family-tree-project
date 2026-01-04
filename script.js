@@ -125,8 +125,9 @@ const familyData = {
                                                                     ]
                                                                 },
                                                                 {
-                                                                    name: "Unknown Child",
-                                                                    role: "G4: Child",
+                                                                    name: "Unknown Rimon",
+                                                                    role: "G4: Doctor",
+                                                                    description: "Son of David Rimon and brother of Rabbi Yosef Zvi Rimon. Worked as a doctor; spent time in jail.",
                                                                     image: "",
                                                                     children: []
                                                                 }
@@ -355,9 +356,9 @@ const familyData = {
                     children: [
                         {
                             name: "Victoria Zoref",
-                            role: "G2: Matriarch (Poor sense of smell)",
+                            role: "G2: Matriarch",
                             image: "",
-                            description: "Mother of Moshe Givon. Had impaired sense of smell.",
+                            description: "Mother of Moshe Givon. Known to have had a very poor sense of smell.",
                             partner: {
                                 name: "Zvi Gelbman",
                                 role: "G2: Patriarch",
@@ -662,22 +663,30 @@ const familyData = {
                     partner: {
                         name: "Pavlina Zoref",
                         role: "G2: Wife",
+                        description: "Family name unknown.",
                         image: ""
                     },
                     children: [
                         {
                             name: "Dror Zoref",
-                            role: "G3: Son (Lives in USA)",
+                            role: "G3: Son (USA)",
                             image: "",
                             locationName: "USA",
+                            children: []
+                        },
+                        {
+                            name: "Unknown Zoref",
+                            role: "G3: Son",
+                            image: "",
                             children: []
                         }
                     ]
                 },
                 {
                     name: "Valentina Zoref",
-                    role: "G2: Sibling (Blind from age 40)",
+                    role: "G2: Sibling",
                     image: "",
+                    description: "Stayed single. Was blind from around age 40.",
                     children: []
                 },
                 {
@@ -687,6 +696,7 @@ const familyData = {
                     partner: {
                         name: "Lily Zoref",
                         role: "G2: Wife",
+                        description: "Family name unknown.",
                         image: ""
                     },
                     children: [
@@ -1007,14 +1017,8 @@ const familyData = {
                 {
                     name: "Laznowsky Parents",
                     role: "Ancestors",
+                    description: "Parents of Bracha Rimon (who married Yaakov Haim Rimon), Mordehay, and another brother.",
                     children: [
-                        {
-                            name: "Bracha Rimon (Laznowsky)",
-                            role: "Wife of Yaakov Haim Rimon. (See Granat Family)",
-                            description: "Daughter of Laznowsky family from Kutno.",
-                            image: "",
-                            children: []
-                        },
                         {
                             name: "Mordehay Laznowsky",
                             role: "Brother of Bracha",
