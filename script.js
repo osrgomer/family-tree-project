@@ -2,6 +2,30 @@
  * Family Tree Data Structure
  */
 
+function getDynamicAge(birthDateString) {
+    const today = new Date();
+    const birthDate = new Date(birthDateString);
+    let years = today.getFullYear() - birthDate.getFullYear();
+    let months = today.getMonth() - birthDate.getMonth();
+    if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
+        years--;
+        months += 12;
+    }
+    // Adjust months if days are less
+    if (today.getDate() < birthDate.getDate()) {
+        months--;
+        if (months < 0) {
+            months += 12;
+            // years is already adjusted above if months < 0
+        }
+    }
+
+    // Return formatted string
+    if (months === 0) return `(Age ${years})`;
+    if (months === 6) return `(Age ${years}.5)`;
+    return `(Age ${years} & ${months} mos)`;
+}
+
 const familyData = {
     name: "The Rimon-Givon Legacy",
     role: "United Family",
@@ -210,18 +234,18 @@ const familyData = {
                                                         role: "G3: Bank of Israel",
                                                         coords: [32.0853, 34.7818],
                                                         locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                                        description: "Daughter of Shalom Weissbarst.",
+                                                        description: "Daughter of Shalom Weissbarst and Tova (Gita) Wallach. (See Weissbarst Family)",
                                                         image: ""
                                                     },
                                                     partnerLeft: false,
                                                     children: [
                                                         {
                                                             name: "Gil Rimon",
-                                                            role: "G4: Entrepreneur & Branding",
+                                                            role: "G4: Entrepreneur & Branding " + getDynamicAge("1973-10-14"),
                                                             image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
                                                             partner: {
                                                                 name: "Yael Givon",
-                                                                role: "G4: Creative Director",
+                                                                role: "G4: Creative Director " + getDynamicAge("1974-07-11"),
                                                                 image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
                                                                 coords: [37.330462, -8.731486],
                                                                 locationName: "Aljezur, Portugal"
@@ -232,7 +256,7 @@ const familyData = {
                                                             children: [
                                                                 {
                                                                     name: "Omer Shalom Rimon",
-                                                                    role: "G5: The Union (Age 13.5)",
+                                                                    role: "G5: The Union " + getDynamicAge("2012-04-21"),
                                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
                                                                     description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
                                                                     coords: [37.330462, -8.731486],
@@ -241,7 +265,7 @@ const familyData = {
                                                                 },
                                                                 {
                                                                     name: "Nomi Rimon",
-                                                                    role: "G5: Daughter (Omer's Sister)",
+                                                                    role: "G5: Daughter " + getDynamicAge("2015-10-20"),
                                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
                                                                     coords: [37.330462, -8.731486],
                                                                     locationName: "Aljezur, Portugal",
@@ -411,7 +435,7 @@ const familyData = {
                                         },
                                         {
                                             name: "Daniella Givon",
-                                            role: "G4: Daughter",
+                                            role: "G4: CEO (Unik) & Founder (Dunica)",
                                             image: "",
                                             children: [
                                                 {
@@ -430,11 +454,11 @@ const familyData = {
                                         },
                                         {
                                             name: "Yael Givon Rimon",
-                                            role: "G4: Daughter",
+                                            role: "G4: Daughter " + getDynamicAge("1974-07-11"),
                                             image: "",
                                             partner: {
                                                 name: "Gil Rimon",
-                                                role: "G4: Entrepreneur & Branding",
+                                                role: "G4: Entrepreneur & Branding " + getDynamicAge("1973-10-14"),
                                                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
 
                                             },
@@ -442,7 +466,7 @@ const familyData = {
                                             children: [
                                                 {
                                                     name: "Omer Shalom Rimon",
-                                                    role: "G5: The Union (Age 13.5)",
+                                                    role: "G5: The Union " + getDynamicAge("2012-04-21"),
                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
                                                     description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
 
@@ -450,7 +474,7 @@ const familyData = {
                                                 },
                                                 {
                                                     name: "Nomi Rimon",
-                                                    role: "G5: Daughter (Omer's Sister)",
+                                                    role: "G5: Daughter " + getDynamicAge("2015-10-20"),
                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
 
                                                     children: []
@@ -780,6 +804,62 @@ const familyData = {
 
 
         {
+            name: "Weissbarst",
+            role: "Heritage: Maternal Roots (Talma)",
+            coords: [52.7915, 20.1172],
+            children: [
+                {
+                    name: "Hirsch Weissbarst",
+                    role: "G-1: Ancestor",
+                    locationName: "Raciąż, Poland",
+                    coords: [52.7915, 20.1172],
+                    image: "",
+                    partner: {
+                        name: "Beile Frenkel",
+                        role: "G-1: Ancestor",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Zvi (Hirsch) Weissburst",
+                            role: "G1: Merchant (b. 1888)",
+                            locationName: "Tarnopol",
+                            image: "",
+                            partner: {
+                                name: "Sara Weissbarst",
+                                role: "G1: Matriarch",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Shalom Weissbarst",
+                                    role: "G2: Architect (1915-2002)",
+                                    locationName: "Haifa, Israel",
+                                    coords: [32.7940, 34.9896],
+                                    image: "",
+                                    partner: {
+                                        name: "Tova (Gita) Wallach",
+                                        role: "G2: Matriarch (1917-2002)",
+                                        description: "Born in Ukraine. Immigrated to Israel 1921.",
+                                        image: ""
+                                    },
+                                    children: [
+                                        {
+                                            name: "Talma Rimon (Weissburst)",
+                                            role: "G3: Daughter (See Rimon Family)",
+                                            image: "",
+                                            description: "Married to Ephraim Rimon.",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             name: "Cohen",
             role: "Heritage: Paternal Roots",
             coords: [31.7683, 35.2137],
@@ -867,17 +947,10 @@ const familyData = {
         },
         {
             name: "DUNICA",
-            type: "venture",
-            coords: [37.330462, -8.731486],
-            description: "Artistic workshop and craftsmanship collective (Ex-Company)",
-            children: [
-                {
-                    name: "The Workshop",
-                    role: "Historical Focus",
-                    description: "The core of the collective's operations in Aljezur.",
-                    children: []
-                }
-            ]
+            role: "Shared Venture (Ex-Company)",
+            description: "Biotech company founded by Daniella Givon (2018) to treat Type 1 Diabetes. Developed 'DUN T1' therapy with support from Merck.",
+            coords: [32.0853, 34.7818],
+            children: []
         }
     ]
 };
