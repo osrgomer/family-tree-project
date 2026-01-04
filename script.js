@@ -123,6 +123,12 @@ const familyData = {
                                                                         { name: "Daughter 7 Rimon", role: "G5: Daughter", children: [] },
                                                                         { name: "Daughter 8 Rimon", role: "G5: Daughter", children: [] }
                                                                     ]
+                                                                },
+                                                                {
+                                                                    name: "Unknown Child",
+                                                                    role: "G4: Child",
+                                                                    image: "",
+                                                                    children: []
                                                                 }
                                                             ]
                                                         }
@@ -930,7 +936,34 @@ const familyData = {
                                 {
                                     name: "Benjamin Cohen",
                                     role: "G3: Husband (1921–1981)",
-                                    children: []
+                                    children: [
+                                        {
+                                            name: "Yoram Cohen",
+                                            role: "G4: Legacy Representative",
+                                            image: "",
+                                            children: [
+                                                {
+                                                    name: "Michal Cohen",
+                                                    role: "G5: Daughter",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: "Dafna Cohen",
+                                            role: "G4: Daughter",
+                                            image: "",
+                                            children: [
+                                                {
+                                                    name: "Uri Cohen",
+                                                    role: "G5: Son",
+                                                    image: "",
+                                                    children: []
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -966,6 +999,37 @@ const familyData = {
             description: "Biotech company founded by Daniella Givon (2018) to treat Type 1 Diabetes. Developed 'DUN T1' therapy with support from Merck.",
             coords: [32.0853, 34.7818],
             children: []
+        },
+        {
+            name: "Laznowsky",
+            role: "Family of Bracha Rimon",
+            children: [
+                {
+                    name: "Laznowsky Parents",
+                    role: "Ancestors",
+                    children: [
+                        {
+                            name: "Bracha Rimon (Laznowsky)",
+                            role: "Wife of Yaakov Haim Rimon. (See Granat Family)",
+                            description: "Daughter of Laznowsky family from Kutno.",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Mordehay Laznowsky",
+                            role: "Brother of Bracha",
+                            image: "",
+                            children: []
+                        },
+                        {
+                            name: "Unknown Brother Laznowsky",
+                            role: "Brother of Bracha",
+                            image: "",
+                            children: []
+                        }
+                    ]
+                }
+            ]
         }
     ]
 };
@@ -1508,14 +1572,22 @@ function initControls() {
         return !!(nav || search);
     };
 
-    // --- Click & Drag Panning (Industry Standard) ---
+    // --- Click & Drag Panning (Mouse & Touch) ---
     let isDown = false;
+    let startX, startY, scrollLeft, scrollTop;
 
     const startDragging = (e) => {
         if (shouldIgnoreDrag(e.target)) return;
         isDown = true;
         viewport.style.cursor = 'grabbing';
-        e.preventDefault();
+
+        const pageX = e.touches ? e.touches[0].pageX : e.pageX;
+        const pageY = e.touches ? e.touches[0].pageY : e.pageY;
+
+        startX = pageX - viewport.offsetLeft;
+        startY = pageY - viewport.offsetTop;
+        scrollLeft = viewport.scrollLeft;
+        scrollTop = viewport.scrollTop;
     };
 
     const stopDragging = () => {
@@ -1527,9 +1599,17 @@ function initControls() {
         if (!isDown) return;
         e.preventDefault();
 
-        // Use built-in movementX/Y for frame-to-frame movement
-        viewport.scrollLeft -= e.movementX;
-        viewport.scrollTop -= e.movementY;
+        const pageX = e.touches ? e.touches[0].pageX : e.pageX;
+        const pageY = e.touches ? e.touches[0].pageY : e.pageY;
+
+        const x = pageX - viewport.offsetLeft;
+        const y = pageY - viewport.offsetTop;
+
+        const walkX = (x - startX);
+        const walkY = (y - startY);
+
+        viewport.scrollLeft = scrollLeft - walkX;
+        viewport.scrollTop = scrollTop - walkY;
     };
 
     viewport.addEventListener('mousedown', startDragging);
