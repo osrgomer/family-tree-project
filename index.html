@@ -92,7 +92,9 @@
                     <button class="zoom-btn" id="zoom-in" title="Zoom In">+</button>
                     <button class="zoom-btn" id="zoom-out" title="Zoom Out">−</button>
                     <button class="zoom-btn" id="zoom-reset" title="Reset">↺</button>
+                    <button class="zoom-btn" id="import-gedcom" title="Import GEDCOM">📂</button>
                     <button class="zoom-btn" id="export-gedcom" title="Export GEDCOM">📄</button>
+                    <input type="file" id="gedcom-file-input" accept=".ged" style="display: none;">
                 </div>
             </div>
 
@@ -161,6 +163,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="debug.js"></script>
+    <script src="gedcom-import.js"></script>
     <script src="script.js"></script>
     <script src="add-member.js"></script>
 </body>
