@@ -37,7 +37,7 @@ const familyData = {
             children: [
                 {
                     name: "Yosef Granat",
-                    role: "G-2: Ancestor",
+                    role: "G-2: Ancestor (Deceased)",
                     image: "",
                     coords: [52.9566, 19.8893],
                     locationName: "Biezun, Poland",
@@ -45,14 +45,14 @@ const familyData = {
                     children: [
                         {
                             name: "Hirsch Granat",
-                            role: "G-1: Ancestor",
+                            role: "G-1: Ancestor (Deceased)",
                             image: "",
                             coords: [52.9566, 19.8894], // Slight offset
                             locationName: "Biezun, Poland",
                             description: "Ancestor and namesake for the Granat/Rimon branch.",
                             partner: {
                                 name: "Gita Granat",
-                                role: "G-1: Ancestor",
+                                role: "G-1: Ancestor (Deceased)",
                                 image: ""
                             },
                             children: [
@@ -64,7 +64,7 @@ const familyData = {
                                         name: "Hana Haya Gerlitz",
                                         role: "G0: Matriarch (1817–1885) (Deceased)",
                                         image: "",
-                                        description: "Daughter of Wolf Eliasz Gerlitz (b. 1782) and Sara Rayzel (b. 1792, d. 1857). Born and lived in Biezun, Poland."
+                                        description: "Daughter of Wolf Eliasz Gerlitz (b. 1782) and Sara Rayzel (b. 1792, d. 1857). Born and lived in Biezun, Poland. (See Gerlitz Family)"
                                     },
                                     coords: [52.9515, 20.0119],
                                     locationName: "Biezun, Poland (Ancestral Home)",
@@ -840,7 +840,7 @@ const familyData = {
                                     partner: {
                                         name: "Tova (Gita) Wallach",
                                         role: "G2: Matriarch (1917-2002)",
-                                        description: "Born in Ukraine. Immigrated to Israel 1921.",
+                                        description: "Born in Ukraine. Immigrated to Israel 1921. Daughter of Shmuel Eliezer Wallach & Tsipora Kaminetsky. (See Wallach Family)",
                                         image: ""
                                     },
                                     children: [
@@ -854,6 +854,55 @@ const familyData = {
                                     ]
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Gerlitz",
+            role: "Heritage: Maternal Ancestry (Granat)",
+            coords: [52.9566, 19.8893],
+            children: [
+                {
+                    name: "Wolf Eliasz Gerlitz",
+                    role: "Ancestor (b. 1782)",
+                    image: "",
+                    partner: {
+                        name: "Sara Rayzel Gerlitz (Hertzov)",
+                        role: "Matriarch (1792-1857)",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Hana Haya Gerlitz",
+                            role: "Daughter (See Granat Family)",
+                            description: "Wife of Josek Hersz Granat.",
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Wallach",
+            role: "Heritage: Maternal Ancestry (Talma)",
+            children: [
+                {
+                    name: "Shmuel Eliezer Wallach",
+                    role: "Patriarch",
+                    image: "",
+                    partner: {
+                        name: "Tsipora Kaminetsky",
+                        role: "Matriarch",
+                        image: ""
+                    },
+                    children: [
+                        {
+                            name: "Tova (Gita) Wallach",
+                            role: "Daughter (See Weissbarst Family)",
+                            description: "Wife of Shalom Weissbarst.",
+                            children: []
                         }
                     ]
                 }
