@@ -420,7 +420,7 @@ const familyData = {
                             name: "Victoria Zoref",
                             role: "G2: Matriarch",
                             image: "",
-                            description: "Mother of Moshe Givon. Known to have had a very poor sense of smell.",
+                            description: "Mother of Moshe Givon. Sister of Valentina Zoref. Known to have had a very poor sense of smell.",
                             partner: {
                                 name: "Zvi Gelbman",
                                 role: "G2: Patriarch",
@@ -437,7 +437,10 @@ const familyData = {
                                     partner: {
                                         name: "Deborah Givon (Diamentstein)",
                                         role: "G3: Matriarch",
-                                        image: "https://osrg.lol/wp-content/uploads/2026/01/Screenshot-2026-01-04-122429.png"
+                                        image: "https://osrg.lol/wp-content/uploads/2026/01/Screenshot-2026-01-04-122429.png",
+                                        coords: [32.0746, 34.7778],
+                                        locationName: "Meishar, Israel",
+                                        description: ""
                                     },
                                     children: [
                                         {
@@ -748,7 +751,7 @@ const familyData = {
                     name: "Valentina Zoref",
                     role: "G2: Sibling",
                     image: "",
-                    description: "Stayed single. Was blind from around age 40.",
+                    description: "Sister of Victoria Zoref. Stayed single. Was blind from around age 40.",
                     children: []
                 },
                 {
