@@ -189,7 +189,16 @@ const familyData = {
                                                             name: "Dafna Cohen",
                                                             role: "G4: Sibling",
                                                             image: "",
-                                                            children: []
+                                                            children: [
+                                                                {
+                                                                    name: "Uri Cohen",
+                                                                    role: "G5: Son",
+                                                                    coords: [32.0853, 34.7818],
+                                                                    locationName: "Tel Aviv, Israel",
+                                                                    image: "",
+                                                                    children: []
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 },
