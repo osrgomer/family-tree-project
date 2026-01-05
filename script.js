@@ -260,14 +260,18 @@ const familyData = {
                                                             partnerLeft: true,
                                                             children: [
                                                                 {
-                                                                    name: "Prof. David Glicksberg",
+                                                                    name: "Prof. David Gliksberg",
                                                                     role: "G4: Law & Tax Expert",
-                                                                    image: "",
+                                                                    description: "Full Professor at the Hebrew University of Jerusalem, holding the Satinover Chair of Tax Law and Property Law. Director of the Sacher Institute of Legislative Research. Former Editor-in-Chief of Mishpatim (Law Review).",
+                                                                    coords: [31.7683, 35.2137],
+                                                                    locationName: "Jerusalem, Israel",
+                                                                    image: "https://en.law.huji.ac.il/sites/default/files/styles/190_250/public/lawen/files/drg_2713a.jpg?m=1715497059&itok=Z0JyVUCY",
                                                                     children: []
                                                                 },
                                                                 {
-                                                                    name: "Alex Glicksberg",
+                                                                    name: "Alex Gliksberg",
                                                                     role: "G4: Literacy Archivist",
+                                                                    description: "Sibling of David Gliksberg. Involved in literacy and archival work.",
                                                                     image: "",
                                                                     children: []
                                                                 }
