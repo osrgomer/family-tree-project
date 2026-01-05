@@ -90,16 +90,18 @@ const familyData = {
                                                     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg/250px-Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg",
                                                     coords: [31.7683, 35.2137],
                                                     locationName: "Jerusalem & Tel Aviv, Israel",
-                                                    description: "Renowned Hebrew poet known as 'י\"צ'. Close to Rav Kook and advisor to Shai Agnon. Buried at the Old Trumpeldor Cemetery in Tel Aviv.",
+                                                    description: "Renowned Hebrew poet known as 'י\"צ', born in Biezun, Poland. Close to Rav Kook and advisor to Shai Agnon. Buried at the Old Trumpeldor Cemetery in Tel Aviv.",
                                                     partner: {
-                                                        name: "Esther Rimon",
-                                                        role: "G2: Wife",
+                                                        name: "Esther Ester Rimon (Schachtin)",
+                                                        role: "G2: Matriarch (1887–1965) (Deceased)",
+                                                        description: "Born in Vilna (Lithuania). Daughter of Zvi David Schachtin and Tova Rivka. Married poet Yosef Zvi Rimon.",
                                                         image: ""
                                                     },
                                                     children: [
                                                         {
                                                             name: "Rivka Rimon",
-                                                            role: "G3: Daughter",
+                                                            role: "G3: Art Teacher (1908–1981) (Deceased)",
+                                                            description: "Born in Tel Aviv. Daughter of poet Yosef Zvi Rimon. Worked as an art teacher in Tel Aviv.",
                                                             image: "",
                                                             children: []
                                                         },
@@ -109,7 +111,13 @@ const familyData = {
                                                             image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%D7%93%D7%95%D7%93_%D7%A8%D7%99%D7%9E%D7%95%D7%9F_-_%D7%A7%D7%91%D7%9C%D7%AA_%D7%99%D7%A7%D7%99%D7%A8_%D7%94%D7%A2%D7%99%D7%A8_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91.tif/lossy-page1-200px-%D7%93%D7%95%D7%93_%D7%A8%D7%99%D7%9E%D7%95%D7%9F_-_%D7%A7%D7%91%D7%9C%D7%AA_%D7%99%D7%A7%D7%99%D7%A8_%D7%94%D7%A2%D7%99%D7%A8_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91.tif.jpg",
                                                             coords: [32.0667, 34.7772],
                                                             locationName: "Tel Aviv-Yafo, Israel",
-                                                            description: "Haganah member, Military Police founder, and Yakir Tel Aviv (1998). Founded the 'Rimon School'.",
+                                                            description: "Haganah activist, Military Police founder, and Israeli author. Yakir Tel Aviv (1998). Manager of the 'Rimon School' (Typing School). Developed a unique heart attack recovery method documented in his later years. Buried in Holon.",
+                                                            partner: {
+                                                                name: "Rita (Sara Rivka) Rimon (Domb)",
+                                                                role: "G3: Wife",
+                                                                description: "Born in England, survived the Blitz, and met David in Safed. Partner in his typing schools and editor of his English typing books.",
+                                                                image: ""
+                                                            },
                                                             children: [
                                                                 {
                                                                     name: "Rabbi Yosef Zvi Rimon",
@@ -141,6 +149,20 @@ const familyData = {
                                                                     description: "Son of David Rimon and brother of Rabbi Yosef Zvi Rimon. Worked as a doctor; spent time in jail.",
                                                                     image: "",
                                                                     children: []
+                                                                },
+                                                                {
+                                                                    name: "Ruth Rimon",
+                                                                    role: "G4: Daughter",
+                                                                    description: "Daughter of David Rimon. Edited and adapted her father's book on heart attack recovery.",
+                                                                    image: "",
+                                                                    children: []
+                                                                },
+                                                                {
+                                                                    name: "Unknown Rimon",
+                                                                    role: "G4: Child",
+                                                                    description: "Child of David Rimon.",
+                                                                    image: "",
+                                                                    children: []
                                                                 }
                                                             ]
                                                         }
@@ -162,11 +184,11 @@ const familyData = {
                                                 },
                                                 {
                                                     name: "Yaakov Haim (Zvi) Rimon (Granat)",
-                                                    role: "G2: Author & Social Worker (1890–1973) (Deceased)",
+                                                    role: "G2: Author & Social Worker (1903–1973) (Deceased)",
                                                     image: "",
                                                     coords: [32.0554, 34.7531],
                                                     locationName: "Jaffa, Israel",
-                                                    description: "Renowned Hebrew poet and author of the religious-Zionist movement. Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
+                                                    description: "Born January 2, 1903 in Biezun, Poland. Renowned Hebrew poet and author of the religious-Zionist movement. Immigrated to Jaffa in 1909.",
                                                     partner: {
                                                         name: "Bracha Rimon (Laznowsky)",
                                                         role: "G2: Matriarch (b. Kutno) (Deceased)",
@@ -227,11 +249,11 @@ const familyData = {
                                                             children: []
                                                         },
                                                         {
-                                                            name: "Miriam Esther Gliksberg",
-                                                            role: "G3: Educator",
+                                                            name: "Miriam Esther Gliksberg (Rimon)",
+                                                            role: "G3: Educator (Deceased)",
                                                             image: "",
                                                             partner: {
-                                                                name: "Israel Glicksberg",
+                                                                name: "Israel Gliksberg",
                                                                 role: "G3: Educator & Scholar",
                                                                 image: ""
                                                             },
@@ -1101,6 +1123,53 @@ const familyData = {
                                     role: "G2: Matriarch (1864–1918) (Deceased)",
                                     description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
                                     children: []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Schachtin",
+            role: "Heritage: Vilna Roots",
+            children: [
+                {
+                    name: "Aharon Selig Schachtin",
+                    role: "G0: Ancestor",
+                    description: "Ancestor of the Schachtin family from Vilna.",
+                    children: [
+                        {
+                            name: "Zvi David Schachtin",
+                            role: "G1: Patriarch (d. 1914) (Deceased)",
+                            description: "Son of Aharon Selig Schachtin. From Vilna. Immigrated to Jerusalem and died in 1914. Buried at the Mount of Olives (Har HaZeitim).",
+                            partner: {
+                                name: "Tova Rivka Schachtin",
+                                role: "G1: Ancestor",
+                                description: "Mother of Esther Rimon."
+                            },
+                            children: [
+                                {
+                                    name: "Esther Ester Rimon (Schachtin)",
+                                    role: "G2: Matriarch (1887–1965) (See Granat branch)",
+                                    description: "Daughter of Zvi David and Tova Rivka Schachtin. Married poet Yosef Zvi Rimon.",
+                                    children: []
+                                },
+                                {
+                                    name: "Yosef Schachtin",
+                                    role: "G2: Sibling (1876–1941) (Deceased)",
+                                    description: "Born in Vilna (circa 1876). Perished in the Holocaust (1941). Son of Zvi David and Tova Rivka Schachtin. Brother of Esther Rimon.",
+                                    partner: {
+                                        name: "Chaya Golda Schachtin",
+                                        role: "G2: Matriarch (1876–1941) (Deceased)",
+                                        description: "Born circa 1876. Perished in the Holocaust (1941). Wife of Yosef Schachtin.",
+                                        image: ""
+                                    },
+                                    children: [
+                                        { name: "Yehuda Schachtin", role: "G3: Son", children: [] },
+                                        { name: "Hasya Schachtin", role: "G3: Daughter", children: [] },
+                                        { name: "Moshe Schachtin", role: "G3: Son", children: [] }
+                                    ]
                                 }
                             ]
                         }
