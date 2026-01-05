@@ -134,213 +134,218 @@ const familyData = {
                                                             ]
                                                         }
                                                     ]
+                                                },
+                                                {
+                                                    name: "Yaakov Haim (Zvi) Rimon (Granat)",
+                                                    role: "G2: Author & Social Worker (1890–1973) (Deceased)",
+                                                    image: "",
+                                                    coords: [32.0554, 34.7531],
+                                                    locationName: "Jaffa, Israel",
+                                                    description: "Renowned Hebrew poet and author of the religious-Zionist movement. Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
+                                                    partner: {
+                                                        name: "Bracha Rimon (Laznowsky)",
+                                                        role: "G2: Matriarch (b. Kutno) (Deceased)",
+                                                        description: "Sister of Mordehay Laznowsky and another brother. (See Laznowsky branch for her siblings). Married Yaakov Haim Rimon.",
+                                                        image: ""
+                                                    },
+                                                    children: [
+                                                        {
+                                                            name: "Hava Esther Cohen (Rimon)",
+                                                            role: "G3: Sibling (1928 - 2002) (Deceased) (Aged 74)",
+                                                            image: "",
+                                                            partner: {
+                                                                name: "Benjamin Cohen",
+                                                                role: "G3: Husband (1921–1981) (Deceased) (Aged 60)",
+                                                                image: ""
+                                                            },
+                                                            children: [
+                                                                {
+                                                                    name: "Yoram Cohen",
+                                                                    role: "G4: Sibling",
+                                                                    image: "",
+                                                                    children: [
+                                                                        {
+                                                                            name: "Michal Cohen",
+                                                                            role: "G5: Daughter",
+                                                                            image: "",
+                                                                            children: []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    name: "Dafna Cohen",
+                                                                    role: "G4: Sibling",
+                                                                    image: "",
+                                                                    children: [
+                                                                        {
+                                                                            name: "Uri Cohen",
+                                                                            role: "G5: Son",
+                                                                            coords: [32.0853, 34.7818],
+                                                                            locationName: "Tel Aviv, Israel",
+                                                                            image: "",
+                                                                            children: []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            name: "Rivka Zinkin",
+                                                            role: "G3: Sibling",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Nitzchia Rimon",
+                                                            role: "G3: Sibling",
+                                                            image: "",
+                                                            children: []
+                                                        },
+                                                        {
+                                                            name: "Miriam Esther Gliksberg",
+                                                            role: "G3: Educator",
+                                                            image: "",
+                                                            partner: {
+                                                                name: "Israel Glicksberg",
+                                                                role: "G3: Educator & Scholar",
+                                                                image: ""
+                                                            },
+                                                            partnerLeft: true,
+                                                            children: [
+                                                                {
+                                                                    name: "Prof. David Glicksberg",
+                                                                    role: "G4: Law & Tax Expert",
+                                                                    image: "",
+                                                                    children: []
+                                                                },
+                                                                {
+                                                                    name: "Alex Glicksberg",
+                                                                    role: "G4: Literacy Archivist",
+                                                                    image: "",
+                                                                    children: []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            name: "Ephraim Rimon",
+                                                            role: "G3: Songwriter | Bank of Israel",
+                                                            image: "",
+                                                            coords: [32.0853, 34.7818],
+                                                            locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
+                                                            partner: {
+                                                                name: "Talma Rimon",
+                                                                role: "G3: Bank of Israel",
+                                                                coords: [32.0853, 34.7818],
+                                                                locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
+                                                                description: "Daughter of Shalom Weissbarst and Tova (Gita) Wallach. (See Weissbarst Family)",
+                                                                image: ""
+                                                            },
+                                                            partnerLeft: false,
+                                                            children: [
+                                                                {
+                                                                    name: "Gil Rimon",
+                                                                    role: "G4: Entrepreneur & Branding\n" + getDynamicAge("1973-10-14"),
+                                                                    image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
+                                                                    partner: {
+                                                                        name: "Yael Givon",
+                                                                        role: "G4: Creative Director\n" + getDynamicAge("1974-07-11"),
+                                                                        image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
+                                                                        coords: [37.330462, -8.731486],
+                                                                        locationName: "Aljezur, Portugal"
+                                                                    },
+                                                                    coords: [37.330462, -8.731486],
+                                                                    locationName: "Aljezur, Portugal",
+                                                                    partnerLeft: true,
+                                                                    children: [
+                                                                        {
+                                                                            name: "Omer Shalom Rimon",
+                                                                            role: "G5: The Union " + getDynamicAge("2012-04-21"),
+                                                                            image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
+                                                                            description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
+                                                                            coords: [37.330462, -8.731486],
+                                                                            locationName: "Aljezur, Portugal",
+                                                                            children: []
+                                                                        },
+                                                                        {
+                                                                            name: "Nomi Rimon",
+                                                                            role: "G5: Daughter " + getDynamicAge("2015-10-20"),
+                                                                            image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                                                            coords: [37.330462, -8.731486],
+                                                                            locationName: "Aljezur, Portugal",
+                                                                            children: []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    name: "Ran Rimon",
+                                                                    role: "G4: Entrepreneur",
+                                                                    image: "https://pbs.twimg.com/profile_images/1524011464109002752/GLGXYNu9_400x400.jpg",
+                                                                    coords: [32.0746, 34.7778],
+                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                    partner: {
+                                                                        name: "Shulamit Bonder",
+                                                                        role: "Spouse",
+                                                                        coords: [32.0746, 34.7778],
+                                                                        locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                        image: ""
+                                                                    },
+                                                                    children: [
+                                                                        {
+                                                                            name: "Eyal Rimon",
+                                                                            role: "G5: Student (Age 14)",
+                                                                            image: "",
+                                                                            coords: [32.0746, 34.7778],
+                                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                            children: []
+                                                                        },
+                                                                        {
+                                                                            name: "Talia Rimon",
+                                                                            role: "G5: Student (Age 11-12)",
+                                                                            image: "",
+                                                                            coords: [32.0746, 34.7778],
+                                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                            children: []
+                                                                        },
+                                                                        {
+                                                                            name: "Gur Rimon",
+                                                                            role: "G5: Student (Age 6-7)",
+                                                                            image: "",
+                                                                            coords: [32.0746, 34.7778],
+                                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                            children: []
+                                                                        },
+                                                                        {
+                                                                            name: "Ana Rimon",
+                                                                            role: "G5: Student (Age 1.5)",
+                                                                            image: "",
+                                                                            coords: [32.0746, 34.7778],
+                                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
+                                                                            children: []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         },
                                         {
                                             name: "Hana Haya Kaczor",
-                                            role: "G2: Sibling",
+                                            role: "G1: Sibling",
                                             image: "",
                                             children: []
                                         },
                                         {
-                                            name: "Yechiel Bunim Rimon (Granat)",
-                                            role: "G2: Sibling",
-                                            image: "",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Yaakov Haim (Zvi) Rimon (Granat)",
-                                            role: "G2: Author & Social Worker (1890–1973) (Deceased)",
-                                            image: "",
-                                            coords: [32.0554, 34.7531],
-                                            locationName: "Jaffa, Israel",
-                                            description: "Renowned Hebrew poet and author of the religious-Zionist movement. Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
+                                            name: "Gitel Rivka Granat",
+                                            role: "G1: Sibling",
+                                            description: "Daughter of Josek Hersz Granat. Married Yechiel Bunim Elstein. (Found in Granat.ged)",
                                             partner: {
-                                                name: "Bracha Rimon (Laznowsky)",
-                                                role: "G2: Matriarch (b. Kutno) (Deceased)",
-                                                description: "Sister of Mordehay Laznowsky and another brother. (See Laznowsky branch for her siblings). Married Yaakov Haim Rimon.",
-                                                image: ""
+                                                name: "Yechiel Bunim Elstein",
+                                                role: "G1: Husband",
+                                                description: "Son of Levin and Hava Elstein. (See Elstein branch for his ancestry)"
                                             },
-                                            children: [
-                                                {
-                                                    name: "Hava Esther Cohen (Rimon)",
-                                                    role: "G3: Sibling (1928 - 2002) (Deceased) (Aged 74)",
-                                                    image: "",
-                                                    partner: {
-                                                        name: "Benjamin Cohen",
-                                                        role: "G3: Husband (1921–1981) (Deceased) (Aged 60)",
-                                                        image: ""
-                                                    },
-                                                    children: [
-                                                        {
-                                                            name: "Yoram Cohen",
-                                                            role: "G4: Sibling",
-                                                            image: "",
-                                                            children: [
-                                                                {
-                                                                    name: "Michal Cohen",
-                                                                    role: "G5: Daughter",
-                                                                    image: "",
-                                                                    children: []
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            name: "Dafna Cohen",
-                                                            role: "G4: Sibling",
-                                                            image: "",
-                                                            children: [
-                                                                {
-                                                                    name: "Uri Cohen",
-                                                                    role: "G5: Son",
-                                                                    coords: [32.0853, 34.7818],
-                                                                    locationName: "Tel Aviv, Israel",
-                                                                    image: "",
-                                                                    children: []
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Rivka Zinkin",
-                                                    role: "G3: Sibling",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Nitzchia Rimon",
-                                                    role: "G3: Sibling",
-                                                    image: "",
-                                                    children: []
-                                                },
-                                                {
-                                                    name: "Miriam Esther Gliksberg",
-                                                    role: "G3: Educator",
-                                                    image: "",
-                                                    partner: {
-                                                        name: "Israel Glicksberg",
-                                                        role: "G3: Educator & Scholar",
-                                                        image: ""
-                                                    },
-                                                    partnerLeft: true,
-                                                    children: [
-                                                        {
-                                                            name: "Prof. David Glicksberg",
-                                                            role: "G4: Law & Tax Expert",
-                                                            image: "",
-                                                            children: []
-                                                        },
-                                                        {
-                                                            name: "Alex Glicksberg",
-                                                            role: "G4: Literacy Archivist",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Ephraim Rimon",
-                                                    role: "G3: Songwriter | Bank of Israel",
-                                                    image: "",
-                                                    coords: [32.0853, 34.7818],
-                                                    locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                                    partner: {
-                                                        name: "Talma Rimon",
-                                                        role: "G3: Bank of Israel",
-                                                        coords: [32.0853, 34.7818],
-                                                        locationName: "Ha-Rav Herzog St 17, Tel Aviv-Jaffa, Israel",
-                                                        description: "Daughter of Shalom Weissbarst and Tova (Gita) Wallach. (See Weissbarst Family)",
-                                                        image: ""
-                                                    },
-                                                    partnerLeft: false,
-                                                    children: [
-                                                        {
-                                                            name: "Gil Rimon",
-                                                            role: "G4: Entrepreneur & Branding\n" + getDynamicAge("1973-10-14"),
-                                                            image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-                                                            partner: {
-                                                                name: "Yael Givon",
-                                                                role: "G4: Creative Director\n" + getDynamicAge("1974-07-11"),
-                                                                image: "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-1/90784911_10156686869197610_3607218928830382080_n.jpg?stp=c0.205.1638.1638a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=fe59b0&_nc_ohc=q4PniCXWyiAQ7kNvwFb4qeu&_nc_oc=AdmtC3FesuZAuFgUe5twQKHYuIQPJL8-8o6AP-VngbiDEkruxZEeoDCHfnMTg7zBwXk&_nc_zt=24&_nc_ht=scontent-mad2-1.xx&_nc_gid=97MW2ts3B2nUE0djMgpevQ&oh=00_AfnLF5TiEr47ptHm6RUOcPzJvVGdDv_6RFQMoZ4AnyMtIw&oe=696BD180",
-                                                                coords: [37.330462, -8.731486],
-                                                                locationName: "Aljezur, Portugal"
-                                                            },
-                                                            coords: [37.330462, -8.731486],
-                                                            locationName: "Aljezur, Portugal",
-                                                            partnerLeft: true,
-                                                            children: [
-                                                                {
-                                                                    name: "Omer Shalom Rimon",
-                                                                    role: "G5: The Union " + getDynamicAge("2012-04-21"),
-                                                                    image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                                                    description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
-                                                                    coords: [37.330462, -8.731486],
-                                                                    locationName: "Aljezur, Portugal",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Nomi Rimon",
-                                                                    role: "G5: Daughter " + getDynamicAge("2015-10-20"),
-                                                                    image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
-                                                                    coords: [37.330462, -8.731486],
-                                                                    locationName: "Aljezur, Portugal",
-                                                                    children: []
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            name: "Ran Rimon",
-                                                            role: "G4: Entrepreneur",
-                                                            image: "https://pbs.twimg.com/profile_images/1524011464109002752/GLGXYNu9_400x400.jpg",
-                                                            coords: [32.0746, 34.7778],
-                                                            locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                            partner: {
-                                                                name: "Shulamit Bonder",
-                                                                role: "Spouse",
-                                                                coords: [32.0746, 34.7778],
-                                                                locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                image: "",
-                                                            },
-                                                            children: [
-                                                                {
-                                                                    name: "Eyal Rimon",
-                                                                    role: "G5: Student (Age 14)",
-                                                                    image: "",
-                                                                    coords: [32.0746, 34.7778],
-                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Talia Rimon",
-                                                                    role: "G5: Student (Age 11-12)",
-                                                                    image: "",
-                                                                    coords: [32.0746, 34.7778],
-                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Gur Rimon",
-                                                                    role: "G5: Student (Age 6-7)",
-                                                                    image: "",
-                                                                    coords: [32.0746, 34.7778],
-                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                    children: []
-                                                                },
-                                                                {
-                                                                    name: "Ana Rimon",
-                                                                    role: "G5: Student (Age 1.5)",
-                                                                    image: "",
-                                                                    coords: [32.0746, 34.7778],
-                                                                    locationName: "Sanhedrin St 4, Tel Aviv-Jaffa, Israel",
-                                                                    children: []
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
+                                            children: []
                                         }
                                     ]
                                 }
@@ -1044,6 +1049,42 @@ const familyData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "Elstein",
+            role: "Heritage: Elstein-Levin",
+            children: [
+                {
+                    name: "Levin Elstein",
+                    role: "G-1: Ancestor",
+                    description: "Ancestor of the Elstein family. Husband of Hava Elstein. (Found in Granat.ged)",
+                    partner: {
+                        name: "Hava Elstein",
+                        role: "G-1: Ancestor",
+                        description: "Wife of Levin Elstein. Nickname 'Berkov'."
+                    },
+                    children: [
+                        {
+                            name: "Yechiel Bunim Elstein",
+                            role: "G0: Patriarch",
+                            description: "Son of Levin and Hava Elstein. Married Gitel Rivka Granat.",
+                            partner: {
+                                name: "Gitel Rivka Granat",
+                                role: "G0: Matriarch",
+                                description: "Daughter of Josek Hersz Granat and Hana Haya Gerlitz. Sister of Efraim Eliezer Granat."
+                            },
+                            children: [
+                                {
+                                    name: "Esther Hava Rimon (Elstein)",
+                                    role: "G1: Matriarch (1864–1918) (Deceased)",
+                                    description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 };
@@ -1204,7 +1245,18 @@ function renderNavigation() {
         const btn = document.createElement('button');
         btn.className = 'nav-jump-btn';
         btn.dataset.lineage = index;
-        btn.textContent = lineage.name || `Lineage ${index + 1}`;
+
+        // Use Surname for label if available, otherwise Last Word of name, fallback to Full Name
+        const fullName = lineage.name || `Lineage ${index + 1}`;
+        let label = lineage.surname;
+
+        if (!label) {
+            const parts = fullName.split(' ');
+            label = parts.length > 1 ? parts[parts.length - 1] : fullName;
+        }
+
+        btn.textContent = label;
+        btn.title = fullName; // Show full name on hover
         navContainer.appendChild(btn);
     });
 }
@@ -1839,111 +1891,7 @@ function exportToGedcom() {
 /**
  * GEDCOM Parser for Import
  */
-function parseGedcom(content) {
-    const lines = content.split(/\r?\n/);
-    const individuals = {};
-    const families = {};
-    let currentId = null;
-    let currentType = null;
 
-    // Pass 1: Parse Records
-    lines.forEach(line => {
-        const parts = line.trim().match(/^(\d+)\s+(@\w+@)?\s*(\w+)(?:\s+(.*))?/);
-        if (!parts) return;
-        const level = parseInt(parts[1]);
-        const id = parts[2];
-        const tag = parts[3];
-        const value = parts[4] || "";
-
-        if (level === 0) {
-            if (id && tag === 'INDI') {
-                currentId = id;
-                currentType = 'INDI';
-                individuals[id] = { id, name: "Unknown", gender: "", notes: [], famc: [], fams: [] };
-            } else if (id && tag === 'FAM') {
-                currentId = id;
-                currentType = 'FAM';
-                families[id] = { id, husb: null, wife: null, children: [] };
-            } else {
-                currentId = null;
-            }
-        } else if (currentId) {
-            if (currentType === 'INDI') {
-                const indi = individuals[currentId];
-                if (tag === 'NAME') indi.name = value.replace(/\//g, '');
-                if (tag === 'SEX') indi.gender = value;
-                if (tag === 'NOTE') indi.notes.push(value);
-                if (tag === 'OCCU' || tag === 'TITL') indi.role = value;
-                if (tag === 'FAMC') indi.famc.push(value);
-                if (tag === 'FAMS') indi.fams.push(value);
-            } else if (currentType === 'FAM') {
-                const fam = families[currentId];
-                if (tag === 'HUSB') fam.husb = value;
-                if (tag === 'WIFE') fam.wife = value;
-                if (tag === 'CHIL') fam.children.push(value);
-            }
-        }
-    });
-
-    // Pass 2: Build Tree
-    const processed = new Set();
-
-    function buildNode(indiId) {
-        if (!indiId || processed.has(indiId)) return null;
-        processed.add(indiId);
-
-        const indi = individuals[indiId];
-        if (!indi) return null;
-
-        const node = {
-            name: indi.name,
-            role: indi.role || (indi.gender === 'F' ? "Matriarch" : "Patriarch"),
-            description: indi.notes.join(' '),
-            image: "",
-            children: []
-        };
-
-        if (indi.fams.length > 0) {
-            indi.fams.forEach(famId => {
-                const fam = families[famId];
-                if (fam) {
-                    const partnerId = (fam.husb === indiId) ? fam.wife : fam.husb;
-                    if (partnerId && individuals[partnerId]) {
-                        const partner = individuals[partnerId];
-                        node.partner = {
-                            name: partner.name,
-                            role: partner.role || "Partner",
-                            image: ""
-                        };
-                        processed.add(partnerId);
-                    }
-                    if (fam.children) {
-                        fam.children.forEach(childId => {
-                            const childNode = buildNode(childId);
-                            if (childNode) node.children.push(childNode);
-                        });
-                    }
-                }
-            });
-        }
-        return node;
-    }
-
-    const rootNodes = [];
-    Object.keys(individuals).forEach(id => {
-        const indi = individuals[id];
-        if (!indi.famc || indi.famc.length === 0) {
-            const root = buildNode(id);
-            if (root) rootNodes.push(root);
-        }
-    });
-
-    return {
-        name: "Imported Family Tree",
-        role: "GEDCOM Import",
-        children: rootNodes
-    };
-}
 
 /**
  * QR Code Logic
