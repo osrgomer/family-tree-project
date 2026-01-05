@@ -43,17 +43,14 @@
                     <div class="nav-divider"></div>
                     <div class="nav-section">
                         <span class="nav-label">Lineage:</span>
-                        <button class="nav-jump-btn" data-lineage="0">Granat</button>
-                        <button class="nav-jump-btn" data-lineage="1">Givon</button>
-                        <button class="nav-jump-btn" data-lineage="2">Cohen</button>
-                        <button class="nav-jump-btn" data-lineage="3">Diamentstein</button>
-                        <button class="nav-jump-btn" data-lineage="4">Weissbarst</button>
-                        <button class="nav-jump-btn" data-lineage="5">DUNICA</button>
+                        <div id="lineage-nav-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <!-- Populated dynamically by script.js -->
+                        </div>
                     </div>
                     <div class="nav-divider"></div>
                     <div class="nav-section">
                         <span class="nav-label">View:</span>
-                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                        <div id="generation-nav-buttons" style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
                             <button class="nav-gen-btn" data-gen="G0">Roots</button>
                             <button class="nav-gen-btn" data-gen="G5">Latest</button>
                         </div>

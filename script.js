@@ -158,17 +158,18 @@ const familyData = {
                                             description: "Renowned Hebrew poet and author of the religious-Zionist movement. Born in Biezun, Poland. Immigrated to Jaffa in 1909.",
                                             partner: {
                                                 name: "Bracha Rimon (Laznowsky)",
-                                                role: "G2: Matriarch (b. Kutno)",
+                                                role: "G2: Matriarch (b. Kutno) (Deceased)",
+                                                description: "Sister of Mordehay Laznowsky and another brother. (See Laznowsky branch for her siblings). Married Yaakov Haim Rimon.",
                                                 image: ""
                                             },
                                             children: [
                                                 {
                                                     name: "Hava Esther Cohen (Rimon)",
-                                                    role: "G3: Sibling (1928 - 2002)",
+                                                    role: "G3: Sibling (1928 - 2002) (Deceased) (Aged 74)",
                                                     image: "",
                                                     partner: {
                                                         name: "Benjamin Cohen",
-                                                        role: "G3: Husband (1921–1981)",
+                                                        role: "G3: Husband (1921–1981) (Deceased) (Aged 60)",
                                                         image: ""
                                                     },
                                                     children: [
@@ -1194,10 +1195,27 @@ function createTreeElement(member) {
     return li;
 }
 
+function renderNavigation() {
+    const navContainer = document.getElementById('lineage-nav-buttons');
+    if (!navContainer || !familyData.children) return;
+
+    navContainer.innerHTML = '';
+    familyData.children.forEach((lineage, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'nav-jump-btn';
+        btn.dataset.lineage = index;
+        btn.textContent = lineage.name || `Lineage ${index + 1}`;
+        navContainer.appendChild(btn);
+    });
+}
+
 function renderTree() {
     const container = document.getElementById('family-tree');
     if (!container) return;
     container.innerHTML = ''; // Clear previous content
+
+    // Render navigation buttons based on current lineages
+    renderNavigation();
 
     // Render each main lineage as its own independent tree
     if (familyData.children) {
@@ -1351,18 +1369,8 @@ function initControls() {
                         const section = card.closest('.lineage-section');
                         let lineage = 'Family';
                         if (section && section.dataset.lineageName) {
-                            const lineageName = section.dataset.lineageName.toLowerCase();
-                            if (lineageName.includes('granat') || lineageName.includes('yosef')) {
-                                lineage = 'Granat';
-                            } else if (lineageName.includes('givon') || lineageName.includes('zvi')) {
-                                lineage = 'Givon';
-                            } else if (lineageName.includes('cohen') || lineageName.includes('baruch')) {
-                                lineage = 'Cohen';
-                            } else if (lineageName.includes('diamentstein') || lineageName.includes('leah')) {
-                                lineage = 'Diamentstein';
-                            } else if (lineageName.includes('weissbarst') || lineageName.includes('hirsch')) {
-                                lineage = 'Weissbarst';
-                            }
+                            const rawName = section.dataset.lineageName;
+                            lineage = rawName.charAt(0).toUpperCase() + rawName.slice(1);
                         }
 
                         matches.push({ name, role, lineage, element: card });
@@ -1411,64 +1419,65 @@ function initControls() {
         }
     });
 
-    // --- Lineage Navigation ---
-    const navBtns = document.querySelectorAll('.nav-jump-btn');
-    navBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const index = parseInt(btn.dataset.lineage);
-            const sections = document.querySelectorAll('.lineage-section');
+    // --- Dynamic Lineage Navigation (Event Delegation) ---
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.nav-jump-btn');
+        if (!btn) return;
 
-            // Try matching by lineage name first (more robust), fallback to index
-            const btnName = (btn.textContent || '').trim().toLowerCase();
-            let targetSection = Array.from(sections).find(s => {
-                const secName = (s.dataset.lineageName || '').trim().toLowerCase();
-                return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
-            });
+        const index = parseInt(btn.dataset.lineage);
+        const sections = document.querySelectorAll('.lineage-section');
+        const navBtns = document.querySelectorAll('.nav-jump-btn');
 
-            // Fallback: Use direct ID lookup if name match fails
-            if (!targetSection) {
-                targetSection = document.getElementById(`lineage-section-${index}`);
-            }
-
-            if (targetSection) {
-                navBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                // Focus the root card of this lineage in Tree View
-                const rootCard = targetSection.querySelector('.member-card');
-                scrollToElement(rootCard);
-
-                // Auto-Zoom on Map if initialized
-                if (mapInitialized && map) {
-                    const lineageData = familyData.children[index];
-                    if (lineageData && lineageData.coords) {
-                        map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
-                    }
-                }
-
-                // Update hash for mobile sharing
-                window.location.hash = `lineage-${index}`;
-            } else if (sections[index]) {
-                // Fallback: If name matching failed, trust the index 100%
-                targetSection = sections[index];
-                navBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const rootCard = targetSection.querySelector('.member-card');
-                scrollToElement(rootCard);
-
-                // Auto-Zoom on Map if initialized
-                if (mapInitialized && map) {
-                    const lineageData = familyData.children[index];
-                    if (lineageData && lineageData.coords) {
-                        map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
-                    }
-                }
-
-                // Update hash for mobile sharing
-                window.location.hash = `lineage-${index}`;
-            }
+        // Try matching by lineage name first (more robust), fallback to index
+        const btnName = (btn.textContent || '').trim().toLowerCase();
+        let targetSection = Array.from(sections).find(s => {
+            const secName = (s.dataset.lineageName || '').trim().toLowerCase();
+            return secName === btnName || secName.includes(btnName) || btnName.includes(secName);
         });
+
+        // Fallback: Use direct ID lookup if name match fails
+        if (!targetSection) {
+            targetSection = document.getElementById(`lineage-section-${index}`);
+        }
+
+        if (targetSection) {
+            navBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Focus the root card of this lineage in Tree View
+            const rootCard = targetSection.querySelector('.member-card');
+            scrollToElement(rootCard);
+
+            // Auto-Zoom on Map if initialized
+            if (mapInitialized && map) {
+                const lineageData = familyData.children[index];
+                if (lineageData && lineageData.coords) {
+                    map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
+                }
+            }
+
+            // Update hash for mobile sharing
+            window.location.hash = `lineage-${index}`;
+        } else if (sections[index]) {
+            // Fallback: If name matching failed, trust the index 100%
+            targetSection = sections[index];
+            navBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const rootCard = targetSection.querySelector('.member-card');
+            scrollToElement(rootCard);
+
+            // Auto-Zoom on Map if initialized
+            if (mapInitialized && map) {
+                const lineageData = familyData.children[index];
+                if (lineageData && lineageData.coords) {
+                    map.flyTo(lineageData.coords, 14, { animate: true, duration: 1.5 });
+                }
+            }
+
+            // Update hash for mobile sharing
+            window.location.hash = `lineage-${index}`;
+        }
     });
 
     // --- Generation Navigation ---
