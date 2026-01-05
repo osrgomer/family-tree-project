@@ -86,12 +86,23 @@ const familyData = {
                                             children: [
                                                 {
                                                     name: "Yosef Zvi Rimon",
-                                                    role: "G2: The Poet of Zion",
+                                                    role: "G2: The Poet of Zion (1889–1958) (Deceased)",
                                                     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg/250px-Yosef_Zvi_Rimon%2C_1939_%28FL12175215%29.jpg",
                                                     coords: [31.7683, 35.2137],
-                                                    locationName: "Jerusalem, Israel",
-                                                    description: "Renowned poet close to Rav Kook. Advisor to Shai Agnon. Changed surname from Granat.",
+                                                    locationName: "Jerusalem & Tel Aviv, Israel",
+                                                    description: "Renowned Hebrew poet known as 'י\"צ'. Close to Rav Kook and advisor to Shai Agnon. Buried at the Old Trumpeldor Cemetery in Tel Aviv.",
+                                                    partner: {
+                                                        name: "Esther Rimon",
+                                                        role: "G2: Wife",
+                                                        image: ""
+                                                    },
                                                     children: [
+                                                        {
+                                                            name: "Rivka Rimon",
+                                                            role: "G3: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        },
                                                         {
                                                             name: "David Rimon",
                                                             role: "G3: Haganah Member (1916–2002)",
@@ -134,6 +145,20 @@ const familyData = {
                                                             ]
                                                         }
                                                     ]
+                                                },
+                                                {
+                                                    name: "Hana Haya Kaczor",
+                                                    role: "G2: Sibling",
+                                                    description: "Daughter of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein. (Found in omersfamilytree.ged)",
+                                                    image: "",
+                                                    children: []
+                                                },
+                                                {
+                                                    name: "Yechiel Bunim Rimon (Granat)",
+                                                    role: "G2: Sibling",
+                                                    description: "Son of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein. Named after his maternal grandfather. (Found in omersfamilytree.ged)",
+                                                    image: "",
+                                                    children: []
                                                 },
                                                 {
                                                     name: "Yaakov Haim (Zvi) Rimon (Granat)",
@@ -330,12 +355,7 @@ const familyData = {
                                                 }
                                             ]
                                         },
-                                        {
-                                            name: "Hana Haya Kaczor",
-                                            role: "G1: Sibling",
-                                            image: "",
-                                            children: []
-                                        },
+
                                         {
                                             name: "Gitel Rivka Granat",
                                             role: "G1: Sibling",
@@ -841,13 +861,13 @@ const familyData = {
             children: [
                 {
                     name: "Hirsch Weissbarst",
-                    role: "G-1: Ancestor",
+                    role: "G0: Ancestor",
                     locationName: "Raciąż, Poland",
                     coords: [52.7915, 20.1172],
                     image: "",
                     partner: {
                         name: "Beile Frenkel",
-                        role: "G-1: Ancestor",
+                        role: "G0: Ancestor",
                         image: ""
                     },
                     children: [
@@ -868,6 +888,7 @@ const familyData = {
                                     locationName: "Haifa, Israel",
                                     coords: [32.7940, 34.9896],
                                     image: "",
+                                    description: "Worked as an architect. Immigrated to Israel in 1921. (Deceased)",
                                     partner: {
                                         name: "Tova (Gita) Wallach",
                                         role: "G2: Matriarch (1917-2002)",
@@ -917,21 +938,22 @@ const familyData = {
         },
         {
             name: "Wallach",
-            role: "Heritage: Maternal Ancestry (Talma)",
+            role: "Heritage: Ukraine to Israel",
+            coords: [48.3794, 31.1656],
             children: [
                 {
                     name: "Shmuel Eliezer Wallach",
-                    role: "Patriarch",
+                    role: "G1: Ancestor",
                     image: "",
                     partner: {
                         name: "Tsipora Kaminetsky",
-                        role: "Matriarch",
+                        role: "G1: Ancestor",
                         image: ""
                     },
                     children: [
                         {
                             name: "Tova (Gita) Wallach",
-                            role: "Daughter (See Weissbarst Family)",
+                            role: "G2: Matriarch (1917-2002) (See Weissbarst Family)",
                             description: "Wife of Shalom Weissbarst.",
                             children: []
                         }
@@ -1056,27 +1078,27 @@ const familyData = {
             children: [
                 {
                     name: "Levin Elstein",
-                    role: "G-1: Ancestor",
+                    role: "G0: Ancestor",
                     description: "Ancestor of the Elstein family. Husband of Hava Elstein. (Found in Granat.ged)",
                     partner: {
                         name: "Hava Elstein",
-                        role: "G-1: Ancestor",
+                        role: "G0: Ancestor",
                         description: "Wife of Levin Elstein. Nickname 'Berkov'."
                     },
                     children: [
                         {
                             name: "Yechiel Bunim Elstein",
-                            role: "G0: Patriarch",
+                            role: "G1: Patriarch",
                             description: "Son of Levin and Hava Elstein. Married Gitel Rivka Granat.",
                             partner: {
                                 name: "Gitel Rivka Granat",
-                                role: "G0: Matriarch",
+                                role: "G1: Matriarch",
                                 description: "Daughter of Josek Hersz Granat and Hana Haya Gerlitz. Sister of Efraim Eliezer Granat."
                             },
                             children: [
                                 {
                                     name: "Esther Hava Rimon (Elstein)",
-                                    role: "G1: Matriarch (1864–1918) (Deceased)",
+                                    role: "G2: Matriarch (1864–1918) (Deceased)",
                                     description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
                                     children: []
                                 }
