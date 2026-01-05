@@ -23,7 +23,7 @@ function getDynamicAge(birthDateString) {
     // Return formatted string
     if (months === 0) return `(Age ${years})`;
     if (months === 6) return `(Age ${years}.5)`;
-    return `(Age ${years} & ${months} mos)`;
+    return `(Age ${years} & ${months} months)`;
 }
 
 const familyData = {
