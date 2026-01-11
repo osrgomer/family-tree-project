@@ -608,20 +608,8 @@ const familyData = {
                                 {
                                     name: "Yechiel Bunim Elstein",
                                     role: "G1: Patriarch",
-                                    description: "Son of Levin and Hava Elstein. Married Gitel Rivka Granat.",
-                                    partner: {
-                                        name: "Gitel Rivka Granat",
-                                        role: "G1: Matriarch",
-                                        description: "Daughter of Josek Hersz Granat and Hana Haya Gerlitz. Sister of Efraim Eliezer Granat."
-                                    },
-                                    children: [
-                                        {
-                                            name: "Esther Hava Rimon (Elstein)",
-                                            role: "G2: Matriarch (1864–1918) (Deceased)",
-                                            description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
-                                            children: []
-                                        }
-                                    ]
+                                    description: "Son of Levin and Hava Elstein. Husband of Gitel Rivka Granat. (See Granat Branch for wife and children)",
+                                    children: []
                                 }
                             ]
                         }
