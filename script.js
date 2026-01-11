@@ -400,6 +400,280 @@ const familyData = {
                         }
                     ]
                 }
+                ,
+                // -- RELATED HERITAGE BRANCHES --
+                {
+                    name: "Weissbarst",
+                    role: "Heritage: Maternal Roots (Talma)",
+                    coords: [52.7915, 20.1172],
+                    children: [
+                        {
+                            name: "Hirsch Weissbarst",
+                            role: "G0: Ancestor",
+                            locationName: "Raciąż, Poland",
+                            coords: [52.7915, 20.1172],
+                            image: "",
+                            partner: {
+                                name: "Beile Frenkel",
+                                role: "G0: Ancestor",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Zvi (Hirsch) Weissburst",
+                                    role: "G1: Merchant (b. 1888)",
+                                    locationName: "Tarnopol",
+                                    image: "",
+                                    partner: {
+                                        name: "Sara Weissbarst",
+                                        role: "G1: Matriarch",
+                                        image: ""
+                                    },
+                                    children: [
+                                        {
+                                            name: "Shalom Weissbarst",
+                                            role: "G2: Architect (1915-2002)",
+                                            locationName: "Haifa, Israel",
+                                            coords: [32.7940, 34.9896],
+                                            image: "",
+                                            description: "Worked as an architect. Immigrated to Israel in 1921. (Deceased)",
+                                            partner: {
+                                                name: "Tova (Gita) Wallach",
+                                                role: "G2: Matriarch (1917-2002)",
+                                                description: "Born in Ukraine. Immigrated to Israel 1921. Daughter of Shmuel Eliezer Wallach & Tsipora Kaminetsky. (See Wallach Family)",
+                                                image: ""
+                                            },
+                                            children: [
+                                                {
+                                                    name: "Talma Rimon (Weissburst)",
+                                                    role: "G3: Daughter (See Rimon Family)",
+                                                    image: "",
+                                                    description: "Married to Ephraim Rimon.",
+                                                    children: []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Gerlitz",
+                    role: "Heritage: Maternal Ancestry (Granat)",
+                    coords: [52.9566, 19.8893],
+                    children: [
+                        {
+                            name: "Wolf Eliasz Gerlitz",
+                            role: "Ancestor (b. 1782)",
+                            image: "",
+                            partner: {
+                                name: "Sara Rayzel Gerlitz (Hertzov)",
+                                role: "Matriarch (1792-1857)",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Hana Haya Gerlitz",
+                                    role: "Daughter (See Granat Family)",
+                                    description: "Wife of Josek Hersz Granat.",
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Wallach",
+                    role: "Heritage: Ukraine to Israel",
+                    coords: [48.3794, 31.1656],
+                    children: [
+                        {
+                            name: "Shmuel Eliezer Wallach",
+                            role: "G1: Ancestor",
+                            image: "",
+                            partner: {
+                                name: "Tsipora Kaminetsky",
+                                role: "G1: Ancestor",
+                                image: ""
+                            },
+                            children: [
+                                {
+                                    name: "Tova (Gita) Wallach",
+                                    role: "G2: Matriarch (1917-2002) (See Weissbarst Family)",
+                                    description: "Wife of Shalom Weissbarst.",
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Cohen",
+                    role: "Heritage: Paternal Roots",
+                    coords: [31.7683, 35.2137],
+                    children: [
+                        {
+                            name: "Baruch Tzvi Hirsh Cohen",
+                            role: "Paternal Roots (1852–1941)",
+                            coords: [45.5017, -73.5673],
+                            locationName: "Montreal, Canada",
+                            description: "Pioneering Chief Rabbi known as the 'Maggid of Montreal'.",
+                            children: [
+                                {
+                                    name: "Rabbi Mosheh David Rozental Hacohen",
+                                    role: "G2: Rabbi & Scholar",
+                                    coords: [32.7940, 34.9896],
+                                    locationName: "Haifa, Israel",
+                                    description: "Settled in Haifa in 1922; customs official and Lehi intelligence officer.",
+                                    children: [
+                                        {
+                                            name: "Benjamin Cohen",
+                                            role: "G3: Husband (1921–1981)",
+                                            children: [
+                                                {
+                                                    name: "Yoram Cohen",
+                                                    role: "G4: Legacy Representative",
+                                                    image: "",
+                                                    children: [
+                                                        {
+                                                            name: "Michal Cohen",
+                                                            role: "G5: Daughter",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    name: "Dafna Cohen",
+                                                    role: "G4: Daughter",
+                                                    image: "",
+                                                    children: [
+                                                        {
+                                                            name: "Uri Cohen",
+                                                            role: "G5: Son",
+                                                            image: "",
+                                                            children: []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Laznowsky",
+                    role: "Family of Bracha Rimon",
+                    children: [
+                        {
+                            name: "Laznowsky Parents",
+                            role: "Ancestors",
+                            description: "Parents of Bracha Rimon (who married Yaakov Haim Rimon), Mordehay, and another brother.",
+                            children: [
+                                {
+                                    name: "Mordehay Laznowsky",
+                                    role: "Brother of Bracha",
+                                    image: "",
+                                    children: []
+                                },
+                                {
+                                    name: "Unknown Brother Laznowsky",
+                                    role: "Brother of Bracha",
+                                    image: "",
+                                    children: []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Elstein",
+                    role: "Heritage: Elstein-Levin",
+                    children: [
+                        {
+                            name: "Levin Elstein",
+                            role: "G0: Ancestor",
+                            description: "Ancestor of the Elstein family. Husband of Hava Elstein. (Found in Granat.ged)",
+                            partner: {
+                                name: "Hava Elstein",
+                                role: "G0: Ancestor",
+                                description: "Wife of Levin Elstein. Nickname 'Berkov'."
+                            },
+                            children: [
+                                {
+                                    name: "Yechiel Bunim Elstein",
+                                    role: "G1: Patriarch",
+                                    description: "Son of Levin and Hava Elstein. Married Gitel Rivka Granat.",
+                                    partner: {
+                                        name: "Gitel Rivka Granat",
+                                        role: "G1: Matriarch",
+                                        description: "Daughter of Josek Hersz Granat and Hana Haya Gerlitz. Sister of Efraim Eliezer Granat."
+                                    },
+                                    children: [
+                                        {
+                                            name: "Esther Hava Rimon (Elstein)",
+                                            role: "G2: Matriarch (1864–1918) (Deceased)",
+                                            description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
+                                            children: []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Schachtin",
+                    role: "Heritage: Vilna Roots",
+                    children: [
+                        {
+                            name: "Aharon Selig Schachtin",
+                            role: "G0: Ancestor",
+                            description: "Ancestor of the Schachtin family from Vilna.",
+                            children: [
+                                {
+                                    name: "Zvi David Schachtin",
+                                    role: "G1: Patriarch (d. 1914) (Deceased)",
+                                    description: "Son of Aharon Selig Schachtin. From Vilna. Immigrated to Jerusalem and died in 1914. Buried at the Mount of Olives (Har HaZeitim).",
+                                    partner: {
+                                        name: "Tova Rivka Schachtin",
+                                        role: "G1: Ancestor",
+                                        description: "Mother of Esther Rimon."
+                                    },
+                                    children: [
+                                        {
+                                            name: "Esther Ester Rimon (Schachtin)",
+                                            role: "G2: Matriarch (1887–1965) (See Granat branch)",
+                                            description: "Daughter of Zvi David and Tova Rivka Schachtin. Married poet Yosef Zvi Rimon.",
+                                            children: []
+                                        },
+                                        {
+                                            name: "Yosef Schachtin",
+                                            role: "G2: Sibling (1876–1941) (Deceased)",
+                                            description: "Born in Vilna (circa 1876). Perished in the Holocaust (1941). Son of Zvi David and Tova Rivka Schachtin. Brother of Esther Rimon.",
+                                            partner: {
+                                                name: "Chaya Golda Schachtin",
+                                                role: "G2: Matriarch (1876–1941) (Deceased)",
+                                                description: "Born circa 1876. Perished in the Holocaust (1941). Wife of Yosef Schachtin.",
+                                                image: ""
+                                            },
+                                            children: [
+                                                { name: "Yehuda Schachtin", role: "G3: Son", children: [] },
+                                                { name: "Hasya Schachtin", role: "G3: Daughter", children: [] },
+                                                { name: "Moshe Schachtin", role: "G3: Son", children: [] }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -884,170 +1158,7 @@ const familyData = {
                 },
 
 
-                {
-                    name: "Weissbarst",
-                    role: "Heritage: Maternal Roots (Talma)",
-                    coords: [52.7915, 20.1172],
-                    children: [
-                        {
-                            name: "Hirsch Weissbarst",
-                            role: "G0: Ancestor",
-                            locationName: "Raciąż, Poland",
-                            coords: [52.7915, 20.1172],
-                            image: "",
-                            partner: {
-                                name: "Beile Frenkel",
-                                role: "G0: Ancestor",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Zvi (Hirsch) Weissburst",
-                                    role: "G1: Merchant (b. 1888)",
-                                    locationName: "Tarnopol",
-                                    image: "",
-                                    partner: {
-                                        name: "Sara Weissbarst",
-                                        role: "G1: Matriarch",
-                                        image: ""
-                                    },
-                                    children: [
-                                        {
-                                            name: "Shalom Weissbarst",
-                                            role: "G2: Architect (1915-2002)",
-                                            locationName: "Haifa, Israel",
-                                            coords: [32.7940, 34.9896],
-                                            image: "",
-                                            description: "Worked as an architect. Immigrated to Israel in 1921. (Deceased)",
-                                            partner: {
-                                                name: "Tova (Gita) Wallach",
-                                                role: "G2: Matriarch (1917-2002)",
-                                                description: "Born in Ukraine. Immigrated to Israel 1921. Daughter of Shmuel Eliezer Wallach & Tsipora Kaminetsky. (See Wallach Family)",
-                                                image: ""
-                                            },
-                                            children: [
-                                                {
-                                                    name: "Talma Rimon (Weissburst)",
-                                                    role: "G3: Daughter (See Rimon Family)",
-                                                    image: "",
-                                                    description: "Married to Ephraim Rimon.",
-                                                    children: []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Gerlitz",
-                    role: "Heritage: Maternal Ancestry (Granat)",
-                    coords: [52.9566, 19.8893],
-                    children: [
-                        {
-                            name: "Wolf Eliasz Gerlitz",
-                            role: "Ancestor (b. 1782)",
-                            image: "",
-                            partner: {
-                                name: "Sara Rayzel Gerlitz (Hertzov)",
-                                role: "Matriarch (1792-1857)",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Hana Haya Gerlitz",
-                                    role: "Daughter (See Granat Family)",
-                                    description: "Wife of Josek Hersz Granat.",
-                                    children: []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Wallach",
-                    role: "Heritage: Ukraine to Israel",
-                    coords: [48.3794, 31.1656],
-                    children: [
-                        {
-                            name: "Shmuel Eliezer Wallach",
-                            role: "G1: Ancestor",
-                            image: "",
-                            partner: {
-                                name: "Tsipora Kaminetsky",
-                                role: "G1: Ancestor",
-                                image: ""
-                            },
-                            children: [
-                                {
-                                    name: "Tova (Gita) Wallach",
-                                    role: "G2: Matriarch (1917-2002) (See Weissbarst Family)",
-                                    description: "Wife of Shalom Weissbarst.",
-                                    children: []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Cohen",
-                    role: "Heritage: Paternal Roots",
-                    coords: [31.7683, 35.2137],
-                    children: [
-                        {
-                            name: "Baruch Tzvi Hirsh Cohen",
-                            role: "Paternal Roots (1852–1941)",
-                            coords: [45.5017, -73.5673],
-                            locationName: "Montreal, Canada",
-                            description: "Pioneering Chief Rabbi known as the 'Maggid of Montreal'.",
-                            children: [
-                                {
-                                    name: "Rabbi Mosheh David Rozental Hacohen",
-                                    role: "G2: Rabbi & Scholar",
-                                    coords: [32.7940, 34.9896],
-                                    locationName: "Haifa, Israel",
-                                    description: "Settled in Haifa in 1922; customs official and Lehi intelligence officer.",
-                                    children: [
-                                        {
-                                            name: "Benjamin Cohen",
-                                            role: "G3: Husband (1921–1981)",
-                                            children: [
-                                                {
-                                                    name: "Yoram Cohen",
-                                                    role: "G4: Legacy Representative",
-                                                    image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Michal Cohen",
-                                                            role: "G5: Daughter",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    name: "Dafna Cohen",
-                                                    role: "G4: Daughter",
-                                                    image: "",
-                                                    children: [
-                                                        {
-                                                            name: "Uri Cohen",
-                                                            role: "G5: Son",
-                                                            image: "",
-                                                            children: []
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
+
                 {
                     name: "Diamentstein",
                     role: "Heritage: Sátoraljaújhely, Hungary",
@@ -1077,114 +1188,7 @@ const familyData = {
                     coords: [32.0853, 34.7818],
                     children: []
                 },
-                {
-                    name: "Laznowsky",
-                    role: "Family of Bracha Rimon",
-                    children: [
-                        {
-                            name: "Laznowsky Parents",
-                            role: "Ancestors",
-                            description: "Parents of Bracha Rimon (who married Yaakov Haim Rimon), Mordehay, and another brother.",
-                            children: [
-                                {
-                                    name: "Mordehay Laznowsky",
-                                    role: "Brother of Bracha",
-                                    image: "",
-                                    children: []
-                                },
-                                {
-                                    name: "Unknown Brother Laznowsky",
-                                    role: "Brother of Bracha",
-                                    image: "",
-                                    children: []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Elstein",
-                    role: "Heritage: Elstein-Levin",
-                    children: [
-                        {
-                            name: "Levin Elstein",
-                            role: "G0: Ancestor",
-                            description: "Ancestor of the Elstein family. Husband of Hava Elstein. (Found in Granat.ged)",
-                            partner: {
-                                name: "Hava Elstein",
-                                role: "G0: Ancestor",
-                                description: "Wife of Levin Elstein. Nickname 'Berkov'."
-                            },
-                            children: [
-                                {
-                                    name: "Yechiel Bunim Elstein",
-                                    role: "G1: Patriarch",
-                                    description: "Son of Levin and Hava Elstein. Married Gitel Rivka Granat.",
-                                    partner: {
-                                        name: "Gitel Rivka Granat",
-                                        role: "G1: Matriarch",
-                                        description: "Daughter of Josek Hersz Granat and Hana Haya Gerlitz. Sister of Efraim Eliezer Granat."
-                                    },
-                                    children: [
-                                        {
-                                            name: "Esther Hava Rimon (Elstein)",
-                                            role: "G2: Matriarch (1864–1918) (Deceased)",
-                                            description: "Daughter of Yechiel Bunim Elstein and Gitel Rivka Granat. Married her uncle Efraim Eliezer Granat Rimon.",
-                                            children: []
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    name: "Schachtin",
-                    role: "Heritage: Vilna Roots",
-                    children: [
-                        {
-                            name: "Aharon Selig Schachtin",
-                            role: "G0: Ancestor",
-                            description: "Ancestor of the Schachtin family from Vilna.",
-                            children: [
-                                {
-                                    name: "Zvi David Schachtin",
-                                    role: "G1: Patriarch (d. 1914) (Deceased)",
-                                    description: "Son of Aharon Selig Schachtin. From Vilna. Immigrated to Jerusalem and died in 1914. Buried at the Mount of Olives (Har HaZeitim).",
-                                    partner: {
-                                        name: "Tova Rivka Schachtin",
-                                        role: "G1: Ancestor",
-                                        description: "Mother of Esther Rimon."
-                                    },
-                                    children: [
-                                        {
-                                            name: "Esther Ester Rimon (Schachtin)",
-                                            role: "G2: Matriarch (1887–1965) (See Granat branch)",
-                                            description: "Daughter of Zvi David and Tova Rivka Schachtin. Married poet Yosef Zvi Rimon.",
-                                            children: []
-                                        },
-                                        {
-                                            name: "Yosef Schachtin",
-                                            role: "G2: Sibling (1876–1941) (Deceased)",
-                                            description: "Born in Vilna (circa 1876). Perished in the Holocaust (1941). Son of Zvi David and Tova Rivka Schachtin. Brother of Esther Rimon.",
-                                            partner: {
-                                                name: "Chaya Golda Schachtin",
-                                                role: "G2: Matriarch (1876–1941) (Deceased)",
-                                                description: "Born circa 1876. Perished in the Holocaust (1941). Wife of Yosef Schachtin.",
-                                                image: ""
-                                            },
-                                            children: [
-                                                { name: "Yehuda Schachtin", role: "G3: Son", children: [] },
-                                                { name: "Hasya Schachtin", role: "G3: Daughter", children: [] },
-                                                { name: "Moshe Schachtin", role: "G3: Son", children: [] }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
+
                 {
                     name: "Gelbman",
                     role: "Heritage: The Gelbman Siblings",
