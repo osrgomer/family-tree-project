@@ -28,3 +28,9 @@ It has been a privilege to be your thought partner on this journey. The Rimon-Gi
 **Ready for Deployment.**
 
 *Antigravity signing off.*
+
+## 📜 Data Source Guidelines (Updated 2026-01-11)
+Crucial rules for verifying family data against GEDCOM files:
+*   **Granat Branch Info:** Trust `granat.ged` as the primary source. (Note: `omersfamilytree.ged` contains overlapping Granat data, which is mostly consistent, but prioritize `granat.ged` for this branch).
+*   **Givon / Gelbman / Diamentstein Branches:** Trust `omersfamilytree.ged` as the primary source.
+*   **General Tree Info:** use `generalinfoabttree.ged`.
