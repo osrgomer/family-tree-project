@@ -171,14 +171,14 @@ const familyData = {
                                                 {
                                                     name: "Hana Haya Kaczor",
                                                     role: "G2: Sibling",
-                                                    description: "Daughter of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein. (Found in omersfamilytree.ged)",
+                                                    description: "Daughter of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein.",
                                                     image: "",
                                                     children: []
                                                 },
                                                 {
                                                     name: "Yechiel Bunim Rimon (Granat)",
                                                     role: "G2: Sibling",
-                                                    description: "Son of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein. Named after his maternal grandfather. (Found in omersfamilytree.ged)",
+                                                    description: "Son of Efraim Eliezer Rimon (Granat) and Esther Hava Elstein. Named after his maternal grandfather.",
                                                     image: "",
                                                     children: []
                                                 },
