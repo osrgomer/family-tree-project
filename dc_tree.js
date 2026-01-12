@@ -17,7 +17,10 @@ const dcTreeData = {
                             name: "Kal-El (Clark Kent)",
                             role: "Superman",
                             description: "The Last Son of Krypton. Sent to Earth to protect it.",
-                            image: "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
+                            image: "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
+                            children: [
+                                { name: "Superboy (Conner Kent/Kon-El)", role: "Clone of Superman", description: "Genetic clone of Superman and Lex Luthor." }
+                            ]
                         }
                     ]
                 },
@@ -97,7 +100,7 @@ const dcTreeData = {
             children: [
                 {
                     name: "Henry Allen",
-                    role: "Doctor",
+                    role: "Doctor (Deceased)",
                     partner: { name: "Nora Allen", role: "Mother (Deceased)" },
                     children: [
                         {
@@ -109,6 +112,20 @@ const dcTreeData = {
                                 { name: "Nora West-Allen", role: "XS" },
                                 { name: "Bart Allen", role: "Impulse" }
                             ]
+                        }
+                    ]
+                },
+                {
+                    name: "Joe West",
+                    role: "Detective (CPD)",
+                    description: "Father of Iris and Wally. Guardian of Barry Allen. Played by Jesse L. Martin.",
+                    children: [
+                        { name: "Iris West-Allen", role: "Journalist", description: "Wife of Barry Allen. (See Allen Family)" },
+                        {
+                            name: "Wally West",
+                            role: "Kid Flash / The Flash (III)",
+                            description: "The Fastest Man in the Multiverse. Spouse: Linda Park.",
+                            partner: { name: "Linda Park", role: "Journalist" }
                         }
                     ]
                 }
@@ -183,8 +200,31 @@ const dcTreeData = {
                 {
                     name: "John Constantine",
                     role: "Hellblazer",
-                    description: "Master of the Dark Arts. Antihero. Created by Alan Moore. Son of Mary Ann.",
-                }
+                    description: "Master of the Dark Arts. Antihero. Created by Alan Moore. Son of Mary Ann."
+                },
+                {
+                    name: "Ray Palmer",
+                    role: "The Atom",
+                    description: "Scientist & CEO. Uses dwarf star alloy suit. Played by Brandon Routh."
+                },
+                {
+                    name: "Leonard Snart",
+                    role: "Captain Cold",
+                    description: "Rogue turned Legend. Wields Cold Gun. Created by John Broome. Partner of Mick Rory.",
+                    partner: {
+                        name: "Mick Rory",
+                        role: "Heat Wave",
+                        description: "Pyromaniac and sci-fi romance author. Wields Heat Gun. Played by Dominic Purcell."
+                    }
+                },
+                {
+                    name: "Prof. Martin Stein",
+                    role: "Firestorm",
+                    description: "Nuclear Physicist. Half of Firestorm (with Ronnie/Jax). Created by Gerry Conway.",
+                    children: [{ name: "Jax Jackson", role: "Firestorm", description: "Jefferson Jackson. Mechanic and partner in Firestorm matrix." }]
+                },
+                { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi Totem. JSA Member. Played by Maisie Richardson-Sellers." },
+                { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." }
             ]
         }
     ]
