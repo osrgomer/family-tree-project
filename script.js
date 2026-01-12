@@ -26,7 +26,7 @@ function getDynamicAge(birthDateString) {
     return `(Age ${years} & ${months} months)`;
 }
 
-const familyData = {
+const rimonGivonData = {
     name: "The Rimon-Givon Legacy",
     role: "United Family",
     children: [
@@ -1355,6 +1355,49 @@ const familyData = {
     ]
 };
 
+// -- DYNAMIC TREE SWITCHING LOGIC --
+let familyData = rimonGivonData;
+
+function switchTree(treeKey) {
+    console.log("Switching tree to:", treeKey);
+    if (treeKey === 'rimon') familyData = rimonGivonData;
+    else if (treeKey === 'dc') familyData = (typeof dcTreeData !== 'undefined') ? dcTreeData : rimonGivonData;
+    else if (treeKey === 'gods') familyData = (typeof godsTreeData !== 'undefined') ? godsTreeData : rimonGivonData;
+
+    // 1. Re-render Tree
+    renderTree();
+
+    // 2. Clear Search Results
+    const searchResults = document.getElementById('search-results');
+    if (searchResults) searchResults.innerHTML = '';
+    const searchInput = document.getElementById('member-search');
+    if (searchInput) searchInput.value = '';
+
+    // 3. Re-render Map
+    if (typeof map !== 'undefined' && map) {
+        // Remove all markers
+        map.eachLayer((layer) => {
+            if (layer instanceof L.Marker) {
+                map.removeLayer(layer);
+            }
+        });
+
+        // Add new markers
+        if (typeof addMarkersToMap === 'function') {
+            addMarkersToMap(familyData);
+        }
+
+        // Add historical locations only for the main family
+        if (treeKey === 'rimon' && typeof addHistoricalLocations === 'function') {
+            addHistoricalLocations();
+        }
+    }
+
+    // 4. Reset View
+    setTimeout(centerTree, 100);
+}
+
+
 /**
  * Helper to create a single card DOM element
  */
@@ -1593,6 +1636,12 @@ function centerTree() {
 let zoomLevel = 1;
 
 function initControls() {
+    const treeSelector = document.getElementById('tree-selector');
+    if (treeSelector) {
+        treeSelector.addEventListener('change', (e) => {
+            switchTree(e.target.value);
+        });
+    }
     const treeContainer = document.getElementById('family-tree');
     const viewport = document.querySelector('.tree-viewport');
     const zoomInBtn = document.getElementById('zoom-in');
