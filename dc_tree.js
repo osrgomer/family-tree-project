@@ -69,11 +69,20 @@ const dcTreeData = {
                         {
                             name: "Oliver Queen",
                             role: "Green Arrow",
-                            description: "The Emerald Archer.",
-                            partner: { name: "Dinah Laurel Lance", role: "Black Canary" },
+                            description: "The Emerald Archer. TV: Married to Felicity Smoak. Comics: Partner of Black Canary.",
+                            partner: {
+                                name: "Dinah Laurel Lance",
+                                role: "Black Canary",
+                                description: "DC Comics: Oliver's iconic power-couple partner. Married in various runs."
+                            },
+                            secondPartner: {
+                                name: "Felicity Smoak",
+                                role: "Overwatch",
+                                description: "Arrow TV: Oliver's wife, 'love of his life', and mother of Mia. Reunited in the afterlife."
+                            },
                             children: [
-                                { name: "William Clayton", role: "Son" },
-                                { name: "Mia Smoak", role: "Green Arrow II" }
+                                { name: "William Clayton", role: "Son", description: "Son of Oliver Queen." },
+                                { name: "Mia Smoak", role: "Green Arrow II", description: "Daughter of Oliver & Felicity (Arrow TV)." }
                             ]
                         },
                         { name: "Thea Queen", role: "Speedy" }
