@@ -141,7 +141,7 @@ const dcTreeData = {
                         {
                             name: "Wally West (Original)",
                             role: "Kid Flash / The Flash (III)",
-                            description: "The original Kid Flash and later main Flash. Founding member of the Teen Titans.",
+                            description: "The original Kid Flash and later main Flash. Founding member of the Teen Titans. In Young Justice, he is the partner of Artemis Crock.",
                             partner: { name: "Linda Park", role: "Journalist" }
                         },
                         {
@@ -490,7 +490,81 @@ const dcTreeData = {
                     description: "The last Green Martian. Powerful telepath and shapeshifter. Created by Joseph Samachson and Joe Certa. Played by David Harewood.",
                     image: "https://upload.wikimedia.org/wikipedia/en/2/27/Martian_Manhunter.png",
                     children: [
-                        { name: "Ma'alefa'ak", role: "Son of J'onn", description: "White Martian extremist. Archenemy of his father." }
+                        { name: "Ma'alefa'ak", role: "Son of J'onn", description: "White Martian extremist. Archenemy of his father." },
+                        {
+                            name: "M'gann M'orzz",
+                            role: "Miss Martian",
+                            description: "J'onn's niece. A White Martian shapeshifter with massive telepathic power. Key member of Young Justice.",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Miss_Martian_YJ.jpg/250px-Miss_Martian_YJ.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Atlantis",
+            role: "Kings of the Seven Seas",
+            coords: [-25.0, -45.0], // Mid-Atlantic conceptual location
+            children: [
+                {
+                    name: "Arthur Curry",
+                    role: "Aquaman",
+                    description: "King of Atlantis and founding member of the Justice League. Mentored Kaldur'ahm.",
+                    partner: { name: "Mera", role: "Queen of Atlantis", description: "Hydrokinetic warrior and wife of Arthur." }
+                },
+                {
+                    name: "David Hyde",
+                    role: "Black Manta",
+                    description: "Ruthless mercenary and archenemy of Aquaman. Member of the Light.",
+                    children: [
+                        {
+                            name: "Kaldur'ahm",
+                            role: "Aqualad / Aquaman II",
+                            description: "Tactical leader of Young Justice. Son of Black Manta. Master of hydrokinesis and electrokinesis. Voiced by Khary Payton. Underwent a major arc undercover with the Light after Tula's death.",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Aqualad_%28Kaldur%27ahm%29.jpg/250px-Aqualad_%28Kaldur%27ahm%29.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "El Paso",
+            role: "Blue Beetle Legacy",
+            coords: [31.7619, -106.4850],
+            children: [
+                {
+                    name: "Jaime Reyes",
+                    role: "Blue Beetle (III)",
+                    description: "Wields powerful alien tech via the Khaji Da scarab. Member of the Teen Titans and Young Justice. Created by Keith Giffen, John Rogers, and Cully Hamner.",
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Blue_Beetle_Jaime_Reyes.jpg/250px-Blue_Beetle_Jaime_Reyes.jpg"
+                }
+            ]
+        },
+        {
+            name: "The Crock Family",
+            role: "Assassins & Heroes",
+            coords: [39.2904, -76.6122], // Baltimore-ish (common staging ground)
+            children: [
+                {
+                    name: 'Lawrence "Crusher" Crock',
+                    role: "Sportsmaster",
+                    description: "Enforcer for the Light. Uses sports-themed weapons. Member of Injustice Society and Legion of Doom. First appeared in All-American Comics #85 (1947). Played by Neil Hopkins (Stargirl) and voiced by Nick Chinlund (YJ).",
+                    partner: { name: "Paula Brooks", role: "Huntress (Retired)", description: "Former villain, now wheelchair-bound. Mother of Artemis and Jade." },
+                    children: [
+                        {
+                            name: "Jade Nguyen",
+                            role: "Cheshire",
+                            description: "Master assassin, daughter of Sportsmaster, and sister of Artemis. Created by Marv Wolfman & George Pérez. First appeared in New Teen Titans Annual #2 (1983). Rival of the Teen Titans and occasional love interest of Roy Harper. Affiliations: League of Shadows, Suicide Squad, Secret Six. Voiced by Kelly Hu.",
+                            children: [
+                                { name: "Lian Harper", role: "Daughter", description: "Daughter of Jade and Roy Harper." }
+                            ]
+                        },
+                        {
+                            name: "Artemis Crock",
+                            role: "Artemis / Tigress",
+                            description: "Expert archer and key member of Young Justice. Struggled with her family's villainous legacy. Partner of Wally West (TV).",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Artemis_Young_Justice.jpg/250px-Artemis_Young_Justice.jpg"
+                        }
                     ]
                 }
             ]
