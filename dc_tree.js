@@ -18,6 +18,11 @@ const dcTreeData = {
                             role: "Superman",
                             description: "The Last Son of Krypton. Sent to Earth to protect it.",
                             image: "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png",
+                            partner: {
+                                name: "Lois Lane",
+                                role: "Daily Planet Reporter",
+                                description: "Superman's wife. Award-winning journalist."
+                            },
                             children: [
                                 { name: "Superboy (Conner Kent/Kon-El)", role: "Clone of Superman", description: "Genetic clone of Superman and Lex Luthor." }
                             ]
