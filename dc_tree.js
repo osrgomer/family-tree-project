@@ -568,6 +568,37 @@ const dcTreeData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "The Harper Legacy",
+            role: "Archers & Outlaws",
+            coords: [45.4215, -75.6972], // Ottawa-ish (Roy Sr. was a forest ranger in the North)
+            children: [
+                {
+                    name: "Roy Harper Sr.",
+                    role: "Forest Ranger (Deceased)",
+                    description: "Died saving members of a Navajo reservation. Father of Roy Harper Jr.",
+                    children: [
+                        {
+                            name: "Roy William Harper Jr.",
+                            role: "Speedy / Arsenal / Red Arrow",
+                            description: "The longtime sidekick of Green Arrow. Founding member of the Teen Titans and key figure in Young Justice. Aliases: Arsenal, Red Arrow. First appeared in More Fun Comics #73 (1941). Son of Roy Harper Sr. Played by Colton Haynes (Arrow).",
+                            partner: {
+                                name: "Jade Nguyen",
+                                role: "Cheshire",
+                                description: "Occasional love interest and mother of his daughter Lian. (See Crock Family)"
+                            },
+                            children: [
+                                {
+                                    name: "Lian Harper",
+                                    role: "Daughter",
+                                    description: "Daughter of Roy and Jade Nguyen. (See Crock Family)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 };
