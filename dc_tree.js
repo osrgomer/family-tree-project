@@ -134,17 +134,29 @@ const dcTreeData = {
                     children: [
                         { name: "Iris West-Allen", role: "Journalist", description: "Wife of Barry Allen. (See Allen Family)" },
                         {
-                            name: "Wally West",
+                            name: "Wally West (Original)",
                             role: "Kid Flash / The Flash (III)",
-                            description: "The Fastest Man in the Multiverse. Spouse: Linda Park.",
+                            description: "The original Kid Flash and later main Flash. Founding member of the Teen Titans.",
                             partner: { name: "Linda Park", role: "Journalist" }
+                        },
+                        {
+                            name: "Daniel West",
+                            role: "Reverse-Flash (New 52)",
+                            description: "Brother of Iris and Joe's son. Father of Wallace West.",
+                            children: [
+                                {
+                                    name: "Wallace West (Ace)",
+                                    role: "Kid Flash (Rebirth)",
+                                    description: "The second Kid Flash. Member of the Teen Titans. Sometimes called 'Ace'."
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     name: "Hunter Zolomon",
                     role: "Zoom",
-                    description: "The second Reverse-Flash. Archenemy of Wally West. Created by Geoff Johns.",
+                    description: "The second Reverse-Flash. Archenemy of the original Wally West. Created by Geoff Johns.",
                     partner: { name: "Ashley Zolomon", role: "Profiler" }
                 }
             ]
