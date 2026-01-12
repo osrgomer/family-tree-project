@@ -369,6 +369,11 @@ const dcTreeData = {
                 },
                 { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
                 {
+                    name: "Clotho (Charlie)",
+                    role: "Legend / Fate",
+                    description: "An ancient Greek deity and one of the three Fates (the Spinner). Destroyed the Loom of Fate to give mortals free will. Locked in Amaya Jiwe's form by Constantine. Played by Maisie Richardson-Sellers."
+                },
+                {
                     name: "Gideon",
                     role: "Human-AI Fusion",
                     description: "Advanced AI/LLM system and Interactive Artificial Consciousness of the Waverider. Later resurrected in human form by Astra Logue. Official member of the Legends. Played by Amy Louise Pemberton.",
@@ -812,6 +817,30 @@ const dcTreeData = {
                     description: "Designer-creator of the AVA clones and founder of AVA Corporation. Responsible for kidnapping and cloning Sara Lance. Died in multiple timelines (1925 original, 1943 new). In an erased timeline, he attempted to replace humanity and was killed by the children of Mick and Kayla. In the current timeline, he regained his memories, realized his mistakes, and sacrificed himself to allow the Legends to escape, killed by robot duplicates of the team. Played by Raffi Barsoumian.",
                     children: [
                         { name: "Ava Sharpe (Clone Batch)", role: "AVA Clones", description: "Batch of thousands of clones produced for efficiency. (See Time Bureau)" }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "The Loom of Fate",
+            role: "Ancient Deities",
+            coords: [37.9838, 23.7275], // Athens
+            children: [
+                {
+                    name: "Lachesis",
+                    role: "Fate (The Apportioner)",
+                    description: "One of the three Fates. Sought to restore the Loom and control humanity's destiny.",
+                    children: [
+                        {
+                            name: "Clotho (Charlie)",
+                            role: "Fate (The Spinner)",
+                            description: "Betrayed her sisters and joined the Legends to protect free will. (See Waverider)"
+                        },
+                        {
+                            name: "Atropos",
+                            role: "Fate (The Inevitable)",
+                            description: "The sister who cuts the thread of life. Ruthless enforcer of the Fates' will."
+                        }
                     ]
                 }
             ]
