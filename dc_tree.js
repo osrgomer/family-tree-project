@@ -144,17 +144,27 @@ const dcTreeData = {
                 {
                     name: "Quentin Lance",
                     role: "Police Captain",
-                    description: "Father of Laurel and Sara. Husband of the Golden Age Black Canary.",
+                    description: "Father of two biological daughters and one adopted daughter. Husband of Dinah Drake.",
                     partner: {
                         name: "Dinah Drake (Mother)",
                         role: "Original Black Canary",
-                        description: "Golden Age Hero. Passed the mantle to her daughter Laurel."
+                        description: "Golden Age Hero. Mother of Laurel and Sara."
                     },
                     children: [
                         {
                             name: "Dinah Laurel Lance",
-                            role: "Black Canary (II)",
-                            description: "The Black Canary of Team Arrow. Daughter of Dinah Drake. Sister of Sara (See Legends)."
+                            role: "Black Canary (Earth-1)",
+                            description: "Eldest biological daughter. Deceased in original timeline, restored on Earth-Prime. Played by Katie Cassidy."
+                        },
+                        {
+                            name: "Sara Lance",
+                            role: "White Canary",
+                            description: "Younger biological daughter. Presumed dead on Queen's Gambit. Now Captain of the Legends (See Waverider)."
+                        },
+                        {
+                            name: "Laurel Lance (Earth-2)",
+                            role: "Black Siren / Black Canary",
+                            description: "Alternate version of Laurel adopted by Quentin as his own daughter. Redeemed hero."
                         }
                     ]
                 },
@@ -187,6 +197,19 @@ const dcTreeData = {
             role: "Legends of Tomorrow",
             coords: [0, 0],
             children: [
+                {
+                    name: "Sara Lance",
+                    role: "Captain (White Canary)",
+                    description: "Captain of the Legends. Paragon of Destiny. Biological daughter of Quentin Lance.",
+                    partner: {
+                        name: "Ava Sharpe",
+                        role: "Co-Captain",
+                        description: "Wife of Sara. Director of the Time Bureau."
+                    },
+                    children: [
+                        { name: "Future Daughter", role: "Planned Granddaughter", description: "Planned child of Sara and Ava; Quentin's granddaughter." }
+                    ]
+                },
                 {
                     name: "Rip Hunter",
                     role: "Time Master",
