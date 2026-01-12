@@ -159,6 +159,33 @@ const dcTreeData = {
                     }
                 }
             ]
+        },
+        {
+            name: "The Waverider",
+            role: "Legends of Tomorrow",
+            coords: [0, 0],
+            children: [
+                {
+                    name: "Rip Hunter",
+                    role: "Time Master",
+                    description: "Founder of the Legends. Former Time Master. Created by Jack Miller & Ruben Moreira."
+                },
+                {
+                    name: "Dr. Nate Heywood",
+                    role: "Citizen Steel / Steel",
+                    description: "Historian specializing in historical reconstruction. Played by Nick Zano.",
+                    partner: {
+                        name: "Zari Tomaz (Zari 1.0)",
+                        role: "Air Totem Bearer",
+                        description: "Hacker from 2042. wielder of the Air Totem. Aliases: Z, Khaahar."
+                    }
+                },
+                {
+                    name: "John Constantine",
+                    role: "Hellblazer",
+                    description: "Master of the Dark Arts. Antihero. Created by Alan Moore. Son of Mary Ann.",
+                }
+            ]
         }
     ]
 };
