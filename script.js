@@ -1555,13 +1555,23 @@ function renderNavigation() {
         btn.className = 'nav-jump-btn';
         btn.dataset.lineage = index;
 
-        // Use Surname for label if available, otherwise Last Word of name, fallback to Full Name
+        // Use Surname for label if available, otherwise strip 'City', 'Labs', 'The' etc.
         const fullName = lineage.name || `Lineage ${index + 1}`;
         let label = lineage.surname;
 
         if (!label) {
-            const parts = fullName.split(' ');
-            label = parts.length > 1 ? parts[parts.length - 1] : fullName;
+            const cleanName = fullName.replace(/^The\s+/i, '');
+            const parts = cleanName.split(' ');
+            if (parts.length > 1) {
+                const lastWord = parts[parts.length - 1].toLowerCase();
+                if (['city', 'labs', 'family', 'legacy', 'team'].includes(lastWord)) {
+                    label = parts[0]; // Use first word for places/teams: "Gotham", "Central", "S.T.A.R."
+                } else {
+                    label = parts[parts.length - 1]; // Use last word for human names: "Granat", "Zoref"
+                }
+            } else {
+                label = cleanName;
+            }
         }
 
         btn.textContent = label;
