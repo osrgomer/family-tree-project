@@ -91,9 +91,9 @@ const dcTreeData = {
                                 description: "DC Comics: Oliver's iconic power-couple partner. Married in various runs."
                             },
                             secondPartner: {
-                                name: "Felicity Smoak",
+                                name: "Felicity Megan Smoak",
                                 role: "Overwatch",
-                                description: "Arrow TV: Oliver's wife, 'love of his life', and mother of Mia. Reunited in the afterlife."
+                                description: "Oliver's wife, 'love of his life', and mother of Mia. Aliases: Ghost Fox Goddess, The Calculator. Based on DC character by Gerry Conway & Rafael Kayanan. Played by Emily Bett Rickards."
                             },
                             children: [
                                 { name: "William Clayton", role: "Son", description: "Son of Oliver Queen and Samantha Clayton." },
