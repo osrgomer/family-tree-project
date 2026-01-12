@@ -267,14 +267,28 @@ const dcTreeData = {
                     ]
                 },
                 {
-                    name: "Dr. Nate Heywood",
-                    role: "Citizen Steel / Steel",
-                    description: "Historian specializing in historical reconstruction. Former bearer of the Earth Totem. Played by Nick Zano.",
-                    partner: {
-                        name: "Zari Tomaz (Zari 1.0)",
-                        role: "Air Totem Bearer",
-                        description: "Hacker from 2042. Bearer of the Air Totem (one of the Six). Aliases: Z, Khaahar."
-                    }
+                    name: "Henry Heywood",
+                    role: "Commander Steel",
+                    description: "Golden Age hero and JSA member. WWII veteran with cybernetic enhancements. Created by Gerry Conway and Don Heck.",
+                    children: [
+                        {
+                            name: "Hank Heywood",
+                            role: "D.O.D. Official",
+                            description: "Nate's father. Overseer of the Time Bureau and Project Heywood.",
+                            children: [
+                                {
+                                    name: "Dr. Nate Heywood",
+                                    role: "Citizen Steel / Steel",
+                                    description: "Historian and Legend. Can turn into organic steel. Played by Nick Zano.",
+                                    partner: {
+                                        name: "Zari Tomaz",
+                                        role: "Air Totem Bearer",
+                                        description: "Hacker from 2042. Bearer of the Air Totem (one of the Six)."
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     name: "John Constantine",
@@ -462,6 +476,22 @@ const dcTreeData = {
                     name: "Billy Batson",
                     role: "Shazam / The Captain",
                     description: "Young reporter who shouts a magic word to transform. Created by Bill Parker and C.C. Beck."
+                }
+            ]
+        },
+        {
+            name: "Mars",
+            role: "Martian Manhunters",
+            coords: [0, 0], // Conceptual
+            children: [
+                {
+                    name: "J'onn J'onzz",
+                    role: "Martian Manhunter",
+                    description: "The last Green Martian. Powerful telepath and shapeshifter. Created by Joseph Samachson and Joe Certa. Played by David Harewood.",
+                    image: "https://upload.wikimedia.org/wikipedia/en/2/27/Martian_Manhunter.png",
+                    children: [
+                        { name: "Ma'alefa'ak", role: "Son of J'onn", description: "White Martian extremist. Archenemy of his father." }
+                    ]
                 }
             ]
         }
