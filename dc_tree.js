@@ -174,6 +174,12 @@ const dcTreeData = {
                     role: "Reverse-Flash",
                     description: "The archenemy of Barry Allen. Speedster from the 25th century.",
                     image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Reverse_Flash.png/220px-Reverse_Flash.png"
+                },
+                {
+                    name: "Abra Kadabra",
+                    role: "Citizen Abra",
+                    description: "Time-traveling criminal from the 64th century. Uses advanced technology ('techno-magic') to simulate magic. Primary antagonist of the Flash. Created by John Broome and Carmine Infantino. Played by David Dastmalchian (TV).",
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Abra_Kadabra_Flash_128.jpg/250px-Abra_Kadabra_Flash_128.jpg"
                 }
             ]
         },
@@ -350,7 +356,12 @@ const dcTreeData = {
                     ]
                 },
                 { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
-                { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." },
+                {
+                    name: "Gideon",
+                    role: "Human-AI Fusion",
+                    description: "Advanced AI/LLM system and Interactive Artificial Consciousness of the Waverider. Later resurrected in human form by Astra Logue. Official member of the Legends. Played by Amy Louise Pemberton.",
+                    partner: { name: "Gary Green", role: "Legend / Magical Apprentice", description: "Gideon's boyfriend." }
+                },
                 {
                     name: "Leo Snart (Earth-X)",
                     role: "Citizen Cold",
@@ -375,6 +386,43 @@ const dcTreeData = {
                     name: "Mallus",
                     role: "Primordial Time Demon",
                     description: "Ancient entity seeking to destroy time. Defeated by Beebo. Main antagonist of Season 3."
+                }
+            ]
+        },
+        {
+            name: "The Time Bureau",
+            role: "Temporal Law Enforcement",
+            coords: [34.0522, -118.2437], // Los Angeles-ish
+            children: [
+                {
+                    name: "Ava Sharpe",
+                    role: "Director",
+                    description: "Highly efficient agent and clone who became Director. Wife of Sara Lance. (See Waverider)",
+                    children: [
+                        {
+                            name: "Gary Green",
+                            role: "Legend / Agent",
+                            description: "Quirky Time Bureau agent and magical apprentice. Later joins the Legends. Boyfriend of Gideon.",
+                            partner: { name: "Gideon", role: "Human-AI Fusion", description: "Gary's girlfriend." }
+                        },
+                        { name: "Neil McNeil", role: "Agent", description: "Time Bureau field agent." },
+                        { name: "Mona Wu", role: "Magical Creature Handler", description: "Agent who can transform into a Kaupe (Wolfie). Later joins the Legends." }
+                    ]
+                },
+                {
+                    name: "Rip Hunter",
+                    role: "Founder",
+                    description: "Original founder of the Bureau and former Director. (See Waverider)"
+                },
+                {
+                    name: "Wilbur Bennett",
+                    role: "Director (Former)",
+                    description: "Preceded Ava Sharpe as Director of the Bureau."
+                },
+                {
+                    name: "Hank Heywood",
+                    role: "D.O.D. Official / Temporary Director",
+                    description: "Headed the funding department. (See Waverider - Heywood Lineage)"
                 }
             ]
         },
@@ -720,7 +768,17 @@ const dcTreeData = {
                         { name: "Stel", role: "Sentient Robot" },
                         { name: "G'nort", role: "Bumbling but loyal Lantern" },
                         { name: "Sodam Yat", role: "Daxamite / Ion" },
-                        { name: "Tomar-Tu", role: "Son of Tomar-Re" }
+                        { name: "Tomar-Tu", role: "Son of Tomar-Re" },
+                        { name: "Green Man", role: "Green Lantern (Sector 2828)" },
+                        { name: "Varix", role: "Alpha Lantern" },
+                        { name: "Sendrina", role: "Green Lantern (Sector 7)" },
+                        { name: "Voz", role: "Warden of the Sciencells" },
+                        { name: "Brik", role: "Green Lantern (Sector 700)" },
+                        { name: "Vandor", role: "Alpha Lantern" },
+                        { name: "Aa", role: "Green Lantern (Sector 911)" },
+                        { name: "Apros", role: "Green Lantern (Sector 3)" },
+                        { name: "Raker Qarrigat", role: "Green Lantern (Sector 3897)" },
+                        { name: "Norchavius", role: "Green Lantern (Sector 26)" }
                     ]
                 }
             ]
