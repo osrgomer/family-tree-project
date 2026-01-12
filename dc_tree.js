@@ -214,6 +214,12 @@ const dcTreeData = {
                         role: "Firestorm (Deceased)",
                         description: "The Nuclear Man. Fused with Martin Stein. Husband of Caitlin Snow (TV)."
                     }
+                },
+                {
+                    name: "Cisco Ramon",
+                    role: "Vibe",
+                    description: "Mechanical engineer at S.T.A.R. Labs. Can emit powerful vibratory shock waves. Played by Carlos Valdes.",
+                    image: "https://upload.wikimedia.org/wikipedia/en/d/d3/Cisco_Ramon_vibe.jpg"
                 }
             ]
         },
@@ -283,7 +289,22 @@ const dcTreeData = {
                     name: "Prof. Martin Stein",
                     role: "Firestorm (Former Legend)",
                     description: "Nuclear Physicist. Founding member of the Legends. Currently deceased/retired (Crisis on Earth-X). Friend of the team.",
-                    children: [{ name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." }]
+                    partner: {
+                        name: "Clarissa Stein",
+                        role: "Wife of Martin",
+                        description: "Mother of Lily Stein."
+                    },
+                    children: [
+                        { name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." },
+                        {
+                            name: "Dr. Lily Stein",
+                            role: "Scientist",
+                            description: "Daughter of Martin and Clarissa. Originally a time aberration. Scientific genius.",
+                            children: [
+                                { name: "Ronnie", role: "Grandson of Martin", description: "Son of Lily Stein. Named after Ronnie Raymond." }
+                            ]
+                        }
+                    ]
                 },
                 { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
                 { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." },
