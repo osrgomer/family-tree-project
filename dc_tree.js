@@ -142,6 +142,23 @@ const dcTreeData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "S.T.A.R. Labs",
+            role: "Team Flash",
+            coords: [39.0997, -94.5786],
+            children: [
+                {
+                    name: "Dr. Caitlin Snow",
+                    role: "Killer Frost / Frost",
+                    description: "Bio-engineer & Metahuman (Ice Powers). Aliases: Khione. Dr. Louise Lincoln/Crystal Frost (Comics mantles).",
+                    partner: {
+                        name: "Ronnie Raymond",
+                        role: "Firestorm",
+                        description: "The Nuclear Man. Fused with Martin Stein. Husband of Caitlin Snow (TV)."
+                    }
+                }
+            ]
         }
     ]
 };
