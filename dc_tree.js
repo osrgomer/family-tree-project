@@ -40,9 +40,9 @@ const dcTreeData = {
             ]
         },
         {
-            name: "Gotham",
+            name: "Gotham City",
             role: "Wayne Family",
-            coords: [40.7128, -74.0060], // Gotham-ish
+            coords: [39.3607, -74.4258], // South Jersey area, often the lore location for Gotham
             children: [
                 {
                     name: "Thomas Wayne",
