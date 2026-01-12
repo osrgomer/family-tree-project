@@ -599,6 +599,26 @@ const dcTreeData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "Detroit",
+            role: "Stone Family",
+            coords: [42.3314, -83.0458],
+            children: [
+                {
+                    name: "Dr. Silas Stone",
+                    role: "Scientist (S.T.A.R. Labs)",
+                    description: "Renowned scientist who saved his son Victor using experimental cybernetics.",
+                    children: [
+                        {
+                            name: "Victor Stone",
+                            role: "Cyborg",
+                            description: "Former athlete turned cybernetically enhanced hero. Founding member of the Justice League (New 52) and key Titan. Created by Marv Wolfman & George Pérez. First appeared in DC Comics Presents #26 (1980).",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Cyborg_Stone.png/250px-Cyborg_Stone.png"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 };
