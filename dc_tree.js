@@ -138,20 +138,30 @@ const dcTreeData = {
         },
         {
             name: "Star City",
-            role: "Lance Family",
+            role: "The Canaries (Lance Legacy)",
             coords: [47.6062, -122.3321],
             children: [
                 {
                     name: "Quentin Lance",
                     role: "Police Captain",
-                    description: "Father of Laurel and Sara.",
+                    description: "Father of Laurel and Sara. Husband of the Golden Age Black Canary.",
+                    partner: {
+                        name: "Dinah Drake (Mother)",
+                        role: "Original Black Canary",
+                        description: "Golden Age Hero. Passed the mantle to her daughter Laurel."
+                    },
                     children: [
                         {
                             name: "Dinah Laurel Lance",
-                            role: "Black Canary",
-                            description: "Sister of Sara (See Legends of Tomorrow). Also connected to Oliver Queen."
+                            role: "Black Canary (II)",
+                            description: "The Black Canary of Team Arrow. Daughter of Dinah Drake. Sister of Sara (See Legends)."
                         }
                     ]
+                },
+                {
+                    name: "Dinah Drake (Meta)",
+                    role: "Black Canary (III)",
+                    description: "Metahuman successor. Distinct from Laurel's mother. Possesses the Canary Cry. Played by Juliana Harkavy."
                 }
             ]
         },
