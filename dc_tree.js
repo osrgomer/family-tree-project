@@ -144,17 +144,7 @@ const dcTreeData = {
                         {
                             name: "Dinah Laurel Lance",
                             role: "Black Canary",
-                            description: "Sister of Sara. Also connected to Oliver Queen (see Queen Family)."
-                        },
-                        {
-                            name: "Sara Lance",
-                            role: "White Canary",
-                            description: "Captain of the Legends. First Black Canary. Played by Caity Lotz. Aliases: Ta'ir as-Safir, The Canary.",
-                            partner: {
-                                name: "Ava Sharpe",
-                                role: "Director of Time Bureau",
-                                description: "Spouse of Sara Lance."
-                            }
+                            description: "Sister of Sara (See Legends of Tomorrow). Also connected to Oliver Queen."
                         }
                     ]
                 }
@@ -171,7 +161,7 @@ const dcTreeData = {
                     description: "Bio-engineer & Metahuman (Ice Powers). Aliases: Khione. Dr. Louise Lincoln/Crystal Frost (Comics mantles).",
                     partner: {
                         name: "Ronnie Raymond",
-                        role: "Firestorm",
+                        role: "Firestorm (Des",
                         description: "The Nuclear Man. Fused with Martin Stein. Husband of Caitlin Snow (TV)."
                     }
                 }
@@ -182,6 +172,16 @@ const dcTreeData = {
             role: "Legends of Tomorrow",
             coords: [0, 0],
             children: [
+                {
+                    name: "Sara Lance",
+                    role: "Captain (White Canary)",
+                    description: "Captain of the Legends. Paragon of Destiny. Former bearer of the Death Totem. First Black Canary. Played by Caity Lotz.",
+                    partner: {
+                        name: "Ava Sharpe",
+                        role: "Director of Time Bureau",
+                        description: "Co-Captain and wife of Sara Lance. Clone (Advanced)."
+                    }
+                },
                 {
                     name: "Rip Hunter",
                     role: "Time Master",
