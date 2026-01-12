@@ -93,7 +93,7 @@ const dcTreeData = {
                                 { name: "Mia Smoak", role: "Green Arrow II", description: "Daughter of Oliver & Felicity (Arrow TV)." }
                             ]
                         },
-                        { name: "Thea Queen", role: "Speedy" }
+                        { name: "Thea Queen", role: "Speedy", description: "Sister of Oliver. Biological daughter of Malcolm Merlyn." }
                     ]
                 }
             ]
@@ -286,6 +286,16 @@ const dcTreeData = {
                             role: "Witch / Fairy Godmother",
                             description: "Daughter of Damien and Ruvé. Former playmate of William Clayton. Wife of Ray Palmer. (See Waverider)"
                         }
+                    ]
+                },
+                {
+                    name: "Malcolm Merlyn",
+                    role: "The Dark Archer / Magician",
+                    description: "Former Ra's al Ghul and CEO of Merlyn Global Group. Biological father of Thea Queen. Played by John Barrowman.",
+                    partner: { name: "Rebecca Merlyn", role: "Wife (Deceased)" },
+                    children: [
+                        { name: "Tommy Merlyn", role: "Philanthropist (Deceased)", description: "Best friend of Oliver Queen." },
+                        { name: "Thea Queen", role: "Speedy", description: "Biological daughter (See Star City - Queen Family)." }
                     ]
                 }
             ]
