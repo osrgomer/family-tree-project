@@ -299,11 +299,16 @@ const dcTreeData = {
                                 {
                                     name: "Dr. Nate Heywood",
                                     role: "Citizen Steel / Steel",
-                                    description: "Historian and Legend. Can turn into organic steel. Played by Nick Zano.",
+                                    description: "Historian and Legend. Can turn into organic steel. Former bearer of the Earth Totem (one of the Six). Played by Nick Zano.",
                                     partner: {
                                         name: "Zari Tomaz",
                                         role: "Air Totem Bearer",
-                                        description: "Hacker from 2042. Bearer of the Air Totem (one of the Six)."
+                                        description: "Hacker from 2042. Bearer of the Air Totem (one of the Six). Nate's current partner."
+                                    },
+                                    secondPartner: {
+                                        name: "Amaya Jiwe",
+                                        role: "Vixen",
+                                        description: "1940s JSA member and Legend. Dated Nate before returning to her own time. (See Waverider)"
                                     }
                                 }
                             ]
@@ -367,7 +372,12 @@ const dcTreeData = {
                         }
                     ]
                 },
-                { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
+                {
+                    name: "Amaya Jiwe",
+                    role: "Vixen",
+                    description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers.",
+                    partner: { name: "Nate Heywood", role: "Citizen Steel", description: "Historian and fellow Legend. Ex-boyfriend. (See Heywood Lineage)" }
+                },
                 {
                     name: "Clotho (Charlie)",
                     role: "Legend / Fate",
