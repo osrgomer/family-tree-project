@@ -233,7 +233,12 @@ const dcTreeData = {
                 {
                     name: "Ray Palmer",
                     role: "The Atom",
-                    description: "Scientist & CEO. Uses dwarf star alloy suit. Played by Brandon Routh."
+                    description: "Scientist & CEO. Uses dwarf star alloy suit. Played by Brandon Routh.",
+                    partner: {
+                        name: "Nora Darhk",
+                        role: "Fairy Godmother",
+                        description: "Daughter of Damien Darhk. Wife of Ray Palmer. Played by Courtney Ford."
+                    }
                 },
                 {
                     name: "Leonard Snart",
@@ -252,7 +257,37 @@ const dcTreeData = {
                     children: [{ name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." }]
                 },
                 { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
-                { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." }
+                { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." },
+                {
+                    name: "Leo Snart (Earth-X)",
+                    role: "Citizen Cold",
+                    description: "Heroic, openly gay resistance fighter and therapist from Earth-X. Help fight the New Reich. Played by Wentworth Miller.",
+                    partner: {
+                        name: "Ray Terrill",
+                        role: "The Ray",
+                        description: "Light-powered hero from Earth-X. Member of the Freedom Fighters."
+                    }
+                }
+            ]
+        },
+        {
+            name: "League of Assassins",
+            role: "H.I.V.E.",
+            coords: [32.060, 34.770], // Hypothetical Nanda Parbat/Middle East-ish coords
+            children: [
+                {
+                    name: "Damien Darhk",
+                    role: "H.I.V.E. Leader",
+                    description: "Former League member, 'Heir to the Demon', and archenemy of Sara Lance. Known as Kenneth Bender. Played by Neal McDonough.",
+                    partner: { name: "Ruvé Adams", role: "Mayor of Star City" },
+                    children: [
+                        {
+                            name: "Nora Darhk (Palmer)",
+                            role: "Witch / Fairy Godmother",
+                            description: "Daughter of Damien and Ruvé. Former playmate of William Clayton. Wife of Ray Palmer. (See Waverider)"
+                        }
+                    ]
+                }
             ]
         }
     ]
