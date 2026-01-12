@@ -83,8 +83,8 @@ const dcTreeData = {
                     children: [
                         {
                             name: "Oliver Queen",
-                            role: "Green Arrow",
-                            description: "The Emerald Archer. TV: Married to Felicity Smoak. Comics: Partner of Black Canary.",
+                            role: "Green Arrow / The Spectre",
+                            description: "The Emerald Archer and later the Spectre. Savior of the Multiverse. TV: Married to Felicity Smoak.",
                             partner: {
                                 name: "Dinah Laurel Lance",
                                 role: "Black Canary",
@@ -96,11 +96,16 @@ const dcTreeData = {
                                 description: "Arrow TV: Oliver's wife, 'love of his life', and mother of Mia. Reunited in the afterlife."
                             },
                             children: [
-                                { name: "William Clayton", role: "Son", description: "Son of Oliver Queen." },
+                                { name: "William Clayton", role: "Son", description: "Son of Oliver Queen and Samantha Clayton." },
                                 { name: "Mia Smoak", role: "Green Arrow II", description: "Daughter of Oliver & Felicity (Arrow TV)." }
                             ]
                         },
-                        { name: "Thea Queen", role: "Speedy", description: "Sister of Oliver. Biological daughter of Malcolm Merlyn." }
+                        { name: "Thea Queen", role: "Speedy", description: "Sister of Oliver. Biological daughter of Malcolm Merlyn." },
+                        {
+                            name: "Emiko Adachi",
+                            role: "Red Arrow",
+                            description: "Oliver's paternal half-sister. Daughter of Robert Queen and Kazumi Adachi."
+                        }
                     ]
                 }
             ]
@@ -158,6 +163,12 @@ const dcTreeData = {
                     role: "Zoom",
                     description: "The second Reverse-Flash. Archenemy of the original Wally West. Created by Geoff Johns.",
                     partner: { name: "Ashley Zolomon", role: "Profiler" }
+                },
+                {
+                    name: "Eobard Thawne",
+                    role: "Reverse-Flash",
+                    description: "The archenemy of Barry Allen. Speedster from the 25th century.",
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Reverse_Flash.png/220px-Reverse_Flash.png"
                 }
             ]
         },
@@ -295,7 +306,15 @@ const dcTreeData = {
                         description: "Mother of Lily Stein."
                     },
                     children: [
-                        { name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." },
+                        {
+                            name: "Jax Jackson",
+                            role: "Firestorm / Captain Cold",
+                            description: "Jefferson Jackson. Former Legend and second-in-command. Mechanic of the Waverider.",
+                            partner: { name: "Alanna Jackson", role: "Wife of Jax" },
+                            children: [
+                                { name: "Martina Jackson", role: "Daughter", description: "Named after Martin Stein." }
+                            ]
+                        },
                         {
                             name: "Dr. Lily Stein",
                             role: "Scientist",
@@ -377,6 +396,31 @@ const dcTreeData = {
                             role: "Mistress of Magic",
                             description: "Sorceress Supreme. Member of Justice League Dark.",
                             image: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Zatanna_Zatara.png/250px-Zatanna_Zatara.png"
+                        },
+                        {
+                            name: "Kent Nelson",
+                            role: "Doctor Fate",
+                            description: "Powerful sorcerer and agent for the Lords of Order. Wielder of the Helmet of Fate.",
+                            partner: { name: "Inza Nelson", role: "Wife & Partner" }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Gorilla City",
+            role: "Solovar's Kingdom",
+            coords: [0.0, 15.0], // Equator/Africa-ish
+            children: [
+                {
+                    name: "Solovar",
+                    role: "King of Gorilla City",
+                    description: "Enlightened leader of the gorilla civilization. Ally to Flash.",
+                    children: [
+                        {
+                            name: "Gorilla Grodd",
+                            role: "Usurper / Villain",
+                            description: "Super-intelligent telepathic gorilla. Archenemy of The Flash."
                         }
                     ]
                 }
