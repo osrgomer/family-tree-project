@@ -194,7 +194,7 @@ const dcTreeData = {
                     partner: {
                         name: "Zari Tomaz (Zari 1.0)",
                         role: "Air Totem Bearer",
-                        description: "Hacker from 2042. wielder of the Air Totem. Aliases: Z, Khaahar."
+                        description: "Hacker from 2042. Bearer of the Air Totem (one of the Six). Aliases: Z, Khaahar."
                     }
                 },
                 {
@@ -210,12 +210,12 @@ const dcTreeData = {
                 {
                     name: "Leonard Snart",
                     role: "Captain Cold",
-                    description: "Rogue turned Legend. Wields Cold Gun. Created by John Broome. Partner of Mick Rory.",
-                    partner: {
-                        name: "Mick Rory",
-                        role: "Heat Wave",
-                        description: "Pyromaniac and sci-fi romance author. Wields Heat Gun. Played by Dominic Purcell."
-                    }
+                    description: "Rogue turned Legend. Wields Cold Gun. Crime partner of Mick Rory."
+                },
+                {
+                    name: "Mick Rory",
+                    role: "Heat Wave",
+                    description: "Pyromaniac, sci-fi romance author, and bearer of the Fire Totem. Wields Heat Gun. Crime partner of Leonard Snart."
                 },
                 {
                     name: "Prof. Martin Stein",
@@ -223,7 +223,7 @@ const dcTreeData = {
                     description: "Nuclear Physicist. Founding member of the Legends. Currently deceased/retired (Crisis on Earth-X). Friend of the team.",
                     children: [{ name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." }]
                 },
-                { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi Totem. JSA Member. Played by Maisie Richardson-Sellers." },
+                { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi (Spirit) Totem (one of the Six). JSA Member. Played by Maisie Richardson-Sellers." },
                 { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." }
             ]
         }
