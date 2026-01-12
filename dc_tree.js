@@ -231,6 +231,11 @@ const dcTreeData = {
                     role: "Vibe",
                     description: "Mechanical engineer at S.T.A.R. Labs. Can emit powerful vibratory shock waves. Played by Carlos Valdes.",
                     image: "https://upload.wikimedia.org/wikipedia/en/d/d3/Cisco_Ramon_vibe.jpg"
+                },
+                {
+                    name: "Hartley Rathaway",
+                    role: "Pied Piper",
+                    description: "Genius physicist and former protege of Harrison Wells. Uses sonic tech. Reformed rogue and ally to Team Flash. Played by Andy Mientus."
                 }
             ]
         },
@@ -274,7 +279,7 @@ const dcTreeData = {
                 {
                     name: "John Constantine",
                     role: "Hellblazer",
-                    description: "Master of the Dark Arts. Antihero. Created by Alan Moore. Son of Mary Ann."
+                    description: "Master of the Dark Arts and cynical antihero. Created by Alan Moore, Stephen R. Bissette, and John Totleben. First appeared in Swamp Thing #37 (1985). Son of Mary Ann. Played by Matt Ryan."
                 },
                 {
                     name: "Ray Palmer",
@@ -340,8 +345,12 @@ const dcTreeData = {
                 {
                     name: "Jonah Hex",
                     role: "Bounty Hunter",
-                    description: "Scarred antihero from the Old West. Ally to the Legends.",
-                    children: [{ name: "Mary Xavier", role: "Foster Mother", description: "Rip Hunter's foster mother." }]
+                    description: "Scarred antihero from the Old West. Ally to the Legends."
+                },
+                {
+                    name: "Mary Xavier",
+                    role: "Foster Mother",
+                    description: "Head of the Time Master orphanage. Raised Rip Hunter as her own."
                 },
                 {
                     name: "Mallus",
