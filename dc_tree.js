@@ -32,8 +32,9 @@ const dcTreeData = {
                 {
                     name: "Zor-El",
                     role: "Scientist",
+                    partner: { name: "Alura In-Ze", role: "Judge / Scientist" },
                     children: [
-                        { name: "Kara Zor-El (Supergirl)", role: "Supergirl", description: "Cousin of Superman." }
+                        { name: "Kara Zor-El (Supergirl)", role: "Supergirl", description: "Cousin of Superman. Daughter of Zor-El and Alura." }
                     ]
                 }
             ]
@@ -55,7 +56,13 @@ const dcTreeData = {
                             image: "https://upload.wikimedia.org/wikipedia/en/c/c7/Batman_Infobox.jpg",
                             children: [
                                 { name: "Damian Wayne", role: "Robin", description: "Son of Bruce and Talia al Ghul." },
-                                { name: "Dick Grayson", role: "Nightwing", description: "Adopted son. First Robin." },
+                                {
+                                    name: "Dick Grayson",
+                                    role: "Nightwing",
+                                    description: "Adopted son. First Robin. Son of John and Mary Grayson.",
+                                    partner: { name: "Barbara Gordon", role: "Batgirl / Oracle", description: "Iconic partner and soulmate." },
+                                    secondPartner: { name: "Starfire (Koriand'r)", role: "Princess of Tamaran", description: "Enduring love interest during Teen Titans era." }
+                                },
                                 { name: "Jason Todd", role: "Red Hood", description: "Adopted son. Second Robin." },
                                 { name: "Tim Drake", role: "Red Robin", description: "Adopted son. Third Robin." }
                             ]
@@ -133,6 +140,12 @@ const dcTreeData = {
                             partner: { name: "Linda Park", role: "Journalist" }
                         }
                     ]
+                },
+                {
+                    name: "Hunter Zolomon",
+                    role: "Zoom",
+                    description: "The second Reverse-Flash. Archenemy of Wally West. Created by Geoff Johns.",
+                    partner: { name: "Ashley Zolomon", role: "Profiler" }
                 }
             ]
         },
@@ -213,7 +226,11 @@ const dcTreeData = {
                 {
                     name: "Rip Hunter",
                     role: "Time Master",
-                    description: "Founder of the Legends. Former Time Master. Created by Jack Miller & Ruben Moreira."
+                    description: "Founder of the Legends. Originally named Michael. Created by Jack Miller.",
+                    partner: { name: "Miranda Coburn", role: "Time Master (Deceased)", description: "Rip's wife. Killed by Vandal Savage." },
+                    children: [
+                        { name: "Jonas Hunter", role: "Son (Deceased)", description: "Killed by Vandal Savage in 2166." }
+                    ]
                 },
                 {
                     name: "Dr. Nate Heywood",
@@ -267,6 +284,17 @@ const dcTreeData = {
                         role: "The Ray",
                         description: "Light-powered hero from Earth-X. Member of the Freedom Fighters."
                     }
+                },
+                {
+                    name: "Jonah Hex",
+                    role: "Bounty Hunter",
+                    description: "Scarred antihero from the Old West. Ally to the Legends.",
+                    children: [{ name: "Mary Xavier", role: "Foster Mother", description: "Rip Hunter's foster mother." }]
+                },
+                {
+                    name: "Mallus",
+                    role: "Primordial Time Demon",
+                    description: "Ancient entity seeking to destroy time. Defeated by Beebo. Main antagonist of Season 3."
                 }
             ]
         },
@@ -297,6 +325,39 @@ const dcTreeData = {
                         { name: "Tommy Merlyn", role: "Philanthropist (Deceased)", description: "Best friend of Oliver Queen." },
                         { name: "Thea Queen", role: "Speedy", description: "Biological daughter (See Star City - Queen Family)." }
                     ]
+                }
+            ]
+        },
+        {
+            name: "Magic & Mysticism",
+            role: "Homo Magi",
+            coords: [51.5074, -0.1278], // London-ish
+            children: [
+                {
+                    name: "Giovanni Zatara",
+                    role: "Master Magician",
+                    description: "Golden Age hero and powerful mage. Created by Fred Guardineer.",
+                    partner: { name: "Sindella", role: "Homo Magi" },
+                    children: [
+                        {
+                            name: "Zatanna Zatara",
+                            role: "Mistress of Magic",
+                            description: "Sorceress Supreme. Member of Justice League Dark.",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Zatanna_Zatara.png/250px-Zatanna_Zatara.png"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Fawcett City",
+            role: "The Rock of Eternity",
+            coords: [39.9526, -75.1652], // Philadelphia-ish
+            children: [
+                {
+                    name: "Billy Batson",
+                    role: "Shazam / The Captain",
+                    description: "Young reporter who shouts a magic word to transform. Created by Bill Parker and C.C. Beck."
                 }
             ]
         }
