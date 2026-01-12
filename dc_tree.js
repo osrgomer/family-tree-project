@@ -195,7 +195,7 @@ const dcTreeData = {
                         {
                             name: "Sara Lance",
                             role: "White Canary",
-                            description: "Younger biological daughter. Presumed dead on Queen's Gambit. Now Captain of the Legends (See Waverider)."
+                            description: "Younger biological daughter. Presumed dead on Queen's Gambit. Former member of the League of Assassins (Ta-er al-Sahfer). Now Captain of the Legends (See Waverider)."
                         },
                         {
                             name: "Laurel Lance (Earth-2)",
@@ -242,7 +242,7 @@ const dcTreeData = {
                 {
                     name: "Sara Lance",
                     role: "Captain (White Canary)",
-                    description: "Captain of the Legends. Paragon of Destiny. Biological daughter of Quentin Lance.",
+                    description: "Captain of the Legends. Paragon of Destiny. Former member of the League of Assassins (Ta-er al-Sahfer). Biological daughter of Quentin Lance.",
                     partner: {
                         name: "Ava Sharpe",
                         role: "Co-Captain",
@@ -376,6 +376,24 @@ const dcTreeData = {
                     children: [
                         { name: "Tommy Merlyn", role: "Philanthropist (Deceased)", description: "Best friend of Oliver Queen." },
                         { name: "Thea Queen", role: "Speedy", description: "Biological daughter (See Star City - Queen Family)." }
+                    ]
+                },
+                {
+                    name: "Ra's al Ghul",
+                    role: "The Demon's Head",
+                    description: "Legendary leader of the League of Assassins. Centenarian mastermind.",
+                    children: [
+                        {
+                            name: "Nyssa al Ghul",
+                            role: "Heir to the Demon",
+                            description: "Daughter of Ra's. Former lover and mentor of Sara Lance. Briefly married to Oliver Queen.",
+                            partner: { name: "Sara Lance", role: "Ta-er al-Sahfer", description: "Consort of the Heir." }
+                        },
+                        {
+                            name: "Talia al Ghul",
+                            role: "Assassin / Mentor",
+                            description: "Eldest daughter of Ra's. Mentor to Oliver Queen and Adrian Chase."
+                        }
                     ]
                 }
             ]
