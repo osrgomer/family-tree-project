@@ -219,9 +219,9 @@ const dcTreeData = {
                 },
                 {
                     name: "Prof. Martin Stein",
-                    role: "Firestorm",
-                    description: "Nuclear Physicist. Half of Firestorm (with Ronnie/Jax). Created by Gerry Conway.",
-                    children: [{ name: "Jax Jackson", role: "Firestorm", description: "Jefferson Jackson. Mechanic and partner in Firestorm matrix." }]
+                    role: "Firestorm (Former Legend)",
+                    description: "Nuclear Physicist. Founding member of the Legends. Currently deceased/retired (Crisis on Earth-X). Friend of the team.",
+                    children: [{ name: "Jax Jackson", role: "Firestorm (Retired)", description: "Jefferson Jackson. Former Legend." }]
                 },
                 { name: "Amaya Jiwe", role: "Vixen", description: "Bearer of the Anansi Totem. JSA Member. Played by Maisie Richardson-Sellers." },
                 { name: "Gideon", role: "Ship AI", description: "Interactive Artificial Consciousness of the Waverider. Voiced/Played by Amy Pemberton." }
