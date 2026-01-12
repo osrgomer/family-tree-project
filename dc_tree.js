@@ -190,7 +190,7 @@ const dcTreeData = {
                 {
                     name: "Dr. Nate Heywood",
                     role: "Citizen Steel / Steel",
-                    description: "Historian specializing in historical reconstruction. Played by Nick Zano.",
+                    description: "Historian specializing in historical reconstruction. Former bearer of the Earth Totem. Played by Nick Zano.",
                     partner: {
                         name: "Zari Tomaz (Zari 1.0)",
                         role: "Air Totem Bearer",
@@ -215,7 +215,7 @@ const dcTreeData = {
                 {
                     name: "Mick Rory",
                     role: "Heat Wave",
-                    description: "Pyromaniac, sci-fi romance author, and bearer of the Fire Totem. Wields Heat Gun. Crime partner of Leonard Snart."
+                    description: "Pyromaniac, sci-fi romance author, and former bearer of the Fire Totem. Wields Heat Gun. Crime partner of Leonard Snart."
                 },
                 {
                     name: "Prof. Martin Stein",
