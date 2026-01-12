@@ -61,7 +61,12 @@ const dcTreeData = {
                                     role: "Nightwing",
                                     description: "Adopted son. First Robin. Son of John and Mary Grayson.",
                                     partner: { name: "Barbara Gordon", role: "Batgirl / Oracle", description: "Iconic partner and soulmate." },
-                                    secondPartner: { name: "Starfire (Koriand'r)", role: "Princess of Tamaran", description: "Enduring love interest during Teen Titans era." }
+                                    secondPartner: {
+                                        name: "Koriand'r (Starfire)",
+                                        role: "Princess of Tamaran",
+                                        description: "Longtime love interest of Dick Grayson. Member of the Teen Titans. Mother of Nightstar. Created by Marv Wolfman & George Pérez.",
+                                        image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Starfire_DC_Comics.png/250px-Starfire_DC_Comics.png"
+                                    }
                                 },
                                 { name: "Jason Todd", role: "Red Hood", description: "Adopted son. Second Robin." },
                                 { name: "Tim Drake", role: "Red Robin", description: "Adopted son. Third Robin." }
@@ -496,6 +501,12 @@ const dcTreeData = {
                             role: "Miss Martian",
                             description: "J'onn's niece. A White Martian shapeshifter with massive telepathic power. Key member of Young Justice.",
                             image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Miss_Martian_YJ.jpg/250px-Miss_Martian_YJ.jpg"
+                        },
+                        {
+                            name: "Garfield Logan",
+                            role: "Beast Boy / Changeling",
+                            description: "Adopted brother of Miss Martian. Shapeshifter who can transform into any animal. Created by Arnold Drake and Bob Brown. First appeared in Doom Patrol #99 (1965).",
+                            image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Beast_Boy_%28circa_2011%29.png/250px-Beast_Boy_%28circa_2011%29.png"
                         }
                     ]
                 }
@@ -616,6 +627,21 @@ const dcTreeData = {
                             description: "Former athlete turned cybernetically enhanced hero. Founding member of the Justice League (New 52) and key Titan. Created by Marv Wolfman & George Pérez. First appeared in DC Comics Presents #26 (1980).",
                             image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Cyborg_Stone.png/250px-Cyborg_Stone.png"
                         }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Tamaran",
+            role: "Royal Household",
+            coords: [0, 0], // Conceptual Space Location
+            children: [
+                {
+                    name: "Koriand'r",
+                    role: "Starfire",
+                    description: "Princess of Tamaran. Debut: DC Comics Presents #26 (1980). A founding member of the New Teen Titans. Fired bolts of starfire.",
+                    children: [
+                        { name: "Nightstar (Mar'i Grayson)", role: "Daughter", description: "Daughter of Starfire and Dick Grayson (Kingdom Come timeline)." }
                     ]
                 }
             ]
