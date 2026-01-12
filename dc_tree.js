@@ -645,6 +645,85 @@ const dcTreeData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "Oa",
+            role: "Green Lantern Corps HQ",
+            coords: [0, 0], // Center of the Universe
+            children: [
+                {
+                    name: "Alan Scott",
+                    role: "Green Lantern (Original)",
+                    description: "The Golden Age Green Lantern. Wielder of the Starheart. Created by Martin Nodell. First appeared in All-American Comics #16 (1940).",
+                    children: [
+                        {
+                            name: "Jennifer-Lynn Hayden (Jade)",
+                            role: "Green Lantern / Jade",
+                            description: "Daughter of Alan Scott. Founding member of the Outsiders and later a Green Lantern Corps member. Born with green skin and chlorokinesis."
+                        }
+                    ]
+                },
+                {
+                    name: "Hal Jordan",
+                    role: "Green Lantern (Sector 2814.1)",
+                    description: "Test pilot who became the greatest Green Lantern. Founding member of the Justice League. Created by John Broome and Gil Kane. Debut: Showcase #22 (1959).",
+                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Hal_Jordan_Green_Lantern.png/250px-Hal_Jordan_Green_Lantern.png"
+                },
+                {
+                    name: "John Stewart",
+                    role: "Green Lantern (Sector 2814.2)",
+                    description: "Architect and US Marine. One of the most capable tactical minds in the Corps. Lead Lantern in the Justice League animated series."
+                },
+                {
+                    name: "Guy Gardner",
+                    role: "Green Lantern / Warrior",
+                    description: "Known for his abrasive personality and immense willpower. Former gym teacher and social worker."
+                },
+                {
+                    name: "Kyle Rayner",
+                    role: "Green Lantern / Ion / White Lantern",
+                    description: "The 'Torch-Bearer' who kept the Corps alive during its darkest era. Artist who uses highly creative constructs."
+                },
+                {
+                    name: "Kilowog",
+                    role: "Citadel / Drill Sergeant",
+                    description: "Bolovaxian trainer of all rookie Green Lanterns. Known for calling recruits 'Poozers'."
+                },
+                {
+                    name: "Simon Baz",
+                    role: "Green Lantern (Sector 2814.4)",
+                    description: "Lebanese-American Lantern from Detroit. Wielded a firearm early in his career and has the rare gift of 'Emerald Sight'."
+                },
+                {
+                    name: "Soranik Natu",
+                    role: "Green Lantern / Sinestro Corps Leader",
+                    description: "Doctor from Korugar and daughter of Thaal Sinestro. Expert medical officer."
+                },
+                {
+                    name: "Abin Sur",
+                    role: "Green Lantern (Former Sector 2814)",
+                    description: "Hal Jordan's predecessor. His crashing spaceship led to the selection of Jordan as his successor."
+                },
+                {
+                    name: "Notable Corps Members",
+                    role: "Intergalactic Peacekeepers",
+                    description: "Distinguished officers from various sectors throughout the universe.",
+                    children: [
+                        { name: "Arisia Rrab", role: "Green Lantern (Sector 2815)" },
+                        { name: "Salaak", role: "Corps Administrator" },
+                        { name: "Aya", role: "AI Green Lantern" },
+                        { name: "Boodikka", role: "Alpha Lantern" },
+                        { name: "Isamot Kol", role: "Lizard-like Warrior" },
+                        { name: "Mogo", role: "Sentient Planet" },
+                        { name: "Ch'p", role: "Squirrel-like Lantern" },
+                        { name: "B'dg", role: "Successor to Ch'p" },
+                        { name: "Stel", role: "Sentient Robot" },
+                        { name: "G'nort", role: "Bumbling but loyal Lantern" },
+                        { name: "Sodam Yat", role: "Daxamite / Ion" },
+                        { name: "Tomar-Tu", role: "Son of Tomar-Re" }
+                    ]
+                }
+            ]
         }
     ]
 };
