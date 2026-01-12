@@ -101,8 +101,13 @@ const dcTreeData = {
                                 description: "Oliver's wife, 'love of his life', and mother of Mia. Aliases: Ghost Fox Goddess, The Calculator. Based on DC character by Gerry Conway & Rafael Kayanan. Played by Emily Bett Rickards."
                             },
                             children: [
-                                { name: "William Clayton", role: "Son", description: "Son of Oliver Queen and Samantha Clayton." },
-                                { name: "Mia Smoak", role: "Green Arrow II", description: "Daughter of Oliver & Felicity (Arrow TV)." }
+                                { name: "William Clayton", role: "Son / CEO", description: "Son of Oliver Queen and Samantha Clayton. Older half-brother of Mia. Later CEO of Queen-Smoak Industries." },
+                                {
+                                    name: "Mia Queen",
+                                    role: "Green Arrow III / Blackstar",
+                                    description: "Daughter of Oliver & Felicity. Born Oct 13, 2019. Previously 'Mia Smoak'. Future socialite and cage fighter ('Blackstar'). Took up her father's mantle as Green Arrow in 2040 Earth-Prime. Played by Katherine McNamara.",
+                                    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Katherine_McNamara_as_Mia_Smoak.png/220px-Katherine_McNamara_as_Mia_Smoak.png"
+                                }
                             ]
                         },
                         { name: "Thea Queen", role: "Speedy", description: "Sister of Oliver. Biological daughter of Malcolm Merlyn." },
@@ -258,14 +263,18 @@ const dcTreeData = {
                 {
                     name: "Sara Lance",
                     role: "Captain (White Canary)",
-                    description: "Captain of the Legends. Paragon of Destiny. Former member of the League of Assassins (Ta-er al-Sahfer). Biological daughter of Quentin Lance.",
+                    description: "Captain of the Legends. Paragon of Destiny. Former member of the League of Assassins. Resurrected as an alien-human hybrid clone. Biological daughter of Quentin Lance.",
                     partner: {
                         name: "Ava Sharpe",
                         role: "Co-Captain",
-                        description: "Wife of Sara. Director of the Time Bureau."
+                        description: "Wife of Sara. 12th Advanced Variant Automation clone. Former Director of the Time Bureau."
                     },
                     children: [
-                        { name: "Future Daughter", role: "Planned Granddaughter", description: "Planned child of Sara and Ava; Quentin's granddaughter." }
+                        {
+                            name: "Lance-Sharpe Daughter",
+                            role: "Potential Future Child",
+                            description: "Conceived in a potential future via Kriblix DNA/alien-human cloning genetics after Sarah and Ava retired. Conceived when Ava's DNA was transferred to Sara through a kiss, triggering ovulation."
+                        }
                     ]
                 },
                 {
@@ -304,7 +313,10 @@ const dcTreeData = {
                 {
                     name: "John Constantine",
                     role: "Hellblazer",
-                    description: "Master of the Dark Arts and cynical antihero. Created by Alan Moore, Stephen R. Bissette, and John Totleben. First appeared in Swamp Thing #37 (1985). Son of Mary Ann. Played by Matt Ryan."
+                    description: "Master of the Dark Arts and cynical antihero. Created by Alan Moore, Stephen R. Bissette, and John Totleben. First appeared in Swamp Thing #37 (1985). Son of Mary Ann. Played by Matt Ryan.",
+                    children: [
+                        { name: "Astra Logue", role: "Legend / Mage", description: "Former Queen of Hell and powerful sorceress. Resurrected Gideon in human form. Member of the Legends. Played by Olivia Swann." }
+                    ]
                 },
                 {
                     name: "Ray Palmer",
@@ -360,7 +372,17 @@ const dcTreeData = {
                     name: "Gideon",
                     role: "Human-AI Fusion",
                     description: "Advanced AI/LLM system and Interactive Artificial Consciousness of the Waverider. Later resurrected in human form by Astra Logue. Official member of the Legends. Played by Amy Louise Pemberton.",
-                    partner: { name: "Gary Green", role: "Legend / Magical Apprentice", description: "Gideon's boyfriend." }
+                    partner: { name: "Gary Green", role: "Legend / Necrian", description: "Gideon's boyfriend. Alias: Agent 1066. Former apprentice to John Constantine." }
+                },
+                {
+                    name: "Esperanza 'Spooner' Cruz",
+                    role: "Legend / Alien Empath",
+                    description: "Can communicate with and track aliens. Close friend of Astra and Ava. Played by Lisseth Chavez."
+                },
+                {
+                    name: "Dr. Gwyn Davies",
+                    role: "Father of Time Travel",
+                    description: "1920s scientist who laid the foundation for modern time travel. Helped the Legends return to their own time. Played by Matt Ryan."
                 },
                 {
                     name: "Leo Snart (Earth-X)",
@@ -396,15 +418,11 @@ const dcTreeData = {
             children: [
                 {
                     name: "Ava Sharpe",
-                    role: "Director",
-                    description: "Highly efficient agent and clone who became Director. Wife of Sara Lance. (See Waverider)",
+                    role: "Director / Co-Captain",
+                    description: "Manufactured in 2213, she is the 12th genetically-engineered Advanced Variant Automation clone created by Bishop. Succeeded Wilbur Bennett as Director of the Time Bureau. Wife of Sara Lance and co-captain of the Legends.",
+                    partner: { name: "Sara Lance", role: "Captain", description: "Wife and co-captain." },
                     children: [
-                        {
-                            name: "Gary Green",
-                            role: "Legend / Agent",
-                            description: "Quirky Time Bureau agent and magical apprentice. Later joins the Legends. Boyfriend of Gideon.",
-                            partner: { name: "Gideon", role: "Human-AI Fusion", description: "Gary's girlfriend." }
-                        },
+                        { name: "Gary Green", role: "Legend / Agent", description: "Quirky Necrian (alien) agent, apprentice to Constantine, and boyfriend of Gideon. Alias: Agent 1066." },
                         { name: "Neil McNeil", role: "Agent", description: "Time Bureau field agent." },
                         { name: "Mona Wu", role: "Magical Creature Handler", description: "Agent who can transform into a Kaupe (Wolfie). Later joins the Legends." }
                     ]
@@ -779,6 +797,37 @@ const dcTreeData = {
                         { name: "Apros", role: "Green Lantern (Sector 3)" },
                         { name: "Raker Qarrigat", role: "Green Lantern (Sector 3897)" },
                         { name: "Norchavius", role: "Green Lantern (Sector 26)" }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "Zaguron Base / Bishop's Lab",
+            role: "AVA Clone Production",
+            coords: [0, 0], // Deep Space
+            children: [
+                {
+                    name: "Bishop",
+                    role: "Founder of AVA Corp / Scientist",
+                    description: "Designer-creator of the AVA clones and founder of AVA Corporation. Responsible for kidnapping and cloning Sara Lance. Died in multiple timelines (1925 original, 1943 new). In an erased timeline, he attempted to replace humanity and was killed by the children of Mick and Kayla. In the current timeline, he regained his memories, realized his mistakes, and sacrificed himself to allow the Legends to escape, killed by robot duplicates of the team. Played by Raffi Barsoumian.",
+                    children: [
+                        { name: "Ava Sharpe (Clone Batch)", role: "AVA Clones", description: "Batch of thousands of clones produced for efficiency. (See Time Bureau)" }
+                    ]
+                }
+            ]
+        },
+        {
+            name: "The Multiverse",
+            role: "Cosmic Entities",
+            coords: [0, 0], // The Vanishing Point / Source
+            children: [
+                {
+                    name: "Mar Novu",
+                    role: "The Monitor",
+                    description: "Maltusian time traveler with cosmic powers. Guardian of the Multiverse and architect of the plan to stop the Anti-Monitor. Played by LaMonica Garrett.",
+                    partner: { name: "Xneen", role: "Wife (Deceased)", description: "Fellow Maltusian; Mar Novu's wife before his experiment." },
+                    children: [
+                        { name: "Lyla Michaels", role: "Harbinger", description: "The Monitor's herald and agent. Crisis coordinator." }
                     ]
                 }
             ]
