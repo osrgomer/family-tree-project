@@ -113,6 +113,35 @@ const dcTreeData = {
                     ]
                 }
             ]
+        },
+        {
+            name: "Star City",
+            role: "Lance Family",
+            coords: [47.6062, -122.3321],
+            children: [
+                {
+                    name: "Quentin Lance",
+                    role: "Police Captain",
+                    description: "Father of Laurel and Sara.",
+                    children: [
+                        {
+                            name: "Dinah Laurel Lance",
+                            role: "Black Canary",
+                            description: "Sister of Sara. Also connected to Oliver Queen (see Queen Family)."
+                        },
+                        {
+                            name: "Sara Lance",
+                            role: "White Canary",
+                            description: "Captain of the Legends. First Black Canary. Played by Caity Lotz. Aliases: Ta'ir as-Safir, The Canary.",
+                            partner: {
+                                name: "Ava Sharpe",
+                                role: "Director of Time Bureau",
+                                description: "Spouse of Sara Lance."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 };
