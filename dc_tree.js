@@ -281,9 +281,9 @@ const dcTreeData = {
                     name: "Rip Hunter",
                     role: "Time Master",
                     description: "Founder of the Legends. Originally named Michael. Created by Jack Miller.",
-                    partner: { name: "Miranda Coburn", role: "Time Master (Deceased)", description: "Rip's wife. Killed by Vandal Savage." },
+                    partner: { name: "Miranda Coburn", role: "Time Master Lieutenant", description: "Rip's wife and fellow Time Master. Killed by Vandal Savage in 2166. Played by Alex Duncan. (Deceased) " },
                     children: [
-                        { name: "Jonas Hunter", role: "Son (Deceased)", description: "Killed by Vandal Savage in 2166." }
+                        { name: "Jonas Hunter", role: "Son (Deceased)", description: "Rip and Miranda's son, named after Jonah Hex. Killed by Vandal Savage in 2166." }
                     ]
                 },
                 {
@@ -428,7 +428,11 @@ const dcTreeData = {
                     partner: { name: "Sara Lance", role: "Captain", description: "Wife and co-captain." },
                     children: [
                         { name: "Gary Green", role: "Legend / Agent", description: "Quirky Necrian (alien) agent, apprentice to Constantine, and boyfriend of Gideon. Alias: Agent 1066." },
-                        { name: "Neil McNeil", role: "Agent", description: "Time Bureau field agent." },
+                        {
+                            name: "Neil McNeil",
+                            role: "Time Bureau Agent",
+                            description: "Dedicated agent of the Time Bureau. Once awarded Agent of the Month (to Gary Green's hidden jealousy). Later hypnotized by Gary during his sham performance reviews. Played by James Kot."
+                        },
                         { name: "Mona Wu", role: "Magical Creature Handler", description: "Agent who can transform into a Kaupe (Wolfie). Later joins the Legends." }
                     ]
                 },
