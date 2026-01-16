@@ -744,26 +744,26 @@ const rimonGivonData = {
                                             },
                                             children: [
                                                 {
-                                                    name: "Lian Whitelegg",
-                                                    role: "G5: Daughter",
+                                                    name: "Lian Givon Whitelegg",
+                                                    role: "G5: Son (Age 15)",
                                                     image: "",
                                                     children: []
                                                 },
                                                 {
-                                                    name: "Alma Whitelegg",
-                                                    role: "G5: Daughter",
+                                                    name: "Alma Givon Whitelegg",
+                                                    role: "G5: Daughter (Age 13.5)",
                                                     image: "",
                                                     children: []
                                                 },
                                                 {
-                                                    name: "Yanai Whitelegg",
-                                                    role: "G5: Son",
+                                                    name: "Yanai Givon Whitelegg",
+                                                    role: "G5: Son (Age 9-10)",
                                                     image: "",
                                                     children: []
                                                 },
                                                 {
-                                                    name: "Ilay Whitelegg",
-                                                    role: "G5: Child",
+                                                    name: "Ilay Givon Whitelegg",
+                                                    role: "G5: Son (Age 5)",
                                                     image: "",
                                                     children: []
                                                 }
