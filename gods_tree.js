@@ -1,58 +1,15 @@
-const godsTreeData = {
-    name: "Greek & Roman Gods",
-    role: "The Pantheon",
-    children: [
-        {
-            name: "Primordial",
-            role: "Titans",
-            coords: [38.000, 22.000],
-            children: [
-                {
-                    name: "Cronus (Saturn)",
-                    role: "King of Titans",
-                    description: "Ruler of the Universe during the Golden Age.",
-                    partner: { name: "Rhea (Ops)", role: "Titaness of Motherhood" },
-                    children: [
-                        {
-                            name: "Zeus (Jupiter)",
-                            role: "King of Gods",
-                            coords: [40.086, 22.358], // Mt Olympus
-                            description: "God of the Sky, Lightning, Thunder, Law, Order, and Justice.",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg/220px-Jupiter_Smyrna_Louvre_Ma13.jpg",
-                            partner: { name: "Hera (Juno)", role: "Queen of Gods" },
-                            children: [
-                                { name: "Ares (Mars)", role: "God of War", description: "Son of Zeus and Hera." },
-                                { name: "Hephaestus (Vulcan)", role: "God of Blacksmiths", description: "Son of Zeus and Hera." },
-                                { name: "Athena (Minerva)", role: "Goddess of Wisdom", description: "Born from Zeus's forehead." },
-                                { name: "Apollo", role: "God of Sun & Music", description: "Twin of Artemis." },
-                                { name: "Artemis (Diana)", role: "Goddess of Hunt", description: "Twin of Apollo." },
-                                { name: "Hermes (Mercury)", role: "Messenger God", description: "Son of Zeus and Maia." },
-                                { name: "Dionysus (Bacchus)", role: "God of Wine", description: "Son of Zeus and Semele." },
-                                { name: "Heracles (Hercules)", role: "Hero & God", description: "Son of Zeus and Alcmene." }
-                            ]
-                        },
-                        {
-                            name: "Poseidon (Neptune)",
-                            role: "God of the Sea",
-                            coords: [36.4, 25.4], // Aegean Sea
-                            description: "God of the Sea, Earthquakes, and Horses.",
-                            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Poseidon_sculpture_Copenhagen_2005.jpg/220px-Poseidon_sculpture_Copenhagen_2005.jpg",
-                            children: [
-                                { name: "Triton", role: "Messenger of the Sea" },
-                                { name: "Pegasus", role: "Winged Horse" }
-                            ]
-                        },
-                        {
-                            name: "Hades (Pluto)",
-                            role: "God of the Underworld",
-                            description: "God of the Dead and Riches.",
-                            partner: { name: "Persephone (Proserpina)", role: "Queen of the Underworld" }
-                        },
-                        { name: "Hestia (Vesta)", role: "Goddess of Hearth" },
-                        { name: "Demeter (Ceres)", role: "Goddess of Harvest" }
-                    ]
-                }
-            ]
+let godsTreeData = {};
+
+fetch('gods_data.json')
+    .then(response => response.json())
+    .then(data => {
+        godsTreeData = data;
+        // Refresh if currently selected
+        if (typeof switchTree === 'function') {
+            const selector = document.getElementById('tree-selector');
+            if (selector && selector.value === 'gods') {
+                switchTree('gods');
+            }
         }
-    ]
-};
+    })
+    .catch(err => console.error("Error loading Gods data:", err));
