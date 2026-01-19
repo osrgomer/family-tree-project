@@ -1181,6 +1181,14 @@ const rimonGivonData = {
                     coords: [32.0853, 34.7818],
                     children: []
                 },
+                {
+                    name: "Baixo Art Space",
+                    role: "Cultural & Art Space",
+                    description: "Co-founded by Hadas Jackont and Yael Givon Rimon. A center for arts and culture in Aljezur, promoting exhibitions and events as a meeting point for the artistic community. @baixoartaljezur",
+                    coords: [37.3168, -8.8035],
+                    locationName: "Rua da Serra, Aljezur",
+                    children: []
+                },
 
                 {
                     name: "Gelbman",
