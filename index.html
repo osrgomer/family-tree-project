@@ -124,11 +124,22 @@
                     </div>
                     <div class="form-group">
                         <label for="new-parent">Parent (Link to...)</label>
-                        <select id="new-parent" required>
+                        <select id="new-parent">
                             <option value="">Select Parent...</option>
                             <!-- Populated by JS -->
                         </select>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="new-child">Kid (Link to...) [Optional - Creates Parent]</label>
+                    <select id="new-child">
+                        <option value="">Select Kid...</option>
+                        <!-- Populated by JS -->
+                    </select>
+                    <small style="color: #666; font-size: 0.8rem; display: block; margin-top: 5px;">
+                        Select <strong>EITHER</strong> a Parent (to add a child) <strong>OR</strong> a Kid (to add a
+                        parent).
+                    </small>
                 </div>
                 <div class="form-group">
                     <label for="new-location">Current Residence (Map Location)</label>

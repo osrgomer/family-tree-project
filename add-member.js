@@ -1,4 +1,3 @@
-
 /**
  * Add Member Modal Logic
  */
@@ -9,15 +8,18 @@ function initAddMemberModal() {
     const cancelBtn = document.getElementById('cancel-add');
     const form = document.getElementById('add-member-form');
     const parentSelect = document.getElementById('new-parent');
+    const childSelect = document.getElementById('new-child'); // New Select
 
-    if (!modal || !openBtn || !closeBtn || !cancelBtn || !form || !parentSelect) {
+    if (!modal || !openBtn || !closeBtn || !cancelBtn || !form || !parentSelect || !childSelect) {
         console.error('Add Member Modal: Required elements not found');
         return;
     }
 
-    // Populate parent dropdown with all family members
-    function populateParentDropdown() {
+    // Populate dropdowns with all family members
+    function populateDropdowns() {
+        // Clear both
         parentSelect.innerHTML = '<option value="">Select Parent...</option>';
+        childSelect.innerHTML = '<option value="">Select Kid...</option>';
 
         const allMembers = [];
 
@@ -34,24 +36,46 @@ function initAddMemberModal() {
             }
         }
 
-        familyData.children.forEach((lineage, index) => {
-            collectMembers(lineage, index);
-        });
+        if (familyData && familyData.children) {
+            familyData.children.forEach((lineage, index) => {
+                collectMembers(lineage, index);
+            });
+        }
 
+        // Fill options
         allMembers.forEach(item => {
-            const option = document.createElement('option');
-            option.value = JSON.stringify({
+            const valueStr = JSON.stringify({
                 name: item.name,
                 lineageIndex: item.lineageIndex
             });
-            option.textContent = `${item.name} (${item.role})`;
-            parentSelect.appendChild(option);
+            const textContent = `${item.name} (${item.role})`;
+
+            // Option for Parent Select
+            const optionP = document.createElement('option');
+            optionP.value = valueStr;
+            optionP.textContent = textContent;
+            parentSelect.appendChild(optionP);
+
+            // Option for Child Select
+            const optionC = document.createElement('option');
+            optionC.value = valueStr;
+            optionC.textContent = textContent;
+            childSelect.appendChild(optionC);
         });
     }
 
+    // Event Listeners for Exclusivity (One or the other)
+    parentSelect.addEventListener('change', () => {
+        if (parentSelect.value) childSelect.value = "";
+    });
+
+    childSelect.addEventListener('change', () => {
+        if (childSelect.value) parentSelect.value = "";
+    });
+
     // Open modal
     openBtn.addEventListener('click', () => {
-        populateParentDropdown();
+        populateDropdowns();
         modal.classList.add('active');
     });
 
@@ -92,14 +116,29 @@ function initAddMemberModal() {
         }
     }
 
-    // Find member in tree by name
-    function findMemberByName(name, lineageIndex) {
-        function search(member) {
-            if (member.name === name) {
-                return member;
-            }
-            if (member.children) {
-                for (let child of member.children) {
+    // Find member + container in tree
+    function findMemberAndContainer(name, lineageIndex) {
+        if (!familyData.children || !familyData.children[lineageIndex]) return null;
+
+        const root = familyData.children[lineageIndex];
+
+        // Check if it's the root of the lineage
+        if (root.name === name) {
+            return {
+                node: root,
+                container: familyData.children,
+                index: lineageIndex
+            };
+        }
+
+        // Recursive search in children
+        function search(node) {
+            if (node.children) {
+                for (let i = 0; i < node.children.length; i++) {
+                    const child = node.children[i];
+                    if (child.name === name) {
+                        return { node: child, container: node.children, index: i };
+                    }
                     const found = search(child);
                     if (found) return found;
                 }
@@ -107,7 +146,7 @@ function initAddMemberModal() {
             return null;
         }
 
-        return search(familyData.children[lineageIndex]);
+        return search(root);
     }
 
     // Handle form submission
@@ -117,7 +156,14 @@ function initAddMemberModal() {
         const name = document.getElementById('new-name').value.trim();
         const age = document.getElementById('new-age').value.trim();
         const location = document.getElementById('new-location').value.trim();
-        const parentData = JSON.parse(parentSelect.value);
+
+        const parentVal = parentSelect.value;
+        const childVal = childSelect.value;
+
+        if (!parentVal && !childVal) {
+            alert('Please select either a Parent OR a Kid to link to.');
+            return;
+        }
 
         // Show loading state
         const submitBtn = form.querySelector('button[type="submit"]');
@@ -143,14 +189,39 @@ function initAddMemberModal() {
                 newMember.locationName = geoData.locationName;
             }
 
-            // Find parent and add new member
-            const parent = findMemberByName(parentData.name, parentData.lineageIndex);
-            if (parent) {
-                if (!parent.children) {
-                    parent.children = [];
-                }
-                parent.children.push(newMember);
+            let success = false;
 
+            if (parentVal) {
+                // --- MODE 1: Add as Child ---
+                const parentData = JSON.parse(parentVal);
+                // For adding as child, we just need the node, not container
+                const result = findMemberAndContainer(parentData.name, parentData.lineageIndex);
+
+                if (result && result.node) {
+                    const parentNode = result.node;
+                    if (!parentNode.children) parentNode.children = [];
+                    parentNode.children.push(newMember);
+                    success = true;
+                }
+
+            } else if (childVal) {
+                // --- MODE 2: Add as Parent ---
+                const kidData = JSON.parse(childVal);
+                const result = findMemberAndContainer(kidData.name, kidData.lineageIndex);
+
+                if (result && result.node && result.container) {
+                    const { node: kidNode, container, index } = result;
+
+                    // 1. New Member adopts the Kid
+                    newMember.children.push(kidNode);
+
+                    // 2. Container replaces Kid with New Member
+                    container[index] = newMember;
+                    success = true;
+                }
+            }
+
+            if (success) {
                 // Re-render the tree
                 renderTree();
 
@@ -168,40 +239,19 @@ function initAddMemberModal() {
 
                 // Scroll to the new member
                 setTimeout(() => {
-                    const newCard = document.getElementById('member-' + name.replace(/\s+/g, '-').toLowerCase());
+                    const idSafeName = name.replace(/\s+/g, '-').toLowerCase();
+                    const newCard = document.getElementById('member-' + idSafeName);
                     if (newCard) {
-                        const viewport = document.querySelector('.tree-viewport');
-                        if (!viewport) return;
-
+                        newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         newCard.classList.add('spotlight');
-
-                        const viewportRect = viewport.getBoundingClientRect();
-                        const elementRect = newCard.getBoundingClientRect();
-
-                        const elementCenterX = elementRect.left + (elementRect.width / 2);
-                        const elementCenterY = elementRect.top + (elementRect.height / 2);
-
-                        const viewportCenterX = viewportRect.left + (viewportRect.width / 2);
-                        const viewportCenterY = viewportRect.top + (viewportRect.height / 2);
-
-                        const offsetX = elementCenterX - viewportCenterX;
-                        const offsetY = elementCenterY - viewportCenterY;
-
-                        const newScrollLeft = viewport.scrollLeft + offsetX;
-                        const newScrollTop = viewport.scrollTop + offsetY;
-
-                        viewport.scrollTo({
-                            left: newScrollLeft,
-                            top: newScrollTop,
-                            behavior: 'smooth'
-                        });
-
                         setTimeout(() => newCard.classList.remove('spotlight'), 3000);
                     }
                 }, 500);
+
             } else {
-                alert('❌ Could not find parent member. Please try again.');
+                alert('❌ Could not find the selected family member to link to. Please try again.');
             }
+
         } catch (error) {
             console.error('Error adding member:', error);
             alert('❌ An error occurred while adding the member. Please try again.');
