@@ -790,13 +790,17 @@ const rimonGivonData = {
                                         },
                                         {
                                             name: "Yael Givon Rimon",
-                                            role: "G4: Daughter\n" + getDynamicAge("1974-07-11"),
+                                            role: "G4: Artist & Co-Founder of Baixo Art Space\n" + getDynamicAge("1974-07-11"),
                                             image: "",
+                                            coords: [37.3168, -8.8035],
+                                            locationName: "Aljezur, Portugal (Baixo Art Space)",
+                                            description: "Creative Director and artist. Formerly active in the Hamburg art scene (colleague of Nir Alon), she now focuses on local curation in Portugal. Co-founded 'Baixo Art Space' (Rua da Serra, Aljezur) with Hadas Jackont, creating a vibrant cultural hub for exhibitions and the local artistic community. @baixoartaljezur",
                                             partner: {
                                                 name: "Gil Rimon",
                                                 role: "G4: Entrepreneur & Branding\n" + getDynamicAge("1973-10-14"),
                                                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFekz6-k5QSGQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516166655864?e=2147483647&v=beta&t=FbFriFy5jiB-Pr9DEteB0912XRyeEr8ETCpa00xde0Y",
-
+                                                coords: [37.3168, -8.8035],
+                                                locationName: "Aljezur, Portugal",
                                             },
 
                                             children: [
@@ -804,7 +808,7 @@ const rimonGivonData = {
                                                     name: "Omer Shalom Rimon",
                                                     role: "G5: The Union " + getDynamicAge("2012-04-21"),
                                                     image: "https://i.pinimg.com/736x/c8/e1/c2/c8e1c2206c98cfbdb48d793c219d01e1.jpg",
-                                                    description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon).",
+                                                    description: "Named after Shalom Weissbarst, his great-grandfather. Nickname: OSRG (Omer Shalom Rimon Givon). Contributed 'Sea' and 'Land' voice recordings for Yoav Perry's 2025 Hamburg sound installation.",
 
                                                     children: []
                                                 },
@@ -812,6 +816,7 @@ const rimonGivonData = {
                                                     name: "Nomi Rimon",
                                                     role: "G5: Daughter " + getDynamicAge("2015-10-20"),
                                                     image: "https://osrg.lol/wp-content/uploads/2025/12/IMG-20250724-WA0005.jpg",
+                                                    description: "Daughter of Gil and Yael. Contributed 'Sea' and 'Land' voice recordings for Yoav Perry's 2025 Hamburg sound installation.",
 
                                                     children: []
                                                 }
@@ -1345,6 +1350,41 @@ const rimonGivonData = {
                                             ]
                                         }
                                     ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "The Jackont Family",
+                    role: "Aljezur Branch",
+                    coords: [37.3168, -8.8035],
+                    children: [
+                        {
+                            name: "Hadas Jackont",
+                            role: "Co-Founder of Baixo Art Space",
+                            locationName: "Aljezur, Portugal",
+                            description: "Co-founder of 'Baixo Art Space' along with Yael Givon Rimon. Key figure in the Aljezur artistic community.",
+                            partner: {
+                                name: "Gilan Jackont",
+                                role: "Husband",
+                                description: "Husband of Hadas Jackont."
+                            },
+                            children: [
+                                {
+                                    name: "Avner Jackont",
+                                    role: "Son",
+                                    description: "Older son of Hadas and Gilan. Loves soccer a lot."
+                                },
+                                {
+                                    name: "Yoel Jackont",
+                                    role: "Son",
+                                    description: "Middle son of Hadas and Gilan. Nicknamed 'yoyo'."
+                                },
+                                {
+                                    name: "Millie Jackont",
+                                    role: "Daughter",
+                                    description: "Smallest daughter of Hadas and Gilan. Nicknamed 'Mizy'."
                                 }
                             ]
                         }
