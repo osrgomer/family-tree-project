@@ -8,7 +8,7 @@ function initAddMemberModal() {
     const cancelBtn = document.getElementById('cancel-add');
     const form = document.getElementById('add-member-form');
     const parentSelect = document.getElementById('new-parent');
-    const childSelect = document.getElementById('new-child'); // New Select
+    const childSelect = document.getElementById('new-child');
 
     if (!modal || !openBtn || !closeBtn || !cancelBtn || !form || !parentSelect || !childSelect) {
         console.error('Add Member Modal: Required elements not found');
@@ -23,13 +23,23 @@ function initAddMemberModal() {
 
         const allMembers = [];
 
-        function collectMembers(member, lineageIndex) {
+        function collectMembers(member, lineageIndex, mainNode = null) {
+            // Add self
             allMembers.push({
                 name: member.name,
                 role: member.role,
                 lineageIndex: lineageIndex,
-                member: member
+                member: member,
+                mainNode: mainNode || member
             });
+
+            // Add Partners
+            if (member.partner) {
+                collectMembers(member.partner, lineageIndex, member);
+            }
+            if (member.secondPartner) {
+                collectMembers(member.secondPartner, lineageIndex, member);
+            }
 
             if (member.children) {
                 member.children.forEach(child => collectMembers(child, lineageIndex));
@@ -46,7 +56,8 @@ function initAddMemberModal() {
         allMembers.forEach(item => {
             const valueStr = JSON.stringify({
                 name: item.name,
-                lineageIndex: item.lineageIndex
+                lineageIndex: item.lineageIndex,
+                mainNodeName: item.mainNode ? item.mainNode.name : item.name
             });
             const textContent = `${item.name} (${item.role})`;
 
@@ -64,7 +75,7 @@ function initAddMemberModal() {
         });
     }
 
-    // Event Listeners for Exclusivity (One or the other)
+    // Event Listeners for Exclusivity
     parentSelect.addEventListener('change', () => {
         if (parentSelect.value) childSelect.value = "";
     });
@@ -194,8 +205,9 @@ function initAddMemberModal() {
             if (parentVal) {
                 // --- MODE 1: Add as Child ---
                 const parentData = JSON.parse(parentVal);
-                // For adding as child, we just need the node, not container
-                const result = findMemberAndContainer(parentData.name, parentData.lineageIndex);
+                // Use mainNodeName to ensure we attach to the structural node
+                const targetName = parentData.mainNodeName || parentData.name;
+                const result = findMemberAndContainer(targetName, parentData.lineageIndex);
 
                 if (result && result.node) {
                     const parentNode = result.node;
@@ -207,7 +219,9 @@ function initAddMemberModal() {
             } else if (childVal) {
                 // --- MODE 2: Add as Parent ---
                 const kidData = JSON.parse(childVal);
-                const result = findMemberAndContainer(kidData.name, kidData.lineageIndex);
+                // Use mainNodeName
+                const targetName = kidData.mainNodeName || kidData.name;
+                const result = findMemberAndContainer(targetName, kidData.lineageIndex);
 
                 if (result && result.node && result.container) {
                     const { node: kidNode, container, index } = result;
