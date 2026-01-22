@@ -846,7 +846,7 @@ function exportToGedcom() {
         const id = `I${individualId++}`;
         personMap.set(member.name, id);
 
-        gedcom += `0 ${id} INDI\n`;
+        gedcom += `0 @${id}@ INDI\n`;
         gedcom += `1 NAME ${member.name}\n`;
         if (member.role) gedcom += `1 NOTE ${member.role}\n`;
         if (member.coords) gedcom += `1 RESI\n2 PLAC ${member.locationName || 'Unknown'}\n`;
@@ -859,7 +859,7 @@ function exportToGedcom() {
 
             gedcom += `1 FAMS @${famId}@\n`;
 
-            gedcom += `0 ${spouseId} INDI\n`;
+            gedcom += `0 @${spouseId}@ INDI\n`;
             gedcom += `1 NAME ${member.partner.name}\n`;
             if (member.partner.role) gedcom += `1 NOTE ${member.partner.role}\n`;
             gedcom += `1 FAMS @${famId}@\n`;

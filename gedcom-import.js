@@ -12,10 +12,22 @@ function parseGedcom(content) {
     lines.forEach(line => {
         const parts = line.trim().match(/^(\d+)\s+(@\w+@)?\s*(\w+)(?:\s+(.*))?/);
         if (!parts) return;
-        const level = parseInt(parts[1]);
-        const id = parts[2];
-        const tag = parts[3];
-        const value = parts[4] || "";
+
+        let level = parseInt(parts[1]);
+        let id = parts[2];
+        let tag = parts[3];
+        let value = parts[4] || "";
+
+        // Handle non-standard IDs without @ (e.g. "0 I1 INDI")
+        // If Regex missed the ID (because no @), it shifts: parts[3] becomes ID, parts[4] becomes Tag
+        if (!id && (value === 'INDI' || value === 'FAM')) {
+            id = tag;
+            tag = value;
+            value = "";
+        }
+
+        // Clean ID
+        if (id) id = id.replace(/@/g, '');
 
         if (level === 0) {
             if (id && tag === 'INDI') {
@@ -34,15 +46,18 @@ function parseGedcom(content) {
                 const indi = individuals[currentId];
                 if (tag === 'NAME') indi.name = value.replace(/\//g, '');
                 if (tag === 'SEX') indi.gender = value;
+                // Accumulate all NOTE lines
                 if (tag === 'NOTE') indi.notes.push(value);
+                // Capture CONT/CONC for multi-line notes if necessary (simplified here)
+
                 if (tag === 'OCCU' || tag === 'TITL') indi.role = value;
-                if (tag === 'FAMC') indi.famc.push(value);
-                if (tag === 'FAMS') indi.fams.push(value);
+                if (tag === 'FAMC') indi.famc.push(value.replace(/@/g, ''));
+                if (tag === 'FAMS') indi.fams.push(value.replace(/@/g, ''));
             } else if (currentType === 'FAM') {
                 const fam = families[currentId];
-                if (tag === 'HUSB') fam.husb = value;
-                if (tag === 'WIFE') fam.wife = value;
-                if (tag === 'CHIL') fam.children.push(value);
+                if (tag === 'HUSB') fam.husb = value.replace(/@/g, '');
+                if (tag === 'WIFE') fam.wife = value.replace(/@/g, '');
+                if (tag === 'CHIL') fam.children.push(value.replace(/@/g, ''));
             }
         }
     });
