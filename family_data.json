@@ -1585,30 +1585,37 @@
                     ],
                     "children": [
                         {
-                            "name": "Hadas Jackont",
-                            "role": "Co-Founder of Baixo Art Space",
-                            "locationName": "Aljezur, Portugal",
-                            "description": "Co-founder of 'Baixo Art Space' along with Yael Givon Rimon. Key figure in the Aljezur artistic community.",
-                            "partner": {
-                                "name": "Gilan Jackont",
-                                "role": "Husband",
-                                "description": "Husband of Hadas Jackont."
-                            },
+                            "name": "Liora Jackont",
+                            "role": "Matriarch (Deceased)",
+                            "description": "Mother of Gilan Jackont. Very good friend of Deborah Givon (Gurfinkel). Passed away.",
                             "children": [
                                 {
-                                    "name": "Avner Jackont",
+                                    "name": "Gilan Jackont",
                                     "role": "Son",
-                                    "description": "Older son of Hadas and Gilan. Loves soccer a lot."
-                                },
-                                {
-                                    "name": "Yoel Jackont",
-                                    "role": "Son",
-                                    "description": "Middle son of Hadas and Gilan. Nicknamed 'yoyo'."
-                                },
-                                {
-                                    "name": "Millie Jackont",
-                                    "role": "Daughter",
-                                    "description": "Smallest daughter of Hadas and Gilan. Nicknamed 'Mizy'."
+                                    "description": "Son of Liora Jackont.",
+                                    "partner": {
+                                        "name": "Hadas Jackont",
+                                        "role": "Co-Founder of Baixo Art Space",
+                                        "locationName": "Aljezur, Portugal",
+                                        "description": "Co-founder of 'Baixo Art Space' along with Yael Givon Rimon. Key figure in the Aljezur artistic community."
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "Avner Jackont",
+                                            "role": "Son",
+                                            "description": "Older son of Hadas and Gilan. Loves soccer a lot."
+                                        },
+                                        {
+                                            "name": "Yoel Jackont",
+                                            "role": "Son",
+                                            "description": "Middle son of Hadas and Gilan. Nicknamed 'yoyo'."
+                                        },
+                                        {
+                                            "name": "Millie Jackont",
+                                            "role": "Daughter",
+                                            "description": "Smallest daughter of Hadas and Gilan. Nicknamed 'Mizy'."
+                                        }
+                                    ]
                                 }
                             ]
                         }
