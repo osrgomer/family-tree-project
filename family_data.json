@@ -1636,8 +1636,115 @@
         },
         {
             "name": "Naor",
-            "role": "The Naor Family",
-            "children": []
+            "role": "The Naor Family Heritage",
+            "children": [
+                {
+                    "name": "Leib Naor",
+                    "role": "G-1: Patriarch (Grandfather)",
+                    "description": "Grandfather of Abba Naor. Perished at Fort IX during the 'Great Action'.",
+                    "children": [
+                        {
+                            "name": "Abba Naor's Father",
+                            "role": "G0: Father",
+                            "description": "His life was saved during a selection on October 28, 1941, by a friend in the Jewish police who pulled him to the 'good' side.",
+                            "partner": {
+                                "name": "Abba Naor's Mother",
+                                "role": "G0: Mother",
+                                "description": "Sent to Auschwitz/Stutthof with her youngest son, Berale, where they perished."
+                            },
+                            "children": [
+                                {
+                                    "name": "Chaim Naor",
+                                    "role": "G1: Older Brother",
+                                    "description": "Shot at Fort IX while searching for food."
+                                },
+                                {
+                                    "name": "Abba Naor",
+                                    "role": "G1: The Victorious Survivor",
+                                    "birthDate": "1928-03-21",
+                                    "description": "Born in Kovno, Lithuania. Survived the Kovno Ghetto, Stutthof concentration camp, and Dachau sub-camps. Served in the Shin Bet and the Mossad; key operative in Operation Moses (Sudan rescue). Refers to his large family as his 'victory'.",
+                                    "coords": [
+                                        54.8985,
+                                        23.9036
+                                    ],
+                                    "locationName": "Kaunas (Kovno), Lithuania",
+                                    "children": [
+                                        {
+                                            "name": "Sarah Naor Harz",
+                                            "role": "G2: Daughter",
+                                            "children": [
+                                                {
+                                                    "name": "Yaakov Harz",
+                                                    "role": "G3: Grandson",
+                                                    "children": [
+                                                        {
+                                                            "name": "Tamir",
+                                                            "role": "G4: Great-grandson"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "Miryam Harz",
+                                                    "role": "G3: Granddaughter",
+                                                    "children": [
+                                                        {
+                                                            "name": "Adi",
+                                                            "role": "G4: Great-granddaughter"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "Elisheva",
+                                                    "role": "G3: Grandchild",
+                                                    "description": "Grandchild of Abba and half-sister to Yaakov and Miryam."
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Second Naor Child",
+                                            "role": "G2: Child",
+                                            "description": "One of Abba Naor's two children."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Berale Naor",
+                                    "role": "G1: Younger Brother",
+                                    "description": "Sent to Auschwitz/Stutthof with his mother and perished."
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Moshe",
+                            "role": "G0: Uncle",
+                            "description": "Uncle of Abba Naor. Victim of the 'Great Action' at Fort IX.",
+                            "children": [
+                                {
+                                    "name": "Aharon",
+                                    "role": "G1: Cousin",
+                                    "partner": {
+                                        "name": "Aharon's Wife & Baby",
+                                        "role": "G1+G2 Family",
+                                        "description": "Victims of the Holocaust."
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sara",
+                            "role": "G0: Aunt",
+                            "description": "Aunt of Abba Naor. Victim of the 'Great Action' at Fort IX.",
+                            "children": [
+                                {
+                                    "name": "Zelda",
+                                    "role": "G1: Cousin (Child)",
+                                    "description": "Daughter of Sara, victim of the Holocaust."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
