@@ -1696,9 +1696,29 @@
                                             ]
                                         },
                                         {
-                                            "name": "Second Naor Child",
-                                            "role": "G2: Child",
-                                            "description": "One of Abba Naor's two children."
+                                            "name": "Sarah's Sister",
+                                            "role": "G2: Daughter",
+                                            "description": "Daughter of Abba Naor and sister to Sarah.",
+                                            "children": [
+                                                {
+                                                    "name": "Grandchild of Abba",
+                                                    "role": "G3: Grandchild",
+                                                    "children": [
+                                                        {
+                                                            "name": "Tamir",
+                                                            "role": "G4: Great-grandson"
+                                                        },
+                                                        {
+                                                            "name": "Adi",
+                                                            "role": "G4: Great-granddaughter"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "Grandchild of Abba",
+                                                    "role": "G3: Grandchild"
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
