@@ -1672,6 +1672,7 @@
                                         {
                                             "name": "Sarah Naor Harz",
                                             "role": "G2: Daughter",
+                                            "partnerLeft": true,
                                             "description": "Runs 'Amaria', a luxury boutique hotel and retreat located in the Costa Vicentina Natural Park (Aljezur/Odeceixe), Portugal, together with David Harz.",
                                             "partner": {
                                                 "name": "David Harz",
