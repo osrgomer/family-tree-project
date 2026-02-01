@@ -1740,10 +1740,17 @@
                                     "name": "Aharon",
                                     "role": "G1: Cousin",
                                     "partner": {
-                                        "name": "Aharon's Wife & Baby",
-                                        "role": "G1+G2 Family",
-                                        "description": "Victims of the Holocaust."
-                                    }
+                                        "name": "Aharon's Wife",
+                                        "role": "G1: Partner",
+                                        "description": "Victim of the Holocaust."
+                                    },
+                                    "children": [
+                                        {
+                                            "name": "Aharon's Baby",
+                                            "role": "G2: Child",
+                                            "description": "Victim of the Holocaust."
+                                        }
+                                    ]
                                 }
                             ]
                         },
