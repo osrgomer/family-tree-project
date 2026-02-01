@@ -1662,20 +1662,21 @@
                                     "name": "Abba Naor",
                                     "role": "G1: The Victorious Survivor",
                                     "birthDate": "1928-03-21",
-                                    "description": "Born in Kovno, Lithuania. Survived the Kovno Ghetto, Stutthof concentration camp, and Dachau sub-camps. Served in the Shin Bet and the Mossad; key operative in Operation Moses (Sudan rescue). Refers to his large family as his 'victory'.",
+                                    "description": "Born in Kovno, Lithuania. Survived the Kovno Ghetto, Stutthof concentration camp, and Dachau sub-camps. Served in the Shin Bet and the Mossad; key operative in Operation Moses (Sudan rescue). Refers to his large family as his 'victory'. Now splits his time between Tel Aviv and Munich, continuing to share his testimony as a witness for future generations.",
                                     "coords": [
-                                        54.8985,
-                                        23.9036
+                                        48.1351,
+                                        11.5820
                                     ],
-                                    "locationName": "Kaunas (Kovno), Lithuania",
+                                    "locationName": "Munich, Germany & Tel Aviv, Israel",
                                     "children": [
                                         {
                                             "name": "Sarah Naor Harz",
                                             "role": "G2: Daughter",
+                                            "description": "Runs 'Amaria', a luxury boutique hotel and retreat located in the Costa Vicentina Natural Park (Aljezur/Odeceixe), Portugal, together with David Harz.",
                                             "partner": {
                                                 "name": "David Harz",
                                                 "role": "Father",
-                                                "description": "German. Formerly known as Oliver before converting from Christianity to Judaism."
+                                                "description": "German. Formerly known as Oliver before converting from Christianity to Judaism. Runs 'Amaria', a luxury boutique hotel and retreat located in the Costa Vicentina Natural Park (Aljezur/Odeceixe), Portugal, together with Sarah Naor Harz."
                                             },
                                             "children": [
                                                 {
