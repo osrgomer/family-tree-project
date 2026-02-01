@@ -1672,6 +1672,11 @@
                                         {
                                             "name": "Sarah Naor Harz",
                                             "role": "G2: Daughter",
+                                            "partner": {
+                                                "name": "David Harz",
+                                                "role": "Father",
+                                                "description": "German. Formerly known as Oliver before converting from Christianity to Judaism."
+                                            },
                                             "children": [
                                                 {
                                                     "name": "Yaakov Harz",
