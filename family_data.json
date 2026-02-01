@@ -1682,23 +1682,11 @@
                                             "children": [
                                                 {
                                                     "name": "Yaakov Harz",
-                                                    "role": "G3: Grandson",
-                                                    "children": [
-                                                        {
-                                                            "name": "Tamir",
-                                                            "role": "G4: Great-grandson"
-                                                        }
-                                                    ]
+                                                    "role": "G3: Grandson"
                                                 },
                                                 {
                                                     "name": "Miryam Harz",
-                                                    "role": "G3: Granddaughter",
-                                                    "children": [
-                                                        {
-                                                            "name": "Adi",
-                                                            "role": "G4: Great-granddaughter"
-                                                        }
-                                                    ]
+                                                    "role": "G3: Granddaughter"
                                                 },
                                                 {
                                                     "name": "Elisheva",
